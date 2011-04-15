@@ -1,7 +1,7 @@
 <%= include_tiny_mce_if_needed %>
 <%= hidden_field_tag 'task','post' %>
 <%= hidden_field_tag :file_id %>
-<%= form.hidden_field(:category_id, :id => "category_id", :value => @document.category_id) -%>
+<%= form.hidden_field(:category_id, :id => "category_id", :value => 1) -%>
 <%= observe_field(:file_id,
    :frequency => 0.5,
    :url => { :controller => 'documents', :action => 'file_add', :document_id => @document },

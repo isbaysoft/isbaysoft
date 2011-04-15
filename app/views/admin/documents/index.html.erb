@@ -24,7 +24,7 @@
      <td width="2%"><%= check_box_tag('ids[]',row.id) %></td>
      <td><%= link_to(row.name, edit_document_url(row.id)) -%></td>
      <td><%= row.filelists.count -%></td>
-     <td><%= row.sections.name -%></td>
+     <td><%= row.section.name unless row.section.nil? -%></td>
      <td><%= row.category.name unless row.category.nil? -%></td>
      <td><%= row.rule.name -%></td>
      <td><%= row.updated_at.to_formatted_s(:short) -%></td>
