@@ -1,0 +1,24 @@
+<% selected_tab = params[:tabv] ? params[:tabv].to_s : tabs.first[:name] %>
+
+<div class="tabsv" style="float: left;">
+  <ul>
+  <% tabs.map do |tab| -%>
+    <li>
+      <%= link_to t(tab[:label]), { :tabv => tab[:name], :tab => params[:tab]},
+        :id => "tabv-#{tab[:name]}",
+        :class => (tab[:name] != selected_tab ? nil : 'selected'),
+        :onclick => "showTabV('#{tab[:name]}'); this.blur(); return false;" %>
+    </li>
+  <% end -%>
+  </ul>
+</div>
+
+
+
+<% tabs.each do |tab| -%>
+  <%= content_tag('div', render(:partial => tab[:partial], :locals => {:tab => tab} ),
+     :id => "tabv-content-#{tab[:name]}",
+     :style => (tab[:name] != selected_tab ? 'display:none' : nil),
+     :class => 'tabv-content') %>
+<% end -%>
+<div class="clearboth"></div>

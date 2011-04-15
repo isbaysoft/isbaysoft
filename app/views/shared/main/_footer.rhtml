@@ -1,0 +1,50 @@
+<div class="wrap_wide bg_footer">
+<div class="wrap">
+<!-- Begin footer -->
+<div class="footer">
+<!-- Begin first footer widget -->
+<div class="widget_footer">
+<div class="heading_holder icon_topdownloads_24"> <h2>Навигация</h2></div>
+<ul>
+  <% main_menu.map do |menuitem| %>
+    <li><%= link_to menuitem[0] , menuitem[1], :class => "sm" -%></li>
+  <% end %>
+</ul>
+</div>
+<!-- End first footer widget -->
+<!-- Begin second footer widget -->
+<div class="widget_footer">
+<div class="heading_holder icon_topdownloads_24"> <h2>Навигация</h2></div>
+<ul>
+    <li><a href="#">Documentation</a></li>
+    <li><a href="#">Plugins</a></li>
+    <li><a href="#">Suggest Ideas</a></li>
+    <li><a href="#">Support Forum</a></li>
+    <li class="no-border"><a href="#">WordPress Planet</a></li>
+</ul>
+</div>
+<!-- End second footer widget -->
+</div>
+<!--End footer -->
+</div>
+</div>
+<!--End content -->
+<!--End main wrapper -->
+
+<div class="wrap_wide footer_copyright">
+<div class="wrap">
+<!-- Begin copyright -->
+
+<div class="copyright">
+  <p>Copyright <%= Time.now.year %> © isbaysoft</p>
+<ul>
+    <li><a class="twitter" href="#" title="Follow us on Twitter">Twitter</a></li>
+    <li><a class="rss" href="#" title="Subscribe to RSS feed">RSS feed</a></li>
+    <li><a class="go_top" href="#top" title="Go to top">Go to top &uarr;</a></li>
+</ul>
+</div>
+<!-- End copyright -->
+</div>
+
+</div>
+<!--End content -->

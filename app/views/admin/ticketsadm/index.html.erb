@@ -1,0 +1,42 @@
+<%#*admintickets controller%>
+<% content_for :toolbar do %>
+  <%= header_caption :caption => "#{controller_caption}", :icon_class => 'icon_ticket_48' -%>
+  <div class="clearboth"></div>
+Показывать тикеты: Все  |  Только новые
+<% end %>
+
+<% roundbox2 do -%>
+<table id="admintickets" width="100%">
+<tr>
+  <td valign="top" width="150px">
+    <h3 class="icon_user_32">Пользователи</h3>
+    <ol class="list_ol">
+    <% ticket_all_users.map do |row| %>
+      <li><%= link_to_remote row.email, :url => adminticket_url(row.id), :method => :GET -%></li>
+    <% end %>
+    </ol>
+    <h3 class="icon_guest_32">Гости</h3>
+    <ol class="list_ol">
+    <% ticket_guest.map do |row| %>
+      <li><%= link_to_remote row.email, :url => adminticket_url(row.id), :method => :GET -%></li>
+    <% end %>
+    </ol>
+  </td>
+  <td valign="top" width="150px">
+    <h3 class="icon_mail_post_32">Темы сообщений</h3>
+    <span id="note_subjects" class="silver">Для того чтобы отобразить темы сообщений выберите пользователя в панели слева</span>
+    <div id="ticket_subjects">
+    </div>
+  </td>
+  <td valign="top">
+    <h3 class="icon_comment_32">Сообщения</h3>
+    <span id="note_messages" class="silver">Для того чтобы отобразить сообщения выберите тему сообщения в панели слева</span>
+    <div id="ticket_messages">
+    </div>
+    <div id="ticket_sendmessage">
+      <%#= render :partial => 'admin/ticketsadm/form' -%>
+    </div>
+  </td>
+</tr>
+</table>
+<% end # end roundbox2%>

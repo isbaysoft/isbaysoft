@@ -1,0 +1,49 @@
+<%= include_tiny_mce_if_needed %>
+<%= hidden_field_tag 'task','post' %>
+<%= hidden_field_tag :file_id %>
+<%= form.hidden_field(:category_id, :id => "category_id", :value => 1) -%>
+<%= observe_field(:file_id,
+   :frequency => 0.5,
+   :url => { :controller => 'documents', :action => 'file_add', :document_id => @document },
+   :with => "id")
+%>
+<div class="box tabular settings">
+  <fieldset class="left" style="width: 70%"><legend></legend>
+    <%= form.error_messages -%>
+    <dl>
+      <dt><%= label_tag :name, t(:label_document_name) %></dt>
+      <dd><%= form.text_field :name, :class => 'edit' %></dd>
+      <dt> <%= label_tag :filelist_id, t(:label_document_files) %></dt>
+      <dd><%= render :partial => 'filelist_list', :locals => {:rows => @document.document_files} %></dd>
+      <dd><%= render :partial => 'filelist_info', :locals => {:document => @document} %></dd>
+      <br />
+      <dt><%= label_tag :category_id, t(:label_document_section_and_category) %></dt>
+      <dd><%= text_field_tag :category_name, @document.path_name, :size => 50,
+                :readonly => true,
+                :onclick => remote_function(:url => dialog_url('category'), :method => :GET),
+                :class => 'edit' %>
+      </dd>
+      <dt><%= label_tag :description, t(:label_description) %></dt>
+      <dd><%= form.text_area(:description, @text_area_default_size_for_description_big.update(:class => "mceEditor")) %></dd>
+      <br />
+    </dl>
+  </fieldset>
+  <fieldset><legend></legend>
+    <dt><%= label_tag :access_level, t(:label_document_access_for) %></dt>
+    <dd><%= form.select(:access_level, rules_for_select, {:include_blank => false}) %></dd>
+    <dt><%= label_tag :published, t(:label_document_publication) %></dt>
+    <dd><%= form.select(:published, options_yesno_tag(@document.published) ) %></dd>
+    <dt><%= label_tag :approved, t(:label_document_approved) %></dt>
+    <dd><%= form.select(:approved, options_yesno_tag(@document.approved) ) %></dd>
+    <dt><%= label_tag 'file[f]', t(:label_add_load_new_file) %></dt>
+    <dd><%= file_field_tag 'file[f]' %></dd>
+    <dt><%= label_tag 'fromarchive', t(:label_add_file_from_archive) %></dt>
+    <dd>
+        <%= link_to_function t(:button_add),
+          remote_function(:url => dialog_url('filelist',:except_document_files => @document.id ),
+          :method => :GET )
+        %>
+    </dd>
+  </fieldset>
+  <div class="clearboth"></div>
+</div>

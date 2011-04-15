@@ -1,0 +1,13 @@
+<div class="menu_header icon_sections_32">Резделы архива</div>
+<div class="leftsidemenu">
+<ul>
+  <% @sections.collect do |c| -%>
+    <% if document_section_current.to_i == c.id -%>
+      <li class="big bold bk_active"><%= h(c.name) -%></li>
+    <% else %>
+      <li class="big bold"><%= link_to(h(c.name), catalog_section_url(c.id), :class=>'silver_medium') -%></li>
+    <% end -%>
+  <% end unless @sections.nil? %>
+</ul>
+</div>
+

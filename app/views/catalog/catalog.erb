@@ -1,0 +1,19 @@
+<div class="menu_header icon_homecatalog_32">Каталог архива</div>
+<table class="catalog">
+<% @sections.in_groups_of(3, false) do |section_of| %>
+  <tr valign="top">
+    <% section_of.map do |row|  %>
+    <td>
+      <ol>
+      <div class="catalog_box">
+        <h3><%= row.name -%></h3>
+        <% getcategories(row.id).map do |row_category| %>
+          <li><%= link_to h(row_category.name), catalog_category_url(row.id,row_category.id) %></li>
+        <% end %>
+      </div>
+      </ol>
+    </td>
+    <% end %>
+  </tr>
+<% end %>
+</table>

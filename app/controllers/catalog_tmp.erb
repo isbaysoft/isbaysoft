@@ -1,0 +1,49 @@
+class CatalogController < MainApplicationController
+  layout = 'main'
+  $contents = ['main','greeting']
+
+  helper_method :section_current, :category_current, :active_link
+  before_filter :init_categories, :only => [:section, :show]
+  before_filter :require_user, :only => [:show]
+  before_filter :load_content
+
+  def download
+    @document = Document.find_by_id(params[:id])
+    raise DownloadFileNotFound unless @document
+    raise DownloadDenied unless @document.downloadable?(current_user)
+    @document.hits += 1
+    @document.save
+    params[:id] = @document.filelist_id
+    download_to(params)
+  end
+
+  def index
+
+  end
+
+  def section
+    conditions = ['(sections.id=?)',section_current] unless section_current == 0
+    conditions = ['(category_id=?)',category_current] unless category_current == 0
+    cookies["per_page_#{self.controller_name}"] = params[:per_page] if params[:per_page]
+    per_page = params[:per_page] || cookies["per_page_#{self.controller_name}"]
+    order = sort_column('name') + " " + sort_direction
+    @documents = Document.getrows :page => params[:page], :conditions => conditions, :per_page => 5, :order => order
+  end
+
+  def show
+    @document = Document.find(params[:document]);
+    render 'errors/filenotfound' and return unless @document.present?
+  end
+
+  private
+
+  def load_content
+    @contents = StaticContent.getrows
+  end
+
+  def init_categories
+    conditions = ['(sections.id=?)',section_current] unless section_current == 0
+    @categories = Category.find(:all,:conditions => ['section_id=?',section_current])
+  end
+
+end

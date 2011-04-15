@@ -1,0 +1,12 @@
+<%# Filelist controller -%>
+<%= hidden_field_tag 'task','post' %>
+<div class="box tabular settings">
+<fieldset><legend></legend>
+  <%= form.error_messages -%>
+  <dl>
+    <dt><%= label_tag :name, t(:label_filelist_select_file) -%></dt>
+    <dd><%= form.file_field :f %></dd>
+  </dl>
+</fieldset>
+</div>
+

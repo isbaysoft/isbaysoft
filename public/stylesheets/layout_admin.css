@@ -1,0 +1,41 @@
+root { 
+    display: block;
+}
+
+html, body {
+	margin:0;
+  	padding:0;
+  	border: 0px;
+  	width:100%;
+  	height:100%;
+}
+
+body {
+	background: white;
+	font-family:Tahoma,Verdana,Arial;
+	font-size:8pt;
+	color:#000000;
+}
+
+/* ------------------------ */
+#wrapper {
+  position:relative;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+#content {
+  padding: 10px 10px 40px 10px;
+}
+
+#footer {
+/*  position: relative;
+  margin-top: -128px;
+  height: 128px;*/
+}
+#header {
+  height: 90px;
+  width: 100%;
+}
+
+

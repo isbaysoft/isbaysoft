@@ -1,0 +1,13 @@
+<%= include_tiny_mce_if_needed %>
+<%= hidden_field_tag 'task','post' -%>
+<div class="box tabular settings">
+<fieldset><legend></legend>
+  <%= form.error_messages %>
+  <dl>
+    <dt><%= label_tag :name, t(:label_section_name) %></dt>
+    <dd><%= form.text_field :name, :class=>'edit' %></dd>
+    <dt><%= label_tag :description, t(:label_description) %></dt>
+    <dd><%= form.text_area(:description, @text_area_default_size_for_description.update(:class => "mceEditor") ) %></dd>
+  </dl>
+</fieldset>
+</div>

@@ -1,0 +1,330 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ru:
+  language: Русский язык
+  date:
+    formats:
+      default: "%d.%m.%Y"
+      short: "%d %b"
+      long: "%d %B %Y"
+
+    day_names: [воскресенье, понедельник, вторник, среда, четверг, пятница, суббота]
+    standalone_day_names: [Воскресенье, Понедельник, Вторник, Среда, Четверг, Пятница, Суббота]
+    abbr_day_names: [Вс, Пн, Вт, Ср, Чт, Пт, Сб]
+
+    month_names: [~, января, февраля, марта, апреля, мая, июня, июля, августа, сентября, октября, ноября, декабря]
+    # see russian gem for info on "standalone" day names
+    standalone_month_names: [~, Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь]
+    abbr_month_names: [~, янв., февр., марта, апр., мая, июня, июля, авг., сент., окт., нояб., дек.]
+    standalone_abbr_month_names: [~, янв., февр., март, апр., май, июнь, июль, авг., сент., окт., нояб., дек.]
+
+    order: [ :day, :month, :year ]
+
+  time:
+    formats:
+      default: "%a, %d %b %Y, %H:%M:%S %z"
+      time: "%H:%M"
+      short: "%d %b, %H:%M"
+      long: "%d %B %Y, %H:%M"
+
+    am: "утра"
+    pm: "вечера"
+
+  number:
+    format:
+      separator: ","
+      delimiter: " "
+      precision: 3
+
+    currency:
+      format:
+        format: "%n %u"
+        unit: "руб."
+        separator: "."
+        delimiter: " "
+        precision: 2
+
+    percentage:
+      format:
+        delimiter: ""
+        
+    precision:
+      format:
+        delimiter: ""
+
+    human:
+      format:
+        delimiter: ""
+        precision: 2
+      # Rails 2.2
+      # storage_units: [байт, КБ, МБ, ГБ, ТБ]
+
+      # Rails 2.3
+      storage_units:
+        # Storage units output formatting.
+        # %u is the storage unit, %n is the number (default: 2 MB)
+        format: "%n %u"
+        units:
+          byte:
+            one:   "байт"
+            few:   "байта"
+            many:  "байт"
+            other: "байта"
+          kb: "КБ"
+          mb: "МБ"
+          gb: "ГБ"
+          tb: "ТБ"
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "меньше минуты"
+      less_than_x_seconds:
+        one:   "меньше %{count} секунды"
+        few:   "меньше %{count} секунд"
+        many:  "меньше %{count} секунд"
+        other: "меньше %{count} секунды"
+      x_seconds:
+        one:   "%{count} секунда"
+        few:   "%{count} секунды"
+        many:  "%{count} секунд"
+        other: "%{count} секунды"
+      less_than_x_minutes:
+        one:   "меньше %{count} минуты"
+        few:   "меньше %{count} минут"
+        many:  "меньше %{count} минут"
+        other: "меньше %{count} минуты"
+      x_minutes:
+        one:   "%{count} минуту"
+        few:   "%{count} минуты"
+        many:  "%{count} минут"
+        other: "%{count} минуты"
+      about_x_hours:
+        one:   "около %{count} часа"
+        few:   "около %{count} часов"
+        many:  "около %{count} часов"
+        other: "около %{count} часа"
+      x_days:
+        one:   "%{count} день"
+        few:   "%{count} дня"
+        many:  "%{count} дней"
+        other: "%{count} дня"
+      about_x_months:
+        one:   "около %{count} месяца"
+        few:   "около %{count} месяцев"
+        many:  "около %{count} месяцев"
+        other: "около %{count} месяца"
+      x_months:
+        one:   "%{count} месяц"
+        few:   "%{count} месяца"
+        many:  "%{count} месяцев"
+        other: "%{count} месяца"
+      about_x_years:
+        one:   "около %{count} года"
+        few:   "около %{count} лет"
+        many:  "около %{count} лет"
+        other: "около %{count} лет"
+      over_x_years:
+        one:   "больше %{count} года"
+        few:   "больше %{count} лет"
+        many:  "больше %{count} лет"
+        other: "больше %{count} лет"
+      almost_x_years:
+        one:   "почти 1 год"
+        few:   "почти %{count} года"
+        many:  "почти %{count} лет"
+        other: "почти %{count} года"
+    prompts:
+      year: "Год"
+      month: "Месяц"
+      day: "День"
+      hour: "Часов"
+      minute: "Минут"
+      second: "Секунд"
+
+  activerecord:
+    models:
+      section: Менеджер разделов
+      category: Менеджер категорий
+      filelist: Менеджер файлов
+      document: Менеджер документов
+      user: Менеджер пользователей
+      usergroup: Менеджер групп пользователей
+    attributes:
+      section:
+        name: Название раздела
+        description: Описание
+      category:
+        name: Название категории
+        section: Раздел
+        description: Описание
+      filelist:
+        f_file_name: Файл
+      document:
+        name: Название документа
+        description: Описание
+      user:
+        rule_id: Роль пользователя
+        email: e-mail
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+      usergroup:
+        name: Название группы пользователей
+
+    errors:
+      template:
+        header:
+          one:   "%{model}: сохранение не удалось из-за %{count} ошибки"
+          few:   "%{model}: сохранение не удалось из-за %{count} ошибок"
+          many:  "%{model}: сохранение не удалось из-за %{count} ошибок"
+          other: "%{model}: сохранение не удалось из-за %{count} ошибки"
+
+        body: "Проблемы возникли со следующими полями:"
+
+      messages:
+        inclusion: "имеет непредусмотренное значение"
+        exclusion: "имеет зарезервированное значение"
+        invalid: "имеет неверное значение"
+        confirmation: "не совпадает с подтверждением"
+        accepted: "нужно подтвердить"
+        empty: "не может быть пустым"
+        blank: "не может быть пустым"
+        too_long:
+          one:   "слишком большой длины (не может быть больше чем %{count} символ)"
+          few:   "слишком большой длины (не может быть больше чем %{count} символа)"
+          many:  "слишком большой длины (не может быть больше чем %{count} символов)"
+          other: "слишком большой длины (не может быть больше чем %{count} символа)"
+        too_short:
+          one:   "недостаточной длины (не может быть меньше %{count} символа)"
+          few:   "недостаточной длины (не может быть меньше %{count} символов)"
+          many:  "недостаточной длины (не может быть меньше %{count} символов)"
+          other: "недостаточной длины (не может быть меньше %{count} символа)"
+        wrong_length:
+          one:   "неверной длины (может быть длиной ровно %{count} символ)"
+          few:   "неверной длины (может быть длиной ровно %{count} символа)"
+          many:  "неверной длины (может быть длиной ровно %{count} символов)"
+          other: "неверной длины (может быть длиной ровно %{count} символа)"
+        taken: "уже существует"
+        not_a_number: "не является числом"
+        greater_than: "может иметь значение большее %{count}"
+        greater_than_or_equal_to: "может иметь значение большее или равное %{count}"
+        equal_to: "может иметь лишь значение, равное %{count}"
+        less_than: "может иметь значение меньшее чем %{count}"
+        less_than_or_equal_to: "может иметь значение меньшее или равное %{count}"
+        odd: "может иметь лишь нечетное значение"
+        even: "может иметь лишь четное значение"
+        greater_than_start_date: "должна быть позднее даты начала"
+        not_same_project: "не относится к одному проекту"
+        circular_dependency: "Такая связь приведет к циклической зависимости"
+        cant_link_an_issue_with_a_descendant: "Задача не может быть связана со своей подзадачей"
+
+  support:
+    array:
+      # Rails 2.2
+      sentence_connector: "и"
+      skip_last_comma: true
+      
+      # Rails 2.3
+      words_connector: ", "
+      two_words_connector: " и "
+      last_word_connector: " и "
+
+  global_default_select_empty: Пусто
+  global_yes: Да
+  global_action_show: Просмотр
+  global_action_add: Добавление
+  global_action_edit: Редактирование
+  global_access_denied: Доступ запрещен
+  global_action_not_definitely: Имя действия не определенно
+  global_controller_alias_not_definitely: Имя контроллера не определенно
+  global_updating: Обновление данных
+
+  global_errors_not_definitely: Не задан обязательный параметр
+  global_errors_sitename: Название сайта
+  global_errors_adminemail: E-mail администратора
+  global_errors_domain: Домен
+
+
+  label_confirmation: Эта операция требует подтверждения
+  label_destroy_confirmation: Вы действительно хотите произвести операцию удаления?
+  label_login_email: e-mail
+  label_login_password: Пароль
+  label_login_password_change: Новый пароль
+  label_login_password_confirmation: Пароль еще раз
+  label_login_usergroup: Группа пользователя
+  label_login_rule: Роль пользователя (уровень прав)
+  label_login_activation: Активация пользователя
+  label_section_name: Название раздела
+  label_category_name: Название категории
+  label_category_section: Раздел
+  label_filelist_select_file: Выберите файл
+  label_document_name: Название документа
+  label_document_files: Файлы документа
+  label_document_section_and_category: Раздел / Категория
+  label_document_access_for: Доступ к документу
+  label_document_publication: Публикация
+  label_document_approved: Проверен
+  label_usergroup_name: Имя группы
+  label_description: Описание
+  label_add_file_from_archive: Добавить файл из архива
+  label_add_load_new_file: Загрузить новый файл
+
+  button_delete: Удалить
+  button_deactivate: Деактивировать
+  button_activate: Активировать
+  button_add: Добавить
+  button_load: Загрузить
+  button_activate_user: Активировать пользователя
+  button_deactivate_user: Деактивировать пользователя
+  button_on: Вкл.
+  button_off: Выкл.
+  button_new_document: Новый документ
+  button_new_content: Новая статья
+
+  notice_destroy_section: Раздел был успешно удален
+  notice_destroy_category: Категория была успешно удалена
+  notice_destroy_filelist: Файл был успешно удален
+  notice_destroy_document: Документ был успешно удален
+  notice_destroy_content: Контент был успешно удален
+  notice_destroy_user: Пользователь был успешно удален
+  notice_destroy_usergroup: Группа пользователей была успешно удалена
+  notice_select_user_activated: Выбранные пользователи активированы
+  notice_select_user_deactivated: Выбранные пользователи деактивированы
+  notice_destroy_document_file: Файл успешно удален из документа
+  
+  error_destroy_section: Раздел удалить не удалось
+  error_destroy_category: Категорию удалить не удалось
+  error_destroy_filelist: Файл удалить не удалось
+  error_destroy_document: Документ удалить не удалось
+  error_destroy_content: Контент удалить не удалось
+  error_destroy_user: Пользователя удалить не удалось
+  error_destroy_usergroup: Группу пользователей удалить не удалось
+  error_destroy_document_file: Файл не удалось удалить из документа
+
+  text_user_activated: Пользователь активирован
+  text_user_deactivated: Пользователь не активирован
+  text_filelist_filecount: Всего файлов
+  text_filelist_summary_filesize: Сумарный объем
+  text_no_data: Нет данных
+  
+  controller_sections_name: Менеджер разделов
+  controller_categories_name: Менеджер категорий
+  controller_filelists_name: Менеджер файлов
+  controller_documents_name: Менеджер документов
+  controller_userlists_name: Менеджер пользователей
+  controller_usergroups_name: Менеджер групп пользователей
+  controller_configs_name: Системные настройки
+
+  field_filename: Имя файла
+  field_filesize: Размер файла
+  field_filetype: Тип файла
+
+  dialog_category: Выбор категории
+  dialog_file: Выбор файла
+
+  tab_options: Основные наснастройки
+  tab_notify: Оповещение
+  tab_notify_activate_user: Активация пользователя
+  tab_notify_deactivate_user: Деактивация пользователя
+
+

@@ -1,0 +1,5 @@
+<%# Category controller %>
+<% form_for @category, category_url, :html => {:name =>'adminForm'} do |f| %>
+  <%= render :partial =>'form', :object => f %>
+<% end %>
+<%= render :partial => 'shared/admin/toolbar_action', :locals => {:icon_class => "icon_folder_document_48"} %>

@@ -1,0 +1,5 @@
+page['file_id'].value = 0
+page.insert_html :bottom, 'documentfilelist', :partial => 'admin/documents/filelist_row', :locals => {:row => @docfile}
+page.visual_effect :highlight, "id#{@docfile.id}", :duration=>2
+
+

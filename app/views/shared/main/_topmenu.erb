@@ -1,0 +1,5 @@
+<ul class="kwicks">
+  <% main_menu.map do |menuitem| %>
+    <li id="<%=menuitem[2]%>"><%= link_to menuitem[0], menuitem[1] -%></li>
+  <% end %>
+</ul>

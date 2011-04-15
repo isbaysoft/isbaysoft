@@ -1,0 +1,15 @@
+<%# users controller %>
+<% form_for @user, :url => userlist_url, :html => {:name =>'adminForm'} do |f| %>
+  <%= render :partial =>'form', :object => f %>
+<% end %>
+<% content_for :toolbar_additional do %>
+  <%= btn(:icon_class=>'icon_activate_32',
+    :caption => t(:button_on),
+    :title => t(:button_activate_user),
+    :onclick=>"submitaction('#{activate_userlist_url(@user_id)}')") unless @user.access %>
+  <%= btn(:icon_class=>'icon_deactivate_32', 
+    :caption => t(:button_off),
+    :title => t(:button_deactivate_user),
+    :onclick=>"submitaction('#{deactivate_userlist_url(@user_id)}')") if @user.access %>
+<% end %>
+<%= render :partial => 'shared/admin/toolbar_action', :locals => {:icon_class => 'icon_users_48'} -%>

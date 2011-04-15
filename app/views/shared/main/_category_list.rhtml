@@ -1,0 +1,10 @@
+<div id="category_list">
+<h3 class="icon_document_down_24">ИНТЕРНЕТ</h3>
+<div>
+  <%= link_to 'Все', catalog_section_url(document_section_current), :class => active_link(document_category_current.to_i == 0) -%>
+  <% @categories.map do |c| -%>
+    | <%= link_to c.name, catalog_category_url(c.section_id,c.id), :class => active_link(document_category_current.to_i == c.id) -%>
+  <% end -%>
+</div>
+</div>
+

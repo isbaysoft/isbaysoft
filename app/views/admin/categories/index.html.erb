@@ -1,0 +1,25 @@
+<%# Category controller%>
+<% roundbox2 do -%>
+  <%= render :partial => 'shared/admin/panel_table', :locals => {:per_page => @categories.per_page} %>
+  <% form_for 'tasks', :url => category_url('destroy'), :html =>{ :method => :delete, :name=>'adminForm'} do -%>
+  <%= hidden_field_tag 'task','0' %>
+  <% show_model_table(@categories,
+    [['name','Название'],
+     ['description','Описание'],
+     ['section_name','Раздел']],
+    :class => 'grid',
+    :cellpadding => 0, :cellspacing => 0, :border => 0,
+    :numeration => '№', :checkbox => 'ids[]'
+   ) do |row,counter|  -%>
+    <tr class="<%= tr_cycle_wrong row %>"<%= 'id="after_edit"' if flash[:edited].to_s == row.id.to_s  -%> >
+      <td width="2%"><%= counter -%></td>
+      <td width="2%"><%= check_box_tag('ids[]',row.id) %></td>
+      <td><%= link_to(row.name.to_s, edit_category_url(row.id)) -%></td>
+      <td><%= row.description.to_s %></td>
+      <td><%= row.section_name.to_s %></td>
+    </tr>
+  <% end %>
+  <%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @categories, :icon_class => 'icon_folder_document_48' } %>
+  <% end %>
+<% end %>
+<%= javascript_tag(visual_effect(:highlight,:after_edit, :duration => 1.3)) if flash[:edited] %>

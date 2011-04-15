@@ -1,0 +1,10 @@
+<% @contents.select {|item| content_for == item.position}.collect do |row| %>
+<div class="content_row">
+  <div class="content_row_title">
+    <h2><%= h row.name %></h2>
+  </div>
+  <div class="content_row_text">
+    <%= row.content %>
+  </div>
+</div><br />
+<% end %>

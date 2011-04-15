@@ -1,0 +1,9 @@
+<tr height="24px" <%= 'class="ticket_table_tr_q"' if tb.atype == 1 -%>">
+  <td width="80px" valign="top">
+    <%= tb.s_type -%><br />
+    <span class="n silver_medium normal"><%= tb.created_at.to_formatted_s(:short) -%></span>
+  </td>
+  <td valign="top">
+    <%= h(tb.message) -%>
+  </td>
+</tr>

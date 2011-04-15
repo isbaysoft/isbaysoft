@@ -1,0 +1,14 @@
+<html>
+<body>
+
+  Спасибо за регистрацию на сайте <b><%= @sitename -%></b><br />
+  Для того чтобы активировать ваш аккаунт перейдите по ссылке указанной ниже.
+<p>
+  <%= link_to 'Кликните тут чтобы активировать аккаут', activate_user_url(@user.id,:activation_code => @user.persistence_token) -%><br />
+</p><br /><br />
+
+C Ув. админстрация сайта <b><%= @sitename -%></b><br />
+<%= Time.new.to_formatted_s(:short) %>
+
+</body>
+</html>

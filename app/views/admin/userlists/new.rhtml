@@ -1,0 +1,5 @@
+<%# userlist controller %>
+<% form_for @user, :url => userlists_url, :html => {:name =>'adminForm'} do |f| %>
+  <%= render :partial =>'form', :object => f -%>
+<% end %>
+<%= render :partial => 'shared/admin/toolbar_action', :locals => {:icon_class => 'icon_users_48'} -%>

@@ -1,0 +1,17 @@
+<%= include_tiny_mce_if_needed %>
+<%= hidden_field_tag 'task','post' -%>
+<div class="box tabular settings">
+<fieldset><legend></legend>
+  <%= form.error_messages -%>
+  <dl>
+    <dt><%= label_tag :name, 'Название' %></dt>
+    <dd><%= form.text_field :name, :class=>'edit' %></dd>
+
+    <dt><%= label_tag :position, 'Позиция' %></dt>
+    <dd><%= form.select(:position, ss, {:include_blank => t(:global_default_select_empty)}, {:size => 10, :class => 'select'}) %></dd>
+
+    <dt><%= label_tag :content, 'Описание' %></dt>
+    <dd><%= form.text_area(:content, @text_area_default_size_for_description_big.update(:class => "mceEditor") ) %></dd>
+  </dl>
+</fieldset>
+</div>

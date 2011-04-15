@@ -1,0 +1,30 @@
+<fieldset><legend>Настройки сайта</legend>
+  <dl>
+    <dt><%= label_tag 'options[sitename]', 'Название сайта' %></dt>
+    <dd>
+      <%= text_field_tag 'options[sitename]', cfg_read_value('sitename'), :class => 'edit' %>
+      <span class="help_note">(например Мой файловый архив)</span>
+    </dd>
+    <dt><%= label_tag 'options[adminemail]', 'e-mail администратора' %></dt>
+    <dd>
+      <%= text_field_tag 'options[adminemail]', cfg_read_value('adminemail'), :class=>'edit' %>
+      <span class="help_note">(на этот адрес будут высылаться сообщения администратору)</span>
+    </dd>
+    <dt><%= label_tag 'options[domain]', 'Домен сайта' %></dt>
+    <dd>
+      <%= text_field_tag 'options[domain]', cfg_read_value('domain'), :class=>'edit' %>
+      <span class="help_note">(например myfiles.com)</span>
+    </dd>
+  </dl>
+</fieldset>
+<fieldset><legend>Регистрация пользователей</legend>
+  <%= radio_button_tag 'options[user_reg_type]', 'type_auto', cfg_read_value('user_reg_type') == 'type_auto' -%>
+  <%= label_tag :options_user_reg_type_type_auto, 'Автоматическая активация', :class => 'mt5 ml5' -%>
+  <span class="help_note">(При регистрации высылается запрос на активацию учетной записи пользователя)</span>
+  <br /><br />
+  <%= radio_button_tag 'options[user_reg_type]', 'type_manual', cfg_read_value('user_reg_type') == 'type_manual' -%>
+  <%= label_tag :options_user_reg_type_type_manual, 'Ручная активация', :class => 'mt5 ml5' -%>
+  <span class="help_note">(Учетная запись пользователя активируется администратором системы вручную)</span>
+  <br /><br />
+</fieldset>
+<div class="clearboth">&nbsp;</div>

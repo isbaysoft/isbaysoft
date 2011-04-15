@@ -1,0 +1,25 @@
+<% cols = 4 %>
+<% td_percent = 100 / cols %>
+<fieldset class="fieldset_top_line" >
+  <legend>Разделы</legend>
+  <div style="overflow-y: scroll; width: 100%; max-height: 100px;">
+    <table width="100%" cellspacing="0px">
+    <% @dialogdata.in_groups_of(cols, false) do |row| %>
+      <tr>
+        <% row.map do |r| %>
+          <td width="<%="#{td_percent}%"%>">
+            <%= link_to_remote h(r.name), :url => dialog_url('fetch_category', :id => r.id ),
+              :update => 'dialog_category_list', :html => {:class => 'itemselect'} %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+</fieldset>
+<fieldset class="fieldset_top_line" style="display: block; width: 96%;">
+  <legend>Категории</legend>
+  <div id="dialog_category_list">
+    
+  </div>
+</fieldset>

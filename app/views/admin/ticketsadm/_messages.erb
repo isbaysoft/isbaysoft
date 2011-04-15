@@ -1,0 +1,13 @@
+<table width="100%">
+<% messages.map do |row| %>
+  <tr class="<%= cycle('even','odd')%> ">
+    <td class="brd-right n silver" width="150px;">
+      <%= row.created_at.to_formatted_s(:long) -%>
+    </td>
+    <td class="n dark">
+      <%= row.message -%>
+    </td>
+  </tr>
+<% end %>
+</table>
+

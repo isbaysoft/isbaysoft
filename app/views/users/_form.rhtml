@@ -1,0 +1,9 @@
+  <%= label_tag :email, 'e-mail', :class=>'prop_key' %>
+  <%= form.text_field :email, :class=>'prop_value' %>
+  <br /><br />
+  <%= label_tag :password, form.object.new_record? ? 'password' : "Change password", :class=>'prop_key' %>
+  <%= form.password_field :password, :class=>'prop_value' %>
+  <br /><br />
+  <%= label_tag :password_confirmation, 'password_confirmation', :class=>'prop_key' %>
+  <%= form.password_field :password_confirmation, :class=>'prop_value' %>
+

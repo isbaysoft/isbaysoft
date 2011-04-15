@@ -1,0 +1,5 @@
+<ol class="list_ol">
+<% subjects.map do |row| %>
+  <li><%= link_to_remote row.subject, :url => messages_adminticket_url(row.id.to_i) -%></li>
+<% end %>
+</ol>

@@ -1,0 +1,9 @@
+<% content_for :railslogo do %>
+ <%= image_tag("/images/admin/rails.gif") %>
+<% end %>
+
+<% content_for :footerbody do %>
+ <%= content_tag(:div,yield(:railslogo),:id => 'railslogo') %>
+<% end %>
+
+<%= content_tag(:div,yield(:footerbody), :id => 'footer_bk') %>

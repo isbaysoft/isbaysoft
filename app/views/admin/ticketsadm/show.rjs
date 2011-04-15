@@ -1,0 +1,6 @@
+page.replace_html 'ticket_subjects', :partial => 'admin/ticketsadm/subjects', :locals => {:subjects => @subjects}
+page['ticket_messages'].innerHTML = ''
+page['note_subjects'].hide
+page['note_messages'].show
+
+

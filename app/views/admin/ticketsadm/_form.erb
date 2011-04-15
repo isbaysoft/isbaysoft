@@ -1,0 +1,7 @@
+<h3>Отправить сообщение</h3><br />
+<%# remote_form_for :sendform, admintickets_url do |f|%>
+<% remote_form_for :sendform, :remote => true, :url => admintickets_url do |f| %>
+  <%= hidden_field_tag 'sendform[ticket_id]', ticket_id -%>
+  <%= f.text_area 'message' -%><br /><br />
+  <%= submit_tag 'Ответить', :class=>'button'; -%>
+<% end %>

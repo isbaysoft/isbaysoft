@@ -1,0 +1,10 @@
+<h1>Register</h1>
+<% if user_count == 0 %>
+<h3>Внимание! Это первый аккаунт в системе. Введенные регистрационные данные будут иметь права супер пользователя.</h3>
+<% end %>
+
+<% form_for @user, :url => account_path do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => "form", :object => f %>
+  <%= f.submit "Register" %>
+<% end %>

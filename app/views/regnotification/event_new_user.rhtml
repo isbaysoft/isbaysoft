@@ -1,0 +1,13 @@
+<html>
+<body>
+Новый пользователь зарегестрировался на сайте! <br />
+Зайди в админку и активизируй его если надо. <br /><br />
+<p>
+  <%= link_to 'Перейти в админку', administrator_url %><br />
+  <%= link_to 'Перейти в менеджер пользователей', userlists_url %><br />
+  <%= link_to 'Перейти в менеджер пользователей (редактирование)', edit_userlist_url(@user.id) %><br />
+</p><br /><br />
+
+<%= Time.new.to_formatted_s(:short) %>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<div id="ticket_sendmessage" class="ticket_box_in">
+  <fieldset><h3>Отправка нового сообщения</h3>
+    <% remote_form_for :new_ticket, :url => tickets_url do |f| %>
+      <%= f.error_messages %>
+
+      <% unless current_user %>
+        <%= label_tag :email, 'e-mail', :class => "prop_key" -%>
+        <%= f.text_field :email, :class => "prop_value" -%>
+        <br style="clear: left" /><br />
+      <% end %>
+
+      <%= label_tag :subject, 'Заголовок', :class => "prop_key" -%>
+      <%= f.text_field :subject, :class => "prop_value" -%>
+      <br style="clear: left" /><br />
+
+      <%= label_tag :message, 'Сообщение', :class => "prop_key" -%>
+      <% fields_for :ticket_messages do |tt| %>
+        <%= tt.text_area :message, :rows => 5, :class => "prop_value" -%>
+      <% end %>
+      <br style="clear: left" />
+      <br />
+      <%= label_tag :message, 'Отправить сообщение', :class => "prop_key" -%>
+      <%= image_submit_tag('/images/main/icons/32/send24x32.png', :style=>"border: none", :class=>"ml5") %>
+
+    <% end %>
+  </fieldset>
+</div>

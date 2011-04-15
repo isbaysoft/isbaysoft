@@ -1,0 +1,127 @@
+<%# administrator controller -%>
+<% content_for :toolbar do %>
+  <%= render :partial => 'shared/drop' %>
+<fieldset class="left"><legend>Панель управления</legend>
+<table class="admin_toolbar" cellpadding="10px">
+  <tr>
+    <td valign="bottom"><span class="icon_folder_48">&nbsp;</span>
+      <%= link_to_allow 'Менеджер разделов', sections_url, current_user.allow('Administrator') -%>
+    </td>
+    <td valign="bottom"><span class="icon_folder_document_48">&nbsp;</span>
+      <%= link_to_allow 'Менеджер категорий', categories_url, current_user.allow('Administrator') -%>
+    </td>
+    <td valign="bottom"><span class="icon_hard_48">&nbsp;</span>
+      <%= link_to_allow 'Менеджер файлов', filelists_url, current_user.allow('Administrator') -%>
+    </td>
+  </tr>
+  <tr>
+    <td valign="bottom"><span class="icon_document_48">&nbsp;</span>
+      <%= link_to_allow 'Менеджер документов', documents_url, current_user.allow('Administrator') -%>
+    </td>
+    <td valign="bottom"><span class="icon_content_48">&nbsp;</span>
+      <%= link_to_allow 'Статический контент', contents_url, current_user.allow('Moderator') -%>
+    </td>
+    <td valign="bottom"><span class="icon_home_48">&nbsp;</span><%= link_to 'Перейти на сайт', home_url, :target => 'blank' -%></td>
+  </tr>
+  <tr>
+    <td valign="bottom"><span class="icon_users_48">&nbsp;</span>
+      <%= link_to_allow 'Менеджер пользователей', userlists_url, current_user.allow('Administrator')  -%>
+    </td>
+    <td valign="bottom"><span class="icon_user_group_48">&nbsp;</span>
+      <%= link_to_allow 'Группы пользователей', usergroups_url, current_user.allow('Administrator') -%>
+    </td>
+    <td valign="bottom"><span class="icon_logout_48">&nbsp;</span><%= link_to 'Выход', logout_url -%></td>
+  </tr>
+  <tr>
+    <td valign="bottom"><span class="icon_config_48">&nbsp;</span>
+      <%= link_to_allow 'Системные настройки', config_url, current_user.allow('Sa') -%>
+    </td>
+    <td valign="bottom"><span class="icon_document_48">&nbsp;</span>
+      <%= link_to_allow t(:button_new_document), new_document_url, current_user.allow('Administrator') -%>
+    </td>
+    <td valign="bottom"><span class="icon_content_48">&nbsp;</span>
+      <%= link_to_allow t(:button_new_content), new_content_url, current_user.allow('Moderator') -%>
+    </td>
+  </tr>
+</table>
+</fieldset>
+<fieldset class="left"><legend>Панель информации</legend>
+<% if @show_attention %>
+<fieldset><legend class="attention icon_attention_24">Внимание!!!</legend>
+  <table class="table_info">
+    <tr>
+      <td><span class="grey">Файлов без документов: </span></td>
+      <td><span class="dark bold"><%= @files_without_document_count -%></span></td>
+    </tr>
+  </table>
+</fieldset>
+<% end %>
+<fieldset><legend>Состояние архива</legend>
+  <table class="table_info">
+    <tr>
+      <td><span class="grey">Документов в архиве: </span></td>
+      <td><span class="dark bold"><%= @documents_count -%></span></td>
+    </tr>
+    <tr>
+      <td><span class="grey">Документов опубликовано: </span></td>
+      <td><span class="dark bold"><%= @published_docuemnt_count %></span></td>
+    </tr>
+    <tr>
+      <td><span class="grey">Документов проверенно: </span></td>
+      <td><span class="dark bold"><%= @approved_document_count %></span></td>
+    </tr>
+    <tr>
+      <td><span class="grey">Файлов всего архиве: </span></td>
+      <td><span class="dark bold"><%= @files_count -%></span></td>
+    </tr>
+    <tr>
+      <td><span class="grey">Суммарный объем файлов в архиве: </span></td>
+      <td><span class="dark bold"><%= number_to_human_size(@sum_files_size) -%></span></td>
+    </tr>
+    <tr>
+      <td><span class="grey">Пользователей в системе: </span></td>
+      <td><span class="dark bold"><%= @users_cout %></span></td>
+    </tr>
+  </table>
+</fieldset><br />
+<fieldset><legend>Популярные документы</legend>
+  <table class="table_info">
+    <tr><th>Документ</th><th>Добавлен</th><th>Хиты</th></tr>
+    <% @popular_documents.collect do |row| %>
+    <tr>
+      <td><%= link_to row.name, edit_document_url(row.id) -%></td>
+      <td><%= row.created_at.to_date.to_formatted_s(:long) -%></td>
+      <td align="right"><%= row.hits.to_i -%></td>
+    </tr>
+    <% end %>
+  </table>  
+</fieldset><br />
+<fieldset><legend>Последние добавленные документы</legend>
+  <table class="table_info">
+    <tr><th>Документ</th><th>Добавлен</th><th>Хиты</th></tr>
+    <% @last_documents.collect do |row| %>
+    <tr>
+      <td><%= link_to row.name, edit_document_url(row.id) -%></td>
+      <td><%= row.created_at.to_date.to_formatted_s(:long) -%></td>
+      <td align="right"><%= row.hits.to_i -%></td>
+    </tr>
+    <% end %>
+  </table>
+</fieldset><br />
+<fieldset><legend>Последние загруженные файлы</legend>
+  <table class="table_info">
+    <tr><th>Файл</th><th>Добавлен</th><th>Размер</th></tr>
+    <% @last_files.collect do |row| %>
+    <tr>
+      <td><%= link_to row.f_file_name, download_filelist_url(row.id) -%></td>
+      <td><%= row.created_at.to_date.to_formatted_s(:long) -%></td>
+      <td align="right"><%= number_to_human_size(row.f_file_size) -%></td>
+    </tr>
+    <% end %>
+  </table>
+</fieldset><br />
+
+  
+</fieldset>
+<div class="clearboth">&nbsp;</div>
+<% end %>

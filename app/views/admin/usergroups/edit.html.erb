@@ -1,0 +1,5 @@
+<%# Usergroup controller %>
+<% form_for @usergroup, :url => usergroup_url, :html => {:name =>'adminForm'} do |f| %>
+  <%= render :partial =>'form', :object => f %>
+<% end %>
+<%= render :partial => 'shared/admin/toolbar_action', :locals => {:icon_class => 'icon_user_group_48'} -%>

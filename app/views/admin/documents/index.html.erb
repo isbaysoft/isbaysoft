@@ -1,0 +1,40 @@
+<%# Document controller %>
+<% roundbox2 do -%>
+  <%= render :partial => 'shared/admin/panel_table', :locals => { :per_page => @documents.per_page } %>
+  <% form_for 'tasks', :url => document_url('destroy'), :html =>{:method => :delete, :name=>'adminForm' } do -%>
+   <%= hidden_field_tag 'task','0' %>
+   <% show_model_table(@documents,
+    [['name','Заголовок'],
+     ['f_file_name','Файлов'],
+     ['section_name','Раздел'],
+     ['category_name','Категория'],
+     ['rules.name','Доступ'],
+     ['updated_at','Дата'],
+     ['published','Публикация'],
+     ['approved','Проверен'],
+     ['f_file_size','Размер'],
+     ['hits','Хинты']
+    ],
+    :class => 'grid',
+    :cellpadding => 0, :cellspacing => 0, :border => 0,
+    :numeration => '№', :checkbox => 'ids[]'
+   ) do |row,counter|  -%>
+   <tr <%= 'id="after_edit"' if flash[:edited].to_s == row.id.to_s  %> >
+     <td align="center" width="2%"><%= counter -%></td>
+     <td width="2%"><%= check_box_tag('ids[]',row.id) %></td>
+     <td><%= link_to(row.name, edit_document_url(row.id)) -%></td>
+     <td><%= row.filelists.count -%></td>
+     <td><%= row.section.name unless row.section.nil? -%></td>
+     <td><%= row.category.name unless row.category.nil? -%></td>
+     <td><%= row.rule.name -%></td>
+     <td><%= row.updated_at.to_formatted_s(:short) -%></td>
+     <td><%= check_box_tag("published_#{row.id}",row.published,row.published,:disabled => true) -%></td>
+     <td><%= check_box_tag("approved_#{row.id}",row.approved,row.approved,:disabled => true) -%></td>
+     <td><%= number_to_human_size(row.filelists.sum('f_file_size')) -%></td>
+     <td><%= row.hits.to_i -%></td>
+   </tr>
+   <% end %>
+  <%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @documents, :icon_class => 'icon_document_48' } %>
+  <% end %>
+<% end %>
+<%= javascript_tag(visual_effect(:highlight,:after_edit, :duration => 1.3)) if flash[:edited] %>

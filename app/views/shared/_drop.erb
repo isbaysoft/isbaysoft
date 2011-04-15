@@ -1,0 +1,40 @@
+!-- IN MY VIEW -->
+<h2>Drag and drop upload</h2>
+
+<div id="drop">
+  <h2>Drop Files Here</h2>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  var dropbox = document.getElementById("drop");
+  drop = function(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+    var files = evt.dataTransfer.files;
+    var count = files.length;
+    if (count > 0) {
+        // handleFiles(files);
+      var url = 'admin/administrator/raw';
+      var request = new XMLHttpRequest();
+      request.open("POST",  url, true); // open asynchronous post request
+      request.send(files[0]);
+    }
+  }
+  dragEnter = function(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+  }
+  dragExit = function(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+  }
+  dragOver = function(evt) {
+    evt.stopPropagation();
+    evt.preventDefault();
+  }
+  // init event handlers
+  dropbox.addEventListener("dragenter", dragEnter, false);
+  dropbox.addEventListener("dragexit", dragExit, false);
+  dropbox.addEventListener("dragover", dragOver, false);
+  dropbox.addEventListener("drop", drop, false);
+</script>

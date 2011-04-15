@@ -1,0 +1,13 @@
+<table class="gridmini" style="width: 100%;" cellpadding="0" cellspacing="0">
+  <th><%= t(:field_filename) %></th>
+  <th><%= t(:field_filesize) %></th>
+  <th><%= t(:field_filetype) %></th>
+  <th></th>
+  <% @dialogdata.map do |e|  %>
+  <tr class="<%=cycle('odd','even')%>">
+    <td><%= link_to_function h(e.f_file_name), "dialog.select('file','name',#{e.id})" %></td>
+    <td><%= number_to_human_size(e.f_file_size) %></td>
+    <td><%= e.f_content_type %></td>
+  </tr>
+  <% end %>
+</table>

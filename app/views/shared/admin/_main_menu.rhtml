@@ -1,0 +1,39 @@
+<div id="main_menu">
+  <ul>
+    <li><a href="#" onmouseover="mopen('m1')"
+       onmouseout="mclosetime()"><%= current_user.rule_name %>&nbsp;<strong><%= current_user.email %></strong></a>
+        <div id="m1"
+            onmouseover="mcancelclosetime()"
+            onmouseout="mclosetime()">
+            <%= link_to 'Перейти на сайт', home_url, :target => 'blank' -%>
+            <%= link_to 'Панель управления', administrator_url -%>
+            <%= link_to_allow 'Менеджер пользователей', userlists_url, current_user.allow('Administrator')  -%>
+            <%= link_to_allow 'Группы пользователей', usergroups_url, current_user.allow('Administrator') -%>
+            <%= link_to_allow 'Системные настройки', config_url, current_user.allow('Sa') -%>
+            <%= link_to 'Logout', logout_url -%>
+        </div>
+    </li>
+    <li><a href="#"
+        onmouseover="mopen('m2')"
+        onmouseout="mclosetime()">Администрирование</a>
+        <div id="m2"
+            onmouseover="mcancelclosetime()"
+            onmouseout="mclosetime()">
+            <%= link_to_allow 'Менеджер разделов', sections_url, current_user.allow('Administrator') -%>
+            <%= link_to_allow 'Менеджер категорий', categories_url, current_user.allow('Administrator') -%>
+            <%= link_to_allow 'Менеджер файлов', filelists_url, current_user.allow('Administrator') -%>
+            <%= link_to_allow 'Менеджер документов', documents_url, current_user.allow('Administrator') -%>
+
+        </div>
+    </li>
+    <li><a href="#" onmouseover="mopen('m3')" onmouseout="mclosetime()">Управление контентом</a>
+      <div id="m3"
+            onmouseover="mcancelclosetime()"
+            onmouseout="mclosetime()">
+            <%= link_to_allow 'Статический контент', contents_url, current_user.allow('Moderator') -%>
+      </div>
+    </li>
+  </ul>
+</div>
+<div style="clear:both"></div>
+
