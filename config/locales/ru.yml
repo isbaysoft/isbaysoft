@@ -239,6 +239,7 @@ ru:
   global_controller_alias_not_definitely: Имя контроллера не определенно
   global_updating: Обновление данных
 
+
   global_errors_not_definitely: Не задан обязательный параметр
   global_errors_sitename: Название сайта
   global_errors_adminemail: E-mail администратора

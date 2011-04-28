@@ -18,6 +18,8 @@ class Admin::AdministratorController < AdminApplicationController
   end
 
   def raw
+#     for drag-drop upload.
+#     in fufure
     name = "tmp_image.png"
     data = request.raw_post
     r = request.headers

@@ -277,37 +277,28 @@ ul.social li {
     padding: 0;
     display: block;
 }
-.kwickss li{
-    display: block;
-    overflow: hidden;
-    padding: 0;
-    height: 50px;
-    cursor: pointer;
-}
 /*end default*/
 
 .kwicks li{
 	float: left;
 	width: 100px;
-        line-height: 50px;
+        line-height: 55px;
 	margin-right: 5px;
 }
 #kwick1 {
     background:url(../images/main/icons/32/homecatalog.png) no-repeat 100px center ;
 }
 #kwick2 {
-    background:url(../images/main/icons/32/homecatalog.png) no-repeat 100px center ;
+    background:url(../images/main/icons/32/software.png) no-repeat 100px center ;
 }
 #kwick3 {
-    background:url(../images/main/icons/32/homecatalog.png) no-repeat 100px center ;
+    background:url(../images/main/icons/32/download2.png) no-repeat 100px center ;
 }
 #kwick4 {
-    background:url(../images/main/icons/32/homecatalog.png) no-repeat 100px center ;
+    background:url(../images/main/icons/32/help.png) no-repeat 100px center ;
 }
 #kwick5 {
-    background:url(../images/main/icons/32/homecatalog.png) no-repeat 100px center ;
+    background:url(../images/main/icons/32/social.png) no-repeat 100px center ;
 }
-
-
 
 /* END Kwicks menu 	*/

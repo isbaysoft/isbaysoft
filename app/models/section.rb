@@ -2,6 +2,7 @@ class Section < ActiveRecord::Base
   validates_presence_of :name, :description
 
   has_many :categories, :dependent => :destroy
+  has_many :documents, :dependent => :destroy
   
   cattr_reader :per_page
 

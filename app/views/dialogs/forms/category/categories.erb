@@ -5,7 +5,12 @@
   <tr>
     <% row.map do |r| %>
       <td width="<%="#{td_percent}%"%>">
-        <%= link_to_function h(r.name), "dialog.select('category','#{r.section.name} / #{r.name}',#{r.id})" %>
+        <%= link_to_function h(r.name), "dialog.select(#{
+          {
+            :category_name => r.name,
+            :category_id => r.id,
+            :section_id => r.section.id
+          }.to_json })" %>
       </td>
     <% end %>
   </tr>

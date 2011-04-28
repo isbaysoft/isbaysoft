@@ -9,12 +9,12 @@ var dialog = {
     new Effect.Appear('overlay', {duration: 0.2});
     new Effect.Appear('dialog', {duration: 0.2});
   },
-  select: function(element,value_name,value_id) {
-      if ($([element,'name'].join('_')))
-        $([element,'name'].join('_')).value = value_name;
-      
-      $([element,'id'].join('_')).value = value_id;
-      this.hide();
+  select: function(selected_values) {
+    for (var key in selected_values) {
+        if ($(key))
+            $(key).value = selected_values[key];
+        
+    }
+    this.hide();
   }
 }
-

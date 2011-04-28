@@ -9,7 +9,7 @@ class Document < ActiveRecord::Base
   validates_presence_of :description, :name
 
   named_scope :get, lambda { |id| { :conditions => ['documents.id = ?', id] } }
-  named_scope :getlist,  :include => [:section, :category, :rule, :filelists]
+  named_scope :getlist,  :include => [:section, :category, :rule]
   named_scope :section, lambda { |section_id| { :conditions => ['section_id = ?',section_id] }}
   named_scope :category, lambda { |category_id| {:conditions => ['categories.id=?',category_id]} unless category_id.nil? }
   named_scope :published, :conditions => 'documents.published=1'
@@ -19,7 +19,11 @@ class Document < ActiveRecord::Base
   cattr_reader :per_page
 
   @@per_page=30
-  
+
+  def section_name
+    self.section.present? ? self.section['name'] : I18n::t(:text_no_data)
+  end
+
   def downloadable?(user)
      user.rule_id <= self.access_level
   end
