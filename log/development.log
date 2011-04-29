@@ -47930,3 +47930,1047 @@ Rendered shared/main/_topmenu (0.0ms)
 Rendered shared/main/_topdownloads (15.6ms)
 Rendered shared/main/_footer (0.0ms)
 Completed in 78ms (View: 63, DB: 0) | 404 [http://localhost/images/footer_rss_icn.png]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CatalogController#catalog (for 127.0.0.1 at 2011-04-29 08:50:02) [GET]
+  Parameters: {"action"=>"catalog", "controller"=>"catalog"}
+  [4;36;1mSection Load (78.1ms)[0m   [0;1mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering catalog/catalog
+  [4;35;1mSection Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mCategory Load (93.8ms)[0m   [0;1mSELECT * FROM `categories` WHERE (section_id=34) [0m
+  [4;35;1mCategory Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (section_id=36) [0m
+  [4;35;1mUser Columns (93.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `perishable_token` = 'Adn31UefFgKvdgqaDbz', `last_request_at` = '2011-04-29 05:50:03' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/main/_sign (218.8ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;35;1mDocument Load (140.6ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (140.6ms)
+Rendered shared/main/_footer (15.6ms)
+Completed in 672ms (View: 219, DB: 422) | 200 OK [http://localhost/catalog]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 08:50:05) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "main", "arrow.png"], "controller"=>"main_application"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `perishable_token` = 'r6JAJ4T9jZL71okzFdrm', `last_request_at` = '2011-04-29 05:50:05' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Rendered shared/main/_sign (109.4ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;35;1mDocument Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (0.0ms)
+Rendered shared/main/_footer (15.6ms)
+Completed in 219ms (View: 203, DB: 0) | 404 [http://localhost/images/main/arrow.png]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 08:50:05) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "footer_twitter_icn.png"], "controller"=>"main_application"}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `perishable_token` = 'u8x1P4SQc7c6Hw96jGB', `last_request_at` = '2011-04-29 05:50:05' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/main/_sign (46.9ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (15.6ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 78ms (View: 63, DB: 0) | 404 [http://localhost/images/footer_twitter_icn.png]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 08:50:05) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "footer_rss_icn.png"], "controller"=>"main_application"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `perishable_token` = '5yUX04ejkjksv1sDMe', `last_request_at` = '2011-04-29 05:50:05' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Rendered shared/main/_sign (125.0ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;35;1mDocument Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (0.0ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 141ms (View: 125, DB: 0) | 404 [http://localhost/images/footer_rss_icn.png]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-29 08:52:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"products"}
+
+LoadError (Expected C:/andrew/ruby187/app/isbaysoft/app/controllers/products_controller.rb to define ProductsController):
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-04-29 08:53:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+  [4;35;1mStaticContent Load (93.8ms)[0m   [0mSELECT users.email as user_login,static_contents.* FROM `static_contents` join users on users.id=static_contents.user_id LIMIT 0, 30[0m
+Rendering template within layouts/main
+Rendering products/index
+Rendered shared/main/_promo (0.0ms)
+  [4;36;1mStaticContent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `static_contents`[0m
+Rendered shared/main/_content (15.6ms)
+Rendered shared/main/_greeting (15.6ms)
+Rendered shared/main/_content (0.0ms)
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `perishable_token` = '6tAgQP0GtE12dO6Q1cw5', `last_request_at` = '2011-04-29 05:53:20' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/main/_sign (31.3ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (15.6ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 203ms (View: 63, DB: 109) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 08:53:21) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "footer_rss_icn.png"], "controller"=>"main_application"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `perishable_token` = 'IhgIhGRPnrEqxtSjUXaI', `last_request_at` = '2011-04-29 05:53:21' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Rendered shared/main/_sign (46.9ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;35;1mDocument Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (15.6ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 94ms (View: 78, DB: 0) | 404 [http://localhost/images/footer_rss_icn.png]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 08:53:21) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "footer_twitter_icn.png"], "controller"=>"main_application"}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `perishable_token` = 'OHqfBeO4m6QRzxdS2JGc', `last_request_at` = '2011-04-29 05:53:21' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/main/_sign (46.9ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (15.6ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 78ms (View: 47, DB: 16) | 404 [http://localhost/images/footer_twitter_icn.png]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-04-29 08:56:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"products"}
+
+NameError (uninitialized constant ProductsController):
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2011-04-29 08:57:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+  [4;36;1mStaticContent Load (0.0ms)[0m   [0;1mSELECT users.email as user_login,static_contents.* FROM `static_contents` join users on users.id=static_contents.user_id LIMIT 0, 30[0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered shared/main/_promo (0.0ms)
+  [4;35;1mStaticContent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `static_contents`[0m
+Rendered shared/main/_content (15.6ms)
+Rendered shared/main/_greeting (15.6ms)
+Rendered shared/main/_content (0.0ms)
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `perishable_token` = '9JvkWzizkl1eu2IAe4Kg', `last_request_at` = '2011-04-29 05:57:22' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Rendered shared/main/_sign (31.3ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;35;1mDocument Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (15.6ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 94ms (View: 63, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 08:57:23) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "footer_twitter_icn.png"], "controller"=>"main_application"}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `perishable_token` = '5g6Jzj10SiQSuhrBhOe1', `last_request_at` = '2011-04-29 05:57:23' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/main/_sign (46.9ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (15.6ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 94ms (View: 63, DB: 0) | 404 [http://localhost/images/footer_twitter_icn.png]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 08:57:23) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "footer_rss_icn.png"], "controller"=>"main_application"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `perishable_token` = 'W5ly4jQQ4HS3gXQAWbM', `last_request_at` = '2011-04-29 05:57:23' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Rendered shared/main/_sign (109.4ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;35;1mDocument Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (0.0ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 156ms (View: 125, DB: 0) | 404 [http://localhost/images/footer_rss_icn.png]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2011-04-29 08:57:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+  [4;35;1mStaticContent Load (0.0ms)[0m   [0mSELECT users.email as user_login,static_contents.* FROM `static_contents` join users on users.id=static_contents.user_id LIMIT 0, 30[0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered shared/main/_promo (0.0ms)
+  [4;36;1mStaticContent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `static_contents`[0m
+Rendered shared/main/_content (0.0ms)
+Rendered shared/main/_greeting (0.0ms)
+Rendered shared/main/_content (0.0ms)
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `perishable_token` = 'xeBMM3vL3KHhJecdaFl', `last_request_at` = '2011-04-29 05:57:35' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/main/_sign (31.3ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (0.0ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 94ms (View: 47, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 08:57:35) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "footer_twitter_icn.png"], "controller"=>"main_application"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `perishable_token` = 'GW697UhLQWKVdSNFVkjh', `last_request_at` = '2011-04-29 05:57:36' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Rendered shared/main/_sign (46.9ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;35;1mDocument Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (0.0ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 141ms (View: 63, DB: 0) | 404 [http://localhost/images/footer_twitter_icn.png]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 08:57:36) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "footer_rss_icn.png"], "controller"=>"main_application"}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `perishable_token` = 'vBuBDFoDGECzypmjTUzX', `last_request_at` = '2011-04-29 05:57:36' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/main/_sign (46.9ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (15.6ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 94ms (View: 78, DB: 0) | 404 [http://localhost/images/footer_rss_icn.png]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#catalog (for 127.0.0.1 at 2011-04-29 08:58:02) [GET]
+  Parameters: {"action"=>"catalog", "controller"=>"main"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering main/catalog
+  [4;36;1mSection Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` WHERE (section_id=34) [0m
+  [4;36;1mCategory Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mDocument Load (15.6ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+
+ActionView::TemplateError (undefined method `catalog_category_url' for #<ActionView::Base:0xe48e968>) on line #11 of app/views/main/catalog.erb:
+8:       <div class="catalog_box">
+9:         <h3><%= row.name -%></h3>
+10:         <% getcategories(row.id).map do |row_category| %>
+11:           <li><%= link_to h(row_category.name), catalog_category_url(row.id,row_category.id) %></li>
+12:         <% end %>
+13:       </div>
+14:       </ol>
+
+    app/views/main/catalog.erb:11
+    app/views/main/catalog.erb:10:in `map'
+    app/views/main/catalog.erb:10
+    app/views/main/catalog.erb:5:in `map'
+    app/views/main/catalog.erb:5
+    app/views/main/catalog.erb:3
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2011-04-29 08:59:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+  [4;36;1mStaticContent Load (0.0ms)[0m   [0;1mSELECT users.email as user_login,static_contents.* FROM `static_contents` join users on users.id=static_contents.user_id LIMIT 0, 30[0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered shared/main/_promo (0.0ms)
+  [4;35;1mStaticContent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `static_contents`[0m
+Rendered shared/main/_content (0.0ms)
+Rendered shared/main/_greeting (0.0ms)
+Rendered shared/main/_content (0.0ms)
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `perishable_token` = 'UDZFmZnVJw5ZG05zK6p0', `last_request_at` = '2011-04-29 05:59:10' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Rendered shared/main/_sign (31.3ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;35;1mDocument Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (15.6ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 94ms (View: 16, DB: 47) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 08:59:11) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "footer_rss_icn.png"], "controller"=>"main_application"}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `perishable_token` = 'i18hYoO2QPfz5oqfeok', `last_request_at` = '2011-04-29 05:59:11' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/main/_sign (46.9ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (15.6ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 78ms (View: 63, DB: 0) | 404 [http://localhost/images/footer_rss_icn.png]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 08:59:11) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "footer_twitter_icn.png"], "controller"=>"main_application"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `perishable_token` = 's35fkReA2yx2DHg1W8hP', `last_request_at` = '2011-04-29 05:59:11' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Rendered shared/main/_sign (31.3ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;35;1mDocument Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (0.0ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 78ms (View: 63, DB: 0) | 404 [http://localhost/images/footer_twitter_icn.png]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2011-04-29 08:59:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+  [4;35;1mStaticContent Load (0.0ms)[0m   [0mSELECT users.email as user_login,static_contents.* FROM `static_contents` join users on users.id=static_contents.user_id LIMIT 0, 30[0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered shared/main/_promo (0.0ms)
+  [4;36;1mStaticContent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `static_contents`[0m
+Rendered shared/main/_content (0.0ms)
+Rendered shared/main/_greeting (0.0ms)
+Rendered shared/main/_content (0.0ms)
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `perishable_token` = 'Tj1Vg6Qfau7OauQ3XskR', `last_request_at` = '2011-04-29 05:59:51' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/main/_sign (31.3ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (15.6ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 156ms (View: 109, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 08:59:52) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "footer_twitter_icn.png"], "controller"=>"main_application"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `perishable_token` = 'SAZjWbAsNM5KGZRrcp8', `last_request_at` = '2011-04-29 05:59:52' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Rendered shared/main/_sign (46.9ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;35;1mDocument Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (15.6ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 78ms (View: 63, DB: 0) | 404 [http://localhost/images/footer_twitter_icn.png]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 08:59:52) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "footer_rss_icn.png"], "controller"=>"main_application"}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `perishable_token` = 'u6FSN4eT87k8Oi1uSlo', `last_request_at` = '2011-04-29 05:59:52' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/main/_sign (140.6ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (15.6ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 188ms (View: 172, DB: 0) | 404 [http://localhost/images/footer_rss_icn.png]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#catalog (for 127.0.0.1 at 2011-04-29 08:59:55) [GET]
+  Parameters: {"action"=>"catalog", "controller"=>"main"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering main/catalog
+  [4;36;1mSection Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` WHERE (section_id=34) [0m
+  [4;36;1mCategory Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+
+ActionView::TemplateError (undefined method `catalog_category_url' for #<ActionView::Base:0xe719c20>) on line #11 of app/views/main/catalog.erb:
+8:       <div class="catalog_box">
+9:         <h3><%= row.name -%></h3>
+10:         <% getcategories(row.id).map do |row_category| %>
+11:           <li><%= link_to h(row_category.name), catalog_category_url(row.id,row_category.id) %></li>
+12:         <% end %>
+13:       </div>
+14:       </ol>
+
+    app/views/main/catalog.erb:11
+    app/views/main/catalog.erb:10:in `map'
+    app/views/main/catalog.erb:10
+    app/views/main/catalog.erb:5:in `map'
+    app/views/main/catalog.erb:5
+    app/views/main/catalog.erb:3
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#products (for 127.0.0.1 at 2011-04-29 09:01:14) [GET]
+  Parameters: {"action"=>"products", "controller"=>"main"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering main/products
+  [4;36;1mSection Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` WHERE (section_id=34) [0m
+  [4;36;1mCategory Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+
+ActionView::TemplateError (undefined method `catalog_category_url' for #<ActionView::Base:0xe57bb48>) on line #11 of app/views/main/products.erb:
+8:       <div class="catalog_box">
+9:         <h3><%= row.name -%></h3>
+10:         <% getcategories(row.id).map do |row_category| %>
+11:           <li><%= link_to h(row_category.name), catalog_category_url(row.id,row_category.id) %></li>
+12:         <% end %>
+13:       </div>
+14:       </ol>
+
+    app/views/main/products.erb:11
+    app/views/main/products.erb:10:in `map'
+    app/views/main/products.erb:10
+    app/views/main/products.erb:5:in `map'
+    app/views/main/products.erb:5
+    app/views/main/products.erb:3
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Andrew/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#products (for 127.0.0.1 at 2011-04-29 09:01:45) [GET]
+  Parameters: {"action"=>"products", "controller"=>"main"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering main/products
+  [4;36;1mSection Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` WHERE (section_id=34) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (section_id=36) [0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `perishable_token` = 'm8oCM3mvAJmo6ALBJ6WO', `last_request_at` = '2011-04-29 06:01:45' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/main/_sign (31.3ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (15.6ms)
+  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (0.0ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 09:01:46) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "footer_twitter_icn.png"], "controller"=>"main_application"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `perishable_token` = 'IvvZxyLt12tfpPMoaAm', `last_request_at` = '2011-04-29 06:01:46' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Rendered shared/main/_sign (46.9ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;35;1mDocument Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (0.0ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 78ms (View: 47, DB: 16) | 404 [http://localhost/images/footer_twitter_icn.png]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 09:01:46) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "footer_rss_icn.png"], "controller"=>"main_application"}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `perishable_token` = 'cqSbalQhZr6faQLSbSyN', `last_request_at` = '2011-04-29 06:01:46' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/main/_sign (46.9ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (0.0ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 141ms (View: 63, DB: 0) | 404 [http://localhost/images/footer_rss_icn.png]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 09:01:46) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "main", "arrow.png"], "controller"=>"main_application"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `perishable_token` = '5dhbemtjy4Cvb44ZKO9', `last_request_at` = '2011-04-29 06:01:46' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Rendered shared/main/_sign (46.9ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;35;1mDocument Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (0.0ms)
+Rendered shared/main/_footer (15.6ms)
+Completed in 78ms (View: 63, DB: 0) | 404 [http://localhost/images/main/arrow.png]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::AdministratorController#index (for 127.0.0.1 at 2011-04-29 09:07:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/administrator"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `perishable_token` = 'JbstT608jeZZnwGiQZ', `last_request_at` = '2011-04-29 06:07:07' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCfg Columns (62.5ms)[0m   [0;1mSHOW FIELDS FROM `cfgs`[0m
+  [4;35;1mCfg Load (0.0ms)[0m   [0mSELECT * FROM `cfgs` WHERE (`cfgs`.`name` = 'sitename') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `cfgs` WHERE (`cfgs`.`name` = 'sitename') LIMIT 1[0m
+  [4;35;1mCfg Load (0.0ms)[0m   [0mSELECT * FROM `cfgs` WHERE (`cfgs`.`name` = 'adminemail') LIMIT 1[0m
+  [4;36;1mCfg Load (0.0ms)[0m   [0;1mSELECT * FROM `cfgs` WHERE (`cfgs`.`name` = 'domain') LIMIT 1[0m
+  [4;35;1mDocument Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `documents`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `documents` [0m
+  [4;35;1mFilelist Columns (62.5ms)[0m   [0mSHOW FIELDS FROM `filelists`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `filelists` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT sum(`filelists`.f_file_size) AS sum_f_file_size FROM `filelists` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `documents` WHERE (documents.published=1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `documents` WHERE (documents.approved=1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM `documents` ORDER BY id desc LIMIT 10[0m
+  [4;36;1mFilelist Load (0.0ms)[0m   [0;1mSELECT * FROM `filelists` ORDER BY id desc LIMIT 10[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSELECT count(DISTINCT `filelists`.id) AS count_all FROM `filelists` LEFT OUTER JOIN `document_files` ON document_files.filelist_id = filelists.id WHERE (filelists.id is null) [0m
+Rendering template within layouts/admin
+Rendering admin/administrator/index
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+Rendered layouts/_admin_header (0.0ms)
+  [4;35;1mRule Columns (46.9ms)[0m   [0mSHOW FIELDS FROM `rules`[0m
+  [4;36;1mRule Load (15.6ms)[0m   [0;1mSELECT * FROM `rules` WHERE (`rules`.`id` = 1) [0m
+Rendered shared/admin/_main_menu (78.1ms)
+Rendered layouts/_admin_footer (0.0ms)
+Rendered shared/_dialog (0.0ms)
+Completed in 438ms (View: 47, DB: 203) | 200 OK [http://localhost/administrator]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::DocumentsController#index (for 127.0.0.1 at 2011-04-29 09:07:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/documents"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `perishable_token` = 'AePrNyub8CcsEzqSByb1', `last_request_at` = '2011-04-29 06:07:11' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCfg Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `cfgs`[0m
+  [4;36;1mCfg Load (0.0ms)[0m   [0;1mSELECT * FROM `cfgs` WHERE (`cfgs`.`name` = 'sitename') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `cfgs` WHERE (`cfgs`.`name` = 'sitename') LIMIT 1[0m
+  [4;36;1mCfg Load (0.0ms)[0m   [0;1mSELECT * FROM `cfgs` WHERE (`cfgs`.`name` = 'adminemail') LIMIT 1[0m
+  [4;35;1mCfg Load (0.0ms)[0m   [0mSELECT * FROM `cfgs` WHERE (`cfgs`.`name` = 'domain') LIMIT 1[0m
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM `documents` LIMIT 0, 30[0m
+  [4;35;1mDocument Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `documents`[0m
+  [4;36;1mSection Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` WHERE (`sections`.`id` IN (34,36)) [0m
+  [4;36;1mCategory Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` IN (29,30)) [0m
+  [4;36;1mRule Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `rules`[0m
+  [4;35;1mRule Load (0.0ms)[0m   [0mSELECT * FROM `rules` WHERE (`rules`.`id` = 1) [0m
+Rendering template within layouts/admin
+Rendering admin/documents/index
+Rendered shared/admin/_panel_table (0.0ms)
+  [4;36;1mFilelist Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `filelists`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `filelists` INNER JOIN `document_files` ON `filelists`.id = `document_files`.filelist_id WHERE ((`document_files`.document_id = 10)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT sum(`filelists`.f_file_size) AS sum_f_file_size FROM `filelists` INNER JOIN `document_files` ON `filelists`.id = `document_files`.filelist_id WHERE ((`document_files`.document_id = 10)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `filelists` INNER JOIN `document_files` ON `filelists`.id = `document_files`.filelist_id WHERE ((`document_files`.document_id = 11)) [0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSELECT sum(`filelists`.f_file_size) AS sum_f_file_size FROM `filelists` INNER JOIN `document_files` ON `filelists`.id = `document_files`.filelist_id WHERE ((`document_files`.document_id = 11)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `filelists` INNER JOIN `document_files` ON `filelists`.id = `document_files`.filelist_id WHERE ((`document_files`.document_id = 13)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT sum(`filelists`.f_file_size) AS sum_f_file_size FROM `filelists` INNER JOIN `document_files` ON `filelists`.id = `document_files`.filelist_id WHERE ((`document_files`.document_id = 13)) [0m
+Rendered shared/admin/_toolbar_controller (0.0ms)
+Rendered layouts/_admin_header (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `rules` WHERE (`rules`.`id` = 1) [0m
+Rendered shared/admin/_main_menu (0.0ms)
+Rendered layouts/_admin_footer (0.0ms)
+Rendered shared/_dialog (0.0ms)
+Completed in 172ms (View: 31, DB: 94) | 200 OK [http://localhost/documents]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::DocumentsController#edit (for 127.0.0.1 at 2011-04-29 09:07:13) [GET]
+  Parameters: {"action"=>"edit", "id"=>"11", "controller"=>"admin/documents"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `perishable_token` = 'xEydDcwT3UasAvt1ivE', `last_request_at` = '2011-04-29 06:07:13' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mCfg Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `cfgs`[0m
+  [4;35;1mCfg Load (0.0ms)[0m   [0mSELECT * FROM `cfgs` WHERE (`cfgs`.`name` = 'sitename') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `cfgs` WHERE (`cfgs`.`name` = 'sitename') LIMIT 1[0m
+  [4;35;1mCfg Load (0.0ms)[0m   [0mSELECT * FROM `cfgs` WHERE (`cfgs`.`name` = 'adminemail') LIMIT 1[0m
+  [4;36;1mCfg Load (0.0ms)[0m   [0;1mSELECT * FROM `cfgs` WHERE (`cfgs`.`name` = 'domain') LIMIT 1[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+  [4;36;1mDocument Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM `documents` WHERE (`documents`.`id` = 11) [0m
+Rendering template within layouts/admin
+Rendering admin/documents/edit
+  [4;36;1mDocumentFile Load (0.0ms)[0m   [0;1mSELECT * FROM `document_files` WHERE (`document_files`.document_id = 11) [0m
+  [4;35;1mDocumentFile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `document_files`[0m
+  [4;36;1mFilelist Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `filelists`[0m
+  [4;35;1mFilelist Load (0.0ms)[0m   [0mSELECT * FROM `filelists` WHERE (`filelists`.`id` = 34) [0m
+Rendered admin/documents/_filelist_row (15.6ms)
+  [4;36;1mFilelist Load (0.0ms)[0m   [0;1mSELECT * FROM `filelists` WHERE (`filelists`.`id` = 33) [0m
+Rendered admin/documents/_filelist_row (0.0ms)
+Rendered admin/documents/_filelist_list (31.3ms)
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `filelists` INNER JOIN `document_files` ON `filelists`.id = `document_files`.filelist_id WHERE ((`document_files`.document_id = 11)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT sum(`filelists`.f_file_size) AS sum_f_file_size FROM `filelists` INNER JOIN `document_files` ON `filelists`.id = `document_files`.filelist_id WHERE ((`document_files`.document_id = 11)) [0m
+Rendered admin/documents/_filelist_info (0.0ms)
+  [4;35;1mCategory Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`id` = 29) [0m
+  [4;35;1mSection Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` WHERE (`sections`.`id` = 34) [0m
+  [4;35;1mRule Load (0.0ms)[0m   [0mSELECT * FROM `rules` WHERE (id >= 1) [0m
+  [4;36;1mRule Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `rules`[0m
+Rendered admin/documents/_form (93.8ms)
+Rendered shared/admin/_toolbar_action (0.0ms)
+Rendered layouts/_admin_header (0.0ms)
+  [4;35;1mRule Load (0.0ms)[0m   [0mSELECT * FROM `rules` WHERE (`rules`.`id` = 1) [0m
+Rendered shared/admin/_main_menu (0.0ms)
+Rendered layouts/_admin_footer (0.0ms)
+Rendered shared/_dialog (0.0ms)
+Completed in 250ms (View: 94, DB: 31) | 200 OK [http://localhost/documents/11/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 12:19:02) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "main", "arrow.png"], "controller"=>"main_application"}
+  [4;36;1mSection Load (93.8ms)[0m   [0;1mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;35;1mUser Columns (62.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `perishable_token` = 'BYQXlx7Buh3Y6bUYsqpj', `last_request_at` = '2011-04-29 09:19:02' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/main/_sign (218.8ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;35;1mDocument Load (78.1ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (78.1ms)
+Rendered shared/main/_footer (15.6ms)
+Completed in 500ms (View: 219, DB: 234) | 404 [http://localhost/images/main/arrow.png]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 12:19:02) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "footer_twitter_icn.png"], "controller"=>"main_application"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE `users` SET `perishable_token` = 'vzVCbDPpQjRrswhdHyHw', `last_request_at` = '2011-04-29 09:19:02' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Rendered shared/main/_sign (46.9ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;35;1mDocument Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (15.6ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 78ms (View: 47, DB: 16) | 404 [http://localhost/images/footer_twitter_icn.png]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainApplicationController#p404 (for 127.0.0.1 at 2011-04-29 12:19:02) [GET]
+  Parameters: {"action"=>"p404", "path"=>["images", "footer_rss_icn.png"], "controller"=>"main_application"}
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+Rendering template within layouts/main
+Rendering errors/404 (404)
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `perishable_token` = 'Xz0ekTwujl58zl27hUSG', `last_request_at` = '2011-04-29 09:19:02' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/main/_sign (46.9ms)
+Rendered shared/main/_searchbar (0.0ms)
+Rendered shared/main/_topmenu (0.0ms)
+  [4;35;1mDocument Load (0.0ms)[0m   [0mSELECT * FROM `documents` ORDER BY hits desc LIMIT 10[0m
+  [4;36;1mDocument Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+Rendered shared/main/_topdownloads (15.6ms)
+Rendered shared/main/_footer (0.0ms)
+Completed in 78ms (View: 63, DB: 0) | 404 [http://localhost/images/footer_rss_icn.png]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (62.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSections (1)
+Migrating to CreateCategories (2)
+Migrating to CreateFilelists (3)
+Migrating to CreateDocuments (4)
+Migrating to CreateUsers (5)
+Migrating to CreateUsergroups (6)
+Migrating to CreateRules (7)
+Migrating to CreateStaticContents (8)
+Migrating to CreateCfgs (9)
+Migrating to CreateTickets (20101210105527)
+Migrating to CreateDocumentFiles (20110328075523)
+Migrating to CreateMemos (20110331064212)
+Migrating to AlterDocumentAddSectionId (20110406080025)
+Migrating to CreateImages (20110429101727)
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCREATE TABLE `images` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `image_file_name` varchar(255), `image_content_type` varchar(255), `image_file_size` int(11), `image_updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110429101727')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (62.5ms)[0m   [0mSHOW FIELDS FROM `categories`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `categories`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `categories`[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mSHOW FIELDS FROM `cfgs`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `cfgs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `cfgs`[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mSHOW FIELDS FROM `document_files`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `document_files`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `document_files`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `documents`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `documents`[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mSHOW FIELDS FROM `filelists`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `filelists`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `filelists`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `images`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `images`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `images`[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mSHOW FIELDS FROM `memos`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `memos`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `memos`[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mSHOW FIELDS FROM `rules`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `rules`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `rules`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `sections`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW FIELDS FROM `static_contents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `static_contents`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `static_contents`[0m
+  [4;35;1mSQL (62.5ms)[0m   [0mSHOW FIELDS FROM `usergroups`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `usergroups`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `usergroups`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Admin::DocumentsController#edit (for 127.0.0.1 at 2011-04-29 13:21:39) [GET]
+  Parameters: {"action"=>"edit", "id"=>"11", "controller"=>"admin/documents"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `perishable_token` = 'huBgVxQLWS9ffVzr0uk', `last_request_at` = '2011-04-29 10:21:39' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCfg Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `cfgs`[0m
+  [4;36;1mCfg Load (0.0ms)[0m   [0;1mSELECT * FROM `cfgs` WHERE (`cfgs`.`name` = 'sitename') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `cfgs` WHERE (`cfgs`.`name` = 'sitename') LIMIT 1[0m
+  [4;36;1mCfg Load (0.0ms)[0m   [0;1mSELECT * FROM `cfgs` WHERE (`cfgs`.`name` = 'adminemail') LIMIT 1[0m
+  [4;35;1mCfg Load (0.0ms)[0m   [0mSELECT * FROM `cfgs` WHERE (`cfgs`.`name` = 'domain') LIMIT 1[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+  [4;35;1mDocument Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `documents`[0m
+  [4;36;1mDocument Load (0.0ms)[0m   [0;1mSELECT * FROM `documents` WHERE (`documents`.`id` = 11) [0m
+Rendering template within layouts/admin
+Rendering admin/documents/edit
+  [4;35;1mDocumentFile Load (0.0ms)[0m   [0mSELECT * FROM `document_files` WHERE (`document_files`.document_id = 11) [0m
+  [4;36;1mDocumentFile Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `document_files`[0m
+  [4;35;1mFilelist Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `filelists`[0m
+  [4;36;1mFilelist Load (15.6ms)[0m   [0;1mSELECT * FROM `filelists` WHERE (`filelists`.`id` = 34) [0m
+Rendered admin/documents/_filelist_row (15.6ms)
+  [4;35;1mFilelist Load (0.0ms)[0m   [0mSELECT * FROM `filelists` WHERE (`filelists`.`id` = 33) [0m
+Rendered admin/documents/_filelist_row (15.6ms)
+Rendered admin/documents/_filelist_list (46.9ms)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `filelists` INNER JOIN `document_files` ON `filelists`.id = `document_files`.filelist_id WHERE ((`document_files`.document_id = 11)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT sum(`filelists`.f_file_size) AS sum_f_file_size FROM `filelists` INNER JOIN `document_files` ON `filelists`.id = `document_files`.filelist_id WHERE ((`document_files`.document_id = 11)) [0m
+Rendered admin/documents/_filelist_info (0.0ms)
+  [4;36;1mCategory Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (15.6ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 29) [0m
+  [4;36;1mSection Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` WHERE (`sections`.`id` = 34) [0m
+  [4;36;1mRule Load (0.0ms)[0m   [0;1mSELECT * FROM `rules` WHERE (id >= 1) [0m
+  [4;35;1mRule Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `rules`[0m
+Rendered admin/documents/_form (125.0ms)
+Rendered shared/admin/_toolbar_action (0.0ms)
+Rendered layouts/_admin_header (0.0ms)
+  [4;36;1mRule Load (0.0ms)[0m   [0;1mSELECT * FROM `rules` WHERE (`rules`.`id` = 1) [0m
+Rendered shared/admin/_main_menu (0.0ms)
+Rendered layouts/_admin_footer (0.0ms)
+Rendered shared/_dialog (0.0ms)
+Completed in 219ms (View: 78, DB: 63) | 200 OK [http://localhost/documents/11/edit]
