@@ -10,7 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.with_options :controller => 'main' do |c|
 #    c.products_section 'section/:section_id', :action => 'documents'
 #    c.products_category 'section/:section_id/category/:category_id', :action => 'documents'
-#    c.show_document 'doc/:id', :action => 'show'
+    c.show_document 'doc/:id', :action => 'show'
     c.show_products 'products', :action => 'products'
   end
   
