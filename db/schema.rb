@@ -85,6 +85,24 @@ ActiveRecord::Schema.define(:version => 20110406080025) do
     t.datetime "updated_at"
   end
 
+  create_table "ticket_messages", :force => true do |t|
+    t.integer  "ticket_subject_id",                :default => 0
+    t.string   "message",           :limit => 250
+    t.integer  "atype",                            :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ticket_subjects", :force => true do |t|
+    t.string   "subject"
+    t.integer  "user_id"
+    t.integer  "state",      :default => 0
+    t.string   "email"
+    t.integer  "responsed",  :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "usergroups", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
