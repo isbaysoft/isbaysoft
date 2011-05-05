@@ -26,13 +26,17 @@ class Admin::DocumentsController < AdminApplicationController
   def edit
   end
 
-  def update    
-    update_attributes_and_redirect(@document,params[:document]) do
-      if params[:file].present?
-        @file = Filelist.new params[:file]
-        @document.filelists << @file if @file.save
+  def update
+    if params[:logo].present?
+      @logo = Logo.new params[:logo]
+      if @logo.valid?
+        if @document.logo.present?
+          @document.logo.destroy
+        end
+        @document.logo = @logo 
       end
     end
+    update_attributes_and_redirect(@document,params[:document])
   end
 
   def destroy

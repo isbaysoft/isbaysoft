@@ -150,6 +150,7 @@ ru:
       document: Менеджер документов
       user: Менеджер пользователей
       usergroup: Менеджер групп пользователей
+      logo: Логотип
     attributes:
       section:
         name: Название раздела
@@ -170,6 +171,8 @@ ru:
         password_confirmation: Подтверждение пароля
       usergroup:
         name: Название группы пользователей
+      logo:
+        logo_file_size: Размер файла
 
     errors:
       template:
@@ -211,12 +214,6 @@ ru:
         equal_to: "может иметь лишь значение, равное %{count}"
         less_than: "может иметь значение меньшее чем %{count}"
         less_than_or_equal_to: "может иметь значение меньшее или равное %{count}"
-        odd: "может иметь лишь нечетное значение"
-        even: "может иметь лишь четное значение"
-        greater_than_start_date: "должна быть позднее даты начала"
-        not_same_project: "не относится к одному проекту"
-        circular_dependency: "Такая связь приведет к циклической зависимости"
-        cant_link_an_issue_with_a_descendant: "Задача не может быть связана со своей подзадачей"
 
   support:
     array:
@@ -269,11 +266,13 @@ ru:
   label_description: Описание
   label_add_file_from_archive: Добавить файл из архива
   label_add_load_new_file: Загрузить новый файл
+  label_add_load_new_logo: Загрузить новый логотип
 
   button_delete: Удалить
   button_deactivate: Деактивировать
   button_activate: Активировать
   button_add: Добавить
+  button_select: Выбрать
   button_load: Загрузить
   button_activate_user: Активировать пользователя
   button_deactivate_user: Деактивировать пользователя
@@ -301,12 +300,14 @@ ru:
   error_destroy_user: Пользователя удалить не удалось
   error_destroy_usergroup: Группу пользователей удалить не удалось
   error_destroy_document_file: Файл не удалось удалить из документа
+  error_max_image_size_byte: Максимум %{max} байт.
 
   text_user_activated: Пользователь активирован
   text_user_deactivated: Пользователь не активирован
   text_filelist_filecount: Всего файлов
   text_filelist_summary_filesize: Сумарный объем
   text_no_data: Нет данных
+  text_logo: Логотип
   
   controller_sections_name: Менеджер разделов
   controller_categories_name: Менеджер категорий

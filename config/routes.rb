@@ -1,17 +1,17 @@
 ActionController::Routing::Routes.draw do |map|
-  map.home '', :controller => 'catalog', :action => 'index'
+  map.home '', :controller => 'main', :action => 'index'
   map.login 'login', :controller => 'user_sessions', :action => 'new'
   map.registration 'registration', :controller => 'users', :action => 'new'
   map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'
-  map.file 'file/:id', :controller => 'catalog', :action => 'download'
+  map.file 'file/:id', :controller => 'main', :action => 'download'
   map.administrator 'administrator', :controller => 'admin/administrator'
   map.dialog 'dialog/:dialog_name', :controller => 'dialogs', :action => 'show_dialog'
 
-  map.with_options :controller => 'catalog' do |c|
-    c.catalog_section 'section/:section_id', :action => 'documents'
-    c.catalog_category 'section/:section_id/category/:category_id', :action => 'documents'
-    c.show_document 'doc/:id', :action => 'show'
-    c.show_categories 'catalog', :action => 'catalog'
+  map.with_options :controller => 'main' do |c|
+#    c.products_section 'section/:section_id', :action => 'documents'
+#    c.products_category 'section/:section_id/category/:category_id', :action => 'documents'
+#    c.show_document 'doc/:id', :action => 'show'
+    c.show_products 'products', :action => 'products'
   end
   
   map.resource :user_session
