@@ -34,7 +34,7 @@ class MainController < MainApplicationController
   end
 
   def products
-  
+    @products = Document.getlist
   end
 
   def contacts

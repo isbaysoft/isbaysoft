@@ -95,7 +95,9 @@ private
     @controlleralias  or "(#{I18n.t(:global_controller_alias_not_definitely)})"
   end
 
-  def update_attributes_and_redirect(update_object,update_hash,update_redirect = url_for(:action => 'index'), &proc)
+  def update_attributes_and_redirect(update_object,
+      update_hash,
+      update_redirect = url_for(:action => 'index'), &proc)
     if update_object.update_attributes(update_hash)
       proc.call(update_object) if proc
       flash[:notice] = I18n.t(:global_updating)
@@ -106,7 +108,7 @@ private
         redirect_to update_redirect
       end
     else
-      render :action => :edit
+      render :action => 'edit'
     end    
   end
 
