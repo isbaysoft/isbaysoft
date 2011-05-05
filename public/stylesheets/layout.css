@@ -41,6 +41,7 @@ body {
 #center {
     float:left;
     width:690px;
+    padding-top: 22px;
 }
 #spacer {height:100px;}
 #footer {

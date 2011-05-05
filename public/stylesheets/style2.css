@@ -91,9 +91,14 @@ dd {padding-left: 10px;}
 
 .brd-top {border-top: 1px solid #d7d7d7;}
 .brd-right {border-right: 1px solid #d7d7d7;}
+.brd-left {border-left: 1px solid #d7d7d7;}
 
 .odd{background-color: #e0ffff;}
 .even{background-color: #FFFFFF;}
+
+.w100prc {
+    width: 100%;
+}
 
 .list_ol {
     padding-left: 20px;

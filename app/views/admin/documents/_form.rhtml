@@ -11,13 +11,20 @@
 <div class="box tabular settings">
   <fieldset class="left" style="width: 70%"><legend></legend>
     <%= form.error_messages -%>
+    <%= error_messages_for 'logo' if @logo &&@logo.errors -%>
     <dl>
       <dt><%= label_tag :name, t(:label_document_name) %></dt>
       <dd><%= form.text_field :name, :class => 'edit' %></dd>
-      <dt> <%= label_tag :filelist_id, t(:label_document_files) %></dt>
-      <dd><%= render :partial => 'filelist_list', :locals => {:rows => @document.document_files} %></dd>
-      <dd><%= render :partial => 'filelist_info', :locals => {:document => @document} %></dd>
-      <br />
+      <div class="left" style="width: 70%">
+        <dt> <%= label_tag :filelist_id, t(:label_document_files) %></dt>
+        <dd><%= render :partial => 'filelist_list', :locals => {:rows => @document.document_files} %></dd>
+        <dd><%= render :partial => 'filelist_info', :locals => {:document => @document} %></dd>
+      </div>
+      <div class="left" style="width: 25%">
+        <dt> <%= label_tag :logo_id, t(:text_logo) %></dt>
+        <dd><%= image_tag (@document.logo.nil? or @document.new_record?) ? 'main/empty_logo.png ' : @document.logo.logo.url, :size => '128x128'  %></dd>
+      </div>
+      <br class="clearboth"/>
       <dt><%= label_tag :category_id, t(:label_document_section_and_category) %></dt>
       <dd><%= text_field_tag :category_name, @document.path_name, :size => 50,
                 :readonly => true,
@@ -40,11 +47,13 @@
     <dd><%= file_field_tag 'file[f]' %></dd>
     <dt><%= label_tag 'fromarchive', t(:label_add_file_from_archive) %></dt>
     <dd>
-        <%= link_to_function t(:button_add),
+        <%= link_to_function t(:button_select),
           remote_function(:url => dialog_url('filelist',:except_document_files => @document.id ),
           :method => :GET )
         %>
     </dd>
+    <dt><%= label_tag 'logo_id', t(:label_add_load_new_logo) %></dt>
+    <dd><%= file_field_tag 'logo[logo]' %></dd>
   </fieldset>
   <div class="clearboth"></div>
 </div>

@@ -363,3 +363,18 @@ table.catalog td {
     color: black;
 }
 /************** END flash message ************/
+
+/* Product box */
+.product_box, .product_box_div {
+    display: block;
+    width: 679px;
+}
+.product_box {
+    background: url(../images/main/box_t.png) no-repeat left top;
+    height: 161px;
+}
+.product_box_div {
+    background: url(../images/main/box_b.png) no-repeat left top;
+    height: 45px;
+}
+/* END Product box */

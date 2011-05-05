@@ -2,6 +2,7 @@ class Document < ActiveRecord::Base
   belongs_to :category, :dependent => :destroy
   belongs_to :section, :dependent => :destroy
   belongs_to :rule, :foreign_key => 'access_level'
+  belongs_to :logo, :dependent => :destroy
 
   has_many :document_files
   has_many :filelists, :through => :document_files
@@ -19,6 +20,10 @@ class Document < ActiveRecord::Base
   cattr_reader :per_page
 
   @@per_page=30
+
+  def logo_url
+    self.logo.nil? ? 'main/empty_logo.png ' : self.logo.logo.url
+  end
 
   def section_name
     self.section.present? ? self.section['name'] : I18n::t(:text_no_data)
