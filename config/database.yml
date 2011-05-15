@@ -19,7 +19,7 @@ test:
   database: dc_test
   pool: 5
   username: root
-  password: ruby
+  password:
   host: localhost
   port: 3306
 
@@ -30,6 +30,6 @@ production:
   database: dc_production
   pool: 5
   username: root
-  password: ruby
+  password:
   host: localhost
   port: 3306

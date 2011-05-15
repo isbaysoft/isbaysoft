@@ -1,6 +1,13 @@
 <% @products.map do |row| %>
 <div class="product_box">
-  <%= image_tag row.logo_url %>
+  <%= image_tag row.logo_url, :align => :left, :class => 'img1' %>
+  <div class="product_header"><h1><%= row.name %></h1></div>
+  <div class="product_description"><%= row.short_description %></div>
 </div> <!-- END product_box -->
-<div class="product_box_div"></div>
+<div class="clearboth">&nbsp;</div>
+<div class="product_box_bottom">
+  <div class="right">
+    <%= link_to 'Узнать больше', show_product_url(row), :class=>'goodbutton1 right' %>
+  </div>
+</div>
 <% end %>

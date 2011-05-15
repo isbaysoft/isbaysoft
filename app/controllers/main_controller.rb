@@ -2,7 +2,7 @@ class MainController < MainApplicationController
   layout = 'main'
   $contents = ['main','greeting']
   
-  before_filter :require_user, :only => [:show]
+  before_filter :require_user, :only => []
   before_filter :load_contents, :only => [:index]
   
 
@@ -27,7 +27,7 @@ class MainController < MainApplicationController
     @documents = Document.getlist.section(params[:section_id]).category(params[:category_id]).paginate :page => params[:page], :per_page => 5
   end
 
-  def show
+  def product
     @document = Document.find_by_id(params[:id]);
     render 'errors/filenotfound' and return unless @document.present?
     @categories = Category.getlist.section(@document.category.section_id)

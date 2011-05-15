@@ -20,3 +20,7 @@ $(document).ready(function(){
 
 	});
 });
+
+ $(function(){
+    $('.img1').corner("round 8px")
+ });

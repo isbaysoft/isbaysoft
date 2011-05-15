@@ -264,6 +264,7 @@ ru:
   label_document_approved: Проверен
   label_usergroup_name: Имя группы
   label_description: Описание
+  label_short_description: Краткое описание
   label_add_file_from_archive: Добавить файл из архива
   label_add_load_new_file: Загрузить новый файл
   label_add_load_new_logo: Загрузить новый логотип

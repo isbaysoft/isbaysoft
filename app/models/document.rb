@@ -15,7 +15,7 @@ class Document < ActiveRecord::Base
   named_scope :category, lambda { |category_id| {:conditions => ['categories.id=?',category_id]} unless category_id.nil? }
   named_scope :published, :conditions => 'documents.published=1'
   named_scope :approved, :conditions => 'documents.approved=1'
-  named_scope :popular, lambda {|top| {:limit => top, :order => 'hits desc'}}
+  named_scope :popular, lambda {|top| { :include => [:document_files], :limit => top, :order => 'document_files.hits desc' }}
 
   cattr_reader :per_page
 
