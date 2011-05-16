@@ -1,6 +1,7 @@
 <%= include_tiny_mce_if_needed %>
 <%= hidden_field_tag 'task','post' %>
 <%= hidden_field_tag :file_id %>
+<%#= hidden_field_tag 'document[logo_id]' %>
 <%= form.hidden_field(:category_id, :id => "category_id", :value => @document.category_id) -%>
 <%= form.hidden_field(:section_id, :id => "section_id", :value => @document.section_id) -%>
 <%= observe_field(:file_id,
@@ -31,6 +32,9 @@
                 :onclick => remote_function(:url => dialog_url('category'), :method => :GET),
                 :class => 'edit' %>
       </dd>
+      <dt><%= label_tag :short_description, t(:label_short_description) %></dt>
+      <dd><%= form.text_area(:short_description, @text_area_default_size_for_description_big.update(:class => "mceEditor")) %></dd>
+      <br />
       <dt><%= label_tag :description, t(:label_description) %></dt>
       <dd><%= form.text_area(:description, @text_area_default_size_for_description_big.update(:class => "mceEditor")) %></dd>
       <br />

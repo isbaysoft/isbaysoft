@@ -1,0 +1,43 @@
+<div class="product_box">
+  <%= image_tag @document.logo_url, :align => :left, :class => 'img1' %>
+  <div class="product_header"><h1><%= @document.name %></h1></div>
+  <div class="product_description"><%= @document.description %></div>
+</div> <!-- END product_box -->
+<div class="clearboth">&nbsp;</div>
+<div class="download_link icon_download_32">
+  <% if current_user && current_user.rule_id <= @document.access_level.to_i %>
+    <%= link_to('Скачать', file_url(@document.id), :class => 'u') -%>
+  <% else %>
+    <span class="green">(К сожалению, Вам запрещено качать этот файл)</span>
+  <% end %>
+</div>
+<div class="documentinfo">
+  <span>Информация о загружаемомо файле</span>
+  <% @document.document_files.map do |row| %>
+  <table>
+  <tr><th>Имя файла</th>
+    <td><%= h(row.filelist.f_file_name) %></td>
+  </tr>
+  <tr><th>Тип файла</th>
+    <td><%= h(row.filelist.f_content_type) %></td>
+  </tr>
+  <tr><th>Имя файла</th>
+    <td><%= h(row.filelist.f_file_name) %></td>
+  </tr>
+  <tr><th>Размер файла</th>
+    <td><%= h(number_to_human_size(row.filelist.f_file_size)) %></td>
+  </tr>
+  <tr><th>Файла загружен</th>
+    <td><%= h(row.filelist.f_updated_at.to_formatted_s(:long)) %></td>
+  </tr>
+  <tr><th>Количество загрузок</th>
+    <td><%= h(row.hits.to_i) %></td>
+  </tr>
+  </table>
+  <% end %>
+</div>
+<div class="product_box_bottom">
+  <div class="right">
+    <%= link_to 'Узнать больше', show_product_url(@document), :class=>'goodbutton1 right' %>
+  </div>
+</div>

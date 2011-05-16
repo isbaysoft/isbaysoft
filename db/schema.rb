@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110504102000) do
+ActiveRecord::Schema.define(:version => 20110514215833) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -27,24 +27,25 @@ ActiveRecord::Schema.define(:version => 20110504102000) do
   end
 
   create_table "document_files", :force => true do |t|
-    t.integer  "document_id", :null => false
-    t.integer  "filelist_id", :null => false
+    t.integer  "document_id",                :null => false
+    t.integer  "filelist_id",                :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "hits",        :default => 0
   end
 
   create_table "documents", :force => true do |t|
     t.string   "name"
     t.integer  "category_id"
-    t.boolean  "published",    :default => false
-    t.boolean  "approved",     :default => false
-    t.integer  "hits",         :default => 0
-    t.string   "description"
+    t.boolean  "published",         :default => false
+    t.boolean  "approved",          :default => false
+    t.text     "description"
     t.integer  "access_level"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "section_id"
     t.integer  "logo_id"
+    t.text     "short_description"
   end
 
   create_table "filelists", :force => true do |t|
@@ -89,6 +90,25 @@ ActiveRecord::Schema.define(:version => 20110504102000) do
     t.text     "content"
     t.string   "position"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "short_description"
+  end
+
+  create_table "ticket_messages", :force => true do |t|
+    t.integer  "ticket_subject_id",                :default => 0
+    t.string   "message",           :limit => 250
+    t.integer  "atype",                            :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ticket_subjects", :force => true do |t|
+    t.string   "subject"
+    t.integer  "user_id"
+    t.integer  "state",      :default => 0
+    t.string   "email"
+    t.integer  "responsed",  :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
