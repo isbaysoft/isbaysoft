@@ -26,6 +26,9 @@
 .icon_mail_post_32 {background: url(../images/admin/icons/32/mail_post_to.png) no-repeat left;}
 .icon_comment_32 {background: url(../images/admin/icons/32/comment.png) no-repeat left;}
 
+.icon_publish_32 {background: url(../images/admin/icons/32/publish.png) no-repeat left;}
+.icon_unpublish_32 {background: url(../images/admin/icons/32/unpublish.png) no-repeat left;}
+
 /* 48x48 */
 .icon_folder_48 {background: url("../images/admin/icons/48/folder.png") no-repeat left;}
 .icon_folder_document_48 {background:transparent url(../images/admin/icons/48/folder_document.png) no-repeat left;}

@@ -64,6 +64,25 @@ class Admin::DocumentsController < AdminApplicationController
     @docfile = @document.document_files.find_by_filelist_id(params[:id])
   end
 
+  def publish
+    a = 'A'
+    b = [1,2,3,4]
+    c = a || b
+    render :text => b and return
+
+#    ids = ad_check_ids
+#    flash[:notice] = t(:notice_select_user_activated)
+#    User.allowobjects(current_user,ids).deactivated.map {|a| a.activate}
+#    ad_redirect
+  end
+
+  def unpublish
+    ids = ad_check_ids
+    flash[:notice] = t(:notice_select_user_deactivated)
+    User.allowobjects(current_user,ids).activated.map {|a| a.deactivate}
+    ad_redirect
+  end
+
 protected
 
   def load_section

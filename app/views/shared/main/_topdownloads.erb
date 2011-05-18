@@ -2,10 +2,9 @@
 <div class="heading_holder icon_topdownloads_24"> <h3>Топ закачек</h3></div>
 <div class="infobar">
   <ul>
-    <%= debug @topdownloads %>
     <% @topdownloads.map do |row| -%>
       <li>
-        <%= link_to h(row.name), administrator_url -%> (<%= row.document_files.max.hits.to_i %>)
+        <%= link_to h(row.name), administrator_url -%> (<%= row.hits.to_i %>)
       </li>
     <% end if @topdownloads%>
   </ul>

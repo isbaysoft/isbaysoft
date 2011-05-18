@@ -1,34 +1,6 @@
 module ApplicationHelper
 
-def show_model_table(collections, headers, options, &proc)
-  table_property = ""
-  table_property << " class=\"#{options[:class]}\"" if options[:class]
-  table_property << " background=\"#{options[:background]}\"" if options[:background]
-  table_property << " bgcolor=\"#{options[:bgcolor]}\"" if options[:bgcolor]
-  table_property << " border=\"#{options[:border]}\"" if options[:border]
-  table_property << " bordercolor=\"#{options[:bordercolor]}\"" if options[:bordercolor]
-  table_property << " cellpadding=\"#{options[:cellpadding]}\"" if options[:cellpadding]
-  table_property << " cellspacing=\"#{options[:cellspacing]}\"" if options[:cellspacing]
-  table_property << " cols=\"#{options[:cols]}\"" if options[:cols]
-  table_property << " height=\"#{options[:height]}\"" if options[:height]
-  table_property << " id=\"#{options[:id]}\"" if options[:id]
-  table_property << " width=\"#{options[:width]}\"" if options[:width]
-
-  html = "<table#{table_property}>\n\t"
-  html << "<thead>"
-  html << content_tag(:th,options[:numeration]) if options[:numeration] # => numeration
-  html << content_tag(:th,check_box("groups", 1, :onclick=>"setCheckBoxes(this,'#{options[:checkbox]}')")) if options[:checkbox] # => global checkbox
-  headers.collect { |v| html << content_tag(:th, sortable(collections,v[1],v[0])) }
-  html << "</thead>\n\t"
-  html << "<tbody>"
-  concat(html)
-  cnt = 0
-  collections.collect {|row| proc.call(row,cnt+=1) }
-  html = "</tbody></table>"
-  concat(html)
-end
-
-def sortable(collections,caption, column, title = nil)
+def sortable(caption, column, title = nil)
   title ||= caption.titleize
   css_class = column == sort_column ? "current #{sort_direction}" : nil
   direction = column == sort_column && sort_direction == "asc" ? "desc" : "asc"
@@ -45,7 +17,6 @@ def roundbox3(&block)
     </div><!--csc-->
   }
   concat(block_content)
-
 end
 
 def roundbox(bk_color_class,&block)

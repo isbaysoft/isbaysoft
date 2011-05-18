@@ -15,6 +15,11 @@ class Filelist < ActiveRecord::Base
   
   @@per_page=30
 
+
+  def file_exist?
+    File.exist?(self.f.path)
+  end
+
   def downloadable?(user)
     true
   end

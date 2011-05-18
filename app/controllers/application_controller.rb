@@ -121,14 +121,15 @@ protected
   SEND_FILE_METHOD = :default
 
   def download_to(params)
-    raise DownloadFileNotFound if (file = Filelist.find_by_id(params[:id])).nil?
+    file = Filelist.find(params[:filelist_id])
+    raise DownloadFileNotFound if file.nil?
     raise DownloadDenied unless file.downloadable?(current_user)
     path = file.f.path
     raise DownloadFileNotFound unless File.exist?(path)
     send_file_options = { :type => file.f_content_type }
     case SEND_FILE_METHOD
-    when :apache then send_file_options[:x_sendfile] = true
-    when :nginx then head(:x_accel_redirect => path.gsub(Rails.root, ''), :content_type => send_file_options[:type]) and return
+      when :apache then send_file_options[:x_sendfile] = true
+      when :nginx then head(:x_accel_redirect => path.gsub(Rails.root, ''), :content_type => send_file_options[:type]) and return
     end
     send_file(path, send_file_options)
   end

@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.login 'login', :controller => 'user_sessions', :action => 'new'
   map.registration 'registration', :controller => 'users', :action => 'new'
   map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'
-  map.file 'file/:id', :controller => 'main', :action => 'download'
+  map.productfile 'file/:document_id/:file_id', :controller => 'main', :action => 'download'
   map.administrator 'administrator', :controller => 'admin/administrator'
   map.dialog 'dialog/:dialog_name', :controller => 'dialogs', :action => 'show_dialog'
 
@@ -26,7 +26,11 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :categories, :controller => 'admin/categories'
   map.resources :filelists, :controller => 'admin/filelists',
     :member => {:download => :get}
-  map.resources :documents, :controller => 'admin/documents' do |e|
+  map.resources :documents, :controller => 'admin/documents',
+    :member => {
+      :publish => :get,
+      :unpublish => :post
+    } do |e|
     e.resources 'file', :controller => 'admin/document_files', :only => [:destroy]
   end
 

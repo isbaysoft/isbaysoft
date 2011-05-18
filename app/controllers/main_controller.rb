@@ -7,13 +7,13 @@ class MainController < MainApplicationController
   
 
   def download
-    @document = Document.getlist.find_by_id(params[:id])
-    raise DownloadFileNotFound unless @document
-    raise DownloadDenied unless @document.downloadable?(current_user)
-#    counter of hits
-    Document.find_by_id(@document.id).increment!(:hits)
-    params[:id] = @document.filelist_id
-    download_to(params)
+    document = Document.getlist.find_by_id(params[:document_id])
+    document_file = document.document_files.find_by_id(params[:file_id])
+    raise DownloadFileNotFound unless document && document_file
+    raise DownloadDenied unless document.downloadable?(current_user)
+    #  Counter of hits
+    document_file.increment!(:hits)
+    download_to({:filelist_id => document_file.filelist_id})
   end
     
   def index
@@ -34,7 +34,7 @@ class MainController < MainApplicationController
   end
 
   def products
-    @products = Document.getlist
+    @products = Document.published.getlist
   end
 
   def contacts
