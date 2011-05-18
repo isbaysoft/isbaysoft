@@ -1,0 +1,34 @@
+<table class="grid" cellspacing="0" cellpadding="0" border="0">
+<thead>
+  <th>№</th>
+  <th><%= check_box_tag("groups", false, false, :onclick=>"setCheckBoxes(this,'ids[]')") %></th>
+  <th><%= sortable('Публикация','published') %></th>
+  <th><%= sortable('Проверен','approved') %></th>
+  <th><%= sortable('Название','name') %></th>
+  <th><%= sortable('Файлов','f_file_name') %></th>
+  <th><%= sortable('Раздел','section_name') %></th>
+  <th><%= sortable('Категория','category_name') %></th>
+  <th><%= sortable('rules.name','Доступ') %></th>
+  <th><%= sortable('updated_at','Дата') %></th>
+  <th><%= sortable('Размер','f_file_size') %></th>
+  <th><%= sortable('Хинты','hits') %></th>
+</thead>
+<tbody>
+<% @documents.map do |row| %>
+  <tr class="<%= cycle('odd','even') %>"<%= 'id="after_edit"' if flash[:edited].to_s == row.id.to_s %> >
+    <th width="2%"><%= row.id -%></th>
+    <th width="2%"><%= check_box_tag('ids[]',row.id) %></th>
+    <th><%= check_box_tag("published_#{row.id}",row.published,row.published,:disabled => true) -%></th>
+    <th><%= check_box_tag("approved_#{row.id}",row.approved,row.approved,:disabled => true) -%></th>
+    <td><%= link_to(row.name, edit_document_url(row.id)) -%></td>
+    <td align="center"><%= row.filelists.count -%></td>
+    <td><%= row.section_name -%></td>
+    <td><%= row.category.try(:name) -%></td>
+    <td><%= row.rule.name -%></td>
+    <td><%= row.updated_at.to_formatted_s(:short) -%></td>
+    <td><%= number_to_human_size(row.filelists.sum('f_file_size')) -%></td>
+    <td align="center"><%= row.hits.to_i -%></td>
+  </tr>
+<% end %>
+</tbody>
+</table>

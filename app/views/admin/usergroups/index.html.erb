@@ -3,22 +3,11 @@
  <%= render :partial => 'shared/admin/panel_table', :locals => {:per_page => @usergroups.per_page} %>
   <% form_for 'tasks', :url => usergroup_url('destroy'), :html =>{:method => :delete, :name=>'adminForm'} do -%>
     <%= hidden_field_tag 'task','search' -%>
-    <table class="grid" cellspacing="0" cellpadding="0" border="0">
-    <thead>
-      <th>№</th>
-      <th><%= check_box_tag("groups", false, false, :onclick=>"setCheckBoxes(this,'ids[]')") %></th>
-      <th><%= sortable('Название','name') %></th>
-    </thead>
-    <tbody>
-    <% @usergroups.map do |row| %>
-      <tr class="<%= cycle('odd','even') %>"<%= 'id="after_edit"' if flash[:edited].to_s == row.id.to_s %> >
-        <td width="2%"><%= row.id %></td>
-        <td width="2%"><%= check_box_tag('ids[]',row.id) %></td>
-        <td><%= link_to(row.name, edit_usergroup_url(row)) %></td>
-      </tr>
+    <% unless @usergroups.blank? %>
+      <%= render :partial => 'table' %>
+    <% else %>
+      <%= nodata %>
     <% end %>
-    </tbody>
-    </table>
     <%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @usergroups, :icon_class => 'icon_user_group_48' } %>
   <% end %>
 <% end %>

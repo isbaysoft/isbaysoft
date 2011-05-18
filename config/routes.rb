@@ -28,7 +28,7 @@ ActionController::Routing::Routes.draw do |map|
     :member => {:download => :get}
   map.resources :documents, :controller => 'admin/documents',
     :member => {
-      :publish => :get,
+      :publish => :post,
       :unpublish => :post
     } do |e|
     e.resources 'file', :controller => 'admin/document_files', :only => [:destroy]

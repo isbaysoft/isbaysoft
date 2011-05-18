@@ -10,6 +10,7 @@ class Document < ActiveRecord::Base
   validates_presence_of :description, :name
 
   named_scope :get, lambda { |id| { :conditions => ['documents.id = ?', id] } }
+  named_scope :set_of, lambda { |ids| { :conditions => ['documents.id in (?)', ids] } }
   named_scope :getlist,  :include => [:section, :category, :rule, :document_files]
   named_scope :section, lambda { |section_id| { :conditions => ['section_id = ?',section_id] }}
   named_scope :category, lambda { |category_id| {:conditions => ['categories.id=?',category_id]} unless category_id.nil? }

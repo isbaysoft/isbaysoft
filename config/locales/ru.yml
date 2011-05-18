@@ -235,6 +235,8 @@ ru:
   global_action_not_definitely: Имя действия не определенно
   global_controller_alias_not_definitely: Имя контроллера не определенно
   global_updating: Обновление данных
+  global_no_data: Нет данных
+
 
 
   global_errors_not_definitely: Не задан обязательный параметр
@@ -281,6 +283,10 @@ ru:
   button_off: Выкл.
   button_new_document: Новый документ
   button_new_content: Новая статья
+  button_show: Показать
+  button_hide: Скрыть
+
+
 
   notice_destroy_section: Раздел был успешно удален
   notice_destroy_category: Категория была успешно удалена
@@ -292,6 +298,8 @@ ru:
   notice_select_user_activated: Выбранные пользователи активированы
   notice_select_user_deactivated: Выбранные пользователи деактивированы
   notice_destroy_document_file: Файл успешно удален из документа
+  notice_publish_documents: Выбранные документы опубликованы
+  notice_unpublish_documents: Выбранныедокументы сняты с публикации
   
   error_destroy_section: Раздел удалить не удалось
   error_destroy_category: Категорию удалить не удалось

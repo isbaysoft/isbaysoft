@@ -1,0 +1,28 @@
+<table class="grid" cellspacing="0" cellpadding="0" border="0">
+<thead>
+  <th>№</th>
+  <th><%= check_box_tag("groups", false, false, :onclick=>"setCheckBoxes(this,'ids[]')") %></th>
+  <th><%= sortable('Логин','email') %></th>
+  <th><%= sortable('Кол.во подключений','login_count') %></th>
+  <th><%= sortable('Последние подключение','last_login_at') %></th>
+  <th><%= sortable('Последний IP','last_login_ip') %></th>
+  <th><%= sortable('Группа','usergroup_name') %></th>
+  <th><%= sortable('Права','rule_name') %></th>
+  <th><%= sortable('Доступ','access') %></th>
+</thead>
+<tbody>
+<% @users.map do |row| %>
+  <tr class="<%= cycle('odd','even') %>"<%= 'id="after_edit"' if flash[:edited].to_s == row.id.to_s %> >
+    <th width="2%"><%= row.id -%></th>
+    <th width="2%"><%= check_box_tag('ids[]',row.id) unless row.superuser? or row.rule_id < current_user.rule_id %></th>
+    <td><%= link_to_allow(row.email.to_s, edit_userlist_url(row.id), row.rule_id >=current_user.rule_id) -%></td>
+    <td><%= row.login_count.to_i -%></td>
+    <td><%= row.last_login_at.to_formatted_s(:long) if row.last_login_at -%></td>
+    <td><%= row.last_login_ip.to_s -%></td>
+    <td><%= row.usergroup_name if row.usergroup -%></td>
+    <td><%= row.rule_name -%></td>
+    <th><%= check_box_tag("access_#{row.id}",row.access, row.access, :disabled => true) -%></th>
+  </tr>
+<% end %>
+</tbody>
+</table>

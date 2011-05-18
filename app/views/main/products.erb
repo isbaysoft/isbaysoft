@@ -1,3 +1,4 @@
+<%= will_paginate @products, :prev_label => '« назад',:next_label => 'вперед »' if @products.present? %>
 <% @products.map do |row| %>
 <div class="product_box">
   <%= image_tag row.logo_url, :align => :left, :class => 'img1' %>

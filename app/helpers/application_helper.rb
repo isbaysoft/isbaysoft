@@ -1,5 +1,10 @@
 module ApplicationHelper
 
+
+def nodata
+  "<p class='nodata'>#{t(:global_no_data)}</p>"
+end
+
 def sortable(caption, column, title = nil)
   title ||= caption.titleize
   css_class = column == sort_column ? "current #{sort_direction}" : nil

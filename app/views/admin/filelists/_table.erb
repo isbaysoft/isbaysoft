@@ -1,0 +1,29 @@
+<table class="grid" cellspacing="0" cellpadding="0" border="0">
+<thead>
+  <th>№</th>
+  <th><%= check_box_tag("groups", false, false, :onclick=>"setCheckBoxes(this,'ids[]')") %></th>
+  <th><%= sortable('Файл','f_file_name') %></th>
+  <th><%= sortable('Дата','f_updated_at') %></th>
+  <th><%= sortable('Тип файла','f_content_type') %></th>
+  <th><%= sortable('Размер','f_file_size') %></th>
+</thead>
+<tbody>
+<% @filelists.map do |row| %>
+  <tr <%="id='#{row.id}' class='#{cycle('odd','even')}'" %>>
+    <th width="2%"><%= row.id %></th>
+    <th width="2%"><%= check_box_tag('ids[]',row.id) %></th>
+    <% if row.file_exist? %>
+      <td><%= row.f_file_name %></td>
+      <td><%= row.f_updated_at.to_formatted_s(:short) %></td>
+      <td><%= row.f_content_type %></td>
+      <td><%= number_to_human_size(row.f_file_size) %></td>
+    <% else %>
+      <td class="silver"><%= row.f_file_name %></td>
+      <td class="silver"><%= row.f_updated_at.to_formatted_s(:short) %></td>
+      <td class="silver"><%= row.f_content_type %></td>
+      <td class="silver"><%= "#{number_to_human_size(row.f_file_size)} (нет на диске)" %></td>
+    <% end %>
+  </tr>
+<% end %>
+</tbody>
+</table>
