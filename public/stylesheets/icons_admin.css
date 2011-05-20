@@ -20,6 +20,7 @@
 .icon_document_delete_32 {background: url(../images/admin/icons/32/page_delete.png) no-repeat center;}
 .icon_hard_add_32 {background: url(../images/admin/icons/32/hard_add.png) no-repeat center;}
 .icon_hard_delete_32 {background: url(../images/admin/icons/32/hard_del.png) no-repeat center;}
+.icon_menu_32 {background: url(../images/admin/icons/32/menu32.png) no-repeat center;}
 
 .icon_user_32 {background: url(../images/admin/icons/32/users.png) no-repeat left;}
 .icon_guest_32 {background: url(../images/admin/icons/32/guest.png) no-repeat left;}
@@ -41,3 +42,4 @@
 .icon_logout_48 {background:transparent url(../images/admin/icons/48/exit.png) no-repeat left;}
 .icon_config_48 {background:transparent url(../images/admin/icons/48/config.png) no-repeat left;}
 .icon_ticket_48 {background:transparent url(../images/admin/icons/48/ticket48.png) no-repeat left;}
+.icon_menu_48 {background: url(../images/admin/icons/48/menu48.png) no-repeat left;}

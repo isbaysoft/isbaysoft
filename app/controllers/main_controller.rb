@@ -34,7 +34,7 @@ class MainController < MainApplicationController
   end
 
   def products
-    @products = Document.published.getlist.getrows :per_page => 2
+    @products = Document.published.getlist.getrows :per_page => 5, :page => params[:page]
   end
 
   def contacts

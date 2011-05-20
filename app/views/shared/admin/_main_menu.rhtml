@@ -19,6 +19,7 @@
         <div id="m2"
             onmouseover="mcancelclosetime()"
             onmouseout="mclosetime()">
+            <%= link_to_allow 'Менеджер меню', menus_url, current_user.allow('Administrator') -%>
             <%= link_to_allow 'Менеджер разделов', sections_url, current_user.allow('Administrator') -%>
             <%= link_to_allow 'Менеджер категорий', categories_url, current_user.allow('Administrator') -%>
             <%= link_to_allow 'Менеджер файлов', filelists_url, current_user.allow('Administrator') -%>

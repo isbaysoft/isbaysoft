@@ -8,5 +8,5 @@ module MenuHelper
       ['ФОРУМ',show_products_url,'kwick5']
     ]
   end
-    
+
 end

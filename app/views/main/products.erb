@@ -1,4 +1,5 @@
-<%= will_paginate @products, :prev_label => '« назад',:next_label => 'вперед »' if @products.present? %>
+<%= will_paginate @products, :prev_label => '&nbsp;',:next_label => '&nbsp;' if @products.present? %>
+<div class="clearboth">&nbsp;</div>
 <% @products.map do |row| %>
 <div class="product_box">
   <%= image_tag row.logo_url, :align => :left, :class => 'img1' %>

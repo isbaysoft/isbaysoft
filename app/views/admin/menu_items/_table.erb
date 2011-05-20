@@ -1,0 +1,20 @@
+<table class="grid" cellspacing="0" cellpadding="0" border="0">
+<thead>
+  <th width="2%">№</th>
+  <th width="2%"><%= check_box_tag("groups", false, false, :onclick=>"setCheckBoxes(this,'ids[]')") %></th>
+  <th><%= sortable('Название','name') %></th>
+  <th width="2%"><%= t(:button_link_to_menu_items)  %></th>
+  <th width="2%"><%= sortable('Опубликовано','published') %></th>
+</thead>
+<tbody>
+<% @menu_items.map do |row| %>
+  <tr class="<%= cycle('odd','even') %>"<%= 'id="after_edit"' if flash[:edited].to_s == row.id.to_s %> >
+    <th><%= row.id -%></th>
+    <th><%= check_box_tag('ids[]',row.id) -%></th>
+    <td><%= link_to(row.title, edit_menu_url(row.id)) %></td>
+    <th><%= link_to( image_tag('admin/icons/24/edit_form.png', :alt => 'edit menu items', :title => t(:button_edit)), edit_menu_url(row.id)) %></th>
+    <th><%= check_box_tag("published_#{row.id}",row.published,row.published,:disabled => true) -%></th>
+  </tr>
+<% end %>
+</tbody>
+</table>

@@ -42,6 +42,11 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :contents, :controller => 'admin/static_contents'
   map.resources :usergroups, :controller => 'admin/usergroups'
 
+  map.resources :menus, :controller => 'admin/menus' do |menu|
+    menu.resources :menu_items, :controller => 'admin/menu_items',
+      :name_prefix => nil
+  end
+
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 #  map.connect '*path', :controller =>  'main_application', :action => 'p404'

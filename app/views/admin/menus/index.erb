@@ -1,0 +1,14 @@
+<%#= Menus controller %>
+<% roundbox2 do -%>
+ <%= render :partial => 'shared/admin/panel_table', :locals => {:per_page => @menus.per_page} %>
+  <% form_for 'tasks', :url => menu_url('destroy'), :html =>{:method => :delete, :name=>'adminForm'} do -%>
+    <%= hidden_field_tag 'task', 'search' -%>
+    <% unless @menus.blank? %>
+      <%= render :partial => 'table' %>
+    <% else %>
+      <%= nodata %>
+    <% end %>
+    <%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @menus, :icon_class => 'icon_menu_48' } %>
+  <% end %>
+<% end %>
+<%= javascript_tag(visual_effect(:highlight,:after_edit, :duration => 1.3)) if flash[:edited] %>

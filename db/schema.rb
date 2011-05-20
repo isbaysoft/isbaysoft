@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110514215833) do
+ActiveRecord::Schema.define(:version => 20110520105931) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -68,6 +68,28 @@ ActiveRecord::Schema.define(:version => 20110514215833) do
     t.text     "memo"
     t.integer  "object_id"
     t.string   "identify"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "menu_items", :force => true do |t|
+    t.string   "title",        :limit => 250, :default => "",    :null => false
+    t.string   "alias",        :limit => 250, :default => "",    :null => false
+    t.string   "url",          :limit => 500, :default => "",    :null => false
+    t.string   "note",         :limit => 500, :default => "",    :null => false
+    t.boolean  "published",                   :default => false, :null => false
+    t.integer  "access_level",                                   :null => false
+    t.boolean  "target"
+    t.integer  "menu_id",                                        :null => false
+    t.integer  "order",                       :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "menus", :force => true do |t|
+    t.string   "title",      :default => "",    :null => false
+    t.integer  "menu_id"
+    t.boolean  "published",  :default => false, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

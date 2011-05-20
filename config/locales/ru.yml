@@ -270,6 +270,7 @@ ru:
   label_add_file_from_archive: Добавить файл из архива
   label_add_load_new_file: Загрузить новый файл
   label_add_load_new_logo: Загрузить новый логотип
+  label_menu_title: Заголовок меню
 
   button_delete: Удалить
   button_deactivate: Деактивировать
@@ -285,8 +286,8 @@ ru:
   button_new_content: Новая статья
   button_show: Показать
   button_hide: Скрыть
-
-
+  button_link_to_menu_items: Пункты меню
+  button_edit: Редактировать
 
   notice_destroy_section: Раздел был успешно удален
   notice_destroy_category: Категория была успешно удалена
@@ -325,6 +326,7 @@ ru:
   controller_userlists_name: Менеджер пользователей
   controller_usergroups_name: Менеджер групп пользователей
   controller_configs_name: Системные настройки
+  controller_menus_name: Менеджер меню
 
   field_filename: Имя файла
   field_filesize: Размер файла

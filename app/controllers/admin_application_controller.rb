@@ -133,4 +133,8 @@ private
     direction
   end
 
+  def render_404
+    render 'errors/404', :status => "404" and return
+  end
+
 end
