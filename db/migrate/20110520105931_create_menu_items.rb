@@ -7,7 +7,7 @@ class CreateMenuItems < ActiveRecord::Migration
       t.string    'note', :null => false, :limit => '500'
       t.boolean   'published', :null => false, :default => false
       t.integer   'access_level', :null => false
-      t.boolean   'target'
+      t.integer   'target', :default => 0
       t.integer   'menu_id', :null => false
       t.integer   'order', :default => 0
 

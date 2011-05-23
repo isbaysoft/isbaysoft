@@ -4,6 +4,7 @@ class CreateMenus < ActiveRecord::Migration
       t.string    'title', :null => false
       t.integer   'menu_id'
       t.boolean   'published', :null => false, :default => false
+      t.integer   'access_level', :null => false
       
       t.timestamps
     end

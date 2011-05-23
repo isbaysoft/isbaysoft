@@ -1,13 +1,31 @@
 <%= include_tiny_mce_if_needed %>
 <%= hidden_field_tag 'task','post' -%>
 <div class="box tabular settings">
-<fieldset><legend></legend>
+<fieldset class="left" style="width: 70%"><legend></legend>
   <%= form.error_messages %>
   <dl>
-    <dt><%= label_tag :title, t(:label_menu_title) %></dt>
+    <dt><%= label_tag :title, t(:label_menu_item_title) %></dt>
     <dd><%= form.text_field :title, :class=>'edit' %></dd>
-    <dt><%= label_tag :published, t(:label_document_publication) %></dt>
-    <dd><%= form.select( :published, options_yesno_tag(@menu.published) ) %></dd>
+
+    <dt><%= label_tag :alias, t(:label_menu_item_alias) %></dt>
+    <dd><%= form.text_field :alias, :class=>'edit' %></dd>
+
+    <dt><%= label_tag :url, t(:label_menu_item_url) %></dt>
+    <dd><%= form.text_field :url, :class=>'edit' %></dd>
+    
+    <dt><%= label_tag :target, t(:label_menu_item_target) %></dt>
+    <dd><%= form.text_field :url, :class=>'edit' %></dd>
+    
+    <dt><%= label_tag :note, t(:label_menu_item_note) %></dt>
+    <dd><%= form.text_area(:note, @text_area_default_size_for_description.update(:class => "mceEditor") ) %></dd>
   </dl>
 </fieldset>
+<fieldset><legend></legend>
+  <dt><%= label_tag :access_level, t(:label_menu_item_access_level) %></dt>
+  <dd><%= form.select(:access_level, rules_for_select, {:include_blank => false}) %></dd>
+  
+  <dt><%= label_tag :published, t(:label_menu_item_publication) %></dt>
+  <dd><%= form.select( :published, options_yesno_tag(@menu.published) ) %></dd>
+</fieldset>
+<div class="clearboth"></div>
 </div>

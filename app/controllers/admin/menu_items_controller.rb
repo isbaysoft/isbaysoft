@@ -4,7 +4,7 @@ class Admin::MenuItemsController < AdminApplicationController
   before_filter :find_menu_item, :only => [:edit, :update]
 
   def load_configs
-    @controlleralias = I18n.t(:controller_menus_name)
+    @controlleralias = I18n.t(:controller_menu_item_name)
     super
   end
 
@@ -17,7 +17,7 @@ class Admin::MenuItemsController < AdminApplicationController
   end
 
   def create
-    @menu_item = MenuItem.new params[:menu_item]
+    @menu_item = @menu.menu_items.new params[:menu_item]
     create_and_redirect(@menu_item)
   end
 
@@ -25,14 +25,14 @@ class Admin::MenuItemsController < AdminApplicationController
   end
 
   def update
-    update_attributes_and_redirect(@menu_item,params[:menu])
+    update_attributes_and_redirect(@menu_item,params[:menu_item])
   end
 
   def destroy
     confirm_multiple_operations params[:ids] do
       if MenuItem.destroy_all(['id in (?)',session[current_session_ids]])
         flash[:notice] = t(:notice_destroy_section)
-        redirect_to menus_url
+        redirect_to menu_items_url
       else
         flash[:error] = t(:error_destroy_section)
         render :action => 'index'
@@ -44,6 +44,8 @@ protected
 
   def find_menu
     @menu = Menu.find(params[:menu_id])
+    @controlleralias += " - #{@menu.title}"
+
   rescue ActiveRecord::RecordNotFound
     render_404
   end

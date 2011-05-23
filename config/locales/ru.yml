@@ -270,8 +270,17 @@ ru:
   label_add_file_from_archive: Добавить файл из архива
   label_add_load_new_file: Загрузить новый файл
   label_add_load_new_logo: Загрузить новый логотип
-  label_menu_title: Заголовок меню
-
+  label_menu_title: Название
+  label_menu_publication: Публиковать
+  label_menu_access_level: Доступ к меню
+  label_menu_item_title: Название
+  label_menu_item_alias: Алиас
+  label_menu_item_url: Ссылка
+  label_menu_item_target: Окно
+  label_menu_item_note: Примечание
+  label_menu_item_access_level: Доступ к пункту меню
+  label_menu_item_publication: Публиковать
+  
   button_delete: Удалить
   button_deactivate: Деактивировать
   button_activate: Активировать
@@ -327,6 +336,7 @@ ru:
   controller_usergroups_name: Менеджер групп пользователей
   controller_configs_name: Системные настройки
   controller_menus_name: Менеджер меню
+  controller_menu_item_name: Пункты меню
 
   field_filename: Имя файла
   field_filesize: Размер файла
