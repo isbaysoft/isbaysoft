@@ -25,6 +25,9 @@ class Admin::MenusController < AdminApplicationController
   end
 
   def update
+    @menu.access_level = params[:menu][:access_level]
+    @menu.published = params[:menu][:published]
+
     update_attributes_and_redirect(@menu,params[:menu])
   end
 

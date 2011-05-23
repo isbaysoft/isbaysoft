@@ -1,6 +1,9 @@
 class Menu < ActiveRecord::Base
   has_many :menu_items, :dependent => :destroy
-   
+  belongs_to :rule, :foreign_key => 'access_level'
+
+#  attr_accessible :title, :menu_id, :created_at, :updated_at
+  attr_protected :published, :access_level
   cattr_reader :per_page
 
   @@per_page=30
