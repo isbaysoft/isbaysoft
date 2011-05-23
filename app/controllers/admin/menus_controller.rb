@@ -17,6 +17,8 @@ class Admin::MenusController < AdminApplicationController
 
   def create
     @menu = Menu.new params[:menu]
+    @menu.access_level = params[:menu][:access_level]
+    @menu.published = params[:menu][:published]
     create_and_redirect(@menu)
   end
 
@@ -27,7 +29,6 @@ class Admin::MenusController < AdminApplicationController
   def update
     @menu.access_level = params[:menu][:access_level]
     @menu.published = params[:menu][:published]
-
     update_attributes_and_redirect(@menu,params[:menu])
   end
 

@@ -44,7 +44,10 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :menus, :controller => 'admin/menus' do |menu|
     menu.resources :menu_items, :controller => 'admin/menu_items',
-      :name_prefix => nil
+      :name_prefix => nil,
+      :member => {
+        :reordering => :get
+      }
   end
 
   map.connect ':controller/:action/:id'

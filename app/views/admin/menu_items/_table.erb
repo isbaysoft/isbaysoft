@@ -19,7 +19,7 @@
     <td><%= h(row.alias) %></td>
     <td><%= h(row.url) %></td>
     <td><%= h(row.rule.name) %></td>
-    <td><%= h(row.target_type_name) %></td>
+    <td><%= h(row.target_name) %></td>
     <th><%= h(row.order) %></th>
     <th><%= check_box_tag("published_#{row.id}",row.published,row.published,:disabled => true) -%></th>
   </tr>
