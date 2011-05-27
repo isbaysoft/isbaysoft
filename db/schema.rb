@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110523093055) do
+ActiveRecord::Schema.define(:version => 20110527140041) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(:version => 20110523093055) do
     t.integer  "access_level",                                   :null => false
     t.integer  "target",                      :default => 0
     t.integer  "menu_id",                                        :null => false
-    t.integer  "order",                       :default => 0
+    t.integer  "sort_no",                     :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -141,8 +141,8 @@ ActiveRecord::Schema.define(:version => 20110523093055) do
     t.string   "current_login_ip"
     t.string   "last_login_ip"
     t.integer  "usergroup_id",        :default => 2
-    t.integer  "rule_id"
     t.boolean  "access",              :default => false
+    t.integer  "access_level"
   end
 
 end

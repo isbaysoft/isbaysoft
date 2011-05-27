@@ -7,7 +7,12 @@
   <th><%= sortable('Ссылка','url') %></th>
   <th><%= sortable('Доступ','access_level') %></th>
   <th><%= sortable('Открывать','target') %></th>
-  <th width="2%"><%= sortable('Порядок','order') %></th>
+  <th width="150px">
+      <%= link_to image_tag('admin/icons/16/update.png'), 
+        reordering_menu_url(@menu),
+        :class => "th-button", :title => 'Перестроить' %>
+      <%= sortable("Порядок",'sort_no') %>
+  </th>
   <th width="2%"><%= sortable('Опубликовано','published') %></th>
 </thead>
 <tbody>
@@ -20,7 +25,7 @@
     <td><%= h(row.url) %></td>
     <td><%= h(row.rule.name) %></td>
     <td><%= h(row.target_name) %></td>
-    <th><%= h(row.order) %></th>
+    <th><%= h(row.sort_no) %></th>
     <th><%= check_box_tag("published_#{row.id}",row.published,row.published,:disabled => true) -%></th>
   </tr>
 <% end %>

@@ -25,7 +25,7 @@
   <dd><%= form.select(:access_level, rules_for_select, {:include_blank => false}) %></dd>
   
   <dt><%= label_tag :published, t(:label_menu_item_publication) %></dt>
-  <dd><%= form.select( :published, options_yesno_tag(@menu.published) ) %></dd>
+  <dd><%= form.select( :published, options_yesno_tag(@menu_item.published) ) %></dd>
 </fieldset>
 <div class="clearboth"></div>
 </div>

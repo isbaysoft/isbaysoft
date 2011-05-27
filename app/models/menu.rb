@@ -7,6 +7,17 @@ class Menu < ActiveRecord::Base
 
   @@per_page=30
 
+  def reordering
+    menu_items = MenuItem.items(self.menu_id)
+    cnt = 1
+    menu_items.map do |m|
+      mm = MenuItem.find(m.id)
+      mm.update_attribute(:sort_no, cnt)
+#      MenuItem.update_ (m.id, :sort_no => cnt )
+      cnt += 1
+    end
+  end
+
   def self.getrows(options)
     page = options[:page] || 1
     @@per_page = options[:per_page] || @@per_page

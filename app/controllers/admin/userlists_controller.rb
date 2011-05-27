@@ -18,7 +18,7 @@ class Admin::UserlistsController < AdminApplicationController
 
   def create
     @user = User.create(params[:user])
-    @user[:rule_id] = params[:rule_id]
+    @user[:access_level] = params[:access_level]
     create_and_redirect(@user)
   end
 
@@ -28,7 +28,7 @@ class Admin::UserlistsController < AdminApplicationController
   def update    
     update_attributes_and_redirect(@user,params[:user]) do |obj|
       Regnotification.deliver_event_hello(@user, Cfg.read('user_reg_type','type_manual'))
-        obj.rule_id = params[:rule_id]
+        obj.access_level = params[:access_level]
         obj.save
     end
   end
@@ -87,7 +87,7 @@ protected
   end
 
   def allow_edit
-    if @user and @user.rule_id < current_user.rule_id
+    if @user and @user.access_level < current_user.access_level
       flash[:notice] = 'Редактировать запрещенно. Ваши права ниже по рейтингу.'
       redirect_to userlists_url
     end

@@ -28,6 +28,7 @@ class Admin::MenuItemsController < AdminApplicationController
 
   def update
     @menu_item.access_level = params[:menu_item][:access_level]
+    @menu_item.published = params[:menu_item][:published]
     update_attributes_and_redirect(@menu_item,params[:menu_item])
   end
 
@@ -41,10 +42,6 @@ class Admin::MenuItemsController < AdminApplicationController
         render :action => 'index'
       end
     end
-  end
-
-  def reordering
-    @menu_item.reordering
   end
 
 protected
