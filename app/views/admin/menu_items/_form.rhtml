@@ -14,7 +14,7 @@
     <dd><%= form.text_field :url, :class=>'edit' %></dd>
     
     <dt><%= label_tag :target, t(:label_menu_item_target) %></dt>
-    <dd><%= form.text_field :url, :class=>'edit' %></dd>
+    <dd><%= form.select( :target, targets_for_select(@menu_item.target) ) %></dd>
     
     <dt><%= label_tag :note, t(:label_menu_item_note) %></dt>
     <dd><%= form.text_area(:note, @text_area_default_size_for_description.update(:class => "mceEditor") ) %></dd>

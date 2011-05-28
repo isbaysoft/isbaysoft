@@ -1,7 +1,8 @@
 class Admin::MenuItemsController < AdminApplicationController
   before_filter :require_admin
   before_filter :find_menu
-  before_filter :find_menu_item, :only => [:edit, :update]
+  before_filter :find_menu_item, :only => [:edit, :update, :reordering]
+  before_filter :after_load_configs
 
   def load_configs
     @controlleralias = I18n.t(:controller_menu_item_name)
@@ -18,6 +19,7 @@ class Admin::MenuItemsController < AdminApplicationController
 
   def create
     @menu_item = @menu.menu_items.new params[:menu_item]
+    @menu_item.access_level = params[:menu_item][:access_level]
     create_and_redirect(@menu_item)
   end
 
@@ -25,8 +27,10 @@ class Admin::MenuItemsController < AdminApplicationController
   end
 
   def update
+<<<<<<< .mine    update_attributes_and_redirect(@menu_item,params[:menu_item])
+=======    @menu_item.access_level = params[:menu_item][:access_level]
     update_attributes_and_redirect(@menu_item,params[:menu_item])
-  end
+>>>>>>> .theirs  end
 
   def destroy
     confirm_multiple_operations params[:ids] do
@@ -38,6 +42,10 @@ class Admin::MenuItemsController < AdminApplicationController
         render :action => 'index'
       end
     end
+  end
+
+  def reordering
+    @menu_item.reordering
   end
 
 protected
@@ -52,7 +60,12 @@ protected
 
   def find_menu_item
     unless @menu.menu_items.nil?
-      @menu_item = @menu.menu_items.find_by_menu_id(params[:id])
+      @menu_item = @menu.menu_items.find(params[:id])
     end
+    render_404 if @menu_item.nil?
+  end
+
+  def after_load_configs
+    @controlleralias += " - #{@menu.title}" unless @menu.nil?
   end
 end

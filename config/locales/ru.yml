@@ -173,6 +173,8 @@ ru:
         name: Название группы пользователей
       logo:
         logo_file_size: Размер файла
+      menu_item:
+        order: Порядок
 
     errors:
       template:
@@ -236,8 +238,6 @@ ru:
   global_controller_alias_not_definitely: Имя контроллера не определенно
   global_updating: Обновление данных
   global_no_data: Нет данных
-
-
 
   global_errors_not_definitely: Не задан обязательный параметр
   global_errors_sitename: Название сайта
@@ -327,6 +327,8 @@ ru:
   text_filelist_summary_filesize: Сумарный объем
   text_no_data: Нет данных
   text_logo: Логотип
+  text_target_self: В этом окне
+  text_target_blank: В новом окне
   
   controller_sections_name: Менеджер разделов
   controller_categories_name: Менеджер категорий
