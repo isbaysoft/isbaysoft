@@ -31,6 +31,7 @@ class AdminApplicationController < ApplicationController
   end
 
   def prepare_index
+#    TODO Refactoring
     @sort_column = sort_column
     @sort_direction = sort_direction
     @order = "#{@sort_column} #{@sort_direction}" if @sort_column
@@ -76,6 +77,7 @@ private
     cookies["per_page_#{self.controller_name}"] = params[:per_page] if params[:per_page]
     per_page = params[:per_page] || cookies["per_page_#{self.controller_name}"]
     {:order => @order,
+     :sort_column => @sort_column,
      :filter => params[:filter],
      :page => params[:page],
      :per_page => per_page

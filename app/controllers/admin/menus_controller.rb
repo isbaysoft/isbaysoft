@@ -1,6 +1,6 @@
 class Admin::MenusController < AdminApplicationController
   before_filter :require_admin
-  before_filter :find_menu, :only => [:edit,:update]
+  before_filter :find_menu, :only => [:edit,:update,:reordering]
 
   def load_configs
     @controlleralias = I18n.t(:controller_menus_name)
@@ -42,6 +42,11 @@ class Admin::MenusController < AdminApplicationController
         render :action => 'index'
       end
     end
+  end
+
+  def reordering
+    @menu.reordering
+    redirect_to menu_items_url(@menu)
   end
 
 protected

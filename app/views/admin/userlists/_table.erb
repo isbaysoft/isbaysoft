@@ -14,8 +14,8 @@
 <% @users.map do |row| %>
   <tr class="<%= cycle('odd','even') %>"<%= 'id="after_edit"' if flash[:edited].to_s == row.id.to_s %> >
     <th width="2%"><%= row.id -%></th>
-    <th width="2%"><%= check_box_tag('ids[]',row.id) unless row.superuser? or row.rule_id < current_user.rule_id %></th>
-    <td><%= link_to_allow(row.email.to_s, edit_userlist_url(row.id), row.rule_id >=current_user.rule_id) -%></td>
+    <th width="2%"><%= check_box_tag('ids[]',row.id) unless row.superuser? or row.access_level < current_user.access_level %></th>
+    <td><%= link_to_allow(row.email.to_s, edit_userlist_url(row.id), row.access_level >=current_user.access_level) -%></td>
     <td><%= row.login_count.to_i -%></td>
     <td><%= row.last_login_at.to_formatted_s(:long) if row.last_login_at -%></td>
     <td><%= row.last_login_ip.to_s -%></td>

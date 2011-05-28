@@ -1,12 +1,12 @@
 class Rule < ActiveRecord::Base
   set_primary_key "access_level"
-
+  
   has_many :users
   has_many :documents
   has_many :menu_items
   has_many :menus
 
-  named_scope :for_current_user, lambda {|current_user| {:conditions => ['id >= ?',current_user]}}
+  named_scope :for_current_user, lambda {|current_user| {:conditions => ['access_level >= ?',current_user]}}
 
   def readonly?
     false

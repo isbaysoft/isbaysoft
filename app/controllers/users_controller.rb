@@ -13,7 +13,7 @@ class UsersController < MainApplicationController
 
   def create
     @user = User.create(params[:user])
-    @user.rule_id = 4
+    @user.access_level = 700 #TODO Заменить на значения модели
     if @user.save
       flash[:notice] = "Account registered!"
       Regnotification.deliver_event_hello(@user, Cfg.read('user_reg_type','type_manual'))

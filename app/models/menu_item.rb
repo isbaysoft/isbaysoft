@@ -2,12 +2,12 @@ class MenuItem < ActiveRecord::Base
   belongs_to :menu
   belongs_to :rule, :foreign_key => 'access_level'
 
-  attr_accessible :title, :alias, :url, :note, :target, :order
+  attr_accessible :title, :alias, :url, :note, :target, :sort_no
   cattr_reader :per_page, :TARGET_TYPES
   
   before_validation_on_create :auto_ordering
 
-  validates_uniqueness_of :order, :scope => :menu_id
+  validates_uniqueness_of :sort_no, :scope => :menu_id
 
 #  before_save :auto_ordering
 
@@ -37,7 +37,8 @@ class MenuItem < ActiveRecord::Base
   def self.getrows(options)
     page = options[:page] || 1
     @@per_page = options[:per_page] || @@per_page
-    filter = ['title like ?',"%#{options[:filter]}%"] if options[:filter]
+    filter = ['title like ?',"%#{options[:filter]}%"] if options[:filter]    
+    options[:order] = nil unless options[:order] && MenuItem.column_names.include?(options[:sort_column])
     self.paginate :page =>page,
       :conditions => filter,
       :order => options[:order]
@@ -54,7 +55,7 @@ class MenuItem < ActiveRecord::Base
   end
 
   def auto_ordering
-    self.order = MenuItem.items(self.menu_id).maximum('order')+1
+    self.sort_no = MenuItem.items(self.menu_id).maximum('sort_no').to_i+1
   end
 
 end

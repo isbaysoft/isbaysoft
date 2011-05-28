@@ -641,3 +641,14 @@ button.tab-right {
     background-color: #FFF8C6;
     font-weight: bold;
 }
+
+.th-button {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}

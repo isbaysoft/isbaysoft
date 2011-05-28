@@ -14,8 +14,8 @@
     <dd><%= form.password_field :password_confirmation, :class=>'edit' %></dd>
   <dt><%= label_tag :usergroup_id, t(:label_login_usergroup) %></dt>
     <dd><%= form.select(:usergroup_id, usergroup_for_select,  {:include_blank => true}, {:class=>'select', :size => 10} ) %></dd>
-  <dt><%= label_tag :rule_id, t(:label_login_rule) %></dt>
-    <dd><%= select_tag(:rule_id, options_for_select(rules_for_select, @user.rule_id), {:class=>'select', :size => 10} ) %></dd>
+  <dt><%= label_tag :access_level, t(:label_login_rule) %></dt>
+    <dd><%= select_tag(:access_level, options_for_select(rules_for_select, @user.access_level), {:class=>'select', :size => 10} ) %></dd>
   <dt></dt>
     <dd></dd>
 </dl>

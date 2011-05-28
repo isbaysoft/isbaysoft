@@ -4,18 +4,18 @@ class User < ActiveRecord::Base
   has_many :static_contents
   has_many :tickets
   belongs_to :usergroup
-  belongs_to :rule
+  belongs_to :rule, :foreign_key => 'access_level'
   cattr_reader :per_page
-  validates_presence_of :rule_id
+  validates_presence_of :access_level
   validates_uniqueness_of :email
   validates_format_of :email, :with => /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.([a-z]){2,4})$/
 
-  attr_protected :rule_id
+  attr_protected :access_level
   attr_protected :access
   cattr_accessor :levels
 
   named_scope :allowobjects, lambda {|cu,list_ids|
-    {:conditions => ['id <> ? and id in (?) and rule_id >= ?',cu.id,list_ids,cu.rule_id]
+    {:conditions => ['id <> ? and id in (?) and access_level >= ?',cu.id,list_ids,cu.access_level]
     }}
   named_scope :activated, :conditions => ['access = ?',true]
   named_scope :deactivated, :conditions => ['access = ?',false]
@@ -63,10 +63,11 @@ class User < ActiveRecord::Base
   end
 
   self.levels = {
-    "Sa" => 1,
-    "Administrator" => 2,
-    "Moderator" => 3,
-    "Member" => 4
+    "Sa" => 1000,
+    "Administrator" => 900,
+    "Moderator" => 800,
+    "Member" => 700,
+    "Everybody" => 0
   }
 
   def rule_name
@@ -76,7 +77,8 @@ class User < ActiveRecord::Base
   self.levels.default = 1
 
   def allow(level)
-    self.rule_id <= levels[level.capitalize.to_s ]
+    #TODO Проверить все проверки на доступ
+    self.access_level >= levels[level.capitalize.to_s ]
   end
 
   def superuser?
@@ -84,21 +86,21 @@ class User < ActiveRecord::Base
   end
 
   def superadmin?
-    self.rule_id == 1
+    self.access_level == 1000
   end
 
   def admin?
-    self.rule_id <= 2
+    self.access_level >= 900
   end
 
   def moderator?
-    self.rule_id <= 3
+    self.access_level >= 800
   end
 
   def check_sa
     # first user as Super Administrator
     if User.count == 0
-      self.rule_id = 1 
+      self.access_level = 1000
       self.access = true
     end
   end  
@@ -112,7 +114,7 @@ class User < ActiveRecord::Base
         rules.name as rule_name,
         users.*',
       :joins => 'left join usergroups on usergroups.id=users.usergroup_id 
-        join rules on rules.id=users.rule_id',
+        join rules on rules.id=users.access_level',
       :conditions => filter,
       :order => options[:order]
   end
