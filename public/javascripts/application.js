@@ -7,11 +7,18 @@ function ColumnOrdering(form, order, direction)
     form.submit();
 }
 
-function setCheckBoxes(obj,aname)
+function setCheckBoxes(obj,check_boxes_name)
 {
-    var check = document.getElementsByName(aname);
+    var check = document.getElementsByName(check_boxes_name);
     for (var i=0; i<check.length; i++)
         check[i].checked = obj.checked;
+}
+
+function CheckedCheckBoxes(check_boxes_name)
+{
+    var check = document.getElementsByName(check_boxes_name);
+    for (var i=0; i<check.length; i++)
+        check[i].checked = true;
 
 }
 

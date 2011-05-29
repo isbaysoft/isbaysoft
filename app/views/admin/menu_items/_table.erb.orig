@@ -7,9 +7,10 @@
   <th><%= sortable('Ссылка','url') %></th>
   <th><%= sortable('Доступ','access_level') %></th>
   <th><%= sortable('Открывать','target') %></th>
-  <th width="130px"><%= sortable("Порядок",'sort_no') %></th>
+  <th width="2%"><%= sortable('Порядок','order') %></th>
   <th width="2%"><%= sortable('Опубликовано','published') %></th>
 </thead>
+<tbody>
 <% @menu_items.map do |row| %>
   <tr class="<%= cycle('odd','even') %>"<%= 'id="after_edit"' if flash[:edited].to_s == row.id.to_s %> >
     <th><%= row.id -%></th>
@@ -18,8 +19,12 @@
     <td><%= h(row.alias) %></td>
     <td><%= h(row.url) %></td>
     <td><%= h(row.rule.name) %></td>
+<<<<<<< HEAD
+    <td><%= h(row.target_type_name) %></td>
+=======
     <td><%= h(row.target_name) %></td>
-    <th><%= text_field_tag 'orders[]', row.sort_no, :class => 'edit_mini' %></th>
+>>>>>>> 6280bf9caa77e4d7808edfe0aeca2b95940b553e
+    <th><%= h(row.order) %></th>
     <th><%= check_box_tag("published_#{row.id}",row.published,row.published,:disabled => true) -%></th>
   </tr>
 <% end %>

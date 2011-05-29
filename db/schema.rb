@@ -87,7 +87,7 @@ ActiveRecord::Schema.define(:version => 20110527140041) do
   end
 
   create_table "menus", :force => true do |t|
-    t.string   "title",        :default => "",    :null => false
+    t.string   "title",                           :null => false
     t.integer  "menu_id"
     t.boolean  "published",    :default => false, :null => false
     t.integer  "access_level",                    :null => false

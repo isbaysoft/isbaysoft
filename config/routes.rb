@@ -43,7 +43,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :usergroups, :controller => 'admin/usergroups'
 
   map.resources :menus, :controller => 'admin/menus', :member => {
-        :reordering => :get
+        :reordering => :post,
+        :save_sorting => :post
       } do |menu|
     menu.resources :menu_items, :controller => 'admin/menu_items',
       :name_prefix => nil

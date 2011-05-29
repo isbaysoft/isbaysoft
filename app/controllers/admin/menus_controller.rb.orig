@@ -1,6 +1,6 @@
 class Admin::MenusController < AdminApplicationController
   before_filter :require_admin
-  before_filter :find_menu, :only => [:edit,:update,:reordering, :save_sorting]
+  before_filter :find_menu, :only => [:edit,:update]
 
   def load_configs
     @controlleralias = I18n.t(:controller_menus_name)
@@ -29,6 +29,10 @@ class Admin::MenusController < AdminApplicationController
   def update
     @menu.access_level = params[:menu][:access_level]
     @menu.published = params[:menu][:published]
+<<<<<<< HEAD
+
+=======
+>>>>>>> 6280bf9caa77e4d7808edfe0aeca2b95940b553e
     update_attributes_and_redirect(@menu,params[:menu])
   end
 
@@ -44,26 +48,7 @@ class Admin::MenusController < AdminApplicationController
     end
   end
 
-  def reordering
-    @menu.reordering
-    redirect_to menu_items_url(@menu)
-  end
-
-  def save_sorting
-    order_values = params[:orders]
-    ids = params[:ids]
-    ids.each_index do |i|
-      menuitem = MenuItem.find_by_id(ids[i])
-      menuitem.update_attribute('sort_no', order_values[i]) unless menuitem.nil?
-    end if (order_values.length == ids.length) && (order_values.all?{|v| is_numeric?(v)}) && (ids.all?{|v| is_numeric?(v)})
-    redirect_to menu_items_url(@menu)
-  end
-
 protected
-
-  def is_numeric?(object)
-    true if Float(object) rescue false
-  end
 
   def find_menu
     @menu = Menu.find(params[:id])

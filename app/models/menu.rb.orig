@@ -2,20 +2,15 @@ class Menu < ActiveRecord::Base
   has_many :menu_items, :dependent => :destroy
   belongs_to :rule, :foreign_key => 'access_level'
 
+<<<<<<< HEAD
+#  attr_accessible :title, :menu_id, :created_at, :updated_at
+  attr_protected :published, :access_level
+=======
   attr_accessible :title, :menu_id
+>>>>>>> 6280bf9caa77e4d7808edfe0aeca2b95940b553e
   cattr_reader :per_page
 
   @@per_page=30
-
-  def reordering
-    menu_items = MenuItem.items(self.id).order_by_sort_no
-    cnt = 1
-    menu_items.map do |m|
-      mm = MenuItem.find(m.id)
-      mm.update_attribute(:sort_no, cnt)
-      cnt += 1
-    end
-  end
 
   def self.getrows(options)
     page = options[:page] || 1

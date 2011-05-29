@@ -297,6 +297,9 @@ ru:
   button_hide: Скрыть
   button_link_to_menu_items: Пункты меню
   button_edit: Редактировать
+  button_sort: Сортировать
+
+  title_reordering: Пересортировать
 
   notice_destroy_section: Раздел был успешно удален
   notice_destroy_category: Категория была успешно удалена

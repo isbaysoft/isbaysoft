@@ -19,7 +19,10 @@ class Admin::MenuItemsController < AdminApplicationController
 
   def create
     @menu_item = @menu.menu_items.new params[:menu_item]
+<<<<<<< HEAD
+=======
     @menu_item.access_level = params[:menu_item][:access_level]
+>>>>>>> 6280bf9caa77e4d7808edfe0aeca2b95940b553e
     create_and_redirect(@menu_item)
   end
 
@@ -27,10 +30,12 @@ class Admin::MenuItemsController < AdminApplicationController
   end
 
   def update
+<<<<<<< HEAD
+=======
     @menu_item.access_level = params[:menu_item][:access_level]
-    @menu_item.published = params[:menu_item][:published]
+>>>>>>> 6280bf9caa77e4d7808edfe0aeca2b95940b553e
     update_attributes_and_redirect(@menu_item,params[:menu_item])
-end
+  end
 
   def destroy
     confirm_multiple_operations params[:ids] do
@@ -42,6 +47,10 @@ end
         render :action => 'index'
       end
     end
+  end
+
+  def reordering
+    @menu_item.reordering
   end
 
 protected
