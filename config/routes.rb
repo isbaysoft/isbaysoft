@@ -50,6 +50,8 @@ ActionController::Routing::Routes.draw do |map|
       :name_prefix => nil
   end
 
+  map.resource 'content', :controller => 'static_content'
+
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 #  map.connect '*path', :controller =>  'main_application', :action => 'p404'

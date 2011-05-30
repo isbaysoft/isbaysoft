@@ -14,9 +14,12 @@
         :title => t(:title_reordering),
         :onclick=>"submitaction('#{reordering_menu_url(@menu)}')") -%>
       <%= btn(:icon_class=>'icon_save_32',
-        :caption => t(:button_off),
-        :title => t(:button_deactivate_user),
+        :caption => t(:button_save),
+        :title => t(:button_save),
         :onclick=>"CheckedCheckBoxes('ids[]'); submitaction('#{save_sorting_menu_url(@menu)}')") -%>
+    <%= btn(:icon_class=>'icon_exit_32',
+      :caption => t(:button_exit),
+      :url => menus_url) -%>
     <% end %>
     <%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @menu_items, :icon_class => 'icon_menu_48' } %>
   <% end %>

@@ -298,6 +298,8 @@ ru:
   button_link_to_menu_items: Пункты меню
   button_edit: Редактировать
   button_sort: Сортировать
+  button_save: Сохранить
+  button_exit: Выход
 
   title_reordering: Пересортировать
 
@@ -349,6 +351,7 @@ ru:
 
   dialog_category: Выбор категории
   dialog_file: Выбор файла
+  dialog_caption_static_content: Выбор статического контента
 
   tab_options: Основные наснастройки
   tab_notify: Оповещение

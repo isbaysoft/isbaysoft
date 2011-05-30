@@ -48,8 +48,6 @@ protected
 
   def find_menu
     @menu = Menu.find(params[:menu_id])
-    @controlleralias += " - #{@menu.title}"
-
   rescue ActiveRecord::RecordNotFound
     render_404
   end

@@ -12,7 +12,14 @@
 
     <dt><%= label_tag :url, t(:label_menu_item_url) %></dt>
     <dd><%= form.text_field :url, :class=>'edit' %></dd>
-    
+
+    <dt>Создать сылку на статический контент</dt>
+    <dd>
+       <%= link_to_function t(:button_select),
+          remote_function(:url => dialog_url('static_content'),
+          :method => :GET )
+        %>
+    </dd>    
     <dt><%= label_tag :target, t(:label_menu_item_target) %></dt>
     <dd><%= form.select( :target, targets_for_select(@menu_item.target) ) %></dd>
     

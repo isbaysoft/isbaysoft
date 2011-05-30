@@ -11,11 +11,16 @@ class DialogsController < ApplicationController
 
     category if params[:dialog_name].eql?('category')
     fetch_category if params[:dialog_name].eql?('fetch_category')
-
     filelist if params[:dialog_name].eql?('filelist')
+    static_content if params[:dialog_name].eql?('static_content')
   end
 
 private
+
+  def static_content
+    @dialog_caption = t(:dialog_caption_static_content)
+    @dialogdata = StaticContent.all
+  end
 
   def filelist
     @dialog_caption = t(:dialog_file)
