@@ -50,7 +50,7 @@ ActionController::Routing::Routes.draw do |map|
       :name_prefix => nil
   end
 
-  map.resource 'content', :controller => 'static_content'
+  map.resources 'show', :controller => 'static_content'
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

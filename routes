@@ -105,5 +105,12 @@ deactivate_userlist POST   /userlists/:id/deactivate(.:format)           {:actio
                menu GET    /menus/:id(.:format)                          {:action=>"show", :controller=>"admin/menus"}
                     PUT    /menus/:id(.:format)                          {:action=>"update", :controller=>"admin/menus"}
                     DELETE /menus/:id(.:format)                          {:action=>"destroy", :controller=>"admin/menus"}
+         show_index GET    /show(.:format)                               {:action=>"index", :controller=>"static_content"}
+                    POST   /show(.:format)                               {:action=>"create", :controller=>"static_content"}
+           new_show GET    /show/new(.:format)                           {:action=>"new", :controller=>"static_content"}
+          edit_show GET    /show/:id/edit(.:format)                      {:action=>"edit", :controller=>"static_content"}
+               show GET    /show/:id(.:format)                           {:action=>"show", :controller=>"static_content"}
+                    PUT    /show/:id(.:format)                           {:action=>"update", :controller=>"static_content"}
+                    DELETE /show/:id(.:format)                           {:action=>"destroy", :controller=>"static_content"}
                            /:controller/:action/:id                      
                            /:controller/:action/:id(.:format)            

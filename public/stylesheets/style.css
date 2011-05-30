@@ -342,39 +342,43 @@ table.catalog td {
 }
 /************** END flash message ************/
 
-/* Product box */
-.product_box, .product_box_bottom {
+
+/* Сontent box */
+.content_box, .content_box_bottom {
     padding: 16px;
     display: block;
 }
-.product_box {
-    
+.content_box {
     background: url(../images/main/box_t.png) no-repeat left top;
     min-height: 161px;
     height:auto !important; /* min-height for IE6 */
     height:161px;
 }
-.product_box_bottom {
+.content_box_bottom {
     background: url(../images/main/box_b.png) no-repeat right bottom;
     min-height: 32px;
     padding-bottom: 22px;
 }
 
-.product_box_bottom div {margin-right: 0px;}
-.product_box h1 {padding: 0px; margin-left: 156px;}
-.product_box img {
+.content_box_bottom div {margin-right: 0px;}
+.content_box h1 {padding: 0px;}
+.content_box img {
     margin: 10px;
     background: url(../images/main/logo_bg.jpg) repeat-x left -60px;
     padding: 6px;
     border:0;
 }
 
-.product_description {
-    margin-left: 156px;
-    margin-right: 48px;
+.content_body {
+    margin-right: 16px;
+    
     text-align: justify;   
 }
-/* END Product box */
+/* END content box */
+
+.body_product {
+    margin-left: 156px;
+}
 
 /* goodbuttons */
 .goodbutton {

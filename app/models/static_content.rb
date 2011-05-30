@@ -4,6 +4,10 @@ class StaticContent < ActiveRecord::Base
 
   @@per_page=30
 
+  def to_param
+    name
+  end
+
   def self.getrows(options = {})
     page = options[:page] || 1
     @@per_page = options[:per_page] || @@per_page

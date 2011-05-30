@@ -1,10 +1,10 @@
-<div class="product_box">
+<div class="content_box">
   <%= image_tag @document.logo_url, :align => :left, :class => 'img1' %>
-  <div class="product_header"><h1><%= @document.name %></h1></div>
-  <div class="product_description"><%= @document.description %></div>
+  <div class="content_header"><h1><%= @document.name %></h1></div>
+  <div class="content_body body_product"><%= @document.description %></div>
 </div> <!-- END product_box -->
 <div class="clearboth">&nbsp;</div>
-<div class="product_box_bottom">
+<div class="content_box_bottom">
   <% if current_user && current_user.access_level > @document.access_level.to_i %>
     <span class="green">(К сожалению, Вам запрещено cкачивать файлы)</span>
   <% end %>

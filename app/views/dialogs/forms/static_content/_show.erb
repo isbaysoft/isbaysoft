@@ -1,9 +1,9 @@
 <table class="gridmini" style="width: 100%;" cellpadding="0" cellspacing="0">
   <th><%= t(:field_filename) %></th>
   <th></th>
-  <% @dialogdata.map do |m|  %>
+  <% @dialogdata.map do |row|  %>
   <tr class="<%=cycle('odd','even')%>">
-    <td><%= link_to_function h(m.name), "dialog.select(#{ {:menu_item_url => 'LINKLINKLINK'}.to_json })" %></td>
+    <td><%= link_to_function h(row.name), "dialog.select(#{ {:menu_item_url => show_path(row.id)}.to_json })" %></td>
   </tr>
   <% end %>
 </table>
