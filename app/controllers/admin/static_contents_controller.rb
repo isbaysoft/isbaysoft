@@ -2,7 +2,7 @@ class Admin::StaticContentsController < AdminApplicationController
   before_filter :require_moderator
 
   def load_configs
-    @controlleralias = 'Статический контент'
+    @controlleralias = I18n.t(:controller_static_content_name)
     super
   end
   

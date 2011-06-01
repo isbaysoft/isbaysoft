@@ -20,10 +20,12 @@ class Admin::MenuItemsController < AdminApplicationController
   def create
     @menu_item = @menu.menu_items.new params[:menu_item]
     @menu_item.access_level = params[:menu_item][:access_level]
+    @menu_item.published = params[:menu_item][:published]
     create_and_redirect(@menu_item)
   end
 
   def edit
+#    routes = ActionController::Routing::Routes.recognize_path("/show/1", {:method => :get})
   end
 
   def update
@@ -44,6 +46,22 @@ end
     end
   end
 
+  def publish
+    if params.has_key?(:ids)
+      @menu.menu_items.update_all(["published = ?",true], ["id in (?)",params[:ids]])
+      flash[:notice] = t(:notice_publish_documents)
+    end
+    redirect_to menu_items_url(@menu)
+  end
+
+  def unpublish
+    if params.has_key?(:ids)
+      @menu.menu_items.update_all(["published = ?",false], ["id in (?)",params[:ids]])
+      flash[:notice] = t(:notice_unpublish_documents)
+    end
+    redirect_to menu_items_url(@menu)
+  end
+  
 protected
 
   def find_menu

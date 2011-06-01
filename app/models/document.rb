@@ -3,6 +3,7 @@ class Document < ActiveRecord::Base
   belongs_to :section, :dependent => :destroy
   belongs_to :rule, :foreign_key => 'access_level'
   belongs_to :logo, :dependent => :destroy
+  belongs_to :menu
 
   has_many :document_files
   has_many :filelists, :through => :document_files

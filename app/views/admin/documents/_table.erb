@@ -24,7 +24,7 @@
     <td align="center"><%= row.filelists.count -%></td>
     <td><%= row.section_name -%></td>
     <td><%= row.category.try(:name) -%></td>
-    <td><%= row.rule.name -%></td>
+    <td><%= row.rule.try(:name) -%></td>
     <td><%= row.updated_at.to_formatted_s(:short) -%></td>
     <td><%= number_to_human_size(row.filelists.sum('f_file_size')) -%></td>
     <td align="center"><%= row.hits.to_i -%></td>

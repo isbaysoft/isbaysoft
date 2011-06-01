@@ -59,6 +59,22 @@ class Admin::MenusController < AdminApplicationController
     redirect_to menu_items_url(@menu)
   end
 
+  def publish
+    if params.has_key?(:ids)
+      Menu.update_all(["published = ?",true], ["id in (?)",params[:ids]])
+      flash[:notice] = t(:notice_publish_documents)
+    end
+    redirect_to menus_url
+  end
+
+  def unpublish
+    if params.has_key?(:ids)
+      Menu.update_all(["published = ?",false], ["id in (?)",params[:ids]])
+      flash[:notice] = t(:notice_unpublish_documents)
+    end
+    redirect_to menus_url
+  end
+
 protected
 
   def is_numeric?(object)

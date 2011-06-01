@@ -44,15 +44,20 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :menus, :controller => 'admin/menus', :member => {
         :reordering => :post,
-        :save_sorting => :post
+        :save_sorting => :post,
+        :publish => :post,
+        :unpublish => :post
       } do |menu|
     menu.resources :menu_items, :controller => 'admin/menu_items',
-      :name_prefix => nil
+      :name_prefix => nil, :member => {
+        :publish => :post,
+        :unpublish => :post
+      }
   end
 
   map.resources 'show', :controller => 'static_content'
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
-#  map.connect '*path', :controller =>  'main_application', :action => 'p404'
+  map.connect '*path', :controller =>  'main_application', :action => 'p404'
 end

@@ -10,12 +10,14 @@
     <dt><%= label_tag :alias, t(:label_menu_item_alias) %></dt>
     <dd><%= form.text_field :alias, :class=>'edit' %></dd>
 
-    <dt><%= label_tag :url, t(:label_menu_item_url) %></dt>
+    <dt>
+      <%= label_tag :url, t(:label_menu_item_url) %>
+      (<%= link_to 'Перейти', h(@menu_item.url.to_s), :target => MenuItem::TARGET_TYPES[@menu_item.target] %>)
+    </dt>
     <dd><%= form.text_field :url, :class=>'edit' %></dd>
-
-    <dt>Создать сылку на статический контент</dt>
+    <dt>Создать сылку как</dt>
     <dd>
-       <%= link_to_function t(:button_select),
+       <%= link_to_function 'Статический контент',
           remote_function(:url => dialog_url('static_content'),
           :method => :GET )
         %>

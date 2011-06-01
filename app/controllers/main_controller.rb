@@ -29,8 +29,10 @@ class MainController < MainApplicationController
 
   def product
     @document = Document.find_by_id(params[:id]);
-    render 'errors/filenotfound' and return unless @document.present?
-    @categories = Category.getlist.section(@document.category.section_id)
+    @document_menu = Menu.permitted.find_by_id(@document.menu_id) unless @document.menu.nil?
+    @document_menu_items = @document_menu.menu_items unless @document_menu.nil?
+#  rescue
+#    render 'errors/filenotfound'
   end
 
   def products

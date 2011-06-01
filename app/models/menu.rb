@@ -1,9 +1,14 @@
 class Menu < ActiveRecord::Base
-  has_many :menu_items, :dependent => :destroy
   belongs_to :rule, :foreign_key => 'access_level'
+
+  has_many :menu_items, :dependent => :destroy
+  has_many :documents
 
   attr_accessible :title, :menu_id
   cattr_reader :per_page
+
+  named_scope :published, {:conditions => 'published = true'}
+  named_scope :permitted, {:conditions => ['access_level <= ?',User.current.access_level]}
 
   @@per_page=30
 

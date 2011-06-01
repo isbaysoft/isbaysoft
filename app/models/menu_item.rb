@@ -13,13 +13,15 @@ class MenuItem < ActiveRecord::Base
 
   named_scope :items, lambda { |menu_id| {:conditions => ["menu_id = ?", menu_id]} }
   named_scope :order_by_sort_no, {:order => 'sort_no'}
+  named_scope :published, {:conditions => 'published = true'}
+
   
   @@per_page=30
 
 #  link_to target type
   TARGET_TYPES = {
-    0 => 'self',
-    1 => 'blank'
+    0 => '_self',
+    1 => '_blank'
   }
   
   TARGET_TYPES_NAMES = {

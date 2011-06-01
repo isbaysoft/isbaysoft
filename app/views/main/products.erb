@@ -1,13 +1,13 @@
 <%= will_paginate @products, :prev_label => '&nbsp;',:next_label => '&nbsp;' if @products.present? %>
 <div class="clearboth">&nbsp;</div>
 <% @products.map do |row| %>
-<div class="product_box">
+<div class="content_box">
   <%= image_tag row.logo_url, :align => :left, :class => 'img1' %>
-  <div class="product_header"><h1><%= row.name %></h1></div>
-  <div class="product_description"><%= row.short_description %></div>
+  <div class="content_header"><h1><%= row.name %></h1></div>
+  <div class="content_description"><%= row.short_description %></div>
 </div> <!-- END product_box -->
 <div class="clearboth">&nbsp;</div>
-<div class="product_box_bottom">
+<div class="content_box_bottom">
   <div class="right">
     <%= link_to 'Узнать больше', show_product_url(row), :class=>'goodbutton goob_cl_orchid goob_sz_normal' %>
   </div>

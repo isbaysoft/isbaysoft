@@ -58,6 +58,10 @@
     </dd>
     <dt><%= label_tag 'logo_id', t(:label_add_load_new_logo) %></dt>
     <dd><%= file_field_tag 'logo[logo]' %></dd>
+
+    <dt><%= label_tag :menu_id, t(:label_document_link_menu) %></dt>
+    <dd><%= form.select(:menu_id, menus_for_select, {:include_blank => false, :prompt => 'Не выбранно'}) %></dd>
+
   </fieldset>
   <div class="clearboth"></div>
 </div>

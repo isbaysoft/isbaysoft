@@ -264,6 +264,7 @@ ru:
   label_document_access_for: Доступ к документу
   label_document_publication: Публикация
   label_document_approved: Проверен
+  label_document_link_menu: Привязать меню
   label_usergroup_name: Имя группы
   label_description: Описание
   label_short_description: Краткое описание
@@ -344,6 +345,7 @@ ru:
   controller_configs_name: Системные настройки
   controller_menus_name: Менеджер меню
   controller_menu_item_name: Пункты меню
+  controller_static_content_name: Статический контент
 
   field_filename: Имя файла
   field_filesize: Размер файла

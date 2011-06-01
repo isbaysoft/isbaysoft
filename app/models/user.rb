@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
   attr_protected :access
   cattr_accessor :levels
 
+#  TODO переименовать в permitted
   named_scope :allowobjects, lambda {|cu,list_ids|
     {:conditions => ['id <> ? and id in (?) and access_level >= ?',cu.id,list_ids,cu.access_level]
     }}
@@ -21,6 +22,15 @@ class User < ActiveRecord::Base
   named_scope :deactivated, :conditions => ['access = ?',false]
 
   @@per_page=30
+
+  def self.current
+    @current_user ||= User.anonymous
+  end
+
+  def self.anonymous
+    0
+  end
+
 
   # Method _activate_ activates the user account.
   # Set access = true in table User.

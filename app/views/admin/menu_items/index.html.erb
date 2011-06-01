@@ -17,9 +17,17 @@
         :caption => t(:button_save),
         :title => t(:button_save),
         :onclick=>"CheckedCheckBoxes('ids[]'); submitaction('#{save_sorting_menu_url(@menu)}')") -%>
-    <%= btn(:icon_class=>'icon_exit_32',
-      :caption => t(:button_exit),
-      :url => menus_url) -%>
+      <%= btn(:icon_class=>'icon_exit_32',
+        :caption => t(:button_exit),
+        :url => menus_url) -%>
+      <%= btn(:icon_class=>'icon_publish_32',
+        :caption => t(:button_show),
+        :title => t(:button_show),
+        :onclick=>"submitaction('#{publish_menu_item_url(@menu,0)}')") -%>
+      <%= btn(:icon_class=>'icon_unpublish_32',
+        :caption => t(:button_hide),
+        :title => t(:button_deactivate_user),
+        :onclick=>"submitaction('#{unpublish_menu_item_url(@menu,0)}')") -%>
     <% end %>
     <%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @menu_items, :icon_class => 'icon_menu_48' } %>
   <% end %>
