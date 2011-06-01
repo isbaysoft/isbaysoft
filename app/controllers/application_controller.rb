@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
   before_filter :initialize_flash_types
   before_filter :mailer_set_url_options
+  before_filter :user_setup
+
 
   def default_url_options(options={})
 #    logger.debug "default_url_options is passed options: #{options.inspect}\n"
@@ -42,6 +44,11 @@ private
   def current_user_session
     return @current_user_session if defined?(@current_user_session)
     @current_user_session = UserSession.find
+  end
+
+  def user_setup
+    # Find the current user
+    User.current = current_user_session && current_user_session.record
   end
 
   def current_user

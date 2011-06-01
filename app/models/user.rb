@@ -10,8 +10,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email
   validates_format_of :email, :with => /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.([a-z]){2,4})$/
 
-  attr_protected :access_level
-  attr_protected :access
+  attr_protected :access_level, :access
   cattr_accessor :levels
 
 #  TODO переименовать в permitted
@@ -23,12 +22,21 @@ class User < ActiveRecord::Base
 
   @@per_page=30
 
+  def self.current=(user)
+    @current_user = user
+  end
+
   def self.current
     @current_user ||= User.anonymous
   end
 
   def self.anonymous
-    0
+    anonymous_user = AnonymousUser.find(:first)
+    if anonymous_user.nil?
+      anonymous_user = AnonymousUser.create(:lastname => 'Anonymous', :firstname => '', :mail => '', :login => '', :status => 0)
+      raise 'Unable to create the anonymous user.' if anonymous_user.new_record?
+    end
+    anonymous_user
   end
 
 
@@ -90,19 +98,19 @@ class User < ActiveRecord::Base
     #TODO Проверить все проверки на доступ
     self.access_level >= levels[level.capitalize.to_s ]
   end
-
+#TODO переделать это безобразие
   def superuser?
     self.id == 1
   end
-
+#TODO переделать это безобразие
   def superadmin?
     self.access_level == 1000
   end
-
+#TODO переделать это безобразие
   def admin?
     self.access_level >= 900
   end
-
+#TODO переделать это безобразие
   def moderator?
     self.access_level >= 800
   end
@@ -114,7 +122,8 @@ class User < ActiveRecord::Base
       self.access = true
     end
   end  
-  
+
+#  TODO Переделать эту гадость - ...join rules on rules.access_l...
   def self.getrows(options)
     page = options[:page] || 1
     @@per_page = options[:per_page] || @@per_page
@@ -124,9 +133,35 @@ class User < ActiveRecord::Base
         rules.name as rule_name,
         users.*',
       :joins => 'left join usergroups on usergroups.id=users.usergroup_id 
-        join rules on rules.id=users.access_level',
-      :conditions => filter,
+        join rules on rules.access_level=users.access_level',
+#      :conditions => filter,
       :order => options[:order]
   end
 
+end
+
+class AnonymousUser < User
+  def validate_on_create
+    # There should be only one AnonymousUser in the database
+    errors.add_to_base 'An anonymous user already exists.' if AnonymousUser.find(:first)
+  end
+
+  def available_custom_fields
+    []
+  end
+
+  # Overrides a User properties
+  def id; 0 end
+  def login; 'Anonymous' end
+  def email; nil end
+  def access; 1 end
+  def access_level; 0 end
+  def superuser?; false end
+  def admin?; false end
+  def moderator?; false end
+
+  # Anonymous user can not be destroyed
+  def destroy
+    false
+  end
 end

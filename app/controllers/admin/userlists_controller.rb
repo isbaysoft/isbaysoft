@@ -87,7 +87,7 @@ protected
   end
 
   def allow_edit
-    if @user and @user.access_level < current_user.access_level
+    if @user and @user.access_level > current_user.access_level
       flash[:notice] = 'Редактировать запрещенно. Ваши права ниже по рейтингу.'
       redirect_to userlists_url
     end

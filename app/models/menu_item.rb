@@ -14,6 +14,7 @@ class MenuItem < ActiveRecord::Base
   named_scope :items, lambda { |menu_id| {:conditions => ["menu_id = ?", menu_id]} }
   named_scope :order_by_sort_no, {:order => 'sort_no'}
   named_scope :published, {:conditions => 'published = true'}
+  named_scope :permitted, {:conditions => ['access_level <= ?',User.current.access_level]}
 
   
   @@per_page=30

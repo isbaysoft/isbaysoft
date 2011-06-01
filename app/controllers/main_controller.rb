@@ -2,9 +2,7 @@ class MainController < MainApplicationController
   layout = 'main'
   $contents = ['main','greeting']
   
-  before_filter :require_user, :only => []
-  before_filter :load_contents, :only => [:index]
-  
+  before_filter :load_contents, :only => [:index]  
 
   def download
     document = Document.getlist.find_by_id(params[:document_id])
@@ -30,7 +28,7 @@ class MainController < MainApplicationController
   def product
     @document = Document.find_by_id(params[:id]);
     @document_menu = Menu.permitted.find_by_id(@document.menu_id) unless @document.menu.nil?
-    @document_menu_items = @document_menu.menu_items unless @document_menu.nil?
+    @document_menu_items = MenuItem.permitted.published.items(@document_menu.id) unless @document_menu.nil?
 #  rescue
 #    render 'errors/filenotfound'
   end
