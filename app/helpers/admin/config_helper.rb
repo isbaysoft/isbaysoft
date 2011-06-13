@@ -24,4 +24,10 @@ module Admin::ConfigHelper
            ]
   end
 
+  def document_tabs
+    tabs = [{:name => 'general', :partial => 'general', :label => :tab_general},
+            {:name => 'screenshots', :partial => 'screenshots', :label => :tab_screenshots}
+           ]
+  end
+
 end

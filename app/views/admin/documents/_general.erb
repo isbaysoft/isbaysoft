@@ -1,0 +1,27 @@
+
+<dl>
+  <dt><%= label_tag :name, t(:label_document_name) %></dt>
+  <dd><%= general.text_field :name, :class => 'edit' %></dd>
+  <div class="left" style="width: 70%">
+    <dt> <%= label_tag :filelist_id, t(:label_document_files) %></dt>
+    <dd><%= render :partial => 'filelist_list', :locals => {:rows => @document.document_files} %></dd>
+    <dd><%= render :partial => 'filelist_info', :locals => {:document => @document} %></dd>
+  </div>
+  <div class="left" style="width: 25%">
+    <dt> <%= label_tag :logo_id, t(:text_logo) %></dt>
+    <dd><%= image_tag (@document.logo.nil? or @document.new_record?) ? 'main/empty_logo.png ' : @document.logo.logo.url, :size => '128x128'  %></dd>
+  </div>
+  <br class="clearboth"/>
+  <dt><%= label_tag :category_id, t(:label_document_section_and_category) %></dt>
+  <dd><%= text_field_tag :category_name, @document.path_name, :size => 50,
+            :readonly => true,
+            :onclick => remote_function(:url => dialog_url('category'), :method => :GET),
+            :class => 'edit' %>
+  </dd>
+  <dt><%= label_tag :short_description, t(:label_short_description) %></dt>
+  <dd><%= general.text_area(:short_description, @text_area_default_size_for_description_big.update(:class => "mceEditor")) %></dd>
+  <br />
+  <dt><%= label_tag :description, t(:label_description) %></dt>
+  <dd><%= general.text_area(:description, @text_area_default_size_for_description_big.update(:class => "mceEditor")) %></dd>
+  <br />
+</dl>

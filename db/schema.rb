@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110531143622) do
+ActiveRecord::Schema.define(:version => 20110612203717) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -101,6 +101,18 @@ ActiveRecord::Schema.define(:version => 20110531143622) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "access_level", :null => false
+  end
+
+  create_table "screenshots", :force => true do |t|
+    t.string   "screenshot_file_name"
+    t.string   "screenshot_content_type"
+    t.integer  "screenshot_file_size"
+    t.datetime "screenshot_updated_at"
+    t.integer  "document_id"
+    t.string   "short_description"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "sections", :force => true do |t|

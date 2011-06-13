@@ -85,9 +85,10 @@ def static_content_for(content_position_name)
 end
 
 # Renders tabs and their content
-def render_tabs(tabs)
-  if tabs.any?
-    render :partial => 'shared/admin/tabs', :locals => {:tabs => tabs}
+def render_tabs(*args)
+  options = args.extract_options!
+  if options.has_key?(:tabs)
+    render :partial => 'shared/admin/tabs', :locals => {:tabs => options[:tabs], :form_object => options[:form_object]  }
   else
     content_tag 'p', t(:text_no_data), :class => "nodata"
   end
