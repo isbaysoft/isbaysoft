@@ -1,6 +1,4 @@
-<%#
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
-%>
-
-<%= "_screenshots" %>
+<dt><%= label_tag 'screenshot_id', t(:label_load_screenshot) %></dt>
+<dd><%= file_field_tag 'screenshot[screenshot]' %>
+  <%= link_to_function 'Загрузить',"submitbutton('post')" %>
+</dd>

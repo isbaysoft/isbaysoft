@@ -281,6 +281,7 @@ ru:
   label_menu_item_note: Примечание
   label_menu_item_access_level: Доступ к пункту меню
   label_menu_item_publication: Публиковать
+  label_load_screenshot: Загрузить скриншот
   
   button_delete: Удалить
   button_deactivate: Деактивировать
