@@ -27,6 +27,11 @@ class Admin::DocumentsController < AdminApplicationController
   end
 
   def update
+    if params[:screenshot].present?
+      screenshot = Screenshot.new params[:screenshot]
+      @document.screenshots << screenshot if screenshot && screenshot.valid? && screenshot.save
+    end
+
     @logo = Logo.new params[:logo] if params[:logo].present?
     if @logo && @logo.valid? && @logo.save
       @document.logo.destroy if @document.logo.present?

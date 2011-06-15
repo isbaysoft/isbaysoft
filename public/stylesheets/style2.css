@@ -657,3 +657,6 @@ button.tab-right {
     width: 32px;
     text-align: center;
 }
+
+.screenshots_table, .screenshots_table td {border: 1px solid #dbdbdb;}
+ .screenshot_info {}

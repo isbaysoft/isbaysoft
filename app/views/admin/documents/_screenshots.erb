@@ -2,3 +2,27 @@
 <dd><%= file_field_tag 'screenshot[screenshot]' %>
   <%= link_to_function 'Загрузить',"submitbutton('post')" %>
 </dd>
+<br />
+
+<table width="100%" class="screenshots_table">
+<% @document.screenshots.map.in_groups_of(3) do |img| %>
+  <tr>
+    <% 3.times do |x| %>
+      <td width="33%" valign="top" align="center">
+        <div class="screenshot_container">
+          <%= image_tag img[x].screenshot.url, :width => '128px' if img[x] %> <br />
+        </div>
+        <div class="screenshot_info">
+          <%  if img[x] %>
+            <%= img[x].screenshot_file_name  %><br />
+            <%= number_to_human_size(img[x].screenshot_file_size) if img[x] %><br />
+            <%#= link_to 'Delete', content_contentimage_url(@content,img[x], :group_id => @group.id), {:method => :delete, :confirm => 'Are you shure?'} %>
+            <%= link_to 'Delete', '#' %><br />
+          <% end %>
+        </div>
+      </td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+

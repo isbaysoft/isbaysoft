@@ -7,6 +7,7 @@ class Document < ActiveRecord::Base
 
   has_many :document_files
   has_many :filelists, :through => :document_files
+  has_many :screenshots
 
   validates_presence_of :description, :name
 
