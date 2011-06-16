@@ -477,9 +477,7 @@ table.catalog td {
 
 .goob_sz_normal {padding: 6px 12px;}
 .goob_sz_small {padding: 3px 12px;}
-.goob_fixedwidth130 {
-    width: 130px;
-}
+.goob_fixedwidth130 {width: 130px;}
 /* END goodbuttons */
 
 /*document information*/
@@ -560,3 +558,24 @@ table.catalog td {
     padding: 0;
     margin: 0;
 }
+
+
+.breadcrumbs {
+    display: block;
+    height: 31px;
+    width: 635px;
+    line-height: 31px;
+    text-indent: 10px;
+    padding-bottom: 6px;
+    background: url(../images/main/breadcrumb_bg.png) no-repeat left top;
+}
+.breadcrumbs a {
+    color: #8d8b8b;
+    text-decoration: underline;
+    font-family: sans-serif;
+}
+.separator {
+    background: url(../images/main/breadcrumb_separator.png) no-repeat right top;
+    padding-right: 16px;
+}
+

@@ -658,5 +658,7 @@ button.tab-right {
     text-align: center;
 }
 
-.screenshots_table, .screenshots_table td {border: 1px solid #dbdbdb;}
- .screenshot_info {}
+.screenshots_table, .screenshots_table td {border: 1px solid #E3BBF5;}
+.screenshots_table td {background-color: #E0FFFF; padding: 10px;}
+.screenshot_info {}
+ 

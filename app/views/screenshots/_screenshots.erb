@@ -1,0 +1,13 @@
+<table width="100%" class="screenshots_table">
+<% @document.screenshots.map.in_groups_of(3) do |img| %>
+  <tr>
+    <% 2.times do |x| %>
+      <td width="33%" valign="top" align="center">
+        <div class="screenshot_container">
+          <%= image_tag img[x].screenshot.url, :width => '128px' if img[x] %> <br />
+        </div>
+      </td>
+    <% end %>
+  </tr>
+<% end %>
+</table>

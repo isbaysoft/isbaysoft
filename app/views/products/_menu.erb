@@ -1,0 +1,22 @@
+<%# if @document.menu && @document.menu.permitted.published && @document.menu.menu_items.published.present? %>
+<% if @document_menu %>
+  <ul class="ul_cleared">
+  <% if @document.screenshots %>
+    <li>
+      <%= link_to h(t(:menu_screenshots)),
+        product_screenshots_url(@document),
+        :class => 'goodbutton goob_cl_lavender goob_sz_small goob_fixedwidth130'
+      %>
+    </li>
+  <% end %>
+  <% @document_menu_items.map do |row|%>
+    <li>
+      <%= link_to h(row.title),
+        row.url,
+        :target => MenuItem::TARGET_TYPES[row.target],
+        :class => 'goodbutton goob_cl_lavender goob_sz_small goob_fixedwidth130'
+      %>
+    </li>
+  <% end %>
+  </ul>
+<% end %>

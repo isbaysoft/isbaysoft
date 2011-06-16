@@ -1,0 +1,16 @@
+<%= render :partial => 'breadcrumbs' %>
+<div class="content_box">
+  <div class="content_box_logo">
+    <%= image_tag @document.logo_url, :align => :left, :class => 'img1' %>
+    <br class="clearboth"/>
+    <%= render :partial => 'menu' %>
+  </div>
+  <div class="content_box_body">
+    <div class="content_header"><h1><%= @document.name %></h1></div>
+    <div class="content_body body_product"><%= @document.description %></div>
+  </div>
+</div> <!-- END product_box -->
+<div class="clearboth">&nbsp;</div>
+<div class="content_box_bottom">
+  <%= render :partial => 'info' %>  
+</div>

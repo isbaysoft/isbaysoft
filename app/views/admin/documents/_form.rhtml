@@ -1,7 +1,7 @@
 <%= include_tiny_mce_if_needed %>
 <%= hidden_field_tag 'task','post' %>
 <%= hidden_field_tag :file_id %>
-<%#= hidden_field_tag 'document[logo_id]' %>
+<%= hidden_field_tag :tab, @active_tab_name %>
 <%= form.hidden_field(:category_id, :id => "category_id", :value => @document.category_id) -%>
 <%= form.hidden_field(:section_id, :id => "section_id", :value => @document.section_id) -%>
 <%= observe_field(:file_id,

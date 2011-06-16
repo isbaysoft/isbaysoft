@@ -16,8 +16,7 @@
           <%  if img[x] %>
             <%= img[x].screenshot_file_name  %><br />
             <%= number_to_human_size(img[x].screenshot_file_size) if img[x] %><br />
-            <%#= link_to 'Delete', content_contentimage_url(@content,img[x], :group_id => @group.id), {:method => :delete, :confirm => 'Are you shure?'} %>
-            <%= link_to 'Delete', '#' %><br />
+            <%= link_to 'Удалить', document_screenshot_url(@document,img[x]), {:method => :delete} %>
           <% end %>
         </div>
       </td>

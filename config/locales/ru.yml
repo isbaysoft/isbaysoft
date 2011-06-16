@@ -312,11 +312,13 @@ ru:
   notice_destroy_content: Контент был успешно удален
   notice_destroy_user: Пользователь был успешно удален
   notice_destroy_usergroup: Группа пользователей была успешно удалена
+  notice_destroy_screenshot: Скриншот был успешно удален
   notice_select_user_activated: Выбранные пользователи активированы
   notice_select_user_deactivated: Выбранные пользователи деактивированы
   notice_destroy_document_file: Файл успешно удален из документа
   notice_publish_documents: Выбранные документы опубликованы
   notice_unpublish_documents: Выбранныедокументы сняты с публикации
+
   
   error_destroy_section: Раздел удалить не удалось
   error_destroy_category: Категорию удалить не удалось
@@ -326,6 +328,7 @@ ru:
   error_destroy_user: Пользователя удалить не удалось
   error_destroy_usergroup: Группу пользователей удалить не удалось
   error_destroy_document_file: Файл не удалось удалить из документа
+  error_destroy_screenshot: Скриншот не удалось удалить из документа
   error_max_image_size_byte: Максимум %{max} байт.
 
   text_user_activated: Пользователь активирован
@@ -363,4 +366,7 @@ ru:
   tab_general: Основные
   tab_screenshots: Скриншоты
 
+#frontend
+
+  menu_screenshots: Скриншоты
 

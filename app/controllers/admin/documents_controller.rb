@@ -1,6 +1,6 @@
 class Admin::DocumentsController < AdminApplicationController
   before_filter :require_admin
-  before_filter :load_section, :only => [:new, :create, :edit, :update]
+  before_filter :set_active_tab, :load_section, :only => [:new, :create, :edit, :update]
   before_filter :document_find, :only => [:edit, :update]
   before_filter :load_categories_at_params, :only => [:create, :update]
 
@@ -26,12 +26,16 @@ class Admin::DocumentsController < AdminApplicationController
   def edit
   end
 
+  def show
+#    hook, only edit method allowed
+    redirect_to edit_document_url params[:id]
+  end
+
   def update
     if params[:screenshot].present?
       screenshot = Screenshot.new params[:screenshot]
       @document.screenshots << screenshot if screenshot && screenshot.valid? && screenshot.save
     end
-
     @logo = Logo.new params[:logo] if params[:logo].present?
     if @logo && @logo.valid? && @logo.save
       @document.logo.destroy if @document.logo.present?
@@ -86,6 +90,10 @@ class Admin::DocumentsController < AdminApplicationController
   end
 
 protected
+
+  def set_active_tab
+    @active_tab_name ||= params[:tab]
+  end
 
   def load_section
     @sections = Section.all

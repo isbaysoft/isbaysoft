@@ -25,19 +25,6 @@ class MainController < MainApplicationController
     @documents = Document.getlist.section(params[:section_id]).category(params[:category_id]).paginate :page => params[:page], :per_page => 5
   end
 
-  def product
-    @document = Document.find_by_id(params[:id]);
-    @document_menu = Menu.permitted.find_by_id(@document.menu_id) unless @document.menu.nil?
-    @document_menu_items = MenuItem.permitted.published.items(@document_menu.id) unless @document_menu.nil?
-
-#  rescue
-#    render 'errors/filenotfound'
-  end
-
-  def products
-    @products = Document.published.getlist.getrows :per_page => 5, :page => params[:page]
-  end
-
   def contacts
     
   end

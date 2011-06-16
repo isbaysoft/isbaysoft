@@ -107,6 +107,10 @@ function moveTabLeft(el) {
 }
 
 function showTab(name) {
+    if (typeof($('tab')) !== 'undefined' )
+    {
+        $('tab').value = name
+    }
     var f = $$('div#content .tab-content');
     for(var i=0; i<f.length; i++){
         Element.hide(f[i]);
@@ -122,6 +126,10 @@ function showTab(name) {
 
 
 function showTabV(name) {
+    if (typeof($('tabv')) !== 'undefined' )
+    {
+        $('tabv').value = name
+    }
     var f = $$('div#content .tabv-content');
     for(var i=0; i<f.length; i++){
         Element.hide(f[i]);

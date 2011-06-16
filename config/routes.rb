@@ -7,13 +7,12 @@ ActionController::Routing::Routes.draw do |map|
   map.administrator 'administrator', :controller => 'admin/administrator'
   map.dialog 'dialog/:dialog_name', :controller => 'dialogs', :action => 'show_dialog'
 
-  map.with_options :controller => 'main' do |c|
-#    c.products_section 'section/:section_id', :action => 'documents'
-#    c.products_category 'section/:section_id/category/:category_id', :action => 'documents'
-    c.show_product 'product/:id', :action => 'product'
-    c.show_products 'products', :action => 'products'
+  map.resources :products do |e|
+    e.resources :screenshots
   end
-  
+
+#END FRONTEND  **********************************
+
   map.resource :user_session
   map.resource :account, :controller => "users"
   map.resource :config, :controller => 'admin/config'
@@ -32,6 +31,7 @@ ActionController::Routing::Routes.draw do |map|
       :unpublish => :post
     } do |e|
     e.resources 'file', :controller => 'admin/document_files', :only => [:destroy]
+    e.resources 'screenshots', :controller => 'admin/screenshots', :only => [:destroy,:show]
   end
 
   map.resources :userlists, :controller => 'admin/userlists',
