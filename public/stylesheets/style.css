@@ -103,7 +103,7 @@ textarea {font-size: 12px; color: #336666;}
     height: 58px;
     background: url(../images/main/menu_bg.png) left top repeat-x;
     position: absolute;
-    z-index:9999;
+    z-index:9;
     top: 120px;
 }
 
@@ -570,12 +570,17 @@ table.catalog td {
     background: url(../images/main/breadcrumb_bg.png) no-repeat left top;
 }
 .breadcrumbs a {
-    color: #8d8b8b;
     text-decoration: underline;
     font-family: sans-serif;
 }
 .separator {
     background: url(../images/main/breadcrumb_separator.png) no-repeat right top;
     padding-right: 16px;
+}
+
+.breadcrumbs a, .breadcrumbs #active_breadcrumb {color: #8d8b8b;}
+
+.breadcrumbs #active_breadcrumb {
+    font-weight: bold;
 }
 
