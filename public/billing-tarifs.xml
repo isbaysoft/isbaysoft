@@ -1,0 +1,4098 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tarifs>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Tele2 (РСС)</operatorname>
+	<operatorlatin>Tele2</operatorlatin>
+	<operatorfull>Tele2_rss</operatorfull>
+	<abonentprice>287 руб. (RUR) без НДС</abonentprice>
+	<price>287</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>157.2876</clientprofit>
+	<clientprofitusd>5.4444</clientprofitusd>
+	<operatorid>61</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>АКОС</operatorname>
+	<operatorlatin>Akos</operatorlatin>
+	<operatorfull>Akos</operatorfull>
+	<abonentprice>287.00 руб. (RUR) без НДС</abonentprice>
+	<price>287</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>154.0791</clientprofit>
+	<clientprofitusd>5.3333</clientprofitusd>
+	<operatorid>24</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Алтайсвязь</operatorname>
+	<operatorlatin>Altaysvyaz</operatorlatin>
+	<operatorfull>Altaysvyaz</operatorfull>
+	<abonentprice>300 руб. (RUR) без НДС</abonentprice>
+	<price>300</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>160.9904</clientprofit>
+	<clientprofitusd>5.5725</clientprofitusd>
+	<operatorid>25</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>БайкалВестКом</operatorname>
+	<operatorlatin>BaikalWestCom</operatorlatin>
+	<operatorfull>BaikalWestCom</operatorfull>
+	<abonentprice>287.00 руб. (RUR) без НДС</abonentprice>
+	<price>287</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>157.2969</clientprofit>
+	<clientprofitusd>5.4447</clientprofitusd>
+	<operatorid>26</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>БашСелл</operatorname>
+	<operatorlatin>BashSell</operatorlatin>
+	<operatorfull>BashSell</operatorfull>
+	<abonentprice>287.00 руб. (RUR) без НДС</abonentprice>
+	<price>287</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>154.0791</clientprofit>
+	<clientprofitusd>5.3333</clientprofitusd>
+	<operatorid>27</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Билайн</operatorname>
+	<operatorlatin>Beeline</operatorlatin>
+	<operatorfull>Beeline_ru</operatorfull>
+	<abonentprice>254.24 руб. (RUR) без НДС</abonentprice>
+	<price>254.24</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>162.5107</clientprofit>
+	<clientprofitusd>5.6252</clientprofitusd>
+	<operatorid>12</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Енисей Телеком</operatorname>
+	<operatorlatin>ETK</operatorlatin>
+	<operatorfull>EniseyTelekom</operatorfull>
+	<abonentprice>300 руб. (RUR) без НДС</abonentprice>
+	<price>300</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>164.3481</clientprofit>
+	<clientprofitusd>5.6888</clientprofitusd>
+	<operatorid>31</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Контент Урал (UTEL)</operatorname>
+	<operatorlatin>UTEL</operatorlatin>
+	<operatorfull>UTEL</operatorfull>
+	<abonentprice>260.00 руб. (RUR) без НДС</abonentprice>
+	<price>260</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>116.6875</clientprofit>
+	<clientprofitusd>4.039</clientprofitusd>
+	<operatorid>65</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Мегафон (Дальний Восток)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_dalniy_vostok</operatorfull>
+	<abonentprice>300 руб. (RUR) без НДС</abonentprice>
+	<price>300</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>161.3635</clientprofit>
+	<clientprofitusd>5.5854</clientprofitusd>
+	<operatorid>19</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Мегафон (Москва)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_moscow</operatorfull>
+	<abonentprice>300 руб. (RUR) без НДС</abonentprice>
+	<price>300</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>161.3635</clientprofit>
+	<clientprofitusd>5.5854</clientprofitusd>
+	<operatorid>21</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Мегафон (Поволжье)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_povolzhye</operatorfull>
+	<abonentprice>300 руб. (RUR) без НДС</abonentprice>
+	<price>300</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>164.0776</clientprofit>
+	<clientprofitusd>5.6794</clientprofitusd>
+	<operatorid>13</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Мегафон (Сев. Кавказ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_kavkaz</operatorfull>
+	<abonentprice>300 руб. (RUR) без НДС</abonentprice>
+	<price>300</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>161.3635</clientprofit>
+	<clientprofitusd>5.5854</clientprofitusd>
+	<operatorid>15</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Мегафон (Северо-Запад)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_severo_zapad</operatorfull>
+	<abonentprice>300 руб. (RUR) без НДС</abonentprice>
+	<price>300</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>158.6493</clientprofit>
+	<clientprofitusd>5.4915</clientprofitusd>
+	<operatorid>20</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Мегафон (Сибирь)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_sibir</operatorfull>
+	<abonentprice>300 руб. (RUR) без НДС</abonentprice>
+	<price>300</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>164.0776</clientprofit>
+	<clientprofitusd>5.6794</clientprofitusd>
+	<operatorid>23</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Мегафон (Урал)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_ural</operatorfull>
+	<abonentprice>300 руб. (RUR) без НДС</abonentprice>
+	<price>300</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>161.3635</clientprofit>
+	<clientprofitusd>5.5854</clientprofitusd>
+	<operatorid>17</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Мегафон (Центр СФ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_north</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>69.3534</clientprofit>
+	<clientprofitusd>2.4006</clientprofitusd>
+	<operatorid>22</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Мегафон (Центр ЮФ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_south</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>69.3534</clientprofit>
+	<clientprofitusd>2.4006</clientprofitusd>
+	<operatorid>18</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Мегафон (Центр)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_centr</operatorfull>
+	<abonentprice>300 руб. (RUR) без НДС</abonentprice>
+	<price>300</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>164.0776</clientprofit>
+	<clientprofitusd>5.6794</clientprofitusd>
+	<operatorid>14</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>МОТИВ</operatorname>
+	<operatorlatin>Motiv</operatorlatin>
+	<operatorfull>Motiv</operatorfull>
+	<abonentprice>287.00 руб. (RUR) без НДС</abonentprice>
+	<price>287</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>154.0791</clientprofit>
+	<clientprofitusd>5.3333</clientprofitusd>
+	<operatorid>32</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>МТС</operatorname>
+	<operatorlatin>MTS</operatorlatin>
+	<operatorfull>MTS_ru</operatorfull>
+	<abonentprice>258.3 руб. (RUR) без НДС</abonentprice>
+	<price>258.3</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>150.8707</clientprofit>
+	<clientprofitusd>5.2222</clientprofitusd>
+	<operatorid>8</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>НСС (Ниж. Новгород)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_nnovgorod</operatorfull>
+	<abonentprice>132.73 руб. (RUR) без НДС</abonentprice>
+	<price>132.73</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>61.3042</clientprofit>
+	<clientprofitusd>2.122</clientprofitusd>
+	<operatorid>39</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>НСС (РМ)</operatorname>
+	<operatorlatin>ON (NSS)</operatorlatin>
+	<operatorfull>NSS_rm</operatorfull>
+	<abonentprice>254.24 руб. (RUR) без НДС</abonentprice>
+	<price>254.24</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>136.6658</clientprofit>
+	<clientprofitusd>4.7306</clientprofitusd>
+	<operatorid>37</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>НСС (С)</operatorname>
+	<operatorlatin>ON (NSS)</operatorlatin>
+	<operatorfull>NSS_c</operatorfull>
+	<abonentprice>254.24 руб. (RUR) без НДС</abonentprice>
+	<price>254.24</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>61.3042</clientprofit>
+	<clientprofitusd>2.122</clientprofitusd>
+	<operatorid>40</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>НСС (Саратов)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_saratov</operatorfull>
+	<abonentprice>254.24 руб. (RUR) без НДС</abonentprice>
+	<price>254.24</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>157.2876</clientprofit>
+	<clientprofitusd>5.4444</clientprofitusd>
+	<operatorid>35</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>НСС (Татарстан)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_tatarstan</operatorfull>
+	<abonentprice>112.48 руб. (RUR) без НДС</abonentprice>
+	<price>112.48</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>51.3338</clientprofit>
+	<clientprofitusd>1.7769</clientprofitusd>
+	<operatorid>41</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>НСС (Ульяновск)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_ulyanovsk</operatorfull>
+	<abonentprice>287 руб. (RUR) без НДС</abonentprice>
+	<price>287</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>154.0791</clientprofit>
+	<clientprofitusd>5.3333</clientprofitusd>
+	<operatorid>64</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>НСС (Чувашия)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_chuvashiya</operatorfull>
+	<abonentprice>254.24 руб. (RUR) без НДС</abonentprice>
+	<price>254.24</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>42.212</clientprofit>
+	<clientprofitusd>1.4611</clientprofitusd>
+	<operatorid>36</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>НТК</operatorname>
+	<operatorlatin>NTK</operatorlatin>
+	<operatorfull>NTK</operatorfull>
+	<abonentprice>260 руб. (RUR) без НДС</abonentprice>
+	<price>260</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>67.0963</clientprofit>
+	<clientprofitusd>2.3225</clientprofitusd>
+	<operatorid>34</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Оренбург GSM</operatorname>
+	<operatorlatin>Orenburg GSM</operatorlatin>
+	<operatorfull>Orenburg_GSM</operatorfull>
+	<abonentprice>254.24 руб. (RUR) без НДС</abonentprice>
+	<price>254.24</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>140.9282</clientprofit>
+	<clientprofitusd>4.8781</clientprofitusd>
+	<operatorid>42</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Сибирьтелеком</operatorname>
+	<operatorlatin>Sibirtelekom</operatorlatin>
+	<operatorfull>Sibirtelekom</operatorfull>
+	<abonentprice>300 руб. (RUR) без НДС</abonentprice>
+	<price>300</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>160.9904</clientprofit>
+	<clientprofitusd>5.5725</clientprofitusd>
+	<operatorid>63</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>СкайЛинк-Мск (МСС)</operatorname>
+	<operatorlatin>SkyLink</operatorlatin>
+	<operatorfull>SkyLink_moscow</operatorfull>
+	<abonentprice>300.00 руб. (RUR) без НДС</abonentprice>
+	<price>300</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>187.5721</clientprofit>
+	<clientprofitusd>6.4926</clientprofitusd>
+	<operatorid>47</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>СкайЛинк-СПб (ДТ)</operatorname>
+	<operatorlatin>SkyLink</operatorlatin>
+	<operatorfull>SkyLink_spb</operatorfull>
+	<abonentprice>300 руб. (RUR) без НДС</abonentprice>
+	<price>300</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>164.3481</clientprofit>
+	<clientprofitusd>5.6888</clientprofitusd>
+	<operatorid>46</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>СМАРТС</operatorname>
+	<operatorlatin>Smarts</operatorlatin>
+	<operatorfull>Smarts_ru</operatorfull>
+	<abonentprice>287.00 руб. (RUR) без НДС</abonentprice>
+	<price>287</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>128.6539</clientprofit>
+	<clientprofitusd>4.4532</clientprofitusd>
+	<operatorid>54</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>СТеК Джи Эс Эм</operatorname>
+	<operatorlatin>Stek GSM</operatorlatin>
+	<operatorfull>Stek_GSM</operatorfull>
+	<abonentprice>300 руб. (RUR) без НДС</abonentprice>
+	<price>300</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>154.0791</clientprofit>
+	<clientprofitusd>5.3333</clientprofitusd>
+	<operatorid>56</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Телесет ЛТД</operatorname>
+	<operatorlatin>Di-ex</operatorlatin>
+	<operatorfull>Diex_teleset</operatorfull>
+	<abonentprice>300.00 руб. (RUR) без НДС</abonentprice>
+	<price>300</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>147.6995</clientprofit>
+	<clientprofitusd>5.1125</clientprofitusd>
+	<operatorid>29</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>7733</number>
+	<operatorname>Ярославль GSM</operatorname>
+	<operatorlatin>Yaroslavl GSM</operatorlatin>
+	<operatorfull>Yaroslavl_GSM</operatorfull>
+	<abonentprice>287 руб. (RUR) без НДС</abonentprice>
+	<price>287</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>10</usdprice>
+	<clientprofit>128.6539</clientprofit>
+	<clientprofitusd>4.4532</clientprofitusd>
+	<operatorid>52</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Tele2 (РСС)</operatorname>
+	<operatorlatin>Tele2</operatorlatin>
+	<operatorfull>Tele2_rss</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>79.3985</clientprofit>
+	<clientprofitusd>2.7483</clientprofitusd>
+	<operatorid>61</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>АКОС</operatorname>
+	<operatorlatin>Akos</operatorlatin>
+	<operatorfull>Akos</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>79.557</clientprofit>
+	<clientprofitusd>2.7538</clientprofitusd>
+	<operatorid>24</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Алтайсвязь</operatorname>
+	<operatorlatin>Altaysvyaz</operatorlatin>
+	<operatorfull>Altaysvyaz</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>81.2452</clientprofit>
+	<clientprofitusd>2.8122</clientprofitusd>
+	<operatorid>25</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Астрахань GSM</operatorname>
+	<operatorlatin>Astrakhan GSM</operatorlatin>
+	<operatorfull>Astrakhan_GSM</operatorfull>
+	<abonentprice>169.49 руб. (RUR) без НДС</abonentprice>
+	<price>169.49</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>78.1673</clientprofit>
+	<clientprofitusd>2.7057</clientprofitusd>
+	<operatorid>51</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>БайкалВестКом</operatorname>
+	<operatorlatin>BaikalWestCom</operatorlatin>
+	<operatorfull>BaikalWestCom</operatorfull>
+	<abonentprice>142.5 руб. (RUR) без НДС</abonentprice>
+	<price>142.5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>78.8575</clientprofit>
+	<clientprofitusd>2.7296</clientprofitusd>
+	<operatorid>26</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>БашСелл</operatorname>
+	<operatorlatin>BashSell</operatorlatin>
+	<operatorfull>BashSell</operatorfull>
+	<abonentprice>144.07 руб. (RUR) без НДС</abonentprice>
+	<price>144.07</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>79.7063</clientprofit>
+	<clientprofitusd>2.759</clientprofitusd>
+	<operatorid>27</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Билайн</operatorname>
+	<operatorlatin>Beeline</operatorlatin>
+	<operatorfull>Beeline_ru</operatorfull>
+	<abonentprice>144.07 руб. (RUR) без НДС</abonentprice>
+	<price>144.07</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>92.736</clientprofit>
+	<clientprofitusd>3.21</clientprofitusd>
+	<operatorid>12</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Волгоград GSM</operatorname>
+	<operatorlatin>Volgograd GSM</operatorlatin>
+	<operatorfull>Volgograd_GSM</operatorfull>
+	<abonentprice>150.00 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>67.9543</clientprofit>
+	<clientprofitusd>2.3522</clientprofitusd>
+	<operatorid>50</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Енисей Телеком</operatorname>
+	<operatorlatin>ETK</operatorlatin>
+	<operatorfull>EniseyTelekom</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>82.924</clientprofit>
+	<clientprofitusd>2.8703</clientprofitusd>
+	<operatorid>31</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Контент Урал (UTEL)</operatorname>
+	<operatorlatin>UTEL</operatorlatin>
+	<operatorfull>UTEL</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>69.3534</clientprofit>
+	<clientprofitusd>2.4006</clientprofitusd>
+	<operatorid>65</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Мегафон (Дальний Восток)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_dalniy_vostok</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>69.3534</clientprofit>
+	<clientprofitusd>2.4006</clientprofitusd>
+	<operatorid>19</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Мегафон (Москва)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_moscow</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>69.3534</clientprofit>
+	<clientprofitusd>2.4006</clientprofitusd>
+	<operatorid>21</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Мегафон (Поволжье)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_povolzhye</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>69.3534</clientprofit>
+	<clientprofitusd>2.4006</clientprofitusd>
+	<operatorid>13</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Мегафон (Сев. Кавказ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_kavkaz</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>69.3534</clientprofit>
+	<clientprofitusd>2.4006</clientprofitusd>
+	<operatorid>15</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Мегафон (Северо-Запад)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_severo_zapad</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>69.3534</clientprofit>
+	<clientprofitusd>2.4006</clientprofitusd>
+	<operatorid>20</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Мегафон (Сибирь)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_sibir</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>69.3534</clientprofit>
+	<clientprofitusd>2.4006</clientprofitusd>
+	<operatorid>23</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Мегафон (Урал)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_ural</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>69.3534</clientprofit>
+	<clientprofitusd>2.4006</clientprofitusd>
+	<operatorid>17</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Мегафон (Центр СФ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_north</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>69.3534</clientprofit>
+	<clientprofitusd>2.4006</clientprofitusd>
+	<operatorid>22</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Мегафон (Центр ЮФ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_south</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>69.3534</clientprofit>
+	<clientprofitusd>2.4006</clientprofitusd>
+	<operatorid>18</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Мегафон (Центр)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_centr</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>69.3534</clientprofit>
+	<clientprofitusd>2.4006</clientprofitusd>
+	<operatorid>14</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>МОТИВ</operatorname>
+	<operatorlatin>Motiv</operatorlatin>
+	<operatorfull>Motiv</operatorfull>
+	<abonentprice>143.5 руб. (RUR) без НДС</abonentprice>
+	<price>143.5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>79.3891</clientprofit>
+	<clientprofitusd>2.748</clientprofitusd>
+	<operatorid>32</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>МТС</operatorname>
+	<operatorlatin>MTS</operatorlatin>
+	<operatorfull>MTS_ru</operatorfull>
+	<abonentprice>157.85 руб. (RUR) без НДС</abonentprice>
+	<price>157.85</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>92.7826</clientprofit>
+	<clientprofitusd>3.2116</clientprofitusd>
+	<operatorid>8</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>НСС (Ниж. Новгород)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_nnovgorod</operatorfull>
+	<abonentprice>132.7 руб. (RUR) без НДС</abonentprice>
+	<price>132.7</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>63.1789</clientprofit>
+	<clientprofitusd>2.1869</clientprofitusd>
+	<operatorid>39</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>НСС (РМ)</operatorname>
+	<operatorlatin>ON (NSS)</operatorlatin>
+	<operatorfull>NSS_rm</operatorfull>
+	<abonentprice>169.49 руб. (RUR) без НДС</abonentprice>
+	<price>169.49</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>85.2278</clientprofit>
+	<clientprofitusd>2.9501</clientprofitusd>
+	<operatorid>37</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>НСС (С)</operatorname>
+	<operatorlatin>ON (NSS)</operatorlatin>
+	<operatorfull>NSS_c</operatorfull>
+	<abonentprice>169.49 руб. (RUR) без НДС</abonentprice>
+	<price>169.49</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>63.1789</clientprofit>
+	<clientprofitusd>2.1869</clientprofitusd>
+	<operatorid>40</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>НСС (Саратов)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_saratov</operatorfull>
+	<abonentprice>169.49 руб. (RUR) без НДС</abonentprice>
+	<price>169.49</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>79.3985</clientprofit>
+	<clientprofitusd>2.7483</clientprofitusd>
+	<operatorid>35</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>НСС (Татарстан)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_tatarstan</operatorfull>
+	<abonentprice>112.48 руб. (RUR) без НДС</abonentprice>
+	<price>112.48</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>51.3338</clientprofit>
+	<clientprofitusd>1.7769</clientprofitusd>
+	<operatorid>41</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>НСС (Ульяновск)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_ulyanovsk</operatorfull>
+	<abonentprice>144.07 руб. (RUR) без НДС</abonentprice>
+	<price>144.07</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>79.7063</clientprofit>
+	<clientprofitusd>2.759</clientprofitusd>
+	<operatorid>64</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>НСС (Чувашия)</operatorname>
+	<operatorlatin>VolgaTelecom</operatorlatin>
+	<operatorfull>NSS_chuvashiya</operatorfull>
+	<abonentprice>169.49 руб. (RUR) без НДС</abonentprice>
+	<price>169.49</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>91.6074</clientprofit>
+	<clientprofitusd>3.1709</clientprofitusd>
+	<operatorid>66</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>НТК</operatorname>
+	<operatorlatin>NTK</operatorlatin>
+	<operatorfull>NTK</operatorfull>
+	<abonentprice>145 руб. (RUR) без НДС</abonentprice>
+	<price>145</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>48.0693</clientprofit>
+	<clientprofitusd>1.6639</clientprofitusd>
+	<operatorid>34</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Оренбург GSM</operatorname>
+	<operatorlatin>Orenburg GSM</operatorlatin>
+	<operatorfull>Orenburg_GSM</operatorfull>
+	<abonentprice>143.5 руб. (RUR) без НДС</abonentprice>
+	<price>143.5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>79.3985</clientprofit>
+	<clientprofitusd>2.7483</clientprofitusd>
+	<operatorid>42</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Сибирьтелеком</operatorname>
+	<operatorlatin>Sibirtelekom</operatorlatin>
+	<operatorfull>Sibirtelekom</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>81.2452</clientprofit>
+	<clientprofitusd>2.8122</clientprofitusd>
+	<operatorid>63</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>СкайЛинк-Мск (МСС)</operatorname>
+	<operatorlatin>SkyLink</operatorlatin>
+	<operatorfull>SkyLink_moscow</operatorfull>
+	<abonentprice>150.00 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>94.5361</clientprofit>
+	<clientprofitusd>3.2723</clientprofitusd>
+	<operatorid>47</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>СкайЛинк-СПб (ДТ)</operatorname>
+	<operatorlatin>SkyLink</operatorlatin>
+	<operatorfull>SkyLink_spb</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>82.924</clientprofit>
+	<clientprofitusd>2.8703</clientprofitusd>
+	<operatorid>46</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>СМАРТС (Иваново GSM)</operatorname>
+	<operatorlatin>Smarts</operatorlatin>
+	<operatorfull>Smarts_Ivanovo_GSM</operatorfull>
+	<abonentprice>169.49 руб. (RUR) без НДС</abonentprice>
+	<price>169.49</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>78.1766</clientprofit>
+	<clientprofitusd>2.706</clientprofitusd>
+	<operatorid>55</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>СМАРТС (Пенза)</operatorname>
+	<operatorlatin>Smarts</operatorlatin>
+	<operatorfull>Smarts_penza</operatorfull>
+	<abonentprice>144.07 руб. (RUR) без НДС</abonentprice>
+	<price>144.07</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>65.3241</clientprofit>
+	<clientprofitusd>2.2611</clientprofitusd>
+	<operatorid>53</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>СМАРТС (Самара GSM)</operatorname>
+	<operatorlatin>Smarts</operatorlatin>
+	<operatorfull>Smarts_Samara_GSM</operatorfull>
+	<abonentprice>169.49 руб. (RUR) без НДС</abonentprice>
+	<price>169.49</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>78.1673</clientprofit>
+	<clientprofitusd>2.7057</clientprofitusd>
+	<operatorid>49</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>СТеК Джи Эс Эм</operatorname>
+	<operatorlatin>Stek GSM</operatorlatin>
+	<operatorfull>Stek_GSM</operatorfull>
+	<abonentprice>150 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>79.7063</clientprofit>
+	<clientprofitusd>2.759</clientprofitusd>
+	<operatorid>56</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Телесет ЛТД</operatorname>
+	<operatorlatin>Di-ex</operatorlatin>
+	<operatorfull>Diex_teleset</operatorfull>
+	<abonentprice>150.00 руб. (RUR) без НДС</abonentprice>
+	<price>150</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>74.6044</clientprofit>
+	<clientprofitusd>2.5824</clientprofitusd>
+	<operatorid>29</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Шупашкар GSM</operatorname>
+	<operatorlatin>Shupashkar GSM</operatorlatin>
+	<operatorfull>Shupashkar_GSM</operatorfull>
+	<abonentprice>169.49 руб. (RUR) без НДС</abonentprice>
+	<price>169.49</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>66.6672</clientprofit>
+	<clientprofitusd>2.3076</clientprofitusd>
+	<operatorid>48</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4161</number>
+	<operatorname>Ярославль GSM</operatorname>
+	<operatorlatin>Yaroslavl GSM</operatorlatin>
+	<operatorfull>Yaroslavl_GSM</operatorfull>
+	<abonentprice>144.07 руб. (RUR) без НДС</abonentprice>
+	<price>144.07</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>66.6672</clientprofit>
+	<clientprofitusd>2.3076</clientprofitusd>
+	<operatorid>52</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Tele2 (РСС)</operatorname>
+	<operatorlatin>Tele2</operatorlatin>
+	<operatorfull>Tele2_rss</operatorfull>
+	<abonentprice>86.09 руб. (RUR) без НДС</abonentprice>
+	<price>86.09</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>38.8916</clientprofit>
+	<clientprofitusd>1.3462</clientprofitusd>
+	<operatorid>61</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>АКОС</operatorname>
+	<operatorlatin>Akos</operatorlatin>
+	<operatorfull>Akos</operatorfull>
+	<abonentprice>90.8 руб. (RUR) без НДС</abonentprice>
+	<price>90.8</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>50.7928</clientprofit>
+	<clientprofitusd>1.7581</clientprofitusd>
+	<operatorid>24</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Алтайсвязь</operatorname>
+	<operatorlatin>Altaysvyaz</operatorlatin>
+	<operatorfull>Altaysvyaz</operatorfull>
+	<abonentprice>90 руб. (RUR) без НДС</abonentprice>
+	<price>90</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>49.3471</clientprofit>
+	<clientprofitusd>1.7081</clientprofitusd>
+	<operatorid>25</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Астрахань GSM</operatorname>
+	<operatorlatin>Astrakhan GSM</operatorlatin>
+	<operatorfull>Astrakhan_GSM</operatorfull>
+	<abonentprice>88.98 руб. (RUR) без НДС</abonentprice>
+	<price>88.98</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>41.7643</clientprofit>
+	<clientprofitusd>1.4456</clientprofitusd>
+	<operatorid>51</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>БайкалВестКом</operatorname>
+	<operatorlatin>BaikalWestCom</operatorlatin>
+	<operatorfull>BaikalWestCom</operatorfull>
+	<abonentprice>89 руб. (RUR) без НДС</abonentprice>
+	<price>89</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>49.8135</clientprofit>
+	<clientprofitusd>1.7242</clientprofitusd>
+	<operatorid>26</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>БашСелл</operatorname>
+	<operatorlatin>BashSell</operatorlatin>
+	<operatorfull>BashSell</operatorfull>
+	<abonentprice>88.98 руб. (RUR) без НДС</abonentprice>
+	<price>88.98</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>49.8041</clientprofit>
+	<clientprofitusd>1.7239</clientprofitusd>
+	<operatorid>27</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Билайн</operatorname>
+	<operatorlatin>Beeline</operatorlatin>
+	<operatorfull>Beeline_ru</operatorfull>
+	<abonentprice>93.22 руб. (RUR) без НДС</abonentprice>
+	<price>93.22</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>60.5394</clientprofit>
+	<clientprofitusd>2.0955</clientprofitusd>
+	<operatorid>12</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Волгоград GSM</operatorname>
+	<operatorlatin>Volgograd GSM</operatorlatin>
+	<operatorfull>Volgograd_GSM</operatorfull>
+	<abonentprice>89 руб. (RUR) без НДС</abonentprice>
+	<price>89</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>41.7643</clientprofit>
+	<clientprofitusd>1.4456</clientprofitusd>
+	<operatorid>50</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Енисей Телеком</operatorname>
+	<operatorlatin>ETK</operatorlatin>
+	<operatorfull>EniseyTelekom</operatorfull>
+	<abonentprice>90 руб. (RUR) без НДС</abonentprice>
+	<price>90</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>50.3544</clientprofit>
+	<clientprofitusd>1.743</clientprofitusd>
+	<operatorid>31</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Контент Урал (UTEL)</operatorname>
+	<operatorlatin>UTEL</operatorlatin>
+	<operatorfull>UTEL</operatorfull>
+	<abonentprice>105 руб. (RUR) без НДС</abonentprice>
+	<price>105</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>49.002</clientprofit>
+	<clientprofitusd>1.6962</clientprofitusd>
+	<operatorid>65</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Мегафон (Дальний Восток)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_dalniy_vostok</operatorfull>
+	<abonentprice>119 руб. (RUR) без НДС</abonentprice>
+	<price>119</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>54.3557</clientprofit>
+	<clientprofitusd>1.8815</clientprofitusd>
+	<operatorid>19</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Мегафон (Москва)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_moscow</operatorfull>
+	<abonentprice>119 руб. (RUR) без НДС</abonentprice>
+	<price>119</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>54.3557</clientprofit>
+	<clientprofitusd>1.8815</clientprofitusd>
+	<operatorid>21</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Мегафон (Поволжье)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_povolzhye</operatorfull>
+	<abonentprice>119 руб. (RUR) без НДС</abonentprice>
+	<price>119</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>54.3557</clientprofit>
+	<clientprofitusd>1.8815</clientprofitusd>
+	<operatorid>13</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Мегафон (Сев. Кавказ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_kavkaz</operatorfull>
+	<abonentprice>119 руб. (RUR) без НДС</abonentprice>
+	<price>119</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>54.3557</clientprofit>
+	<clientprofitusd>1.8815</clientprofitusd>
+	<operatorid>15</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Мегафон (Северо-Запад)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_severo_zapad</operatorfull>
+	<abonentprice>119 руб. (RUR) без НДС</abonentprice>
+	<price>119</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>54.3557</clientprofit>
+	<clientprofitusd>1.8815</clientprofitusd>
+	<operatorid>20</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Мегафон (Сибирь)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_sibir</operatorfull>
+	<abonentprice>119 руб. (RUR) без НДС</abonentprice>
+	<price>119</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>54.3557</clientprofit>
+	<clientprofitusd>1.8815</clientprofitusd>
+	<operatorid>23</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Мегафон (Урал)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_ural</operatorfull>
+	<abonentprice>119 руб. (RUR) без НДС</abonentprice>
+	<price>119</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>54.3557</clientprofit>
+	<clientprofitusd>1.8815</clientprofitusd>
+	<operatorid>17</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Мегафон (Центр СФ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_north</operatorfull>
+	<abonentprice>119 руб. (RUR) без НДС</abonentprice>
+	<price>119</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>54.3557</clientprofit>
+	<clientprofitusd>1.8815</clientprofitusd>
+	<operatorid>22</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Мегафон (Центр ЮФ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_south</operatorfull>
+	<abonentprice>119 руб. (RUR) без НДС</abonentprice>
+	<price>119</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>54.3557</clientprofit>
+	<clientprofitusd>1.8815</clientprofitusd>
+	<operatorid>18</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Мегафон (Центр)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_centr</operatorfull>
+	<abonentprice>119 руб. (RUR) без НДС</abonentprice>
+	<price>119</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>54.3557</clientprofit>
+	<clientprofitusd>1.8815</clientprofitusd>
+	<operatorid>14</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>МОТИВ</operatorname>
+	<operatorlatin>Motiv</operatorlatin>
+	<operatorfull>Motiv</operatorfull>
+	<abonentprice>88.98 руб. (RUR) без НДС</abonentprice>
+	<price>88.98</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>49.8041</clientprofit>
+	<clientprofitusd>1.7239</clientprofitusd>
+	<operatorid>32</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>МТС</operatorname>
+	<operatorlatin>MTS</operatorlatin>
+	<operatorfull>MTS_ru</operatorfull>
+	<abonentprice>86.1 руб. (RUR) без НДС</abonentprice>
+	<price>86.1</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>51.2871</clientprofit>
+	<clientprofitusd>1.7753</clientprofitusd>
+	<operatorid>8</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>НСС (Ниж. Новгород)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_nnovgorod</operatorfull>
+	<abonentprice>99.55 руб. (RUR) без НДС</abonentprice>
+	<price>99.55</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>47.7615</clientprofit>
+	<clientprofitusd>1.6532</clientprofitusd>
+	<operatorid>39</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>НСС (Пенза)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_penza</operatorfull>
+	<abonentprice>84.36 руб. (RUR) без НДС</abonentprice>
+	<price>84.36</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>38.873</clientprofit>
+	<clientprofitusd>1.3456</clientprofitusd>
+	<operatorid>33</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>НСС (РМ)</operatorname>
+	<operatorlatin>ON (NSS)</operatorlatin>
+	<operatorfull>NSS_rm</operatorfull>
+	<abonentprice>84.36 руб. (RUR) без НДС</abonentprice>
+	<price>84.36</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>54.3277</clientprofit>
+	<clientprofitusd>1.8805</clientprofitusd>
+	<operatorid>37</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>НСС (С)</operatorname>
+	<operatorlatin>ON (NSS)</operatorlatin>
+	<operatorfull>NSS_c</operatorfull>
+	<abonentprice>84.36 руб. (RUR) без НДС</abonentprice>
+	<price>84.36</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>47.7615</clientprofit>
+	<clientprofitusd>1.6532</clientprofitusd>
+	<operatorid>40</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>НСС (Саратов)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_saratov</operatorfull>
+	<abonentprice>84.36 руб. (RUR) без НДС</abonentprice>
+	<price>84.36</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>50.3544</clientprofit>
+	<clientprofitusd>1.743</clientprofitusd>
+	<operatorid>35</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>НСС (Татарстан)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_tatarstan</operatorfull>
+	<abonentprice>84.36 руб. (RUR) без НДС</abonentprice>
+	<price>84.36</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>42.1374</clientprofit>
+	<clientprofitusd>1.4585</clientprofitusd>
+	<operatorid>41</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>НСС (Ульяновск)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_ulyanovsk</operatorfull>
+	<abonentprice>90.68 руб. (RUR) без НДС</abonentprice>
+	<price>90.68</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>50.7182</clientprofit>
+	<clientprofitusd>1.7556</clientprofitusd>
+	<operatorid>64</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>НСС (Чувашия)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_chuvashiya</operatorfull>
+	<abonentprice>84.36 руб. (RUR) без НДС</abonentprice>
+	<price>84.36</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>50.7275</clientprofit>
+	<clientprofitusd>1.7559</clientprofitusd>
+	<operatorid>36</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>НТК</operatorname>
+	<operatorlatin>NTK</operatorlatin>
+	<operatorfull>NTK</operatorfull>
+	<abonentprice>86.71 руб. (RUR) без НДС</abonentprice>
+	<price>86.71</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>32.9877</clientprofit>
+	<clientprofitusd>1.1418</clientprofitusd>
+	<operatorid>34</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Оренбург GSM</operatorname>
+	<operatorlatin>Orenburg GSM</operatorlatin>
+	<operatorfull>Orenburg_GSM</operatorfull>
+	<abonentprice>89.83 руб. (RUR) без НДС</abonentprice>
+	<price>89.83</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>50.2612</clientprofit>
+	<clientprofitusd>1.7397</clientprofitusd>
+	<operatorid>42</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Сибирьтелеком</operatorname>
+	<operatorlatin>Sibirtelekom</operatorlatin>
+	<operatorfull>Sibirtelekom</operatorfull>
+	<abonentprice>90 руб. (RUR) без НДС</abonentprice>
+	<price>90</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>49.3471</clientprofit>
+	<clientprofitusd>1.7081</clientprofitusd>
+	<operatorid>63</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>СкайЛинк-Мск (МСС)</operatorname>
+	<operatorlatin>SkyLink</operatorlatin>
+	<operatorfull>SkyLink_moscow</operatorfull>
+	<abonentprice>90.00 руб. (RUR) без НДС</abonentprice>
+	<price>90</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>49.3471</clientprofit>
+	<clientprofitusd>1.7081</clientprofitusd>
+	<operatorid>47</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>СкайЛинк-СПб (ДТ)</operatorname>
+	<operatorlatin>SkyLink</operatorlatin>
+	<operatorfull>SkyLink_spb</operatorfull>
+	<abonentprice>90 руб. (RUR) без НДС</abonentprice>
+	<price>90</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>50.3544</clientprofit>
+	<clientprofitusd>1.743</clientprofitusd>
+	<operatorid>46</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>СМАРТС (Иваново GSM)</operatorname>
+	<operatorlatin>Smarts</operatorlatin>
+	<operatorfull>Smarts_Ivanovo_GSM</operatorfull>
+	<abonentprice>88.98 руб. (RUR) без НДС</abonentprice>
+	<price>88.98</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>41.755</clientprofit>
+	<clientprofitusd>1.4453</clientprofitusd>
+	<operatorid>55</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>СМАРТС (Пенза)</operatorname>
+	<operatorlatin>Smarts</operatorlatin>
+	<operatorfull>Smarts_penza</operatorfull>
+	<abonentprice>89.83 руб. (RUR) без НДС</abonentprice>
+	<price>89.83</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>42.1374</clientprofit>
+	<clientprofitusd>1.4585</clientprofitusd>
+	<operatorid>53</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>СМАРТС (Самара GSM)</operatorname>
+	<operatorlatin>Smarts</operatorlatin>
+	<operatorfull>Smarts_Samara_GSM</operatorfull>
+	<abonentprice>105.08 руб. (RUR) без НДС</abonentprice>
+	<price>105.08</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>49.0393</clientprofit>
+	<clientprofitusd>1.6974</clientprofitusd>
+	<operatorid>49</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>СТеК Джи Эс Эм</operatorname>
+	<operatorlatin>Stek GSM</operatorlatin>
+	<operatorfull>Stek_GSM</operatorfull>
+	<abonentprice>90 руб. (RUR) без НДС</abonentprice>
+	<price>90</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>50.2612</clientprofit>
+	<clientprofitusd>1.7397</clientprofitusd>
+	<operatorid>56</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Телесет ЛТД</operatorname>
+	<operatorlatin>Di-ex</operatorlatin>
+	<operatorfull>Diex_teleset</operatorfull>
+	<abonentprice>90.00 руб. (RUR) без НДС</abonentprice>
+	<price>90</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>45.3645</clientprofit>
+	<clientprofitusd>1.5702</clientprofitusd>
+	<operatorid>29</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Шупашкар GSM</operatorname>
+	<operatorlatin>Shupashkar GSM</operatorlatin>
+	<operatorfull>Shupashkar_GSM</operatorfull>
+	<abonentprice>90.68 руб. (RUR) без НДС</abonentprice>
+	<price>90.68</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>42.5198</clientprofit>
+	<clientprofitusd>1.4718</clientprofitusd>
+	<operatorid>48</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4449</number>
+	<operatorname>Ярославль GSM</operatorname>
+	<operatorlatin>Yaroslavl GSM</operatorlatin>
+	<operatorfull>Yaroslavl_GSM</operatorfull>
+	<abonentprice>89.83 руб. (RUR) без НДС</abonentprice>
+	<price>89.83</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>42.1374</clientprofit>
+	<clientprofitusd>1.4585</clientprofitusd>
+	<operatorid>52</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Tele2 (РСС)</operatorname>
+	<operatorlatin>Tele2</operatorlatin>
+	<operatorfull>Tele2_rss</operatorfull>
+	<abonentprice>57.39 руб. (RUR) без НДС</abonentprice>
+	<price>57.39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>26.4309</clientprofit>
+	<clientprofitusd>0.9149</clientprofitusd>
+	<operatorid>61</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>АКОС</operatorname>
+	<operatorlatin>Akos</operatorlatin>
+	<operatorfull>Akos</operatorfull>
+	<abonentprice>60.6 руб. (RUR) без НДС</abonentprice>
+	<price>60.6</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>34.3961</clientprofit>
+	<clientprofitusd>1.1906</clientprofitusd>
+	<operatorid>24</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Алтайсвязь</operatorname>
+	<operatorlatin>Altaysvyaz</operatorlatin>
+	<operatorfull>Altaysvyaz</operatorfull>
+	<abonentprice>60 руб. (RUR) без НДС</abonentprice>
+	<price>60</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>33.3981</clientprofit>
+	<clientprofitusd>1.156</clientprofitusd>
+	<operatorid>25</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Астрахань GSM</operatorname>
+	<operatorlatin>Astrakhan GSM</operatorlatin>
+	<operatorfull>Astrakhan_GSM</operatorfull>
+	<abonentprice>59.32 руб. (RUR) без НДС</abonentprice>
+	<price>59.32</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>28.1936</clientprofit>
+	<clientprofitusd>0.9759</clientprofitusd>
+	<operatorid>51</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>БайкалВестКом</operatorname>
+	<operatorlatin>BaikalWestCom</operatorlatin>
+	<operatorfull>BaikalWestCom</operatorfull>
+	<abonentprice>59 руб. (RUR) без НДС</abonentprice>
+	<price>59</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>33.5286</clientprofit>
+	<clientprofitusd>1.1606</clientprofitusd>
+	<operatorid>26</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>БашСелл</operatorname>
+	<operatorlatin>BashSell</operatorlatin>
+	<operatorfull>BashSell</operatorfull>
+	<abonentprice>59.32 руб. (RUR) без НДС</abonentprice>
+	<price>59.32</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>33.7059</clientprofit>
+	<clientprofitusd>1.1667</clientprofitusd>
+	<operatorid>27</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Билайн</operatorname>
+	<operatorlatin>Beeline</operatorlatin>
+	<operatorfull>Beeline_ru</operatorfull>
+	<abonentprice>59.32 руб. (RUR) без НДС</abonentprice>
+	<price>59.32</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>39.0689</clientprofit>
+	<clientprofitusd>1.3523</clientprofitusd>
+	<operatorid>12</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Волгоград GSM</operatorname>
+	<operatorlatin>Volgograd GSM</operatorlatin>
+	<operatorfull>Volgograd_GSM</operatorfull>
+	<abonentprice>59 руб. (RUR) без НДС</abonentprice>
+	<price>59</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>28.1936</clientprofit>
+	<clientprofitusd>0.9759</clientprofitusd>
+	<operatorid>50</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Енисей Телеком</operatorname>
+	<operatorlatin>ETK</operatorlatin>
+	<operatorfull>EniseyTelekom</operatorfull>
+	<abonentprice>60 руб. (RUR) без НДС</abonentprice>
+	<price>60</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>34.0696</clientprofit>
+	<clientprofitusd>1.1793</clientprofitusd>
+	<operatorid>31</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Контент Урал (UTEL)</operatorname>
+	<operatorlatin>UTEL</operatorlatin>
+	<operatorfull>UTEL</operatorfull>
+	<abonentprice>75 руб. (RUR) без НДС</abonentprice>
+	<price>75</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>35.4314</clientprofit>
+	<clientprofitusd>1.2264</clientprofitusd>
+	<operatorid>65</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Мегафон (Дальний Восток)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_dalniy_vostok</operatorfull>
+	<abonentprice>89 руб. (RUR) без НДС</abonentprice>
+	<price>89</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>40.7943</clientprofit>
+	<clientprofitusd>1.4121</clientprofitusd>
+	<operatorid>19</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Мегафон (Москва)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_moscow</operatorfull>
+	<abonentprice>89 руб. (RUR) без НДС</abonentprice>
+	<price>89</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>40.7943</clientprofit>
+	<clientprofitusd>1.4121</clientprofitusd>
+	<operatorid>21</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Мегафон (Поволжье)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_povolzhye</operatorfull>
+	<abonentprice>89 руб. (RUR) без НДС</abonentprice>
+	<price>89</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>40.7943</clientprofit>
+	<clientprofitusd>1.4121</clientprofitusd>
+	<operatorid>13</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Мегафон (Сев. Кавказ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_kavkaz</operatorfull>
+	<abonentprice>89 руб. (RUR) без НДС</abonentprice>
+	<price>89</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>40.7943</clientprofit>
+	<clientprofitusd>1.4121</clientprofitusd>
+	<operatorid>15</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Мегафон (Северо-Запад)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_severo_zapad</operatorfull>
+	<abonentprice>89 руб. (RUR) без НДС</abonentprice>
+	<price>89</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>40.7943</clientprofit>
+	<clientprofitusd>1.4121</clientprofitusd>
+	<operatorid>20</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Мегафон (Сибирь)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_sibir</operatorfull>
+	<abonentprice>89 руб. (RUR) без НДС</abonentprice>
+	<price>89</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>40.7943</clientprofit>
+	<clientprofitusd>1.4121</clientprofitusd>
+	<operatorid>23</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Мегафон (Урал)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_ural</operatorfull>
+	<abonentprice>89 руб. (RUR) без НДС</abonentprice>
+	<price>89</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>40.7943</clientprofit>
+	<clientprofitusd>1.4121</clientprofitusd>
+	<operatorid>17</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Мегафон (Центр СФ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_north</operatorfull>
+	<abonentprice>89 руб. (RUR) без НДС</abonentprice>
+	<price>89</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>40.7943</clientprofit>
+	<clientprofitusd>1.4121</clientprofitusd>
+	<operatorid>22</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Мегафон (Центр ЮФ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_south</operatorfull>
+	<abonentprice>89 руб. (RUR) без НДС</abonentprice>
+	<price>89</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>40.7943</clientprofit>
+	<clientprofitusd>1.4121</clientprofitusd>
+	<operatorid>18</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Мегафон (Центр)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_centr</operatorfull>
+	<abonentprice>89 руб. (RUR) без НДС</abonentprice>
+	<price>89</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>40.7943</clientprofit>
+	<clientprofitusd>1.4121</clientprofitusd>
+	<operatorid>14</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>МОТИВ</operatorname>
+	<operatorlatin>Motiv</operatorlatin>
+	<operatorfull>Motiv</operatorfull>
+	<abonentprice>59.07 руб. (RUR) без НДС</abonentprice>
+	<price>59.07</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>33.566</clientprofit>
+	<clientprofitusd>1.1619</clientprofitusd>
+	<operatorid>32</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>МТС</operatorname>
+	<operatorlatin>MTS</operatorlatin>
+	<operatorfull>MTS_ru</operatorfull>
+	<abonentprice>57.4 руб. (RUR) без НДС</abonentprice>
+	<price>57.4</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>34.6945</clientprofit>
+	<clientprofitusd>1.2009</clientprofitusd>
+	<operatorid>8</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>НСС (Ниж. Новгород)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_nnovgorod</operatorfull>
+	<abonentprice>66.36 руб. (RUR) без НДС</abonentprice>
+	<price>66.36</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>32.3441</clientprofit>
+	<clientprofitusd>1.1196</clientprofitusd>
+	<operatorid>39</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>НСС (Пенза)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_penza</operatorfull>
+	<abonentprice>56.24 руб. (RUR) без НДС</abonentprice>
+	<price>56.24</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>26.4122</clientprofit>
+	<clientprofitusd>0.9142</clientprofitusd>
+	<operatorid>33</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>НСС (РМ)</operatorname>
+	<operatorlatin>ON (NSS)</operatorlatin>
+	<operatorfull>NSS_rm</operatorfull>
+	<abonentprice>56.24 руб. (RUR) без НДС</abonentprice>
+	<price>56.24</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>36.8863</clientprofit>
+	<clientprofitusd>1.2768</clientprofitusd>
+	<operatorid>37</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>НСС (С)</operatorname>
+	<operatorlatin>ON (NSS)</operatorlatin>
+	<operatorfull>NSS_c</operatorfull>
+	<abonentprice>56.24 руб. (RUR) без НДС</abonentprice>
+	<price>56.24</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>32.3441</clientprofit>
+	<clientprofitusd>1.1196</clientprofitusd>
+	<operatorid>40</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>НСС (Саратов)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_saratov</operatorfull>
+	<abonentprice>56.24 руб. (RUR) без НДС</abonentprice>
+	<price>56.24</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>34.0696</clientprofit>
+	<clientprofitusd>1.1793</clientprofitusd>
+	<operatorid>35</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>НСС (Татарстан)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_tatarstan</operatorfull>
+	<abonentprice>56.24 руб. (RUR) без НДС</abonentprice>
+	<price>56.24</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>34.1629</clientprofit>
+	<clientprofitusd>1.1825</clientprofitusd>
+	<operatorid>41</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>НСС (Ульяновск)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_ulyanovsk</operatorfull>
+	<abonentprice>60.17 руб. (RUR) без НДС</abonentprice>
+	<price>60.17</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>34.1629</clientprofit>
+	<clientprofitusd>1.1825</clientprofitusd>
+	<operatorid>64</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>НСС (Чувашия)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_chuvashiya</operatorfull>
+	<abonentprice>56.24 руб. (RUR) без НДС</abonentprice>
+	<price>56.24</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>34.1629</clientprofit>
+	<clientprofitusd>1.1825</clientprofitusd>
+	<operatorid>36</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>НТК</operatorname>
+	<operatorlatin>NTK</operatorlatin>
+	<operatorfull>NTK</operatorfull>
+	<abonentprice>58 руб. (RUR) без НДС</abonentprice>
+	<price>58</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>26.4215</clientprofit>
+	<clientprofitusd>0.9146</clientprofitusd>
+	<operatorid>34</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Оренбург GSM</operatorname>
+	<operatorlatin>Orenburg GSM</operatorlatin>
+	<operatorfull>Orenburg_GSM</operatorfull>
+	<abonentprice>60.17 руб. (RUR) без НДС</abonentprice>
+	<price>60.17</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>34.1629</clientprofit>
+	<clientprofitusd>1.1825</clientprofitusd>
+	<operatorid>42</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Сибирьтелеком</operatorname>
+	<operatorlatin>Sibirtelekom</operatorlatin>
+	<operatorfull>Sibirtelekom</operatorfull>
+	<abonentprice>60 руб. (RUR) без НДС</abonentprice>
+	<price>60</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>33.3981</clientprofit>
+	<clientprofitusd>1.156</clientprofitusd>
+	<operatorid>63</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>СкайЛинк-Мск (МСС)</operatorname>
+	<operatorlatin>SkyLink</operatorlatin>
+	<operatorfull>SkyLink_moscow</operatorfull>
+	<abonentprice>50.00 руб. (RUR) без НДС</abonentprice>
+	<price>50</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>28.0817</clientprofit>
+	<clientprofitusd>0.972</clientprofitusd>
+	<operatorid>47</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>СкайЛинк-СПб (ДТ)</operatorname>
+	<operatorlatin>SkyLink</operatorlatin>
+	<operatorfull>SkyLink_spb</operatorfull>
+	<abonentprice>50 руб. (RUR) без НДС</abonentprice>
+	<price>50</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>28.6413</clientprofit>
+	<clientprofitusd>0.9914</clientprofitusd>
+	<operatorid>46</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>СМАРТС (Иваново GSM)</operatorname>
+	<operatorlatin>Smarts</operatorlatin>
+	<operatorfull>Smarts_Ivanovo_GSM</operatorfull>
+	<abonentprice>59.32 руб. (RUR) без НДС</abonentprice>
+	<price>59.32</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>28.3336</clientprofit>
+	<clientprofitusd>0.9807</clientprofitusd>
+	<operatorid>55</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>СМАРТС (Пенза)</operatorname>
+	<operatorlatin>Smarts</operatorlatin>
+	<operatorfull>Smarts_penza</operatorfull>
+	<abonentprice>60.17 руб. (RUR) без НДС</abonentprice>
+	<price>60.17</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>28.716</clientprofit>
+	<clientprofitusd>0.994</clientprofitusd>
+	<operatorid>53</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>СМАРТС (Самара GSM)</operatorname>
+	<operatorlatin>Smarts</operatorlatin>
+	<operatorfull>Smarts_Samara_GSM</operatorfull>
+	<abonentprice>71.19 руб. (RUR) без НДС</abonentprice>
+	<price>71.19</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>33.7059</clientprofit>
+	<clientprofitusd>1.1667</clientprofitusd>
+	<operatorid>49</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>СТеК Джи Эс Эм</operatorname>
+	<operatorlatin>Stek GSM</operatorlatin>
+	<operatorfull>Stek_GSM</operatorfull>
+	<abonentprice>60 руб. (RUR) без НДС</abonentprice>
+	<price>60</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>33.7059</clientprofit>
+	<clientprofitusd>1.1667</clientprofitusd>
+	<operatorid>56</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Телесет ЛТД</operatorname>
+	<operatorlatin>Di-ex</operatorlatin>
+	<operatorfull>Diex_teleset</operatorfull>
+	<abonentprice>60.00 руб. (RUR) без НДС</abonentprice>
+	<price>60</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>30.7399</clientprofit>
+	<clientprofitusd>1.064</clientprofitusd>
+	<operatorid>29</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Шупашкар GSM</operatorname>
+	<operatorlatin>Shupashkar GSM</operatorlatin>
+	<operatorfull>Shupashkar_GSM</operatorfull>
+	<abonentprice>60.17 руб. (RUR) без НДС</abonentprice>
+	<price>60.17</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>28.716</clientprofit>
+	<clientprofitusd>0.994</clientprofitusd>
+	<operatorid>48</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4448</number>
+	<operatorname>Ярославль GSM</operatorname>
+	<operatorlatin>Yaroslavl GSM</operatorlatin>
+	<operatorfull>Yaroslavl_GSM</operatorfull>
+	<abonentprice>58.47 руб. (RUR) без НДС</abonentprice>
+	<price>58.47</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>27.9512</clientprofit>
+	<clientprofitusd>0.9675</clientprofitusd>
+	<operatorid>52</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Tele2 (РСС)</operatorname>
+	<operatorlatin>Tele2</operatorlatin>
+	<operatorfull>Tele2_rss</operatorfull>
+	<abonentprice>37.28 руб. (RUR) без НДС</abonentprice>
+	<price>37.28</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>17.7009</clientprofit>
+	<clientprofitusd>0.6127</clientprofitusd>
+	<operatorid>61</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>АКОС</operatorname>
+	<operatorlatin>Akos</operatorlatin>
+	<operatorfull>Akos</operatorfull>
+	<abonentprice>39.4 руб. (RUR) без НДС</abonentprice>
+	<price>39.4</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>22.8866</clientprofit>
+	<clientprofitusd>0.7922</clientprofitusd>
+	<operatorid>24</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Алтайсвязь</operatorname>
+	<operatorlatin>Altaysvyaz</operatorlatin>
+	<operatorfull>Altaysvyaz</operatorfull>
+	<abonentprice>39 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>22.2337</clientprofit>
+	<clientprofitusd>0.7696</clientprofitusd>
+	<operatorid>25</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Астрахань GSM</operatorname>
+	<operatorlatin>Astrakhan GSM</operatorlatin>
+	<operatorfull>Astrakhan_GSM</operatorfull>
+	<abonentprice>38.98 руб. (RUR) без НДС</abonentprice>
+	<price>38.98</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>19.1465</clientprofit>
+	<clientprofitusd>0.6627</clientprofitusd>
+	<operatorid>51</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>БайкалВестКом</operatorname>
+	<operatorlatin>BaikalWestCom</operatorlatin>
+	<operatorfull>BaikalWestCom</operatorfull>
+	<abonentprice>39 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>22.6721</clientprofit>
+	<clientprofitusd>0.7848</clientprofitusd>
+	<operatorid>26</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>БашСелл</operatorname>
+	<operatorlatin>BashSell</operatorlatin>
+	<operatorfull>BashSell</operatorfull>
+	<abonentprice>38.14 руб. (RUR) без НДС</abonentprice>
+	<price>38.14</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>22.1964</clientprofit>
+	<clientprofitusd>0.7683</clientprofitusd>
+	<operatorid>27</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Билайн</operatorname>
+	<operatorlatin>Beeline</operatorlatin>
+	<operatorfull>Beeline_ru</operatorfull>
+	<abonentprice>37.29 руб. (RUR) без НДС</abonentprice>
+	<price>37.29</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>25.1158</clientprofit>
+	<clientprofitusd>0.8694</clientprofitusd>
+	<operatorid>12</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Волгоград GSM</operatorname>
+	<operatorlatin>Volgograd GSM</operatorlatin>
+	<operatorfull>Volgograd_GSM</operatorfull>
+	<abonentprice>39 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>19.1465</clientprofit>
+	<clientprofitusd>0.6627</clientprofitusd>
+	<operatorid>50</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Енисей Телеком</operatorname>
+	<operatorlatin>ETK</operatorlatin>
+	<operatorfull>EniseyTelekom</operatorfull>
+	<abonentprice>39 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>22.6721</clientprofit>
+	<clientprofitusd>0.7848</clientprofitusd>
+	<operatorid>31</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Контент Урал (UTEL)</operatorname>
+	<operatorlatin>UTEL</operatorlatin>
+	<operatorfull>UTEL</operatorfull>
+	<abonentprice>48 руб. (RUR) без НДС</abonentprice>
+	<price>48</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>23.2131</clientprofit>
+	<clientprofitusd>0.8035</clientprofitusd>
+	<operatorid>65</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Мегафон (Дальний Восток)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_dalniy_vostok</operatorfull>
+	<abonentprice>39 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>21.441</clientprofit>
+	<clientprofitusd>0.7422</clientprofitusd>
+	<operatorid>19</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Мегафон (Москва)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_moscow</operatorfull>
+	<abonentprice>39 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>21.441</clientprofit>
+	<clientprofitusd>0.7422</clientprofitusd>
+	<operatorid>21</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Мегафон (Поволжье)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_povolzhye</operatorfull>
+	<abonentprice>39 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>21.441</clientprofit>
+	<clientprofitusd>0.7422</clientprofitusd>
+	<operatorid>13</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Мегафон (Сев. Кавказ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_kavkaz</operatorfull>
+	<abonentprice>39 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>21.441</clientprofit>
+	<clientprofitusd>0.7422</clientprofitusd>
+	<operatorid>15</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Мегафон (Северо-Запад)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_severo_zapad</operatorfull>
+	<abonentprice>39 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>21.441</clientprofit>
+	<clientprofitusd>0.7422</clientprofitusd>
+	<operatorid>20</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Мегафон (Сибирь)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_sibir</operatorfull>
+	<abonentprice>39 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>21.441</clientprofit>
+	<clientprofitusd>0.7422</clientprofitusd>
+	<operatorid>23</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Мегафон (Урал)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_ural</operatorfull>
+	<abonentprice>39 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>21.441</clientprofit>
+	<clientprofitusd>0.7422</clientprofitusd>
+	<operatorid>17</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Мегафон (Центр СФ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_north</operatorfull>
+	<abonentprice>39 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>21.441</clientprofit>
+	<clientprofitusd>0.7422</clientprofitusd>
+	<operatorid>22</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Мегафон (Центр ЮФ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_south</operatorfull>
+	<abonentprice>39 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>21.441</clientprofit>
+	<clientprofitusd>0.7422</clientprofitusd>
+	<operatorid>18</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Мегафон (Центр)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_centr</operatorfull>
+	<abonentprice>39 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>21.441</clientprofit>
+	<clientprofitusd>0.7422</clientprofitusd>
+	<operatorid>14</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>МОТИВ</operatorname>
+	<operatorlatin>Motiv</operatorlatin>
+	<operatorfull>Motiv</operatorfull>
+	<abonentprice>38.98 руб. (RUR) без НДС</abonentprice>
+	<price>38.98</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>22.6628</clientprofit>
+	<clientprofitusd>0.7845</clientprofitusd>
+	<operatorid>32</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>МТС</operatorname>
+	<operatorlatin>MTS</operatorlatin>
+	<operatorfull>MTS_ru</operatorfull>
+	<abonentprice>37.31 руб. (RUR) без НДС</abonentprice>
+	<price>37.31</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>23.0732</clientprofit>
+	<clientprofitusd>0.7987</clientprofitusd>
+	<operatorid>8</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>НСС (Ниж. Новгород)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_nnovgorod</operatorfull>
+	<abonentprice>43.14 руб. (RUR) без НДС</abonentprice>
+	<price>43.14</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>21.5436</clientprofit>
+	<clientprofitusd>0.7457</clientprofitusd>
+	<operatorid>39</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>НСС (Пенза)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_penza</operatorfull>
+	<abonentprice>36.55 руб. (RUR) без НДС</abonentprice>
+	<price>36.55</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>17.6915</clientprofit>
+	<clientprofitusd>0.6124</clientprofitusd>
+	<operatorid>33</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>НСС (РМ)</operatorname>
+	<operatorlatin>ON (NSS)</operatorlatin>
+	<operatorfull>NSS_rm</operatorfull>
+	<abonentprice>36.55 руб. (RUR) без НДС</abonentprice>
+	<price>36.55</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>24.4349</clientprofit>
+	<clientprofitusd>0.8458</clientprofitusd>
+	<operatorid>37</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>НСС (С)</operatorname>
+	<operatorlatin>ON (NSS)</operatorlatin>
+	<operatorfull>NSS_c</operatorfull>
+	<abonentprice>36.56 руб. (RUR) без НДС</abonentprice>
+	<price>36.56</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>21.5436</clientprofit>
+	<clientprofitusd>0.7457</clientprofitusd>
+	<operatorid>40</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>НСС (Саратов)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_saratov</operatorfull>
+	<abonentprice>36.56 руб. (RUR) без НДС</abonentprice>
+	<price>36.56</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>22.6721</clientprofit>
+	<clientprofitusd>0.7848</clientprofitusd>
+	<operatorid>35</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>НСС (Татарстан)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_tatarstan</operatorfull>
+	<abonentprice>36.56 руб. (RUR) без НДС</abonentprice>
+	<price>36.56</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>19.1372</clientprofit>
+	<clientprofitusd>0.6624</clientprofitusd>
+	<operatorid>41</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>НСС (Ульяновск)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_ulyanovsk</operatorfull>
+	<abonentprice>38.98 руб. (RUR) без НДС</abonentprice>
+	<price>38.98</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>22.6628</clientprofit>
+	<clientprofitusd>0.7845</clientprofitusd>
+	<operatorid>64</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>НСС (Чувашия)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_chuvashiya</operatorfull>
+	<abonentprice>36.56 руб. (RUR) без НДС</abonentprice>
+	<price>36.56</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>22.6628</clientprofit>
+	<clientprofitusd>0.7845</clientprofitusd>
+	<operatorid>36</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>НТК</operatorname>
+	<operatorlatin>NTK</operatorlatin>
+	<operatorfull>NTK</operatorfull>
+	<abonentprice>37.7 руб. (RUR) без НДС</abonentprice>
+	<price>37.7</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>18.5496</clientprofit>
+	<clientprofitusd>0.6421</clientprofitusd>
+	<operatorid>34</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Оренбург GSM</operatorname>
+	<operatorlatin>Orenburg GSM</operatorlatin>
+	<operatorfull>Orenburg_GSM</operatorfull>
+	<abonentprice>38.98 руб. (RUR) без НДС</abonentprice>
+	<price>38.98</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>22.6628</clientprofit>
+	<clientprofitusd>0.7845</clientprofitusd>
+	<operatorid>42</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Сибирьтелеком</operatorname>
+	<operatorlatin>Sibirtelekom</operatorlatin>
+	<operatorfull>Sibirtelekom</operatorfull>
+	<abonentprice>39 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>22.2337</clientprofit>
+	<clientprofitusd>0.7696</clientprofitusd>
+	<operatorid>63</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>СкайЛинк-Мск (МСС)</operatorname>
+	<operatorlatin>SkyLink</operatorlatin>
+	<operatorfull>SkyLink_moscow</operatorfull>
+	<abonentprice>35 руб. (RUR) без НДС</abonentprice>
+	<price>35</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>18.1975</clientprofit>
+	<clientprofitusd>0.6299</clientprofitusd>
+	<operatorid>47</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>СкайЛинк-СПб (ДТ)</operatorname>
+	<operatorlatin>SkyLink</operatorlatin>
+	<operatorfull>SkyLink_spb</operatorfull>
+	<abonentprice>35 руб. (RUR) без НДС</abonentprice>
+	<price>35</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>18.1975</clientprofit>
+	<clientprofitusd>0.6299</clientprofitusd>
+	<operatorid>46</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>СМАРТС (Иваново GSM)</operatorname>
+	<operatorlatin>Smarts</operatorlatin>
+	<operatorfull>Smarts_Ivanovo_GSM</operatorfull>
+	<abonentprice>38.98 руб. (RUR) без НДС</abonentprice>
+	<price>38.98</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>19.1372</clientprofit>
+	<clientprofitusd>0.6624</clientprofitusd>
+	<operatorid>55</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>СМАРТС (Пенза)</operatorname>
+	<operatorlatin>Smarts</operatorlatin>
+	<operatorfull>Smarts_penza</operatorfull>
+	<abonentprice>38.98 руб. (RUR) без НДС</abonentprice>
+	<price>38.98</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>19.1372</clientprofit>
+	<clientprofitusd>0.6624</clientprofitusd>
+	<operatorid>53</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>СМАРТС (Самара GSM)</operatorname>
+	<operatorlatin>Smarts</operatorlatin>
+	<operatorfull>Smarts_Samara_GSM</operatorfull>
+	<abonentprice>50.85 руб. (RUR) без НДС</abonentprice>
+	<price>50.85</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>24.5002</clientprofit>
+	<clientprofitusd>0.8481</clientprofitusd>
+	<operatorid>49</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>СТеК Джи Эс Эм</operatorname>
+	<operatorlatin>Stek GSM</operatorlatin>
+	<operatorfull>Stek_GSM</operatorfull>
+	<abonentprice>39 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>22.6628</clientprofit>
+	<clientprofitusd>0.7845</clientprofitusd>
+	<operatorid>56</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Телесет ЛТД</operatorname>
+	<operatorlatin>Di-ex</operatorlatin>
+	<operatorfull>Diex_teleset</operatorfull>
+	<abonentprice>39.00 руб. (RUR) без НДС</abonentprice>
+	<price>39</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>20.5083</clientprofit>
+	<clientprofitusd>0.7099</clientprofitusd>
+	<operatorid>29</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Шупашкар GSM</operatorname>
+	<operatorlatin>Shupashkar GSM</operatorlatin>
+	<operatorfull>Shupashkar_GSM</operatorfull>
+	<abonentprice>38.98 руб. (RUR) без НДС</abonentprice>
+	<price>38.98</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>19.1372</clientprofit>
+	<clientprofitusd>0.6624</clientprofitusd>
+	<operatorid>48</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4447</number>
+	<operatorname>Ярославль GSM</operatorname>
+	<operatorlatin>Yaroslavl GSM</operatorlatin>
+	<operatorfull>Yaroslavl_GSM</operatorfull>
+	<abonentprice>38.14 руб. (RUR) без НДС</abonentprice>
+	<price>38.14</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>1.3</usdprice>
+	<clientprofit>18.7548</clientprofit>
+	<clientprofitusd>0.6492</clientprofitusd>
+	<operatorid>52</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Tele2 (РСС)</operatorname>
+	<operatorlatin>Tele2</operatorlatin>
+	<operatorfull>Tele2_rss</operatorfull>
+	<abonentprice>4.24 руб. (RUR) без НДС</abonentprice>
+	<price>4.24</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.8411</clientprofit>
+	<clientprofitusd>0.133</clientprofitusd>
+	<operatorid>61</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>АКОС</operatorname>
+	<operatorlatin>Akos</operatorlatin>
+	<operatorfull>Akos</operatorfull>
+	<abonentprice>4.5 руб. (RUR) без НДС</abonentprice>
+	<price>4.5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.9437</clientprofit>
+	<clientprofitusd>0.1365</clientprofitusd>
+	<operatorid>24</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Алтайсвязь</operatorname>
+	<operatorlatin>Altaysvyaz</operatorlatin>
+	<operatorfull>Altaysvyaz</operatorfull>
+	<abonentprice>4.31 руб. (RUR) без НДС</abonentprice>
+	<price>4.31</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.7932</clientprofit>
+	<clientprofitusd>0.1313</clientprofitusd>
+	<operatorid>25</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Астрахань GSM</operatorname>
+	<operatorlatin>Astrakhan GSM</operatorlatin>
+	<operatorfull>Astrakhan_GSM</operatorfull>
+	<abonentprice>5.08 руб. (RUR) без НДС</abonentprice>
+	<price>5.08</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.7664</clientprofit>
+	<clientprofitusd>0.1304</clientprofitusd>
+	<operatorid>51</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>БайкалВестКом</operatorname>
+	<operatorlatin>BaikalWestCom</operatorlatin>
+	<operatorfull>BaikalWestCom</operatorfull>
+	<abonentprice>5 руб. (RUR) без НДС</abonentprice>
+	<price>5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>4.2141</clientprofit>
+	<clientprofitusd>0.1459</clientprofitusd>
+	<operatorid>26</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>БашСелл</operatorname>
+	<operatorlatin>BashSell</operatorlatin>
+	<operatorfull>BashSell</operatorfull>
+	<abonentprice>4.66 руб. (RUR) без НДС</abonentprice>
+	<price>4.66</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>4.0276</clientprofit>
+	<clientprofitusd>0.1394</clientprofitusd>
+	<operatorid>27</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Билайн</operatorname>
+	<operatorlatin>Beeline</operatorlatin>
+	<operatorfull>Beeline_ru</operatorfull>
+	<abonentprice>4.24 руб. (RUR) без НДС</abonentprice>
+	<price>4.24</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>4.1862</clientprofit>
+	<clientprofitusd>0.1449</clientprofitusd>
+	<operatorid>12</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Волгоград GSM</operatorname>
+	<operatorlatin>Volgograd GSM</operatorlatin>
+	<operatorfull>Volgograd_GSM</operatorfull>
+	<abonentprice>5 руб. (RUR) без НДС</abonentprice>
+	<price>5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.7664</clientprofit>
+	<clientprofitusd>0.1304</clientprofitusd>
+	<operatorid>50</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Енисейтелеком</operatorname>
+	<operatorlatin>SibirTelecom</operatorlatin>
+	<operatorfull>SibirTelecom</operatorfull>
+	<abonentprice>4.31 руб. (RUR) без НДС</abonentprice>
+	<price>4.31</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.7944</clientprofit>
+	<clientprofitusd>0.1313</clientprofitusd>
+	<operatorid>44</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Контент Урал (UTEL)</operatorname>
+	<operatorlatin>UTEL</operatorlatin>
+	<operatorfull>UTEL</operatorfull>
+	<abonentprice>4.5 руб. (RUR) без НДС</abonentprice>
+	<price>4.5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.5333</clientprofit>
+	<clientprofitusd>0.1223</clientprofitusd>
+	<operatorid>65</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Мегафон (Дальний Восток)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_dalniy_vostok</operatorfull>
+	<abonentprice>5 руб. (RUR) без НДС</abonentprice>
+	<price>5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.6918</clientprofit>
+	<clientprofitusd>0.1278</clientprofitusd>
+	<operatorid>19</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Мегафон (Москва)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_moscow</operatorfull>
+	<abonentprice>5 руб. (RUR) без НДС</abonentprice>
+	<price>5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.6918</clientprofit>
+	<clientprofitusd>0.1278</clientprofitusd>
+	<operatorid>21</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Мегафон (Поволжье)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_povolzhye</operatorfull>
+	<abonentprice>5 руб. (RUR) без НДС</abonentprice>
+	<price>5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.6918</clientprofit>
+	<clientprofitusd>0.1278</clientprofitusd>
+	<operatorid>13</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Мегафон (Сев. Кавказ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_kavkaz</operatorfull>
+	<abonentprice>5 руб. (RUR) без НДС</abonentprice>
+	<price>5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.6918</clientprofit>
+	<clientprofitusd>0.1278</clientprofitusd>
+	<operatorid>15</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Мегафон (Северо-Запад)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_severo_zapad</operatorfull>
+	<abonentprice>5 руб. (RUR) без НДС</abonentprice>
+	<price>5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.6918</clientprofit>
+	<clientprofitusd>0.1278</clientprofitusd>
+	<operatorid>20</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Мегафон (Сибирь)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_sibir</operatorfull>
+	<abonentprice>5 руб. (RUR) без НДС</abonentprice>
+	<price>5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.6918</clientprofit>
+	<clientprofitusd>0.1278</clientprofitusd>
+	<operatorid>23</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Мегафон (Урал)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_ural</operatorfull>
+	<abonentprice>5 руб. (RUR) без НДС</abonentprice>
+	<price>5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.6918</clientprofit>
+	<clientprofitusd>0.1278</clientprofitusd>
+	<operatorid>17</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Мегафон (Центр СФ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_north</operatorfull>
+	<abonentprice>5 руб. (RUR) без НДС</abonentprice>
+	<price>5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.6918</clientprofit>
+	<clientprofitusd>0.1278</clientprofitusd>
+	<operatorid>22</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Мегафон (Центр ЮФ)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_south</operatorfull>
+	<abonentprice>5 руб. (RUR) без НДС</abonentprice>
+	<price>5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.6918</clientprofit>
+	<clientprofitusd>0.1278</clientprofitusd>
+	<operatorid>18</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Мегафон (Центр)</operatorname>
+	<operatorlatin>Megafon</operatorlatin>
+	<operatorfull>Megafon_centr</operatorfull>
+	<abonentprice>5 руб. (RUR) без НДС</abonentprice>
+	<price>5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.6918</clientprofit>
+	<clientprofitusd>0.1278</clientprofitusd>
+	<operatorid>14</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>МОТИВ</operatorname>
+	<operatorlatin>Motiv</operatorlatin>
+	<operatorfull>Motiv</operatorfull>
+	<abonentprice>5 руб. (RUR) без НДС</abonentprice>
+	<price>5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>4.2141</clientprofit>
+	<clientprofitusd>0.1459</clientprofitusd>
+	<operatorid>32</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>МТС</operatorname>
+	<operatorlatin>MTS</operatorlatin>
+	<operatorfull>MTS_ru</operatorfull>
+	<abonentprice>4.31 руб. (RUR) без НДС</abonentprice>
+	<price>4.31</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.9903</clientprofit>
+	<clientprofitusd>0.1381</clientprofitusd>
+	<operatorid>8</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>НСС (Ниж. Новгород)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_nnovgorod</operatorfull>
+	<abonentprice>4.98 руб. (RUR) без НДС</abonentprice>
+	<price>4.98</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.8131</clientprofit>
+	<clientprofitusd>0.132</clientprofitusd>
+	<operatorid>39</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>НСС (РМ)</operatorname>
+	<operatorlatin>ON (NSS)</operatorlatin>
+	<operatorfull>NSS_rm</operatorfull>
+	<abonentprice>4.22 руб. (RUR) без НДС</abonentprice>
+	<price>4.22</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>4.1488</clientprofit>
+	<clientprofitusd>0.1436</clientprofitusd>
+	<operatorid>37</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>НСС (С)</operatorname>
+	<operatorlatin>ON (NSS)</operatorlatin>
+	<operatorfull>NSS_c</operatorfull>
+	<abonentprice>4.22 руб. (RUR) без НДС</abonentprice>
+	<price>4.22</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.8131</clientprofit>
+	<clientprofitusd>0.132</clientprofitusd>
+	<operatorid>40</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>НСС (Саратов)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_saratov</operatorfull>
+	<abonentprice>4.22 руб. (RUR) без НДС</abonentprice>
+	<price>4.22</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.9437</clientprofit>
+	<clientprofitusd>0.1365</clientprofitusd>
+	<operatorid>35</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>НСС (Татарстан)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_tatarstan</operatorfull>
+	<abonentprice>4.22 руб. (RUR) без НДС</abonentprice>
+	<price>4.22</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.5333</clientprofit>
+	<clientprofitusd>0.1223</clientprofitusd>
+	<operatorid>41</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>НСС (Ульяновск)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_ulyanovsk</operatorfull>
+	<abonentprice>4.49 руб. (RUR) без НДС</abonentprice>
+	<price>4.49</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.9343</clientprofit>
+	<clientprofitusd>0.1362</clientprofitusd>
+	<operatorid>64</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>НСС (Чувашия)</operatorname>
+	<operatorlatin>NSS</operatorlatin>
+	<operatorfull>NSS_chuvashiya</operatorfull>
+	<abonentprice>4.22 руб. (RUR) без НДС</abonentprice>
+	<price>4.22</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.9343</clientprofit>
+	<clientprofitusd>0.1362</clientprofitusd>
+	<operatorid>36</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>НТК</operatorname>
+	<operatorlatin>NTK</operatorlatin>
+	<operatorfull>NTK</operatorfull>
+	<abonentprice>4.35 руб. (RUR) без НДС</abonentprice>
+	<price>4.35</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.468</clientprofit>
+	<clientprofitusd>0.12</clientprofitusd>
+	<operatorid>34</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Оренбург GSM</operatorname>
+	<operatorlatin>Orenburg GSM</operatorlatin>
+	<operatorfull>Orenburg_GSM</operatorfull>
+	<abonentprice>4.49 руб. (RUR) без НДС</abonentprice>
+	<price>4.49</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.9343</clientprofit>
+	<clientprofitusd>0.1362</clientprofitusd>
+	<operatorid>42</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Сибирьтелеком</operatorname>
+	<operatorlatin>Sibirtelekom</operatorlatin>
+	<operatorfull>Sibirtelekom</operatorfull>
+	<abonentprice>4.31 руб. (RUR) без НДС</abonentprice>
+	<price>4.31</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.7932</clientprofit>
+	<clientprofitusd>0.1313</clientprofitusd>
+	<operatorid>63</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>СкайЛинк-Мск (МСС)</operatorname>
+	<operatorlatin>SkyLink</operatorlatin>
+	<operatorfull>SkyLink_moscow</operatorfull>
+	<abonentprice>4.17 руб. (RUR) без НДС</abonentprice>
+	<price>4.17</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.7198</clientprofit>
+	<clientprofitusd>0.1288</clientprofitusd>
+	<operatorid>47</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>СкайЛинк-СПб (ДТ)</operatorname>
+	<operatorlatin>SkyLink</operatorlatin>
+	<operatorfull>SkyLink_spb</operatorfull>
+	<abonentprice>4.17 руб. (RUR) без НДС</abonentprice>
+	<price>4.17</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.7664</clientprofit>
+	<clientprofitusd>0.1304</clientprofitusd>
+	<operatorid>46</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>СМАРТС (Иваново GSM)</operatorname>
+	<operatorlatin>Smarts</operatorlatin>
+	<operatorfull>Smarts_Ivanovo_GSM</operatorfull>
+	<abonentprice>5 руб. (RUR) без НДС</abonentprice>
+	<price>5</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.7664</clientprofit>
+	<clientprofitusd>0.1304</clientprofitusd>
+	<operatorid>55</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>СМАРТС (Пенза)</operatorname>
+	<operatorlatin>Smarts</operatorlatin>
+	<operatorfull>Smarts_penza</operatorfull>
+	<abonentprice>4.24 руб. (RUR) без НДС</abonentprice>
+	<price>4.24</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.4214</clientprofit>
+	<clientprofitusd>0.1184</clientprofitusd>
+	<operatorid>53</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>СМАРТС (Самара GSM)</operatorname>
+	<operatorlatin>Smarts</operatorlatin>
+	<operatorfull>Smarts_Samara_GSM</operatorfull>
+	<abonentprice>5.08 руб. (RUR) без НДС</abonentprice>
+	<price>5.08</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.8038</clientprofit>
+	<clientprofitusd>0.1317</clientprofitusd>
+	<operatorid>49</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>СТеК Джи Эс Эм</operatorname>
+	<operatorlatin>Stek GSM</operatorlatin>
+	<operatorfull>Stek_GSM</operatorfull>
+	<abonentprice>4.31 руб. (RUR) без НДС</abonentprice>
+	<price>4.31</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.9343</clientprofit>
+	<clientprofitusd>0.1362</clientprofitusd>
+	<operatorid>56</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Телесет ЛТД</operatorname>
+	<operatorlatin>Di-ex</operatorlatin>
+	<operatorfull>Diex_teleset</operatorfull>
+	<abonentprice>4.31 руб. (RUR) без НДС</abonentprice>
+	<price>4.31</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.5986</clientprofit>
+	<clientprofitusd>0.1246</clientprofitusd>
+	<operatorid>29</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Шупашкар GSM</operatorname>
+	<operatorlatin>Shupashkar GSM</operatorlatin>
+	<operatorfull>Shupashkar_GSM</operatorfull>
+	<abonentprice>4.49 руб. (RUR) без НДС</abonentprice>
+	<price>4.49</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.5333</clientprofit>
+	<clientprofitusd>0.1223</clientprofitusd>
+	<operatorid>48</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="full">
+	<country code="ru">Россия</country>
+	<number>4443</number>
+	<operatorname>Ярославль GSM</operatorname>
+	<operatorlatin>Yaroslavl GSM</operatorlatin>
+	<operatorfull>Yaroslavl_GSM</operatorfull>
+	<abonentprice>5.08 руб. (RUR) без НДС</abonentprice>
+	<price>5.08</price>
+	<currency>руб. (RUR)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.8038</clientprofit>
+	<clientprofitusd>0.1317</clientprofitusd>
+	<operatorid>52</operatorid>
+	<ndspercent>18</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4161</number>
+	<operatorname>Life (Украина)</operatorname>
+	<operatorlatin>Life</operatorlatin>
+	<operatorfull>Life_ua</operatorfull>
+	<abonentprice>25 грн. (UAH) без НДС</abonentprice>
+	<price>25</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>4</usdprice>
+	<clientprofit>43.894</clientprofit>
+	<clientprofitusd>1.5193</clientprofitusd>
+	<operatorid>69</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4161</number>
+	<operatorname>Билайн (Украина)</operatorname>
+	<operatorlatin>Beeline</operatorlatin>
+	<operatorfull>Beeline_ua</operatorfull>
+	<abonentprice>25 грн. (UAH) без НДС</abonentprice>
+	<price>25</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>4</usdprice>
+	<clientprofit>43.894</clientprofit>
+	<clientprofitusd>1.5193</clientprofitusd>
+	<operatorid>67</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4161</number>
+	<operatorname>Киевстар (Украина)</operatorname>
+	<operatorlatin>Kyivstar</operatorlatin>
+	<operatorfull>Kyivstar_ua</operatorfull>
+	<abonentprice>25 грн. (UAH) без НДС</abonentprice>
+	<price>25</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>4</usdprice>
+	<clientprofit>43.894</clientprofit>
+	<clientprofitusd>1.5193</clientprofitusd>
+	<operatorid>68</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4161</number>
+	<operatorname>МТС (Украина)</operatorname>
+	<operatorlatin>MTS</operatorlatin>
+	<operatorfull>MTS_ua</operatorfull>
+	<abonentprice>25 грн. (UAH) без НДС</abonentprice>
+	<price>25</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>4</usdprice>
+	<clientprofit>48.888</clientprofit>
+	<clientprofitusd>1.6922</clientprofitusd>
+	<operatorid>70</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4449</number>
+	<operatorname>Life (Украина)</operatorname>
+	<operatorlatin>Life</operatorlatin>
+	<operatorfull>Life_ua</operatorfull>
+	<abonentprice>13.33 грн. (UAH) без НДС</abonentprice>
+	<price>13.33</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>24.1004</clientprofit>
+	<clientprofitusd>0.8342</clientprofitusd>
+	<operatorid>69</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4449</number>
+	<operatorname>Билайн (Украина)</operatorname>
+	<operatorlatin>Beeline</operatorlatin>
+	<operatorfull>Beeline_ua</operatorfull>
+	<abonentprice>13.33 грн. (UAH) без НДС</abonentprice>
+	<price>13.33</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>24.1004</clientprofit>
+	<clientprofitusd>0.8342</clientprofitusd>
+	<operatorid>67</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4449</number>
+	<operatorname>Киевстар (Украина)</operatorname>
+	<operatorlatin>Kyivstar</operatorlatin>
+	<operatorfull>Kyivstar_ua</operatorfull>
+	<abonentprice>13.33 грн. (UAH) без НДС</abonentprice>
+	<price>13.33</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>24.1004</clientprofit>
+	<clientprofitusd>0.8342</clientprofitusd>
+	<operatorid>68</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4449</number>
+	<operatorname>МТС (Украина)</operatorname>
+	<operatorlatin>MTS</operatorlatin>
+	<operatorfull>MTS_ua</operatorfull>
+	<abonentprice>13.33 грн. (UAH) без НДС</abonentprice>
+	<price>13.33</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>2</usdprice>
+	<clientprofit>26.7615</clientprofit>
+	<clientprofitusd>0.9263</clientprofitusd>
+	<operatorid>70</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4448</number>
+	<operatorname>Life (Украина)</operatorname>
+	<operatorlatin>Life</operatorlatin>
+	<operatorfull>Life_ua</operatorfull>
+	<abonentprice>10 грн. (UAH) без НДС</abonentprice>
+	<price>10</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>1.5</usdprice>
+	<clientprofit>18.4503</clientprofit>
+	<clientprofitusd>0.6386</clientprofitusd>
+	<operatorid>69</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4448</number>
+	<operatorname>Билайн (Украина)</operatorname>
+	<operatorlatin>Beeline</operatorlatin>
+	<operatorfull>Beeline_ua</operatorfull>
+	<abonentprice>10 грн. (UAH) без НДС</abonentprice>
+	<price>10</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>1.5</usdprice>
+	<clientprofit>18.4503</clientprofit>
+	<clientprofitusd>0.6386</clientprofitusd>
+	<operatorid>67</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4448</number>
+	<operatorname>Киевстар (Украина)</operatorname>
+	<operatorlatin>Kyivstar</operatorlatin>
+	<operatorfull>Kyivstar_ua</operatorfull>
+	<abonentprice>10 грн. (UAH) без НДС</abonentprice>
+	<price>10</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>1.5</usdprice>
+	<clientprofit>18.4503</clientprofit>
+	<clientprofitusd>0.6386</clientprofitusd>
+	<operatorid>68</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4448</number>
+	<operatorname>МТС (Украина)</operatorname>
+	<operatorlatin>MTS</operatorlatin>
+	<operatorfull>MTS_ua</operatorfull>
+	<abonentprice>10 грн. (UAH) без НДС</abonentprice>
+	<price>10</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>1.5</usdprice>
+	<clientprofit>20.4552</clientprofit>
+	<clientprofitusd>0.708</clientprofitusd>
+	<operatorid>70</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4447</number>
+	<operatorname>Life (Украина)</operatorname>
+	<operatorlatin>Life</operatorlatin>
+	<operatorfull>Life_ua</operatorfull>
+	<abonentprice>6.67 грн. (UAH) без НДС</abonentprice>
+	<price>6.67</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>1</usdprice>
+	<clientprofit>12.8002</clientprofit>
+	<clientprofitusd>0.4431</clientprofitusd>
+	<operatorid>69</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4447</number>
+	<operatorname>Билайн (Украина)</operatorname>
+	<operatorlatin>Beeline</operatorlatin>
+	<operatorfull>Beeline_ua</operatorfull>
+	<abonentprice>6.67 грн. (UAH) без НДС</abonentprice>
+	<price>6.67</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>1</usdprice>
+	<clientprofit>12.8002</clientprofit>
+	<clientprofitusd>0.4431</clientprofitusd>
+	<operatorid>67</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4447</number>
+	<operatorname>Киевстар (Украина)</operatorname>
+	<operatorlatin>Kyivstar</operatorlatin>
+	<operatorfull>Kyivstar_ua</operatorfull>
+	<abonentprice>6.67 грн. (UAH) без НДС</abonentprice>
+	<price>6.67</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>1</usdprice>
+	<clientprofit>12.8002</clientprofit>
+	<clientprofitusd>0.4431</clientprofitusd>
+	<operatorid>68</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4447</number>
+	<operatorname>МТС (Украина)</operatorname>
+	<operatorlatin>MTS</operatorlatin>
+	<operatorfull>MTS_ua</operatorfull>
+	<abonentprice>6.67 грн. (UAH) без НДС</abonentprice>
+	<price>6.67</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>1</usdprice>
+	<clientprofit>14.149</clientprofit>
+	<clientprofitusd>0.4898</clientprofitusd>
+	<operatorid>70</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4443</number>
+	<operatorname>Life (Украина)</operatorname>
+	<operatorlatin>Life</operatorlatin>
+	<operatorfull>Life_ua</operatorfull>
+	<abonentprice>0.83 грн. (UAH) без НДС</abonentprice>
+	<price>0.83</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>2.7029</clientprofit>
+	<clientprofitusd>0.0936</clientprofitusd>
+	<operatorid>69</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4443</number>
+	<operatorname>Билайн (Украина)</operatorname>
+	<operatorlatin>Beeline</operatorlatin>
+	<operatorfull>Beeline_ua</operatorfull>
+	<abonentprice>0.83 грн. (UAH) без НДС</abonentprice>
+	<price>0.83</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>2.9217</clientprofit>
+	<clientprofitusd>0.1011</clientprofitusd>
+	<operatorid>67</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4443</number>
+	<operatorname>Киевстар (Украина)</operatorname>
+	<operatorlatin>Kyivstar</operatorlatin>
+	<operatorfull>Kyivstar_ua</operatorfull>
+	<abonentprice>0.83 грн. (UAH) без НДС</abonentprice>
+	<price>0.83</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>2.8123</clientprofit>
+	<clientprofitusd>0.0973</clientprofitusd>
+	<operatorid>68</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="limited">
+	<country code="ua">Украина</country>
+	<number>4443</number>
+	<operatorname>МТС (Украина)</operatorname>
+	<operatorlatin>MTS</operatorlatin>
+	<operatorfull>MTS_ua</operatorfull>
+	<abonentprice>0.83 грн. (UAH) без НДС</abonentprice>
+	<price>0.83</price>
+	<currency>грн. (UAH)</currency>
+	<usdprice>0.15</usdprice>
+	<clientprofit>3.031</clientprofit>
+	<clientprofitusd>0.1049</clientprofitusd>
+	<operatorid>70</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+<item access="no">
+	<country code="kz">Казахстан</country>
+	<number>4161</number>
+	<operatorname>K-Cell (Казахстан)</operatorname>
+	<operatorlatin>K-Cell</operatorlatin>
+	<operatorfull>K-Cell_kz</operatorfull>
+	<abonentprice>625 тенге (KZT) без НДС</abonentprice>
+	<price>625</price>
+	<currency>тенге (KZT)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>50</clientprofit>
+	<clientprofitusd>1.7307</clientprofitusd>
+	<operatorid>73</operatorid>
+	<ndspercent>12</ndspercent>
+</item>
+<item access="limited">
+	<country code="kz">Казахстан</country>
+	<number>4161</number>
+	<operatorname>Neo GSM (Казахстан)</operatorname>
+	<operatorlatin>Neo GSM</operatorlatin>
+	<operatorfull>Neo_kz</operatorfull>
+	<abonentprice>625 тенге (KZT) без НДС</abonentprice>
+	<price>625</price>
+	<currency>тенге (KZT)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>50</clientprofit>
+	<clientprofitusd>1.7307</clientprofitusd>
+	<operatorid>74</operatorid>
+	<ndspercent>12</ndspercent>
+</item>
+<item access="limited">
+	<country code="kz">Казахстан</country>
+	<number>4161</number>
+	<operatorname>Алтел (Казахстан)</operatorname>
+	<operatorlatin>Altel</operatorlatin>
+	<operatorfull>Altel_kz</operatorfull>
+	<abonentprice>848 тенге (KZT) без НДС</abonentprice>
+	<price>848</price>
+	<currency>тенге (KZT)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>50</clientprofit>
+	<clientprofitusd>1.7307</clientprofitusd>
+	<operatorid>72</operatorid>
+	<ndspercent>12</ndspercent>
+</item>
+<item access="limited">
+	<country code="kz">Казахстан</country>
+	<number>4161</number>
+	<operatorname>КаР-Тел (Казахстан)</operatorname>
+	<operatorlatin>Beeline</operatorlatin>
+	<operatorfull>Beeline_kz</operatorfull>
+	<abonentprice>536 тенге (KZT) без НДС</abonentprice>
+	<price>536</price>
+	<currency>тенге (KZT)</currency>
+	<usdprice>5</usdprice>
+	<clientprofit>47.64</clientprofit>
+	<clientprofitusd>1.649</clientprofitusd>
+	<operatorid>71</operatorid>
+	<ndspercent>12</ndspercent>
+</item>
+<item access="limited">
+	<country code="kz">Казахстан</country>
+	<number>3352</number>
+	<operatorname>K-Cell (Казахстан)</operatorname>
+	<operatorlatin>K-Cell</operatorlatin>
+	<operatorfull>K-Cell_kz</operatorfull>
+	<abonentprice>446.43 тенге (KZT) без НДС</abonentprice>
+	<price>446.43</price>
+	<currency>тенге (KZT)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>31.2763</clientprofit>
+	<clientprofitusd>1.0826</clientprofitusd>
+	<operatorid>73</operatorid>
+	<ndspercent>12</ndspercent>
+</item>
+<item access="limited">
+	<country code="kz">Казахстан</country>
+	<number>3352</number>
+	<operatorname>Neo GSM (Казахстан)</operatorname>
+	<operatorlatin>Neo GSM</operatorlatin>
+	<operatorfull>Neo_kz</operatorfull>
+	<abonentprice>446.43 тенге (KZT) без НДС</abonentprice>
+	<price>446.43</price>
+	<currency>тенге (KZT)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>36.5302</clientprofit>
+	<clientprofitusd>1.2645</clientprofitusd>
+	<operatorid>74</operatorid>
+	<ndspercent>12</ndspercent>
+</item>
+<item access="limited">
+	<country code="kz">Казахстан</country>
+	<number>3352</number>
+	<operatorname>Алтел (Казахстан)</operatorname>
+	<operatorlatin>Altel</operatorlatin>
+	<operatorfull>Altel_kz</operatorfull>
+	<abonentprice>446.43 тенге (KZT) без НДС</abonentprice>
+	<price>446.43</price>
+	<currency>тенге (KZT)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>38.7883</clientprofit>
+	<clientprofitusd>1.3426</clientprofitusd>
+	<operatorid>72</operatorid>
+	<ndspercent>12</ndspercent>
+</item>
+<item access="limited">
+	<country code="kz">Казахстан</country>
+	<number>3352</number>
+	<operatorname>КаР-Тел (Казахстан)</operatorname>
+	<operatorlatin>Beeline</operatorlatin>
+	<operatorfull>Beeline_kz</operatorfull>
+	<abonentprice>446.43 тенге (KZT) без НДС</abonentprice>
+	<price>446.43</price>
+	<currency>тенге (KZT)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>50.543</clientprofit>
+	<clientprofitusd>1.7495</clientprofitusd>
+	<operatorid>71</operatorid>
+	<ndspercent>12</ndspercent>
+</item>
+<item access="limited">
+	<country code="kg">Киргизия</country>
+	<number>4449</number>
+	<operatorname>БиТел (Киргизия)</operatorname>
+	<operatorlatin>Bitel</operatorlatin>
+	<operatorfull>Bitel_kg</operatorfull>
+	<abonentprice>3 долл. (USD) без НДС</abonentprice>
+	<price>3</price>
+	<currency>долл. (USD)</currency>
+	<usdprice>3</usdprice>
+	<clientprofit>32</clientprofit>
+	<clientprofitusd>1.1076</clientprofitusd>
+	<operatorid>135</operatorid>
+	<ndspercent>20</ndspercent>
+</item>
+</tarifs>

@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.productfile 'file/:document_id/:file_id', :controller => 'main', :action => 'download'
   map.administrator 'administrator', :controller => 'admin/administrator'
   map.dialog 'dialog/:dialog_name', :controller => 'dialogs', :action => 'show_dialog'
+  map.smsdostup 'smsdostup', :controller => 'admin/smsdostup', :action => 'billing'
 
   map.resources :products do |e|
     e.resources :screenshots

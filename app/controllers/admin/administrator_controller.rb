@@ -1,6 +1,12 @@
 class Admin::AdministratorController < AdminApplicationController
 
   def index
+
+    url = 'http://www.smsdostup.ru/billing-tarifs.xml?pid=4905&md5=032856d98e9fdcffea2c813dc396ebb4'
+    xml = Net::HTTP.get_response(URI.parse(url)).body
+    doc = REXML::Document.new(xml)
+    @names = REXML::XPath.match( doc, "/tarifs/item/number")
+
     @documents_count = Document.count
     @files_count = Filelist.count
     @sum_files_size = Filelist.sum('f_file_size')

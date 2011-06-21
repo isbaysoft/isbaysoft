@@ -1,14 +1,16 @@
 <table width="100%" class="screenshots_table">
-<% @document.screenshots.map.in_groups_of(3) do |img| %>
+<% @document.screenshots.map.in_groups_of(2) do |img| %>
   <tr>
     <% 2.times do |x| %>
-<div style="display:none"><div id="<%="img_#{img[x].id}"%>">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div></div>
       <td width="33%" valign="top" align="center">
-        <div class="screenshot_container">
-          <a class="fancybox-img" href="<%= img[x].screenshot.url %>" rel="group1" id="<%="img_#{img[x].id}"%>">
-          <%= image_tag img[x].screenshot.url, :width => '128px' if img[x] %>
-          </a>          
-        </div>
+        <% if img[x] %>
+          <div style="display:none"><div id="<%="img_#{img[x].id}"%>">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div></div>
+          <div class="screenshot_container">
+            <a class="fancybox-img" href="<%= img[x].screenshot.url %>" rel="group1" id="<%="img_#{img[x].id}"%>">
+            <%= image_tag img[x].screenshot.url, :width => '128px' %>
+            </a>
+          </div>
+        <% end %>
       </td>
     <% end %>
   </tr>
