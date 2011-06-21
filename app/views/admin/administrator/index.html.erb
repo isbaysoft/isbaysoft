@@ -125,3 +125,13 @@
 </fieldset>
 <div class="clearboth">&nbsp;</div>
 <% end %>
+--
+<%= @names.length %>
+-
+<%= @names.uniq.length %>
+<% @names.map { |v| v.to_s }.uniq.each do |n| %>
+<div>
+  <%= "#{n}-#{n.class}" %>
+</div>
+<% end %>
+--
