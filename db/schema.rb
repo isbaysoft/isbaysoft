@@ -74,10 +74,10 @@ ActiveRecord::Schema.define(:version => 20110612203717) do
   end
 
   create_table "menu_items", :force => true do |t|
-    t.string   "title",        :limit => 250, :default => "",    :null => false
-    t.string   "alias",        :limit => 250, :default => "",    :null => false
-    t.string   "url",          :limit => 500, :default => "",    :null => false
-    t.string   "note",         :limit => 500, :default => "",    :null => false
+    t.string   "title",        :limit => 250,                    :null => false
+    t.string   "alias",        :limit => 250,                    :null => false
+    t.string   "url",          :limit => 500,                    :null => false
+    t.string   "note",         :limit => 500,                    :null => false
     t.boolean  "published",                   :default => false, :null => false
     t.integer  "access_level",                                   :null => false
     t.integer  "target",                      :default => 0
@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(:version => 20110612203717) do
   end
 
   create_table "menus", :force => true do |t|
-    t.string   "title",        :default => "",    :null => false
+    t.string   "title",                           :null => false
     t.integer  "menu_id"
     t.boolean  "published",    :default => false, :null => false
     t.integer  "access_level",                    :null => false
@@ -130,6 +130,24 @@ ActiveRecord::Schema.define(:version => 20110612203717) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "short_description"
+  end
+
+  create_table "ticket_messages", :force => true do |t|
+    t.integer  "ticket_subject_id",                :default => 0
+    t.string   "message",           :limit => 250
+    t.integer  "atype",                            :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ticket_subjects", :force => true do |t|
+    t.string   "subject"
+    t.integer  "user_id"
+    t.integer  "state",      :default => 0
+    t.string   "email"
+    t.integer  "responsed",  :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "usergroups", :force => true do |t|
