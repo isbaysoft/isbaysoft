@@ -29,8 +29,9 @@ class Admin::SmsdostupController < ApplicationController
     #    @result = 2 unless md5hash.eql?(params['_md5_hash'])
 
     @message = params['_sms_message']
-    @prefix = params['_sms_message']
-    @code = params['_sms_message']
+    @reg = @message.split(/(ce2qsl)\s*(\D*)\s*(\d*)\s*\-\s*(\d*)/)
+    @prefix = @reg[2]
+    @code = "#{@reg[3]}-#{@reg[4]}"
 
 
 
