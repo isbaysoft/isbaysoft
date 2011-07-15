@@ -21,9 +21,16 @@ $(document).ready(function(){
 	});
 });
 
+
  $(function(){
     $('.img1').corner("round 8px")
+    $('.round8').corner("round 4px")
  });
+
+ function slide(objid){
+     var w = $('#'+objid).width();
+     $('#'+objid).width(w).slideToggle("fast");
+ };
 
 // -------------------------------------------------------------------------------------------
 // Fancybox

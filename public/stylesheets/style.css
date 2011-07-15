@@ -402,7 +402,7 @@ table.catalog td {
 }
 .content_box_bottom div {margin-right: 0px;}
 .content_box h1 {padding: 0px;}
-.content_box img {
+.content_box_img {
     margin: 10px;
     background: url(../images/main/logo_bg.jpg) repeat-x left -60px;
     padding: 6px;
@@ -586,3 +586,42 @@ table.catalog td {
 
 .odd{background-color: #e0ffff;}
 .even{background-color: #FFFFFF;}
+
+/* Download list */
+.d1 {
+    background: url(../images/main/icons/24/symbolic-link.png) no-repeat left;
+    display: block;
+    width: 24px;
+    height: 36px;
+    float: left;
+}
+.d2 {
+    width: 24px;
+    height: 36px;
+    float: left;
+}
+
+.download_list_title {
+    background-color: #e0ffff;
+    display: block;
+    height: 36px;
+    line-height: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.download_list_files {
+    padding-left: 20px;
+}
+.blinder{      display:none;    }
+/* END Download list */
+
+.row_separator {
+    background: url(../images/main/row_separator.png) no-repeat left top;
+    display: block;
+    height: 24px;
+}
+.download_list_files table td {
+    border-bottom: 1px dotted #ccffff;
+}
