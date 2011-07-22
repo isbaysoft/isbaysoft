@@ -12,6 +12,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :products do |e|
     e.resources :screenshots
   end
+  
+  map.resources :tickets
+
 
 #END FRONTEND  **********************************
 

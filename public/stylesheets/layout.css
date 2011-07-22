@@ -236,7 +236,7 @@ ul.social li {
 	background: url(../images/main/input_bg.png) repeat-x top #FFF;
 }
 
-#searchform #searchsubmit {
+.formsubmit {
 	float: none;
 	font-family: Verdana, sans-serif;
 	font-size: 13px;
@@ -261,7 +261,7 @@ ul.social li {
 	width:auto;
 }
 
-#searchform #searchsubmit:hover {
+.formsubmit:hover {
     border-top: solid 1px #4f3f9f;
     border-left: solid 1px #4f3f9f;
     border-right: solid 1px #4f3f9f;

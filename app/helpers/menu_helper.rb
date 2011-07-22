@@ -5,7 +5,7 @@ module MenuHelper
       ['ПРОДУКТЫ',products_url,'kwick2'],
       
       ['ЗАГРУЗКИ',downloads_url,'kwick3'],
-      ['ПОДДЕРЖКА',products_url,'kwick4'],
+      ['ПОДДЕРЖКА',tickets_url,'kwick4'],
       ['ФОРУМ',products_url,'kwick5']
     ]
   end

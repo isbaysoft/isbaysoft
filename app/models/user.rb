@@ -115,6 +115,10 @@ class User < ActiveRecord::Base
     self.access_level >= 800
   end
 
+  def anonymous?
+    self.access_level = 0
+  end
+
   def check_sa
     # first user as Super Administrator
     if User.count == 0
