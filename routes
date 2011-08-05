@@ -6,8 +6,7 @@
             productfile        /file/:document_id/:file_id                          {:controller=>"main", :action=>"download"}
           administrator        /administrator                                       {:controller=>"admin/administrator", :action=>"index"}
                  dialog        /dialog/:dialog_name                                 {:controller=>"dialogs", :action=>"show_dialog"}
-           show_product        /product/:id                                         {:controller=>"main", :action=>"product"}
-          show_products        /products                                            {:controller=>"main", :action=>"products"}
+              smsdostup        /smsdostup                                           {:controller=>"admin/smsdostup", :action=>"billing"}
     product_screenshots GET    /products/:product_id/screenshots(.:format)          {:controller=>"screenshots", :action=>"index"}
                         POST   /products/:product_id/screenshots(.:format)          {:controller=>"screenshots", :action=>"create"}
  new_product_screenshot GET    /products/:product_id/screenshots/new(.:format)      {:controller=>"screenshots", :action=>"new"}
@@ -77,8 +76,8 @@ edit_product_screenshot GET    /products/:product_id/screenshots/:id/edit(.:form
                         POST   /documents(.:format)                                 {:controller=>"admin/documents", :action=>"create"}
            new_document GET    /documents/new(.:format)                             {:controller=>"admin/documents", :action=>"new"}
           edit_document GET    /documents/:id/edit(.:format)                        {:controller=>"admin/documents", :action=>"edit"}
-     unpublish_document POST   /documents/:id/unpublish(.:format)                   {:controller=>"admin/documents", :action=>"unpublish"}
        publish_document POST   /documents/:id/publish(.:format)                     {:controller=>"admin/documents", :action=>"publish"}
+     unpublish_document POST   /documents/:id/unpublish(.:format)                   {:controller=>"admin/documents", :action=>"unpublish"}
                document GET    /documents/:id(.:format)                             {:controller=>"admin/documents", :action=>"show"}
                         PUT    /documents/:id(.:format)                             {:controller=>"admin/documents", :action=>"update"}
                         DELETE /documents/:id(.:format)                             {:controller=>"admin/documents", :action=>"destroy"}
@@ -109,8 +108,8 @@ edit_product_screenshot GET    /products/:product_id/screenshots/:id/edit(.:form
                         POST   /menus/:menu_id/menu_items(.:format)                 {:controller=>"admin/menu_items", :action=>"create"}
           new_menu_item GET    /menus/:menu_id/menu_items/new(.:format)             {:controller=>"admin/menu_items", :action=>"new"}
          edit_menu_item GET    /menus/:menu_id/menu_items/:id/edit(.:format)        {:controller=>"admin/menu_items", :action=>"edit"}
-    unpublish_menu_item POST   /menus/:menu_id/menu_items/:id/unpublish(.:format)   {:controller=>"admin/menu_items", :action=>"unpublish"}
       publish_menu_item POST   /menus/:menu_id/menu_items/:id/publish(.:format)     {:controller=>"admin/menu_items", :action=>"publish"}
+    unpublish_menu_item POST   /menus/:menu_id/menu_items/:id/unpublish(.:format)   {:controller=>"admin/menu_items", :action=>"unpublish"}
               menu_item GET    /menus/:menu_id/menu_items/:id(.:format)             {:controller=>"admin/menu_items", :action=>"show"}
                         PUT    /menus/:menu_id/menu_items/:id(.:format)             {:controller=>"admin/menu_items", :action=>"update"}
                         DELETE /menus/:menu_id/menu_items/:id(.:format)             {:controller=>"admin/menu_items", :action=>"destroy"}
@@ -118,10 +117,10 @@ edit_product_screenshot GET    /products/:product_id/screenshots/:id/edit(.:form
                         POST   /menus(.:format)                                     {:controller=>"admin/menus", :action=>"create"}
                new_menu GET    /menus/new(.:format)                                 {:controller=>"admin/menus", :action=>"new"}
               edit_menu GET    /menus/:id/edit(.:format)                            {:controller=>"admin/menus", :action=>"edit"}
-         unpublish_menu POST   /menus/:id/unpublish(.:format)                       {:controller=>"admin/menus", :action=>"unpublish"}
-      save_sorting_menu POST   /menus/:id/save_sorting(.:format)                    {:controller=>"admin/menus", :action=>"save_sorting"}
            publish_menu POST   /menus/:id/publish(.:format)                         {:controller=>"admin/menus", :action=>"publish"}
         reordering_menu POST   /menus/:id/reordering(.:format)                      {:controller=>"admin/menus", :action=>"reordering"}
+         unpublish_menu POST   /menus/:id/unpublish(.:format)                       {:controller=>"admin/menus", :action=>"unpublish"}
+      save_sorting_menu POST   /menus/:id/save_sorting(.:format)                    {:controller=>"admin/menus", :action=>"save_sorting"}
                    menu GET    /menus/:id(.:format)                                 {:controller=>"admin/menus", :action=>"show"}
                         PUT    /menus/:id(.:format)                                 {:controller=>"admin/menus", :action=>"update"}
                         DELETE /menus/:id(.:format)                                 {:controller=>"admin/menus", :action=>"destroy"}

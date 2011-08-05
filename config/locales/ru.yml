@@ -302,6 +302,9 @@ ru:
   button_sort: Сортировать
   button_save: Сохранить
   button_exit: Выход
+  button_return: Вернуться
+  button_download: Скачать
+  button_learn_more: Узнать больше
 
   title_reordering: Пересортировать
 
@@ -339,6 +342,7 @@ ru:
   text_logo: Логотип
   text_target_self: В этом окне
   text_target_blank: В новом окне
+  text_only_show: Только просмотр
   
   controller_sections_name: Менеджер разделов
   controller_categories_name: Менеджер категорий

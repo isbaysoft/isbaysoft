@@ -56,5 +56,6 @@ Rails::Initializer.run do |config|
   config.gem 'paperclip'
   config.gem 'authlogic'
   config.gem 'tiny_mce'
+  config.gem "recaptcha", :lib => "recaptcha/rails"
 
 end

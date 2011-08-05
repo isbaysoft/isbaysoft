@@ -1,0 +1,15 @@
+<%= link_to_function 'Жмак', "sss()" %>
+<div id="qwe11"></div>
+
+<% form_for @ticket, tickets_url, :remote => true do |f| -%>
+  <div class="content_box">
+      <%= render :partial =>'form', :object => f -%>
+  </div>
+  <div class="clearboth">&nbsp;</div>
+  <div class="content_box_bottom">
+    <div class="right">
+      <%= f.submit 'Отправить сообщение', :class => 'formsubmit', :style => 'margin: 10px;' %>
+    </div>
+      <div class="clearboth">&nbsp;</div>
+  </div>
+<% end %>

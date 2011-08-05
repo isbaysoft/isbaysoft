@@ -1,3 +1,0 @@
-page.insert_html 'before', "ticket_form_#{@new_message.ticket_id}", :partial => 'tickets/ticket_row_td', :locals => {:tb => @new_message}
-page["new_message_message_#{@new_message.ticket_id}"].value = ''
-page.call('showtab', 'link_history', 'ticket_history' )

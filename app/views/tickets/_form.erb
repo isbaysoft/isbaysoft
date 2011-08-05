@@ -1,0 +1,36 @@
+<div>
+  <%= image_tag 'main/icons/128/contact.png', :class => 'img_left' %>
+  <h2>Как с нами связаться</h2>
+  Мы всегда рады ответить на интересующие Вас вопросы и выслушать ваши предложения.
+  Используйте следующие контакты для связи с нами:
+  <br />
+  <br />
+  <%= mail_to 'admin@mail.com', nil, :class => 'info_span36 icon_mail_24' %>
+ 
+
+  <div class="clearboth">&nbsp;</div>
+  <div class="row_separator">&nbsp</div>
+  <h2>Форма обратной связи</h2>
+  Используйте эту форму, если вы хотите задать нам вопрос, или сообщить о проблеме или ошибке.
+  Пожалуйста, делайте ваше сообщение как можно более детализированным,
+  это поможет нам решить проблему намного быстрее.
+  Помните, если ваш e-mail адрес неправилен, мы не сможем вам ответить.
+</div>
+<br />
+<br />
+
+<div  id="ticket_box" style="padding-left: 200px;">
+  <%= form.error_messages -%>
+  <%= label_tag 'name','Как вас зовут:' %><br />
+  <%= form.text_field 'name', :class => 'roundform input_small' %>
+  <br />
+  <%= label_tag 'email','Ваш e-mail, на который будет выслан ответ:' %><br />
+  <%= form.text_field 'email', :class => 'roundform input_small' %>
+  <br />
+  <%= label_tag 'subject', 'Тема сообщения:' %><br />
+  <%= form.text_field 'subject', :class => 'roundform input_small' %>
+  <br />
+  <%= label_tag 'message', 'Сообщение:' %><br />
+  <%= form.text_area 'message', :class => 'roundform input_small', :rows => 6 %>
+  <%= recaptcha_tags :public_key => '6LcuW8YSAAAAALapd6-yCnkr3zSXulmjcOFvQEin' %>
+</div>

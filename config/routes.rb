@@ -7,10 +7,14 @@ ActionController::Routing::Routes.draw do |map|
   map.administrator 'administrator', :controller => 'admin/administrator'
   map.dialog 'dialog/:dialog_name', :controller => 'dialogs', :action => 'show_dialog'
   map.smsdostup 'smsdostup', :controller => 'admin/smsdostup', :action => 'billing'
+  map.downloads 'downloads', :controller => 'downloads', :action => 'index'
 
   map.resources :products do |e|
     e.resources :screenshots
   end
+  
+  map.resources :tickets
+
 
 #END FRONTEND  **********************************
 
