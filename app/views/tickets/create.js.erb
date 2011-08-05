@@ -1,0 +1,8 @@
+<% unless @ticket.valid? %>
+  $('#flash_error').remove();
+  $('#ticket_box').prepend($('<div id="flash_error" class="flash_in error"><%= t(:notice_error_not_all_required_fields_are_filled) %></div>').fadeIn('fast'));
+<% else %>
+  $('#ticket_box').before('Сообщение отправленно. Спасибо за Ваше внимание.');
+  $('#ticket_box').remove();
+  $('#content_box_bottom').remove();
+<% end %>

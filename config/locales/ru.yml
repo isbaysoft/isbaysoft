@@ -372,5 +372,8 @@ ru:
 
 #frontend
 
+  notice_error_not_all_required_fields_are_filled: Не все обязательные поля заполнены
   menu_screenshots: Скриншоты
+
+
 

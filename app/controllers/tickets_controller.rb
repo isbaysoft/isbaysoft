@@ -5,16 +5,26 @@ class TicketsController < MainApplicationController
     
   end
 
+  def aa
+    begin
+      @ticket = Ticket.new
+#      params[:ticket]
+      if @ticet.valid?
+        @aaa = 'валидно'
+      else
+        @aaa = 'no valid'
+      end
+    rescue => e
+      @aaa = e
+    end
+    render :text => @aaa
+  end
+
   def create
-#    redirect_to tickets_url
-      
-#    if @ticket.save
-#      redirect_to tickets_url
-#    else
-#      render :index
-#    end
+    @ticket = Ticket.new params[:ticket]
     respond_to do |format|
-        format.js {}
+      format.html { redirect_to tickets_url }
+      format.js { render :layout => false }
     end
   end
 

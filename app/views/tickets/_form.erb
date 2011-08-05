@@ -18,10 +18,16 @@
 </div>
 <br />
 <br />
+<div class="ticket_sended">
+  <%= image_tag '/images/main/icons/128/mail.png', :alt => 'mail' %>
+  <h2>Сообщение отправленно. Спасибо за Ваше внимание.</h2>
+  <h2>В ближайшее время мы постараемся ответить на Ваш вопрос.</h2>
+
+  
+</div>
 
 <div  id="ticket_box" style="padding-left: 200px;">
-  <%= form.error_messages -%>
-  <%= label_tag 'name','Как вас зовут:' %><br />
+  <%= label_tag 'name','Как вас зовут: ' %><br />
   <%= form.text_field 'name', :class => 'roundform input_small' %>
   <br />
   <%= label_tag 'email','Ваш e-mail, на который будет выслан ответ:' %><br />
@@ -32,5 +38,5 @@
   <br />
   <%= label_tag 'message', 'Сообщение:' %><br />
   <%= form.text_area 'message', :class => 'roundform input_small', :rows => 6 %>
-  <%= recaptcha_tags :public_key => '6LcuW8YSAAAAALapd6-yCnkr3zSXulmjcOFvQEin' %>
+  <%#= recaptcha_tags :public_key => '6LcuW8YSAAAAALapd6-yCnkr3zSXulmjcOFvQEin' %>
 </div>
