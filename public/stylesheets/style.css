@@ -672,11 +672,15 @@ table.catalog td {
     font-weight: bold;
 }
 
+#ticket_sended {
+    text-align: center
+}
+
 #ticket_sended img{
-    display: block;
-    margin: 0 auto;
+/*    display: block;*/
+/*    margin: 0 auto;*/
 }
 
 #ticket_sended h2{
-    text-align: center;
+/*    text-align: center;*/
 }
