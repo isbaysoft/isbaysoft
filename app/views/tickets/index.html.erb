@@ -1,7 +1,4 @@
-<%= link_to_function 'Жмак', "sss()" %>
-<div id="qwe11"></div>
-
-<% form_for @ticket, tickets_url, :remote => true do |f| -%>
+<% form_for @ticket, tickets_url, :html => { :id => 'remoteform' } do |f| -%>
   <div class="content_box">
       <%= render :partial =>'form', :object => f -%>
   </div>
@@ -12,4 +9,5 @@
     </div>
       <div class="clearboth">&nbsp;</div>
   </div>
+  
 <% end %>
