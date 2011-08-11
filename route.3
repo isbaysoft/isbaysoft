@@ -9,8 +9,8 @@ Isbaysoft::Application.routes.draw do
   match 'smsdostup' => 'admin/smsdostup#billing', :as => :smsdostup
   match 'downloads' => 'downloads#index', :as => :downloads
   resources :products do
-
-
+  
+  
       resources :screenshots
   end
 
@@ -19,25 +19,25 @@ Isbaysoft::Application.routes.draw do
   resource :account
   resource :config
   resources :users do
-
+  
     member do
   get :activate
   end
-
+  
   end
 
   resources :sections
   resources :categories
   resources :filelists do
-
+  
     member do
   get :download
   end
-
+  
   end
 
   resources :documents do
-
+  
     member do
   post :publish
   post :unpublish
@@ -47,18 +47,18 @@ Isbaysoft::Application.routes.draw do
   end
 
   resources :userlists do
-
+  
     member do
   post :deactivate
   post :activate
   end
-
+  
   end
 
   resources :contents
   resources :usergroups
   resources :menus do
-
+  
     member do
   post :reordering
   post :publish
@@ -66,12 +66,12 @@ Isbaysoft::Application.routes.draw do
   post :unpublish
   end
       resources :menu_items do
-
+    
         member do
     post :publish
     post :unpublish
     end
-
+    
     end
   end
 

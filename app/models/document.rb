@@ -11,14 +11,14 @@ class Document < ActiveRecord::Base
 
   validates_presence_of :description, :name
 
-  named_scope :get, lambda { |id| { :conditions => ['documents.id = ?', id] } }
-  named_scope :set_of, lambda { |ids| { :conditions => ['documents.id in (?)', ids] } }
-  named_scope :getlist,  :include => [:section, :category, :rule, :document_files]
-  named_scope :section, lambda { |section_id| { :conditions => ['section_id = ?',section_id] }}
-  named_scope :category, lambda { |category_id| {:conditions => ['categories.id=?',category_id]} unless category_id.nil? }
-  named_scope :published, :conditions => 'documents.published=1'
-  named_scope :approved, :conditions => 'documents.approved=1'
-  named_scope :popular, lambda {|top| { :include => [:document_files], :limit => top, :order => 'document_files.hits desc' }}
+  scope :get, lambda { |id| { :conditions => ['documents.id = ?', id] } }
+  scope :set_of, lambda { |ids| { :conditions => ['documents.id in (?)', ids] } }
+  scope :getlist,  :include => [:section, :category, :rule, :document_files]
+  scope :section, lambda { |section_id| { :conditions => ['section_id = ?',section_id] }}
+  scope :category, lambda { |category_id| {:conditions => ['categories.id=?',category_id]} unless category_id.nil? }
+  scope :published, :conditions => 'documents.published=1'
+  scope :approved, :conditions => 'documents.approved=1'
+  scope :popular, lambda {|top| { :include => [:document_files], :limit => top, :order => 'document_files.hits desc' }}
 
   cattr_reader :per_page
 
@@ -48,6 +48,6 @@ class Document < ActiveRecord::Base
   end
 
   def path_name
-    self.category && self.category.section ? "#{self.category.section.name} / #{self.category.name}" : "выберите категорию"
+    self.category && self.category.section ? "#{self.category.section.name} / #{self.category.name}" : "choose the category"
   end
 end

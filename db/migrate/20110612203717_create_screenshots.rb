@@ -7,7 +7,7 @@ class CreateScreenshots < ActiveRecord::Migration
       t.datetime 'screenshot_updated_at'
       t.integer  'document_id'
       t.string   'short_description'
-      t.text     'description', :limit => 250
+      t.text     'description'
 
       t.timestamps
     end

@@ -1,7 +1,6 @@
 module ApplicationHelper
 
 
-
 def nodata
   "<p class='nodata'>#{t(:global_no_data)}</p>"
 end
@@ -69,7 +68,7 @@ def btn(options)
 end
 
 def link_to_home
-  link_to 'Goto main page', home_url
+  link_to 'Перейти на главную страницу сайта', home_url
 end
 
 def tr_cycle_wrong(row)
