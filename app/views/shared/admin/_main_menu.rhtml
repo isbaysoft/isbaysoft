@@ -5,7 +5,7 @@
         <div id="m1"
             onmouseover="mcancelclosetime()"
             onmouseout="mclosetime()">
-            <%= link_to 'Перейти на сайт', home_url, :target => 'blank' -%>
+            <%= link_to 'Перейти на сайт', root_url, :target => 'blank' -%>
             <%= link_to 'Панель управления', administrator_url -%>
             <%= link_to_allow 'Менеджер пользователей', userlists_url, current_user.allow('Administrator')  -%>
             <%= link_to_allow 'Группы пользователей', usergroups_url, current_user.allow('Administrator') -%>

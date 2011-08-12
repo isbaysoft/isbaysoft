@@ -1,58 +1,54 @@
 Isbaysoft::Application.routes.draw do
-  match '' => 'main#index', :as => :home
+  root :to => 'main#index'
+
   match 'login' => 'user_sessions#new', :as => :login
+  match 'administrator' => 'admin/administrator#index', :as => :administrator
   match 'registration' => 'users#new', :as => :registration
   match 'logout' => 'user_sessions#destroy', :as => :logout
   match 'file/:document_id/:file_id' => 'main#download', :as => :productfile
-  match 'administrator' => 'admin/administrator#index', :as => :administrator
-  match 'dialog/:dialog_name' => 'dialogs#show_dialog', :as => :dialog
   match 'smsdostup' => 'admin/smsdostup#billing', :as => :smsdostup
   match 'downloads' => 'downloads#index', :as => :downloads
+  match 'dialog/:dialog_name' => 'dialogs#show_dialog', :as => :dialog
+
+# admin section
+  resource :config, :controller => 'admin/config'
+  resources :sections, :controller => 'admin/sections'
+  resources :categories, :controller => 'admin/categories'
+  resources :filelists, :controller => 'admin/filelists' do
+    member do
+      get :download
+    end
+  end
+  resources :documents, :controller => 'admin/documents' do
+    member do
+      post :publish
+      post :unpublish
+    end
+    resources :file, :only => [:destroy]
+    resources :screenshots, :only => [:destroy, :show]
+  end
+  
+# end admin section vlock
+
   resources :products do
-
-
-      resources :screenshots
+    resources :screenshots
   end
 
   resources :tickets
   resource :user_session
-  resource :account
-  resource :config
   resources :users do
-
     member do
-  get :activate
+      get :activate
+    end
   end
 
-  end
 
-  resources :sections
-  resources :categories
-  resources :filelists do
-
-    member do
-  get :download
-  end
-
-  end
-
-  resources :documents do
-
-    member do
-  post :publish
-  post :unpublish
-  end
-      resources :file, :only => [:destroy]
-    resources :screenshots, :only => [:destroy, :show]
-  end
 
   resources :userlists do
-
     member do
-  post :deactivate
-  post :activate
-  end
-
+      post :deactivate
+      post :activate
+    end
   end
 
   resources :contents
@@ -60,10 +56,10 @@ Isbaysoft::Application.routes.draw do
   resources :menus do
 
     member do
-  post :reordering
-  post :publish
-  post :save_sorting
-  post :unpublish
+      post :reordering
+      post :publish
+      post :save_sorting
+      post :unpublish
   end
       resources :menu_items do
 

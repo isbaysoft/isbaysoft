@@ -1,3 +1,4 @@
+# coding: utf-8
 class UsersController < MainApplicationController
   before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => [:show, :edit, :update]
@@ -11,7 +12,7 @@ class UsersController < MainApplicationController
     @user = User.new
   end
 
-  def create
+  def create    
     @user = User.create(params[:user])
     @user.access_level = 700 #TODO Заменить на значения модели
     if @user.save

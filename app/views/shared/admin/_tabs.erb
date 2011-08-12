@@ -1,29 +1,20 @@
-<% selected_tab = params[:tab] ? params[:tab].to_s : tabs.first[:name] %>
-<div class="tabs">
+<% selected_tab = params[:tab].present? ? params[:tab].to_s : tabs.first[:name] %>
+<div class="tabg tabs">
   <ul>
   <% tabs.map do |tab| -%>
     <li>
       <%= link_to t(tab[:label]), { :tab => tab[:name] },
-        :id => "tab-#{tab[:name]}",
+        :id => "tabg-#{tab[:name]}",
         :class => (tab[:name] != selected_tab ? nil : 'selected'),
-        :onclick => "showTab('#{tab[:name]}'); this.blur(); return false;" %>
+        :onclick => "showtab('tabg','#{tab[:name]}'); this.blur(); return false;" %>
     </li>
   <% end -%>
   </ul>
-  <div class="tabs-buttons" style="display:none;">
-    <button class="tab-left" onclick="moveTabLeft(this);"></button>
-    <button class="tab-right" onclick="moveTabRight(this);"></button>
-  </div>
 </div>
-
-<script>
-  Event.observe(window, 'load', function() { displayTabsButtons(); });
-  Event.observe(window, 'resize', function() { displayTabsButtons(); });
-</script>
 
 <% tabs.each do |tab| -%>
   <%= content_tag('div', render(:partial => tab[:partial], :object => form_object ),
-     :id => "tab-content-#{tab[:name]}",
+     :id => "tabg-content-#{tab[:name]}",
      :style => (tab[:name] != selected_tab ? 'display:none' : nil),
-     :class => 'tab-content') %>
+     :class => 'tabg-content') %>
 <% end -%>

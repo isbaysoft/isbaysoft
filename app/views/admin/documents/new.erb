@@ -1,4 +1,3 @@
-<%# Document controller -%>
 <% form_for @document, :url => documents_url, :html => {:multipart => true, :name =>'adminForm'} do |f| -%>
   <%= render :partial =>'form', :object => f -%>
 <% end %>

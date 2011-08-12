@@ -4,15 +4,19 @@
 <%= hidden_field_tag :tab, @active_tab_name %>
 <%= form.hidden_field(:category_id, :id => "category_id", :value => @document.category_id) -%>
 <%= form.hidden_field(:section_id, :id => "section_id", :value => @document.section_id) -%>
-<%= observe_field(:file_id,
+
+<%#= observe_field(:file_id,
    :frequency => 0.5,
    :url => { :controller => 'documents', :action => 'file_add', :document_id => @document },
    :with => "id")
 %>
+
 <div class="box tabular settings">
   <fieldset class="left" style="width: 70%"><legend></legend>
-    <%= form.error_messages -%>
-    <%= error_messages_for 'logo' if @logo &&@logo.errors -%>
+    <%= errors_for(form.object) -%>
+    <%= errors_for(@logo) if @logo && @logo.errors -%>
+    <%#= error_messages_for 'logo' if @logo && @logo.errors -%>
+
     <%= render_tabs :tabs => document_tabs, :form_object => form %>
   </fieldset>
   <fieldset><legend></legend>

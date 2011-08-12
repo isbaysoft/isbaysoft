@@ -1,6 +1,6 @@
 <%# Scatic_content controller %>
 <% form_for @content, :url => content_url, :html => {:name =>'adminForm'} do |f| %>
-  <%= f.error_messages %>
+  <%= errors_for(@content).html_safe %>
   <%= render :partial =>'form', :object => f %>
 <% end %>
 <%= render :partial => 'shared/admin/toolbar_action', :locals => {:icon_class => "icon_content_48"} %>

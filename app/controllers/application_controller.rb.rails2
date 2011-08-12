@@ -57,7 +57,7 @@ private
   end
 
   def require_admin
-    redirect_to_and_notice home_url, "Доступ запрещен" unless current_user and current_user.allow('Administrator')
+    redirect_to_and_notice root_url, "Доступ запрещен" unless current_user and current_user.allow('Administrator')
   end
 
   def require_user
@@ -65,7 +65,7 @@ private
   end
 
   def require_no_user
-    redirect_to_and_notice home_url, "You must be logged out to access this page" unless current_user.anonymous?
+    redirect_to_and_notice root_url, "You must be logged out to access this page" unless current_user.anonymous?
   end
 
   def store_location

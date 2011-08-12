@@ -1,6 +1,4 @@
-<%# administrator controller -%>
 <% content_for :toolbar do %>
-  <%# for drag-drop upload  = render :partial => 'shared/drop' %>
 <fieldset class="left"><legend>Панель управления</legend>
 <table class="admin_toolbar" cellpadding="10px">
   <tr>
@@ -21,7 +19,7 @@
     <td valign="bottom"><span class="icon_content_48">&nbsp;</span>
       <%= link_to_allow 'Статический контент', contents_url, current_user.allow('Moderator') -%>
     </td>
-    <td valign="bottom"><span class="icon_home_48">&nbsp;</span><%= link_to 'Перейти на сайт', home_url, :target => 'blank' -%></td>
+    <td valign="bottom"><span class="icon_home_48">&nbsp;</span><%= link_to 'Перейти на сайт', root_url, :target => 'blank' -%></td>
   </tr>
   <tr>
     <td valign="bottom"><span class="icon_users_48">&nbsp;</span>
@@ -120,18 +118,6 @@
     <% end %>
   </table>
 </fieldset><br />
-
-  
 </fieldset>
 <div class="clearboth">&nbsp;</div>
 <% end %>
---
-<%= @names.length %>
--
-<%= @names.uniq.length %>
-<% @names.map { |v| v.to_s }.uniq.each do |n| %>
-<div>
-  <%= "#{n}-#{n.class}" %>
-</div>
-<% end %>
---

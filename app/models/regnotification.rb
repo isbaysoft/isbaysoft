@@ -1,3 +1,4 @@
+# coding: utf-8
 class Regnotification < ActionMailer::Base
   cattr_accessor :sitename, :admin_email
 

@@ -1,4 +1,3 @@
-
 <dl>
   <dt><%= label_tag :name, t(:label_document_name) %></dt>
   <dd><%= general.text_field :name, :class => 'edit' %></dd>
@@ -25,3 +24,9 @@
   <dd><%= general.text_area(:description, @text_area_default_size_for_description_big.update(:class => "mceEditor")) %></dd>
   <br />
 </dl>
+
+<script type="text/javascript">
+  $('#category_name').click(function() {
+    $.post('/dialog/category');
+  });
+</script>

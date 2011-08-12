@@ -9,15 +9,16 @@ class Document < ActiveRecord::Base
   has_many :filelists, :through => :document_files
   has_many :screenshots
 
-  validates_presence_of :description, :name
+  validates :description, :presence => true
+  validates :name, :presence => true
 
   scope :get, lambda { |id| { :conditions => ['documents.id = ?', id] } }
   scope :set_of, lambda { |ids| { :conditions => ['documents.id in (?)', ids] } }
   scope :getlist,  :include => [:section, :category, :rule, :document_files]
   scope :section, lambda { |section_id| { :conditions => ['section_id = ?',section_id] }}
   scope :category, lambda { |category_id| {:conditions => ['categories.id=?',category_id]} unless category_id.nil? }
-  scope :published, :conditions => 'documents.published=1'
-  scope :approved, :conditions => 'documents.approved=1'
+  scope :published, where('documents.published = ?',true)
+  scope :approved, where('documents.approved = ?',true)
   scope :popular, lambda {|top| { :include => [:document_files], :limit => top, :order => 'document_files.hits desc' }}
 
   cattr_reader :per_page
@@ -43,7 +44,6 @@ class Document < ActiveRecord::Base
   def self.getrows(options = {})
     page = options[:page] || 1
     @@per_page = options[:per_page] || @@per_page
-    filter = ['documents.name like ?',"%#{options[:filter]}%"] if options[:filter]
     Document.getlist.paginate :page => page
   end
 

@@ -1,23 +1,9 @@
+# coding: utf-8
 class TicketsController < MainApplicationController
   before_filter :ticket_new, :only => [:index,:create]
 
   def index
     
-  end
-
-  def aa
-    begin
-      @ticket = Ticket.new
-#      params[:ticket]
-      if @ticet.valid?
-        @aaa = 'валидно'
-      else
-        @aaa = 'no valid'
-      end
-    rescue => e
-      @aaa = e
-    end
-    render :text => @aaa
   end
 
   def create

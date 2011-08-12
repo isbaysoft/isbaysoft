@@ -219,10 +219,7 @@ dd {padding-left: 10px;}
     background-color: #e0ffff;
 }
 
-.errorExplanation h2 {
-    color: red;
-}
-.errorExplanation {
+.formErrors {
     padding-top: 0;
     display: table-cell;
     width: 100%;
@@ -234,7 +231,12 @@ dd {padding-left: 10px;}
     font-weight: bold;
 }
 
-.errorExplanation ul {
+.formErrors h2 {
+    color: red;
+    padding-bottom: 16px;
+}
+
+.formErrors ul {
     padding-left: 25px;
     color: #000000;
 }

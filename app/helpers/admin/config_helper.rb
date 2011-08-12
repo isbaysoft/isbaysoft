@@ -13,21 +13,18 @@ module Admin::ConfigHelper
   end
 
   def config_tabs
-    tabs = [{:name => 'options', :partial => 'options', :label => :tab_options},
-            {:name => 'notify', :partial => 'notify', :label => :tab_notify}
-           ]
+    [{:name => 'options', :partial => 'options', :label => :tab_options},
+     {:name => 'notify', :partial => 'notify', :label => :tab_notify}]
   end
 
   def notify_tabs
-    tabs = [{:name => 'notify_activation', :partial => 'notify_activation', :label => :tab_notify_activate_user},
-            {:name => 'notify_deactivation', :partial => 'notify_deactivation', :label => :tab_notify_deactivate_user}
-           ]
+    [{:name => 'notify_activation', :partial => 'notify_activation', :label => :tab_notify_activate_user},
+     {:name => 'notify_deactivation', :partial => 'notify_deactivation', :label => :tab_notify_deactivate_user}]
   end
 
   def document_tabs
-    tabs = [{:name => 'general', :partial => 'general', :label => :tab_general},
-            {:name => 'screenshots', :partial => 'screenshots', :label => :tab_screenshots}
-           ]
+    [{:name => 'general', :partial => 'general', :label => :tab_general},
+     {:name => 'screenshots', :partial => 'screenshots', :label => :tab_screenshots}]
   end
 
 end

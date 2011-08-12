@@ -2,7 +2,7 @@
 <%= hidden_field_tag 'task','post' -%>
 <div class="box tabular settings">
 <fieldset><legend></legend>
-  <%= form.error_messages -%>
+  <%= errors_for(form.object) %>
   <dl>
     <dt><%= label_tag :name, t(:label_category_name) %></dt>
     <dd><%= form.text_field :name, :class => 'edit' %></dd>

@@ -1,14 +1,14 @@
-<% content_tag :div, :class => "tablepanel" do -%>
+<div class="tablepanel">
   <% form_for 'tablepanel_form', url_for(:action => 'sort'), :html => {:method => :get, :name => 'tablepanel_form'} do -%>
-    <% content_tag :table,:width => "100%" do  -%>
-      <%= content_tag(:td,label_tag(:filter,'Фильтр: ')) -%>
-      <%= content_tag(:td,text_field_tag(:filter, params[:filter], :id => 'filter')) -%>
-      <%= content_tag(:td,link_to_function('',"tablepanel_form.submit()", :class=>'speedbutton icon_filter_add_24'), :title => 'Установить фильтр') -%>
-      <%= content_tag(:td,link_to_function('', "document.getElementById('filter').value='';tablepanel_form.submit();", :class=>'speedbutton icon_filter_del_24'),
-        :title => 'Убрать фильтр') -%>
-      <%= content_tag(:td,'Количество строк: '+select_tag('per_page',options_for_select([5,10,20,30,50,100], :selected => per_page )),:width => "100%",:align=>"right",:onchange=>"tablepanel_form.submit()") %>
-    <% end %>
-    <%= hidden_field_tag 'sort', @sort_column -%>
-    <%= hidden_field_tag 'direction', @sort_direction -%>
+  <table width="100%">
+    <td><%= label_tag(:filter, 'Фильтр: ') %></td>
+    <td><%= text_field_tag(:filter, params[:filter], :id => 'filter') %></td>
+    <td title='Установить фильтр'><%= link_to_function('',"tablepanel_form.submit()", :class=>'speedbutton icon_filter_add_24') %></td>
+    <td title='Убрать фильтр'><%= link_to_function('', "document.getElementById('filter').value='';tablepanel_form.submit();", :class=>'speedbutton icon_filter_del_24') %></td>
+    <td width="100%" align="right" onchange="tablepanel_form.submit()">Количество строк: <%= select_tag('per_page',options_for_select([5,10,20,30,50,100], :selected => per_page )) %></td>
+    <td></td>
+  </table>
+  <%= hidden_field_tag 'sort', @sort_column -%>
+  <%= hidden_field_tag 'direction', @sort_direction -%>
   <% end %>
-<% end -%>
+</div>

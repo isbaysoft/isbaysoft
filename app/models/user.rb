@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   belongs_to :usergroup
   belongs_to :rule, :foreign_key => 'access_level'
   cattr_reader :per_page
-  validates_presence_of :access_level
+  validates :access_level, :presence => true
   validates_uniqueness_of :email
   validates_format_of :email, :with => /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.([a-z]){2,4})$/
 
@@ -14,11 +14,11 @@ class User < ActiveRecord::Base
   cattr_accessor :levels
 
 #  TODO переименовать в permitted
-  named_scope :allowobjects, lambda {|cu,list_ids|
+  scope :allowobjects, lambda {|cu,list_ids|
     {:conditions => ['id <> ? and id in (?) and access_level >= ?',cu.id,list_ids,cu.access_level]
     }}
-  named_scope :activated, :conditions => ['access = ?',true]
-  named_scope :deactivated, :conditions => ['access = ?',false]
+  scope :activated, :conditions => ['access = ?',true]
+  scope :deactivated, :conditions => ['access = ?',false]
 
   @@per_page=30
 
@@ -31,11 +31,8 @@ class User < ActiveRecord::Base
   end
 
   def self.anonymous
-    anonymous_user = AnonymousUser.find(:first)
-    if anonymous_user.nil?
-      anonymous_user = AnonymousUser.create(:lastname => 'Anonymous', :firstname => '', :mail => '', :login => '', :status => 0)
-      raise 'Unable to create the anonymous user.' if anonymous_user.new_record?
-    end
+    anonymous_user = AnonymousUser.find(:first) 
+    anonymous_user = AnonymousUser.create if anonymous_user.nil?
     anonymous_user
   end
 

@@ -21,9 +21,9 @@ class AdminApplicationController < ApplicationController
     notdef = I18n.t(:global_errors_not_definitely)
     $sitename = Cfg.getvalue('sitename')
     @cfg_errors = Array.new
-    @cfg_errors << ["#{notdef}: #{I18n.t(:global_errors_sitename)}"] unless Cfg.getvalue('sitename')
-    @cfg_errors << ["#{notdef}: #{I18n.t(:global_errors_adminemail)}"] unless Cfg.getvalue('adminemail')
-    @cfg_errors << ["#{notdef}: #{I18n.t(:global_errors_domain)}"] unless Cfg.getvalue('domain')
+    @cfg_errors << "#{notdef}: #{I18n.t(:global_errors_sitename)}" unless Cfg.getvalue('sitename')
+    @cfg_errors << "#{notdef}: #{I18n.t(:global_errors_adminemail)}" unless Cfg.getvalue('adminemail')
+    @cfg_errors << "#{notdef}: #{I18n.t(:global_errors_domain)}" unless Cfg.getvalue('domain')
 
 #    other settings
     @text_area_default_size_for_description = {:cols => 80, :rows => 12}

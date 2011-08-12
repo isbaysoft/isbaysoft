@@ -10,7 +10,7 @@ class UserSessionsController < MainController
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
       flash[:notice] = "Login successful!"
-      redirect_to home_url
+      redirect_to root_url
     else
       render :action => :new
     end
@@ -19,6 +19,6 @@ class UserSessionsController < MainController
   def destroy
     current_user_session.destroy
     flash[:notice] = "Logout successful!"
-    redirect_to home_url
+    redirect_to root_url
   end
 end

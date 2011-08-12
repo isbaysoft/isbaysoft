@@ -10,8 +10,8 @@
   <tr class="<%= cycle('odd','even') %>"<%= 'id="after_edit"' if flash[:edited].to_s == row.id.to_s %> >
     <th width="2%"><%= row.id -%></th>
     <th width="2%"><%= check_box_tag('ids[]',row.id) -%></th>
-    <td><%= link_to(row.name.to_sym, edit_section_url(row.id)) %></td>
-    <td><%= row.description.to_sym %></td>
+    <td><%= link_to(row.name.html_safe, edit_section_url(row.id)) %></td>
+    <td><%= row.description.html_safe %></td>
   </tr>
 <% end %>
 </tbody>

@@ -18,7 +18,7 @@
       <td><%= row.f_content_type %></td>
       <td><%= number_to_human_size(row.f_file_size) %></td>
     <% else %>
-      <td class="silver"><%= row.f_file_name %></td>
+      <td class="silver"><%= row.f_file_name.html_safe %></td>
       <td class="silver"><%= row.f_updated_at.to_formatted_s(:short) %></td>
       <td class="silver"><%= row.f_content_type %></td>
       <td class="silver"><%= "#{number_to_human_size(row.f_file_size)} (нет на диске)" %></td>

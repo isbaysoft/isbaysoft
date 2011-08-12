@@ -1,3 +1,4 @@
+# coding: utf-8
 class UserSession < Authlogic::Session::Base
   validate :check_access_user
   find_by_login_method :find_by_email

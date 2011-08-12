@@ -1,7 +1,7 @@
 module MenuHelper
   def main_menu
     [
-      ['MAIN',home_url,'kwick1'],
+      ['MAIN',root_url,'kwick1'],
       ['PRODUCTS',products_url,'kwick2'],
 
       ['DOWNLOADS',downloads_url,'kwick3'],

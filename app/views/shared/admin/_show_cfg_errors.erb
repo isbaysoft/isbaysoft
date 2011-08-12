@@ -1,7 +1,12 @@
 <div class="errorExplanation">
   <ul>
-    <%= @cfg_errors.map {|x| content_tag :li, x} %>
-  </ul><br />
+    <% @cfg_errors.map do |error_name| %>
+      <li>
+        <%= error_name %>
+      </li>
+    <% end %>
+  </ul>
+  <br />
   <span class="dark">Для корректной работы сайта укажите требуемые параметры в менеджере системных настроек. <br /><br />
   Перейти в </span> <%= link_to 'Системные настройки', config_url %>
 </div>
