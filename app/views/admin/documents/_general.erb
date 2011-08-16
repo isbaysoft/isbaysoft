@@ -14,8 +14,9 @@
   <dt><%= label_tag :category_id, t(:label_document_section_and_category) %></dt>
   <dd><%= text_field_tag :category_name, @document.path_name, :size => 50,
             :readonly => true,
-            :onclick => remote_function(:url => dialog_url('category'), :method => :GET),
-            :class => 'edit' %>
+            :class => 'example5 edit',
+            :href => dialog_url('category')
+           %>
   </dd>
   <dt><%= label_tag :short_description, t(:label_short_description) %></dt>
   <dd><%= general.text_area(:short_description, @text_area_default_size_for_description_big.update(:class => "mceEditor")) %></dd>
@@ -26,7 +27,5 @@
 </dl>
 
 <script type="text/javascript">
-  $('#category_name').click(function() {
-    $.post('/dialog/category');
-  });
+  $(".example5").colorbox({innerWidth:640, innerHeight:480, initialWidth:640, initialHeight:480});
 </script>

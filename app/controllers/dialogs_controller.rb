@@ -10,9 +10,21 @@ class DialogsController < ApplicationController
     end
 
     category if params[:dialog_name].eql?('category')
-    fetch_category if params[:dialog_name].eql?('fetch_category')
+
+    if params[:dialog_name].eql?('fetch_category')
+      @categories = Category.getlist.section(params[:id]).order('name')
+      @inline_object = 'dialog_category_list'
+      @template_dir = 'dialogs/forms/category/categories'
+    end
+
     filelist if params[:dialog_name].eql?('filelist')
     static_content if params[:dialog_name].eql?('static_content')
+
+    respond_to do |format|
+      format.html { redirect_to root_url}
+      format.js
+    end
+
   end
 
 private
@@ -33,11 +45,6 @@ private
   def category
     @dialog_caption = t(:dialog_category)
     @dialogdata = Section.order('name')
-  end
-
-  def fetch_category
-      @categories = Category.getlist.section(params[:id]).order('name')
-      render :template => 'dialogs/forms/category/categories' and return
   end
   
 end

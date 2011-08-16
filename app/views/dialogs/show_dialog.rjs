@@ -1,3 +1,0 @@
-page.replace_html 'dialog_header_caption', @dialog_caption.to_s
-page.replace_html 'dialog_body', :partial => @template_dir
-page.call 'dialog.show'

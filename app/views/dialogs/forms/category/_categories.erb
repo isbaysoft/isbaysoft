@@ -1,0 +1,24 @@
+<ul>
+<% @categories.map do |row| %>
+  <li><h3><%= link_to h(row.name), '#', :onclick => "dialog.select(#{
+          {
+            :category_name => "#{row.section.name}/#{row.name}",
+            :category_id => row.id,
+            :section_id => row.section.id
+          }.to_json }); return false;" %></h3></li>
+<% end %>
+</ul>
+
+<script type="text/javascript">
+var dialog = {
+  select: function(selected_values) {
+    for (var key in selected_values) {
+      $('#'+key).attr('value',selected_values[key])
+    }
+    this.hide();
+  },
+  hide: function() {
+    $.colorbox.close()
+  }
+}
+</script>

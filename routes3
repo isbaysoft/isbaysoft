@@ -1,12 +1,53 @@
-                    home        /(.:format)                                          {:controller=>"main", :action=>"index"}
+                    root        /(.:format)                                          {:controller=>"main", :action=>"index"}
                    login        /login(.:format)                                     {:action=>"new", :controller=>"user_sessions"}
+           administrator        /administrator(.:format)                             {:action=>"index", :controller=>"admin/administrator"}
             registration        /registration(.:format)                              {:action=>"new", :controller=>"users"}
                   logout        /logout(.:format)                                    {:action=>"destroy", :controller=>"user_sessions"}
              productfile        /file/:document_id/:file_id(.:format)                {:controller=>"main", :action=>"download"}
-           administrator        /administrator(.:format)                             {:action=>"index", :controller=>"admin/administrator"}
-                  dialog        /dialog/:dialog_name(.:format)                       {:controller=>"dialogs", :action=>"show_dialog"}
                smsdostup        /smsdostup(.:format)                                 {:action=>"billing", :controller=>"admin/smsdostup"}
                downloads        /downloads(.:format)                                 {:action=>"index", :controller=>"downloads"}
+                  dialog        /dialog/:dialog_name(.:format)                       {:controller=>"dialogs", :action=>"show_dialog"}
+                     ttt        /ttt(.:format)                                       {:action=>"cat", :controller=>"dialogs"}
+                  config POST   /config(.:format)                                    {:action=>"create", :controller=>"admin/config"}
+              new_config GET    /config/new(.:format)                                {:action=>"new", :controller=>"admin/config"}
+             edit_config GET    /config/edit(.:format)                               {:action=>"edit", :controller=>"admin/config"}
+                         GET    /config(.:format)                                    {:action=>"show", :controller=>"admin/config"}
+                         PUT    /config(.:format)                                    {:action=>"update", :controller=>"admin/config"}
+                         DELETE /config(.:format)                                    {:action=>"destroy", :controller=>"admin/config"}
+                sections GET    /sections(.:format)                                  {:action=>"index", :controller=>"admin/sections"}
+                         POST   /sections(.:format)                                  {:action=>"create", :controller=>"admin/sections"}
+             new_section GET    /sections/new(.:format)                              {:action=>"new", :controller=>"admin/sections"}
+            edit_section GET    /sections/:id/edit(.:format)                         {:action=>"edit", :controller=>"admin/sections"}
+                 section GET    /sections/:id(.:format)                              {:action=>"show", :controller=>"admin/sections"}
+                         PUT    /sections/:id(.:format)                              {:action=>"update", :controller=>"admin/sections"}
+                         DELETE /sections/:id(.:format)                              {:action=>"destroy", :controller=>"admin/sections"}
+              categories GET    /categories(.:format)                                {:action=>"index", :controller=>"admin/categories"}
+                         POST   /categories(.:format)                                {:action=>"create", :controller=>"admin/categories"}
+            new_category GET    /categories/new(.:format)                            {:action=>"new", :controller=>"admin/categories"}
+           edit_category GET    /categories/:id/edit(.:format)                       {:action=>"edit", :controller=>"admin/categories"}
+                category GET    /categories/:id(.:format)                            {:action=>"show", :controller=>"admin/categories"}
+                         PUT    /categories/:id(.:format)                            {:action=>"update", :controller=>"admin/categories"}
+                         DELETE /categories/:id(.:format)                            {:action=>"destroy", :controller=>"admin/categories"}
+       download_filelist GET    /filelists/:id/download(.:format)                    {:action=>"download", :controller=>"admin/filelists"}
+               filelists GET    /filelists(.:format)                                 {:action=>"index", :controller=>"admin/filelists"}
+                         POST   /filelists(.:format)                                 {:action=>"create", :controller=>"admin/filelists"}
+            new_filelist GET    /filelists/new(.:format)                             {:action=>"new", :controller=>"admin/filelists"}
+           edit_filelist GET    /filelists/:id/edit(.:format)                        {:action=>"edit", :controller=>"admin/filelists"}
+                filelist GET    /filelists/:id(.:format)                             {:action=>"show", :controller=>"admin/filelists"}
+                         PUT    /filelists/:id(.:format)                             {:action=>"update", :controller=>"admin/filelists"}
+                         DELETE /filelists/:id(.:format)                             {:action=>"destroy", :controller=>"admin/filelists"}
+        publish_document POST   /documents/:id/publish(.:format)                     {:action=>"publish", :controller=>"admin/documents"}
+      unpublish_document POST   /documents/:id/unpublish(.:format)                   {:action=>"unpublish", :controller=>"admin/documents"}
+           document_file DELETE /documents/:document_id/file/:id(.:format)           {:action=>"destroy", :controller=>"file"}
+     document_screenshot GET    /documents/:document_id/screenshots/:id(.:format)    {:action=>"show", :controller=>"screenshots"}
+                         DELETE /documents/:document_id/screenshots/:id(.:format)    {:action=>"destroy", :controller=>"screenshots"}
+               documents GET    /documents(.:format)                                 {:action=>"index", :controller=>"admin/documents"}
+                         POST   /documents(.:format)                                 {:action=>"create", :controller=>"admin/documents"}
+            new_document GET    /documents/new(.:format)                             {:action=>"new", :controller=>"admin/documents"}
+           edit_document GET    /documents/:id/edit(.:format)                        {:action=>"edit", :controller=>"admin/documents"}
+                document GET    /documents/:id(.:format)                             {:action=>"show", :controller=>"admin/documents"}
+                         PUT    /documents/:id(.:format)                             {:action=>"update", :controller=>"admin/documents"}
+                         DELETE /documents/:id(.:format)                             {:action=>"destroy", :controller=>"admin/documents"}
      product_screenshots GET    /products/:product_id/screenshots(.:format)          {:action=>"index", :controller=>"screenshots"}
                          POST   /products/:product_id/screenshots(.:format)          {:action=>"create", :controller=>"screenshots"}
   new_product_screenshot GET    /products/:product_id/screenshots/new(.:format)      {:action=>"new", :controller=>"screenshots"}
@@ -34,18 +75,6 @@
                          GET    /user_session(.:format)                              {:action=>"show", :controller=>"user_sessions"}
                          PUT    /user_session(.:format)                              {:action=>"update", :controller=>"user_sessions"}
                          DELETE /user_session(.:format)                              {:action=>"destroy", :controller=>"user_sessions"}
-                 account POST   /account(.:format)                                   {:action=>"create", :controller=>"accounts"}
-             new_account GET    /account/new(.:format)                               {:action=>"new", :controller=>"accounts"}
-            edit_account GET    /account/edit(.:format)                              {:action=>"edit", :controller=>"accounts"}
-                         GET    /account(.:format)                                   {:action=>"show", :controller=>"accounts"}
-                         PUT    /account(.:format)                                   {:action=>"update", :controller=>"accounts"}
-                         DELETE /account(.:format)                                   {:action=>"destroy", :controller=>"accounts"}
-                  config POST   /config(.:format)                                    {:action=>"create", :controller=>"configs"}
-              new_config GET    /config/new(.:format)                                {:action=>"new", :controller=>"configs"}
-             edit_config GET    /config/edit(.:format)                               {:action=>"edit", :controller=>"configs"}
-                         GET    /config(.:format)                                    {:action=>"show", :controller=>"configs"}
-                         PUT    /config(.:format)                                    {:action=>"update", :controller=>"configs"}
-                         DELETE /config(.:format)                                    {:action=>"destroy", :controller=>"configs"}
            activate_user GET    /users/:id/activate(.:format)                        {:action=>"activate", :controller=>"users"}
                    users GET    /users(.:format)                                     {:action=>"index", :controller=>"users"}
                          POST   /users(.:format)                                     {:action=>"create", :controller=>"users"}
@@ -54,40 +83,6 @@
                     user GET    /users/:id(.:format)                                 {:action=>"show", :controller=>"users"}
                          PUT    /users/:id(.:format)                                 {:action=>"update", :controller=>"users"}
                          DELETE /users/:id(.:format)                                 {:action=>"destroy", :controller=>"users"}
-                sections GET    /sections(.:format)                                  {:action=>"index", :controller=>"sections"}
-                         POST   /sections(.:format)                                  {:action=>"create", :controller=>"sections"}
-             new_section GET    /sections/new(.:format)                              {:action=>"new", :controller=>"sections"}
-            edit_section GET    /sections/:id/edit(.:format)                         {:action=>"edit", :controller=>"sections"}
-                 section GET    /sections/:id(.:format)                              {:action=>"show", :controller=>"sections"}
-                         PUT    /sections/:id(.:format)                              {:action=>"update", :controller=>"sections"}
-                         DELETE /sections/:id(.:format)                              {:action=>"destroy", :controller=>"sections"}
-              categories GET    /categories(.:format)                                {:action=>"index", :controller=>"categories"}
-                         POST   /categories(.:format)                                {:action=>"create", :controller=>"categories"}
-            new_category GET    /categories/new(.:format)                            {:action=>"new", :controller=>"categories"}
-           edit_category GET    /categories/:id/edit(.:format)                       {:action=>"edit", :controller=>"categories"}
-                category GET    /categories/:id(.:format)                            {:action=>"show", :controller=>"categories"}
-                         PUT    /categories/:id(.:format)                            {:action=>"update", :controller=>"categories"}
-                         DELETE /categories/:id(.:format)                            {:action=>"destroy", :controller=>"categories"}
-       download_filelist GET    /filelists/:id/download(.:format)                    {:action=>"download", :controller=>"filelists"}
-               filelists GET    /filelists(.:format)                                 {:action=>"index", :controller=>"filelists"}
-                         POST   /filelists(.:format)                                 {:action=>"create", :controller=>"filelists"}
-            new_filelist GET    /filelists/new(.:format)                             {:action=>"new", :controller=>"filelists"}
-           edit_filelist GET    /filelists/:id/edit(.:format)                        {:action=>"edit", :controller=>"filelists"}
-                filelist GET    /filelists/:id(.:format)                             {:action=>"show", :controller=>"filelists"}
-                         PUT    /filelists/:id(.:format)                             {:action=>"update", :controller=>"filelists"}
-                         DELETE /filelists/:id(.:format)                             {:action=>"destroy", :controller=>"filelists"}
-        publish_document POST   /documents/:id/publish(.:format)                     {:action=>"publish", :controller=>"documents"}
-      unpublish_document POST   /documents/:id/unpublish(.:format)                   {:action=>"unpublish", :controller=>"documents"}
-           document_file DELETE /documents/:document_id/file/:id(.:format)           {:action=>"destroy", :controller=>"file"}
-     document_screenshot GET    /documents/:document_id/screenshots/:id(.:format)    {:action=>"show", :controller=>"screenshots"}
-                         DELETE /documents/:document_id/screenshots/:id(.:format)    {:action=>"destroy", :controller=>"screenshots"}
-               documents GET    /documents(.:format)                                 {:action=>"index", :controller=>"documents"}
-                         POST   /documents(.:format)                                 {:action=>"create", :controller=>"documents"}
-            new_document GET    /documents/new(.:format)                             {:action=>"new", :controller=>"documents"}
-           edit_document GET    /documents/:id/edit(.:format)                        {:action=>"edit", :controller=>"documents"}
-                document GET    /documents/:id(.:format)                             {:action=>"show", :controller=>"documents"}
-                         PUT    /documents/:id(.:format)                             {:action=>"update", :controller=>"documents"}
-                         DELETE /documents/:id(.:format)                             {:action=>"destroy", :controller=>"documents"}
      deactivate_userlist POST   /userlists/:id/deactivate(.:format)                  {:action=>"deactivate", :controller=>"userlists"}
        activate_userlist POST   /userlists/:id/activate(.:format)                    {:action=>"activate", :controller=>"userlists"}
                userlists GET    /userlists(.:format)                                 {:action=>"index", :controller=>"userlists"}

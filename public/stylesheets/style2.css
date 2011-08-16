@@ -663,4 +663,28 @@ button.tab-right {
 .screenshots_table, .screenshots_table td {border: 1px solid #E3BBF5;}
 .screenshots_table td {background-color: #E0FFFF; padding: 10px;}
 .screenshot_info {}
- 
+
+ .roundform {
+    padding: 5px;
+    font-size: 13px;
+    border-top: solid 1px #ccc;
+    border-left: solid 1px #d1d2d2;
+    border-right: solid 1px #d1d2d2;
+    border-bottom: solid 1px #d1d2d2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin:0px 0px 7px 0px;
+    background: url(../images/main/input_bg.png) repeat-x top #FFF;
+}
+
+#dialog_category h2 {
+    height: 32px;
+    line-height: 32px;
+}
+#dialog_category ul {
+    padding-left: 24px;
+}
+#dialog_category li {
+ padding: 3px 0;
+}

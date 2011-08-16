@@ -1,25 +1,27 @@
-<% cols = 4 %>
-<% td_percent = 100 / cols %>
-<fieldset class="fieldset_top_line" >
-  <legend>Разделы</legend>
-  <div style="overflow-y: scroll; width: 100%; max-height: 100px;">
-    <table width="100%" cellspacing="0px">
-    <% @dialogdata.in_groups_of(cols, false) do |row| %>
-      <tr>
-        <% row.map do |r| %>
-          <td width="<%="#{td_percent}%"%>">
-            <%= link_to_remote h(r.name), :url => dialog_url('fetch_category', :id => r.id ),
-              :update => 'dialog_category_list', :html => {:class => 'itemselect'} %>
-          </td>
-        <% end %>
-      </tr>
-    <% end %>
-    </table>
-  </div>
-</fieldset>
-<fieldset class="fieldset_top_line" style="display: block; width: 96%;">
-  <legend>Категории</legend>
-  <div id="dialog_category_list">
-    
-  </div>
-</fieldset>
+<div id="dialog_category">
+<table height="100%" width="100%" cellpadding="2px" cellspacing="0" >
+  <tr>
+    <th height="1px" width="50%"><h2 class="roundform">Разделы</h2></th>
+    <th style=""><h2 class="roundform">Категории</h2</th>
+  </tr>
+  <tr>
+    <td valign="top" style="">
+      <ul>
+      <% @dialogdata.map do |row| %>
+        <li><h3><%= link_to h(row.name),
+            dialog_url('fetch_category', :id => row.id),
+            :remote => true,
+            :update => 'dialog_category_list',
+            :html => {
+              :id => 'dialog_category_list',
+              :class => 'itemselect'
+            } %></h3></li>
+      <% end %>
+      </ul>
+    </td>
+    <td valign="top" style="">
+      <div id="dialog_category_list">&nbsp;</div>
+    </td>
+  </tr>
+</table>
+</div>

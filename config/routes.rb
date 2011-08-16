@@ -9,6 +9,7 @@ Isbaysoft::Application.routes.draw do
   match 'smsdostup' => 'admin/smsdostup#billing', :as => :smsdostup
   match 'downloads' => 'downloads#index', :as => :downloads
   match 'dialog/:dialog_name' => 'dialogs#show_dialog', :as => :dialog
+  
 
 # admin section
   resource :config, :controller => 'admin/config'

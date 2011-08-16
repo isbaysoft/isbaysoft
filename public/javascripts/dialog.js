@@ -12,8 +12,7 @@ var dialog = {
   select: function(selected_values) {
     for (var key in selected_values) {
         if ($(key))
-            $(key).value = selected_values[key];
-        
+            $(key).value = selected_values[key];        
     }
     this.hide();
   }
