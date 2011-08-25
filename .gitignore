@@ -1,6 +1,9 @@
+.gitignore
 downloads/
 public/document_logos/
 tmp/
 log/
 public/screenshots/
 nbproject/
+$ cat .redcar/
+

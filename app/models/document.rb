@@ -38,7 +38,7 @@ class Document < ActiveRecord::Base
   end
 
   def downloadable?(user)
-     user.access_level <= self.access_level
+     user.access_level >= self.access_level
   end
 
   def self.getrows(options = {})
