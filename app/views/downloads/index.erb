@@ -1,0 +1,26 @@
+<div class="breadcrumbs">
+  <span class="separator"><%= link_to 'Главная', root_url %></span>
+  <span class="active"><%= 'Скачать' %></span>
+</div>
+<div class="content_box">
+  <% @products.map do |row| %>
+    <% if row.filelists.count > 0 %>
+      <table>
+        <td width="1px"><%= link_to image_tag('main/icons/24/symbolic-link.png', :title => t(:button_learn_more)), product_url(row) %></td>
+        <td>
+          <%= link_to_function h(row.name),"slide('row#{row.id}')", :class => 'bold' %>
+          <% if current_user.access_level < row.access_level.to_i %>
+            <span class="silver n">(<%= t(:text_only_show)%>)</span>
+          <% end %>
+        </td>
+      </table>
+      <%= render :partial => 'filelist', :locals => {:document => row} %>
+      <div class="row_separator">&nbsp</div>
+      <br  />
+    <% end %>
+  <% end %>
+</div> <!-- END product_box -->
+<div class="clearboth">&nbsp;</div>
+<div class="content_box_bottom">
+  <%= will_paginate @products, :prev_label => '&nbsp;',:next_label => '&nbsp;' if @products.present? %>
+</div>
