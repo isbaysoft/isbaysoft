@@ -5,9 +5,9 @@
 <div class="content_box">
   <% @products.map do |row| %>
   <div>
-    <%= image_tag row.logo_url, :align => :left, :class => 'img1' %>
-    <div class="content_header"><h1><%= row.name %></h1></div>
-    <div class="content_description"><%= row.short_description %></div>
+    <%= image_tag row.logo_url, :width => 128 , :align => :left, :class => 'img1' %>
+    <div class="content_header"><h1><%= row.name.html_safe %></h1></div>
+    <div class="content_description"><%= row.short_description.html_safe %></div>
   </div>
   <div class="clearboth">&nbsp;</div>
   <div class="right">

@@ -1,6 +1,9 @@
-./downloads/
-public/document_logos/
+<<<<<<< .mine./downloads/
+=======.gitignore
+downloads/
+>>>>>>> .theirspublic/document_logos/
 tmp/
 log/
 public/screenshots/
 nbproject/
+$ cat .redcar/
