@@ -1,13 +1,16 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.9'
-gem 'pg'
-# gem 'rake', '0.8.7'
+gem 'rails', '3.1.0'
+gem 'sass-rails', "~> 3.1.0"
+gem 'coffee-script'
+gem 'uglifier'
+gem 'jquery-rails'
 
+gem 'mysql2'
 gem "will_paginate",">=2.3.8"
 gem 'paperclip'
 gem 'authlogic'
-gem 'tiny_mce'
+gem 'tinymce-rails'
 gem "recaptcha", :require => "recaptcha/rails"
 
 # Bundle edge Rails instead:

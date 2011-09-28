@@ -6,11 +6,11 @@ class Filelist < ActiveRecord::Base
 
   cattr_reader :per_page
 
-  named_scope :files_without_document,
+  scope :files_without_document,
     :include => [:document_files], :conditions => 'filelists.id is null'
-  named_scope :order, lambda { |order| {:order => order } }
-  named_scope :get, lambda { |id| {:conditions => ['filelists.id = ?', id] } }
-  named_scope :except, lambda { |ids| {:conditions => ['filelists.id not in (?)', ids] } if ids.present? }
+  scope :order, lambda { |order| {:order => order } }
+  scope :get, lambda { |id| {:conditions => ['filelists.id = ?', id] } }
+  scope :except, lambda { |ids| {:conditions => ['filelists.id not in (?)', ids] } if ids.present? }
 
   
   @@per_page=30

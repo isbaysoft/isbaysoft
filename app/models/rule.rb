@@ -6,7 +6,7 @@ class Rule < ActiveRecord::Base
   has_many :menu_items
   has_many :menus
 
-  named_scope :for_current_user, lambda {|current_user| {:conditions => ['access_level <= ?',current_user]}}
+  scope :for_current_user, lambda {|current_user| {:conditions => ['access_level <= ?',current_user]}}
 
   def readonly?
     false

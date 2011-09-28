@@ -7,8 +7,8 @@ class Menu < ActiveRecord::Base
   attr_accessible :title, :menu_id
   cattr_reader :per_page
 
-  named_scope :published, {:conditions => 'published = true'}
-  named_scope :permitted, {:conditions => ['access_level <= ?',User.current.access_level]}
+  scope :published, {:conditions => 'published = true'}
+  scope :permitted, {:conditions => ['access_level <= ?',User.current.access_level]}
 
   @@per_page=30
 

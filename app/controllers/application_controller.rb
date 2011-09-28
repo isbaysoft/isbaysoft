@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
 
   include(CustomApplicationErrors)
   helper :all
-  filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user, :redirect_back_or_default
   before_filter :set_locale
   before_filter :initialize_flash_types

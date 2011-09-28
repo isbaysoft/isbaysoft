@@ -1,0 +1,9 @@
+<%= form_for @cfg, :url => config_url, :html => {:method => :put, :name =>'adminForm'} do |f| %>
+  <%= hidden_field_tag 'task','post' -%>
+  <%= roundbox2 do -%>
+    <%= render_tabs :tabs => config_tabs %>
+  <% end %> <!-- end roundbox -->
+<% end %> <!-- end form cfg -->
+<%= render :partial => 'shared/admin/toolbar_action', 
+  :locals => {:except => ['post'], 
+  :icon_class => 'icon_config_48'} %>

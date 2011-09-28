@@ -2,7 +2,7 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class AdminApplicationController < ApplicationController
-  uses_tiny_mce
+  # uses_tiny_mce
   layout "admin"
   before_filter :require_user
   before_filter :load_configs

@@ -6,7 +6,7 @@ class Section < ActiveRecord::Base
   
   cattr_reader :per_page
 
-  named_scope :order, lambda { |order| {:order => order } }
+  scope :order, lambda { |order| {:order => order } }
 
   @@per_page=30
 

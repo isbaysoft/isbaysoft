@@ -8,9 +8,9 @@ class Category < ActiveRecord::Base
 
   cattr_reader :per_page
 
-  named_scope :getlist, :joins => [:section]
-  named_scope :order, lambda { |order| {:order => order } }
-  named_scope :section, lambda { |section_id| {:conditions => ['section_id=?',section_id]} }
+  scope :getlist, :joins => [:section]
+  scope :order, lambda { |order| {:order => order } }
+  scope :section, lambda { |section_id| {:conditions => ['section_id=?',section_id]} }
   
   @@per_page=30
 

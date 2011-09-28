@@ -1,6 +1,6 @@
 class Memo < ActiveRecord::Base
 
-  named_scope :get, lambda { |identify| { :conditions => ['identify = ?',identify] } }
+  scope :get, lambda { |identify| { :conditions => ['identify = ?',identify] } }
 
   def self.get_memo (identify)
     memo = get(identify).first

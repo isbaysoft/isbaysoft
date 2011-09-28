@@ -17,8 +17,8 @@ class UsersController < MainApplicationController
     @user.access_level = 700 #TODO Заменить на значения модели
     if @user.save
       flash[:notice] = "Account registered!"
-      Regnotification.deliver_event_hello(@user, Cfg.read('user_reg_type','type_manual'))
-      Regnotification.deliver_event_new_user(@user)
+      Regnotification.event_hello(@user, Cfg.read('user_reg_type','type_manual'))
+      Regnotification.event_new_user(@user)
       redirect_to login_url
     else
       render :action => :new

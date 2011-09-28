@@ -1,0 +1,19 @@
+<h2 class="darksilver"><%= t :tab_notify_deactivate_user %></h2><br />
+<div style="float: left">
+<dl>
+  <dt><%= label_tag 'notify[deactivate_mail_header]', 'Заголовок сообщения' %></dt>
+  <dd><%= text_area_tag 'notify[deactivate_mail_header]', read_memo('deactivate_mail_header'), @text_area_default_size_for_description.update(:class => 'mceEditor')  %></dd>
+
+  <dt><%= label_tag 'notify[deactivate_mail_body]', 'Тело сообщения' %></dt>
+  <dd><%= text_area_tag 'notify[deactivate_mail_body]', read_memo('deactivate_mail_body'), @text_area_default_size_for_description.update(:class => 'mceEditor')  %></dd>
+
+  <dt><%= label_tag 'notify[deactivate_mail_footer]', 'Подпись сообщения' %></dt>
+  <dd><%= text_area_tag 'notify[deactivate_mail_footer]', read_memo('deactivate_mail_footer'), @text_area_default_size_for_description.update(:class => 'mceEditor')  %></dd>
+</dl>
+</div>
+
+<script type="text/javascript">
+  tinyMCE.init({
+    mode: 'textareas'
+  });
+</script>
