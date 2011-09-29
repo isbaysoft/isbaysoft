@@ -13,7 +13,7 @@
     <th><%= row.id -%></th>
     <th><%= check_box_tag('ids[]',row.id) -%></th>
     <th><%= link_to( image_tag('admin/icons/24/edit_form.png', :alt => 'edit menu items', :title => t(:button_edit)),
-            menu_items_url(row)) %></th>
+             menu_menu_items_url(row)) %></th>
     <td><%= link_to(row.title, edit_menu_url(row.id)) %></td>
     <td><%= h row.rule.name %></td>
     <th><%= check_box_tag("published_#{row.id}",row.published,row.published,:disabled => true) -%></th>

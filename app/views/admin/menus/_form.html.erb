@@ -1,8 +1,7 @@
-<%= include_tiny_mce_if_needed %>
 <%= hidden_field_tag 'task','post' -%>
 <div class="box tabular settings">
 <fieldset id="fm1" class="left" style="width: 70%"><legend></legend>
-  <%= form.error_messages %>
+ 	<%= errors_for(form.object).html_safe %>
   <dl>
     <dt><%= label_tag :title, t(:label_menu_title) %></dt>
     <dd><%= form.text_field :title, :class=>'edit' %></dd>

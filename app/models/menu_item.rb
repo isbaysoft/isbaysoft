@@ -5,7 +5,7 @@ class MenuItem < ActiveRecord::Base
   attr_accessible :title, :alias, :url, :note, :target, :sort_no
   cattr_reader :per_page, :TARGET_TYPES
   
-  before_validation_on_create :auto_ordering
+  before_validation :auto_ordering
 
   validates_uniqueness_of :sort_no, :scope => :menu_id
 

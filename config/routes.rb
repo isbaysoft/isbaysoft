@@ -13,6 +13,23 @@ Isbaysoft::Application.routes.draw do
 
 # admin section
   resource :config, :controller => 'admin/config'
+
+  resources :menus, :controller => 'admin/menus' do
+    member do
+      post :reordering
+      post :save_sorting
+      post :publish 
+      post :unpublish
+    end
+    resources :menu_items, :name_prefix => nil, :controller => 'admin/menu_items' do
+        member do
+          post :publish
+          post :unpublish
+        end
+    end
+  end 
+
+  resources :menu_items, :controller => 'admin/menu_items'
   resources :sections, :controller => 'admin/sections'
   resources :categories, :controller => 'admin/categories'
   resources :filelists, :controller => 'admin/filelists' do
@@ -43,8 +60,6 @@ Isbaysoft::Application.routes.draw do
     end
   end
 
-
-
   resources :userlists do
     member do
       post :deactivate
@@ -54,23 +69,6 @@ Isbaysoft::Application.routes.draw do
 
   resources :contents
   resources :usergroups
-  resources :menus do
-
-    member do
-      post :reordering
-      post :publish
-      post :save_sorting
-      post :unpublish
-  end
-      resources :menu_items do
-
-        member do
-    post :publish
-    post :unpublish
-    end
-
-    end
-  end
 
   resources :show
   match '/:controller(/:action(/:id))'
