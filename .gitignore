@@ -1,10 +1,5 @@
-/tmp/cache/*
-!/tmp/cache/
-!/tmp/cache/empty
-
+tmp/
 log/
 public/screenshots/
 public/document_logos/
 downloads/filelists/
-nbproject/
-$ cat .redcar/
