@@ -3,7 +3,24 @@
   <th></th>
   <% @dialogdata.map do |row|  %>
   <tr class="<%=cycle('odd','even')%>">
-    <td><%= link_to_function h(row.name), "dialog.select(#{ {:menu_item_url => show_path(row.id)}.to_json })" %></td>
+    <td><%= link_to h(row.name), '#', :onclick => "dialog.select(#{ 
+    	{
+	    	:menu_item_url => show_path(row.id)
+	    }.to_json }); return false;" %></td>
   </tr>
   <% end %>
 </table>
+
+<script type="text/javascript">
+var dialog = {
+  select: function(selected_values) {
+    for (var key in selected_values) {
+      $('#'+key).attr('value',selected_values[key])
+    }
+    this.hide();
+  },
+  hide: function() {
+    $.colorbox.close()
+  }
+}
+</script>

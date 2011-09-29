@@ -1,8 +1,7 @@
-<%= include_tiny_mce_if_needed %>
 <%= hidden_field_tag 'task','post' -%>
 <div class="box tabular settings">
 <fieldset><legend></legend>
-  <%= form.error_messages -%>
+  <%= errors_for(form.object).html_safe -%>
   <dl>
     <dt><%= label_tag :name, 'Название' %></dt>
     <dd><%= form.text_field :name, :class=>'edit' %></dd>
@@ -15,3 +14,6 @@
   </dl>
 </fieldset>
 </div>
+
+<%= render :partial => 'shared/admin/tinymce_init' %>
+

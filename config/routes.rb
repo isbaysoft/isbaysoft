@@ -12,7 +12,11 @@ Isbaysoft::Application.routes.draw do
   
 
 # admin section
+  resources :show
   resource :config, :controller => 'admin/config'
+  resources :static_contents, 
+    :controller => 'admin/static_contents',
+    :as => 'contents'
 
   resources :menus, :controller => 'admin/menus' do
     member do
@@ -67,10 +71,8 @@ Isbaysoft::Application.routes.draw do
     end
   end
 
-  resources :contents
   resources :usergroups
 
-  resources :show
   match '/:controller(/:action(/:id))'
   match '*path' => 'main_application#p404'
 end

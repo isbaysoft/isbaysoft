@@ -2,5 +2,5 @@
 <% if @inline_object %>
   $('#dialog_category_list').html('<%= escape_javascript(html) %>');
 <% else %>
-  <%= html %>
+  <%= html.html_safe %>
 <% end %>

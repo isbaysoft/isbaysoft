@@ -9,7 +9,7 @@ class MenuItem < ActiveRecord::Base
 
   validates_uniqueness_of :sort_no, :scope => :menu_id
 
-  before_save :auto_ordering
+  before_create :auto_ordering
 
   scope :items, lambda { |menu_id| {:conditions => ["menu_id = ?", menu_id]} }
   scope :order_by_sort_no, {:order => 'sort_no'}

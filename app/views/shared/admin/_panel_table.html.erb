@@ -1,5 +1,5 @@
 <div class="tablepanel">
-  <% form_for 'tablepanel_form', :url => url_for(:action => 'sort'), :html => {:method => :get, :name => 'tablepanel_form'} do -%>
+  <%= form_for 'tablepanel_form', :url => url_for(:action => 'index'), :html => {:method => :get, :name => 'tablepanel_form'} do -%>
   <table width="100%">
     <td><%= label_tag(:filter, 'Фильтр: ') %></td>
     <td><%= text_field_tag(:filter, params[:filter], :id => 'filter') %></td>

@@ -46,7 +46,7 @@ class Admin::MenusController < AdminApplicationController
 
   def reordering
     @menu.reordering
-    redirect_to menu_items_url(@menu)
+    redirect_to menu_menu_items_url(@menu)
   end
 
   def save_sorting
@@ -55,8 +55,8 @@ class Admin::MenusController < AdminApplicationController
     ids.each_index do |i|
       menuitem = MenuItem.find_by_id(ids[i])
       menuitem.update_attribute('sort_no', order_values[i]) unless menuitem.nil?
-    end if (order_values.length == ids.length) && (order_values.all?{|v| is_numeric?(v)}) && (ids.all?{|v| is_numeric?(v)})
-    redirect_to menu_items_url(@menu)
+    end if ids.is_a?(Array) && (order_values.length == ids.length) && (order_values.all?{|v| is_numeric?(v)}) && (ids.all?{|v| is_numeric?(v)})
+    redirect_to menu_menu_items_url(@menu)
   end
 
   def publish

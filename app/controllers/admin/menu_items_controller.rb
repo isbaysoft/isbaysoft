@@ -38,7 +38,7 @@ end
     confirm_multiple_operations params[:ids] do
       if MenuItem.destroy_all(['id in (?)',session[current_session_ids]])
         flash[:notice] = t(:notice_destroy_section)
-        redirect_to menu_items_url
+        redirect_to menu_menu_items_url
       else
         flash[:error] = t(:error_destroy_section)
         render :action => 'index'
@@ -51,7 +51,7 @@ end
       @menu.menu_items.update_all(["published = ?",true], ["id in (?)",params[:ids]])
       flash[:notice] = t(:notice_publish_documents)
     end
-    redirect_to menu_items_url(@menu)
+    redirect_to menu_menu_items_url(@menu)
   end
 
   def unpublish
@@ -59,7 +59,7 @@ end
       @menu.menu_items.update_all(["published = ?",false], ["id in (?)",params[:ids]])
       flash[:notice] = t(:notice_unpublish_documents)
     end
-    redirect_to menu_items_url(@menu)
+    redirect_to menu_menu_items_url(@menu)
   end
   
 protected

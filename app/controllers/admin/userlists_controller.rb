@@ -1,3 +1,4 @@
+# coding: utf-8
 class Admin::UserlistsController < AdminApplicationController
   before_filter :require_admin
   before_filter :userlist_find, :only => [:update, :edit, :deactivate, :activate]

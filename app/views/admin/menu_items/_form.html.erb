@@ -16,7 +16,7 @@
     <dd><%= form.text_field :url, :class=>'edit' %></dd>
     <dt>Создать сылку как</dt>
     <dd>
-       <%= link_to 'Статический контент', dialog_url('static_content'), { :remote => true, :class => 'remote' } %>
+       <%= link_to 'Статический контент', dialog_url('static_content'), { :id => 'pop_dialog_content' } %>
     </dd>    
     <dt><%= label_tag :target, t(:label_menu_item_target) %></dt>
     <dd><%= form.select( :target, targets_for_select(@menu_item.target) ) %></dd>
@@ -34,3 +34,7 @@
 </fieldset>
 <div class="clearboth"></div>
 </div>
+
+<script type="text/javascript">
+  $("#pop_dialog_content").colorbox({innerWidth:640, innerHeight:480, initialWidth:640, initialHeight:480});
+</script>
