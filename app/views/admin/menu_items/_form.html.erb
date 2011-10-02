@@ -1,8 +1,7 @@
-<%= include_tiny_mce_if_needed %>
 <%= hidden_field_tag 'task','post' -%>
 <div class="box tabular settings">
 <fieldset class="left" style="width: 70%"><legend></legend>
-  <%= form.error_messages %>
+  <%= errors_for(form.object).html_safe %>
   <dl>
     <dt><%= label_tag :title, t(:label_menu_item_title) %></dt>
     <dd><%= form.text_field :title, :class=>'edit' %></dd>
@@ -17,10 +16,7 @@
     <dd><%= form.text_field :url, :class=>'edit' %></dd>
     <dt>Создать сылку как</dt>
     <dd>
-       <%= link_to_function 'Статический контент',
-          remote_function(:url => dialog_url('static_content'),
-          :method => :GET )
-        %>
+       <%= link_to 'Статический контент', dialog_url('static_content'), { :remote => true, :class => 'remote' } %>
     </dd>    
     <dt><%= label_tag :target, t(:label_menu_item_target) %></dt>
     <dd><%= form.select( :target, targets_for_select(@menu_item.target) ) %></dd>
