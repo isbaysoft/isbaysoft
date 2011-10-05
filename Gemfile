@@ -16,9 +16,9 @@ group :assets do
   gem 'uglifier'
 end
 
-group :test do
+group :development, :test do
   gem 'database_cleaner'  
-  gem 'rspec-rails'
+  gem 'rspec-rails' 
   gem 'factory_girl_rails'
   gem 'cucumber-rails'
   gem 'capybara'
