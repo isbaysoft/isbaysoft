@@ -20,8 +20,11 @@ group :development, :test do
   gem 'database_cleaner'  
   gem 'rspec-rails' 
   gem 'factory_girl_rails'
-  gem 'cucumber-rails'
-  gem 'capybara'
+  gem 'autotest'
+  gem 'spork'
+  gem 'test_notifier'
+#  gem 'cucumber-rails'
+#  gem 'capybara'
 end
 
 # To use debugger
