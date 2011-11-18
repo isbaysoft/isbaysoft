@@ -5,7 +5,8 @@ class UsersController < MainApplicationController
   before_filter :se_singular, :only => [:show, :edit]
 
   def se_singular
-      @user = @current_user
+      # TODO: Deprecated method
+      # @user = @current_user
   end
 
   def new

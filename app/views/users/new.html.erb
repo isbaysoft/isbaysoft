@@ -1,4 +1,4 @@
-<h1>Register</h1>
+<h1>Registration</h1>
 <% if user_count == 0 %>
 <h3>Внимание! Это первый аккаунт в системе. Введенные регистрационные данные будут иметь права супер пользователя.</h3>
 <% end %>
@@ -6,5 +6,5 @@
 <%= form_for @user, :url => users_url do |f| %>
   <%= errors_for(@user).html_safe %>
   <%= render :partial => "form", :object => f %>
-  <%= f.submit "Register" %>
+  <%= f.submit "Registration" %>
 <% end %>

@@ -21,7 +21,7 @@ group :development, :test do
   gem 'rspec-rails' 
   gem 'factory_girl_rails'
   gem 'autotest'
-  gem 'spork'
+  gem 'spork', "~> 0.9.0.rc9"
   gem 'test_notifier'
 #  gem 'cucumber-rails'
 #  gem 'capybara'
@@ -41,6 +41,8 @@ gem 'paperclip'
 gem 'authlogic'
 gem 'tinymce-rails'
 gem "recaptcha", :require => "recaptcha/rails"
+
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

@@ -1,10 +1,12 @@
 Isbaysoft::Application.routes.draw do
   root :to => 'main#index'
 
-  match 'login' => 'user_sessions#new', :as => :login
+  match 'login' => 'user_sessions#new', :as => :login, :via => 'get'  
+  match 'login' => 'user_sessions#create', :as => :login, :via => 'post'  
+  match 'logout' => 'user_sessions#destroy', :as => :logout
+  
   match 'administrator' => 'admin/administrator#index', :as => :administrator
   match 'registration' => 'users#new', :as => :registration
-  match 'logout' => 'user_sessions#destroy', :as => :logout
   match 'file/:document_id/:file_id' => 'main#download', :as => :productfile
   match 'smsdostup' => 'admin/smsdostup#billing', :as => :smsdostup
   match 'downloads' => 'downloads#index', :as => :downloads
