@@ -23,6 +23,7 @@ group :development, :test do
   gem 'autotest'
   gem 'spork', "~> 0.9.0.rc9"
   gem 'test_notifier'
+  gem 'simplecov'
 #  gem 'cucumber-rails'
 #  gem 'capybara'
 end

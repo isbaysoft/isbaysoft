@@ -51,8 +51,9 @@ Isbaysoft::Application.routes.draw do
     resources :file, :only => [:destroy]
     resources :screenshots, :only => [:destroy, :show]
   end
-  
 # end admin section vlock
+
+  resources :static_contents
 
   resources :products do
     resources :screenshots

@@ -1,5 +1,7 @@
+require '.simplecov'
 require 'rubygems'
 require 'spork'
+SimpleCov.start
 
 Spork.prefork do
   # This file is copied to spec/ when you run 'rails generate rspec:install'
