@@ -113,7 +113,7 @@ class User < ActiveRecord::Base
   end
 
   def anonymous?
-    self.access_level = 0
+    self.id == 0
   end
 
   def check_sa

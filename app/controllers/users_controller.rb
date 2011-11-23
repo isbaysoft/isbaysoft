@@ -27,16 +27,13 @@ class UsersController < MainApplicationController
   end
 
   def update
-    if @current_user      
-      @user = @current_user # makes our views "cleaner" and more consistent
-      if @user.update_attributes(params[:user])
-        flash[:notice] = "Account updated!"
-        redirect_to account_url
-      else
-        render :action => :edit
-      end
+    @user = @current_user
+    if @user.update_attributes(params[:user])
+      flash[:notice] = "Account updated"
+      redirect_to root_url
     else
-        flash[:notice] = "Incorect user"
+      flash[:notice] = "Updated error"
+      render :edit
     end
   end
 
@@ -49,7 +46,7 @@ class UsersController < MainApplicationController
       redirect_to login_url
     else
       flash[:notice] = 'Ссылка активации не правильная'
-      redirect_to login_url
+      redirect_to root_url
     end
   end
   

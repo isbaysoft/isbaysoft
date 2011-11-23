@@ -19,7 +19,7 @@ end
 group :development, :test do
   gem 'database_cleaner'  
   gem 'rspec-rails' 
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', :require => false
   gem 'autotest'
   gem 'spork', "~> 0.9.0.rc9"
   gem 'test_notifier'

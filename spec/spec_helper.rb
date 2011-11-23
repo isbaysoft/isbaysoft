@@ -1,7 +1,8 @@
-require '.simplecov'
+require 'simplecov'
+SimpleCov.start 'rails'
 require 'rubygems'
 require 'spork'
-SimpleCov.start
+
 
 Spork.prefork do
   # This file is copied to spec/ when you run 'rails generate rspec:install'
@@ -43,8 +44,7 @@ Spork.prefork do
 end
 
 Spork.each_run do
-  # This code will be run each time you run your specs.
-  
+  require 'factory_girl_rails'
 end
 
 # --- Instructions ---
