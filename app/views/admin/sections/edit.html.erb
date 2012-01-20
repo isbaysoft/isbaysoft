@@ -1,5 +1,5 @@
 <%# section controller -%>
-<% form_for @section, section_url, :html => {:name =>'adminForm'} do |f| %>
+<%= form_for @section, :url => admin_section_url(@section), :html => {:name =>'adminForm'} do |f| %>
   <%= render :partial =>'form', :object => f %>
 <% end %>
 <%= render :partial => 'shared/admin/toolbar_action', :locals => {:icon_class => "icon_folder_48"} %>

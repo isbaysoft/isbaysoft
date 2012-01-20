@@ -1,5 +1,5 @@
 <%# Filelist controller -%>
-<% form_for :filelist, @filelist, :url => filelists_url, :html => { :multipart => true, :name =>'adminForm' } do |f| %>
+<%= form_for @filelist, :url => admin_filelists_url, :html => { :multipart => true, :name =>'adminForm' } do |f| %>
   <%= render :partial =>'form', :object => f %>
 <% end %>
 <%= render :partial => 'shared/admin/toolbar_action', :locals => {:except => ['post'], :icon_class => 'icon_hard_48'} %>

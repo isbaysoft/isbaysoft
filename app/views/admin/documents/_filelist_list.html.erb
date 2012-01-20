@@ -1,8 +1,8 @@
 <table id="documentfilelist" class="gridmini" cellpadding="0" cellspacing="0">
-  <th><%= t(:field_filename) %></th>
-  <th><%= t(:field_filesize) %></th>
-  <th><%= t(:field_filetype) %></th>
-  <th></th>
+  <th width="50%"><%= t(:field_filename) %></th>
+  <th width="20%"><%= t(:field_filesize) %></th>
+  <th width="25%"><%= t(:field_filetype) %></th>
+  <th width="5%"></th>
   <%  rows.map do |e|  %>
     <%= render :partial => 'filelist_row', :locals => {:row => e} %>
   <% end %>

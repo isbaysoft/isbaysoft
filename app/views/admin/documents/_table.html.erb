@@ -20,7 +20,7 @@
     <th width="2%"><%= check_box_tag('ids[]',row.id) %></th>
     <th><%= check_box_tag("published_#{row.id}",row.published,row.published,:disabled => true) -%></th>
     <th><%= check_box_tag("approved_#{row.id}",row.approved,row.approved,:disabled => true) -%></th>
-    <td><%= link_to(row.name, edit_document_url(row.id)) -%></td>
+    <td><%= link_to(row.name, edit_admin_document_url(row.id)) -%></td>
     <td align="center"><%= row.filelists.count -%></td>
     <td><%= row.section_name -%></td>
     <td><%= row.category.try(:name) -%></td>

@@ -9,7 +9,7 @@
   <tr class="<%= cycle('odd','even') %>"<%= 'id="after_edit"' if flash[:edited].to_s == row.id.to_s %> >
     <th><%= row.id %></th>
     <th><%= check_box_tag('ids[]',row.id) %></th>
-    <td><%= link_to(row.name, edit_usergroup_url(row)) %></td>
+    <td><%= link_to(row.name, edit_admin_usergroup_url(row)) %></td>
   </tr>
 <% end %>
 </tbody>

@@ -7,9 +7,9 @@
             onmouseout="mclosetime()">
             <%= link_to 'Перейти на сайт', root_url, :target => 'blank' -%>
             <%= link_to 'Панель управления', administrator_url -%>
-            <%= link_to_allow 'Менеджер пользователей', userlists_url, current_user.allow('Administrator')  -%>
-            <%= link_to_allow 'Группы пользователей', usergroups_url, current_user.allow('Administrator') -%>
-            <%= link_to_allow 'Системные настройки', config_url, current_user.allow('Sa') -%>
+            <%= link_to_allow 'Менеджер пользователей', admin_userlists_url, current_user.allow('Administrator')  -%>
+            <%= link_to_allow 'Группы пользователей', admin_usergroups_url, current_user.allow('Administrator') -%>
+            <%= link_to_allow 'Системные настройки', admin_config_url, current_user.allow('Sa') -%>
             <%= link_to 'Logout', logout_url -%>
         </div>
     </li>
@@ -19,11 +19,11 @@
         <div id="m2"
             onmouseover="mcancelclosetime()"
             onmouseout="mclosetime()">
-            <%= link_to_allow 'Менеджер меню', menus_url, current_user.allow('Administrator') -%>
-            <%= link_to_allow 'Менеджер разделов', sections_url, current_user.allow('Administrator') -%>
-            <%= link_to_allow 'Менеджер категорий', categories_url, current_user.allow('Administrator') -%>
-            <%= link_to_allow 'Менеджер файлов', filelists_url, current_user.allow('Administrator') -%>
-            <%= link_to_allow 'Менеджер документов', documents_url, current_user.allow('Administrator') -%>
+            <%= link_to_allow 'Менеджер меню', admin_menus_url, current_user.allow('Administrator') -%>
+            <%= link_to_allow 'Менеджер разделов', admin_sections_url, current_user.allow('Administrator') -%>
+            <%= link_to_allow 'Менеджер категорий', admin_categories_url, current_user.allow('Administrator') -%>
+            <%= link_to_allow 'Менеджер файлов', admin_filelists_url, current_user.allow('Administrator') -%>
+            <%= link_to_allow 'Менеджер документов', admin_documents_url, current_user.allow('Administrator') -%>
 
         </div>
     </li>
@@ -31,7 +31,7 @@
       <div id="m3"
             onmouseover="mcancelclosetime()"
             onmouseout="mclosetime()">
-            <%= link_to_allow 'Статический контент', contents_url, current_user.allow('Moderator') -%>
+            <%= link_to_allow 'Статический контент', admin_contents_url, current_user.allow('Moderator') -%>
       </div>
     </li>
   </ul>

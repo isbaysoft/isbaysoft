@@ -14,9 +14,7 @@ class User < ActiveRecord::Base
   cattr_accessor :levels
 
 #  TODO переименовать в permitted
-  scope :allowobjects, lambda {|cu,list_ids|
-    {:conditions => ['id <> ? and id in (?) and access_level >= ?',cu.id,list_ids,cu.access_level]
-    }}
+  scope :allowobjects, lambda {|cu,list_ids| where('id <> ? and id in (?) and access_level < ?',cu.id,list_ids,cu.access_level)}
   scope :activated, :conditions => ['access = ?',true]
   scope :deactivated, :conditions => ['access = ?',false]
 
@@ -45,7 +43,7 @@ class User < ActiveRecord::Base
   def activate
     self.access = true
     reset_perishable_token!
-    Regnotification.deliver_user_activated(self) if save
+    Regnotification.user_activated(self) if save
   end
 
   # Method _deactivate_ disables the user account.
@@ -56,7 +54,7 @@ class User < ActiveRecord::Base
   def deactivate
     self.access = false
     reset_perishable_token!
-    Regnotification.deliver_user_deactivated(self) if save
+    Regnotification.user_deactivated(self) if save
   end
 
   def destroy_valid?

@@ -28,7 +28,7 @@ class Admin::UserlistsController < AdminApplicationController
 
   def update    
     update_attributes_and_redirect(@user,params[:user]) do |obj|
-      Regnotification.deliver_event_hello(@user, Cfg.read('user_reg_type','type_manual'))
+      Regnotification.event_hello(@user, Cfg.read('user_reg_type','type_manual'))
         obj.access_level = params[:access_level]
         obj.save
     end
@@ -38,7 +38,7 @@ class Admin::UserlistsController < AdminApplicationController
     confirm_multiple_operations params[:ids] do
       if User.allowobjects(current_user,session[current_session_ids]).destroy_all
         flash[:notice] = t(:notice_destroy_user)
-        redirect_to userlists_url
+        redirect_to admin_userlists_url
       else
         flash[:error] = t(:error_destroy_user)
         render :action => 'index'
@@ -75,22 +75,22 @@ protected
   # Action activate and deactivate using multiply redirect 
   def ad_redirect
     if params[:ids].present?
-      redirect_to userlists_url
+      redirect_to admin_userlists_url
     else
-      redirect_to edit_userlist_url(params[:id])
+      redirect_to edit_admin_userlist_url(params[:id])
     end
   end
 
   def userlist_find
     @user = User.find_by_id(params[:id]) unless params[:id].eql?(0)
   rescue ActiveRecord::RecordNotFound
-    redirect_to userlists_url unless @user
+    redirect_to admin_userlists_url unless @user
   end
 
   def allow_edit
     if @user and @user.access_level > current_user.access_level
       flash[:notice] = 'Редактировать запрещенно. Ваши права ниже по рейтингу.'
-      redirect_to userlists_url
+      redirect_to admin_userlists_url
     end
   end
 

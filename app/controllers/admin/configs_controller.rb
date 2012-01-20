@@ -1,5 +1,5 @@
 # coding: utf-8
-class Admin::ConfigController < AdminApplicationController
+class Admin::ConfigsController < AdminApplicationController
   before_filter :require_admin
   
   def load_configs
@@ -25,10 +25,10 @@ class Admin::ConfigController < AdminApplicationController
     params[:notify].each_pair { |key, value| Memo.write(key, value) } if params[:notify].present?
     
     load_cfg
-    redirect_to config_url
+    redirect_to admin_config_url
   end
 
-  protected
+ # protected
 
   def load_cfg
     @cfg = Cfg.all

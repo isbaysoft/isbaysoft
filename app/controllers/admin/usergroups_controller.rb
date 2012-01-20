@@ -31,7 +31,7 @@ class Admin::UsergroupsController < AdminApplicationController
     confirm_multiple_operations params[:ids] do
       if Usergroup.destroy_all(['id in (?)',session[current_session_ids]])
         flash[:notice] = t(:notice_destroy_usergroup)
-        redirect_to usergroups_url
+        redirect_to admin_usergroups_url
       else
         flash[:error] = t(:error_destroy_usergroup)
         render :action => 'index'

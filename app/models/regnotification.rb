@@ -24,17 +24,17 @@ class Regnotification < ActionMailer::Base
   end
 
   def user_activated(user)
-    @header => Memo.get_memo('activate_mail_header'),
-    @body => Memo.get_memo('activate_mail_body'),
-    @footer => Memo.get_memo('activate_mail_footer')
+    @header = Memo.get_memo('activate_mail_header')
+    @body = Memo.get_memo('activate_mail_body')
+    @footer = Memo.get_memo('activate_mail_footer')
     mail(:to => user.email, :subject => "Регистрация на сайте #{@site_name}")
   end
 
   def user_deactivated(user)
-    @header => Memo.get_memo('deactivate_mail_header'),
-    @body => Memo.get_memo('deactivate_mail_body'),
-    @footer => Memo.get_memo('deactivate_mail_footer')
-    mail(:to => user.email, :subject "Регистрация на сайте #{@site_name}")
+    @header = Memo.get_memo('deactivate_mail_header')
+    @body = Memo.get_memo('deactivate_mail_body')
+    @footer = Memo.get_memo('deactivate_mail_footer')
+    mail(:to => user.email, :subject => "Регистрация на сайте #{@site_name}")
   end
   
 

@@ -31,7 +31,7 @@ class Admin::SectionsController < AdminApplicationController
     confirm_multiple_operations params[:ids] do
       if Section.destroy_all(['id in (?)',session[current_session_ids]])
         flash[:notice] = t(:notice_destroy_section)
-        redirect_to sections_url
+        redirect_to admin_sections_url
       else
         flash[:error] = t(:error_destroy_section)
         render :action => 'index'

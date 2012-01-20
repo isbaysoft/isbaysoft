@@ -32,6 +32,9 @@ class Admin::DocumentsController < AdminApplicationController
   end
 
   def update
+    add_images = params[:added_documentfilelist_ids]
+    del_images = params[:deleted_documentfilelist_ids]
+    
     if params[:screenshot].present?
       screenshot = Screenshot.new params[:screenshot]
       @document.screenshots << screenshot if screenshot && screenshot.valid? && screenshot.save
@@ -46,6 +49,16 @@ class Admin::DocumentsController < AdminApplicationController
       if @file && @file.valid? && @file.save
          @document.filelists << @file
       end
+
+      add_images.each do |file_id| 
+        file = Filelist.get(file_id).first
+        @document.filelists << file if file
+      end if add_images
+
+      # @document.filelists.delete_all(['id in (?)',del_images]) if del_images
+      @document.filelists.where('filelists.id = 111').delete_all
+
+
     end # END update_attributes_and_redirect
   end
 
@@ -64,13 +77,6 @@ class Admin::DocumentsController < AdminApplicationController
   def get_categories
     @option = Category.find(:all,:conditions => ['section_id=?',params[:id]]).collect { |p| "<option value=#{p.id}>#{p.name}</option>" }
     render :text => @option
-  end
-
-  def file_add
-    @file = Filelist.get(params[:id]).first
-    @document = Document.get(params[:document_id]).first
-    @document.filelists << @file if @file.present? and @document.present?
-    @docfile = @document.document_files.find_by_filelist_id(params[:id])
   end
 
   def publish

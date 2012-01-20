@@ -14,7 +14,7 @@
   <tr class="<%= cycle('odd','even') %>"<%= 'id="after_edit"' if flash[:edited].to_s == row.id.to_s %> >
     <th><%= row.id -%></th>
     <th><%= check_box_tag('ids[]',row.id) -%></th>
-    <td><%= link_to(h(row.title), edit_menu_item_url(row.menu_id,row.id)) %></td>
+    <td><%= link_to(h(row.title), edit_admin_menu_menu_item_url(row.menu_id,row.id)) %></td>
     <td><%= h(row.alias) %></td>
     <td><%= h(row.url) %></td>
     <td><%= h(row.rule.name) %></td>

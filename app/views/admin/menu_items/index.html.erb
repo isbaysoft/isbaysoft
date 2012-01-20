@@ -1,6 +1,6 @@
 <%= roundbox2 do -%>
  <%= render :partial => 'shared/admin/panel_table', :locals => {:per_page => @menu_items.per_page} %>
-  <%= form_for 'tasks', :url => menu_menu_item_url(@menu,'destroy'), :html =>{:method => :delete, :name=>'adminForm'} do -%>
+  <%= form_for 'tasks', :url => admin_menu_menu_item_url(@menu,'destroy'), :html =>{:method => :delete, :name=>'adminForm'} do -%>
     <%= hidden_field_tag 'task', 'search' -%>
     <% unless @menu_items.blank? %>
       <%= render :partial => 'table' %>
@@ -11,22 +11,22 @@
       <%= btn(:icon_class=>'icon_sort_32',
         :caption => t(:button_sort),
         :title => t(:title_reordering),
-        :onclick=>"submitaction('#{reordering_menu_url(@menu)}')") -%>
+        :onclick=>"submitaction('#{reordering_admin_menu_url(@menu)}')") -%>
       <%= btn(:icon_class=>'icon_save_32',
         :caption => t(:button_save),
         :title => t(:button_save),
-        :onclick=>"CheckedCheckBoxes('ids[]'); submitaction('#{save_sorting_menu_url(@menu)}')") -%>
+        :onclick=>"CheckedCheckBoxes('ids[]'); submitaction('#{save_sorting_admin_menu_url(@menu)}')") -%>
       <%= btn(:icon_class=>'icon_exit_32',
         :caption => t(:button_exit),
-        :url => menus_url) -%>
+        :url => admin_menus_url) -%>
       <%= btn(:icon_class=>'icon_publish_32',
         :caption => t(:button_show),
         :title => t(:button_show),
-        :onclick=>"submitaction('#{publish_menu_menu_item_url(@menu,0)}')") -%>
+        :onclick=>"submitaction('#{publish_admin_menu_menu_item_url(@menu,0)}')") -%>
       <%= btn(:icon_class=>'icon_unpublish_32',
         :caption => t(:button_hide),
         :title => t(:button_deactivate_user),
-        :onclick=>"submitaction('#{unpublish_menu_menu_item_url(@menu,0)}')") -%>
+        :onclick=>"submitaction('#{unpublish_admin_menu_menu_item_url(@menu,0)}')") -%>
     <% end %>
     <%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @menu_items, :icon_class => 'icon_menu_48' } %>
   <% end %>

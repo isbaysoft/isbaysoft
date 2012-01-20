@@ -36,7 +36,7 @@ class Admin::MenusController < AdminApplicationController
     confirm_multiple_operations params[:ids] do
       if Menu.destroy_all(['id in (?)',session[current_session_ids]])
         flash[:notice] = t(:notice_destroy_section)
-        redirect_to menus_url
+        redirect_to admin_menus_url
       else
         flash[:error] = t(:error_destroy_section)
         render :action => 'index'
@@ -46,7 +46,7 @@ class Admin::MenusController < AdminApplicationController
 
   def reordering
     @menu.reordering
-    redirect_to menu_menu_items_url(@menu)
+    redirect_to admin_menu_menu_items_url(@menu)
   end
 
   def save_sorting
@@ -56,7 +56,7 @@ class Admin::MenusController < AdminApplicationController
       menuitem = MenuItem.find_by_id(ids[i])
       menuitem.update_attribute('sort_no', order_values[i]) unless menuitem.nil?
     end if ids.is_a?(Array) && (order_values.length == ids.length) && (order_values.all?{|v| is_numeric?(v)}) && (ids.all?{|v| is_numeric?(v)})
-    redirect_to menu_menu_items_url(@menu)
+    redirect_to admin_menu_menu_items_url(@menu)
   end
 
   def publish
@@ -64,7 +64,7 @@ class Admin::MenusController < AdminApplicationController
       Menu.update_all(["published = ?",true], ["id in (?)",params[:ids]])
       flash[:notice] = t(:notice_publish_documents)
     end
-    redirect_to menus_url
+    redirect_to admin_menus_url
   end
 
   def unpublish
@@ -72,7 +72,7 @@ class Admin::MenusController < AdminApplicationController
       Menu.update_all(["published = ?",false], ["id in (?)",params[:ids]])
       flash[:notice] = t(:notice_unpublish_documents)
     end
-    redirect_to menus_url
+    redirect_to admin_menus_url
   end
 
 protected

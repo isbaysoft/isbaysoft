@@ -3,42 +3,42 @@
 <table class="admin_toolbar" cellpadding="10px">
   <tr>
     <td valign="bottom"><span class="icon_folder_48">&nbsp;</span>
-      <%= link_to_allow 'Менеджер разделов', sections_url, current_user.allow('Administrator') -%>
+      <%= link_to_allow 'Менеджер разделов', admin_sections_url, current_user.allow('Administrator') -%>
     </td>
     <td valign="bottom"><span class="icon_folder_document_48">&nbsp;</span>
-      <%= link_to_allow 'Менеджер категорий', categories_url, current_user.allow('Administrator') -%>
+      <%= link_to_allow 'Менеджер категорий', admin_categories_url, current_user.allow('Administrator') -%>
     </td>
     <td valign="bottom"><span class="icon_hard_48">&nbsp;</span>
-      <%= link_to_allow 'Менеджер файлов', filelists_url, current_user.allow('Administrator') -%>
+      <%= link_to_allow 'Менеджер файлов', admin_filelists_url, current_user.allow('Administrator') -%>
     </td>
   </tr>
   <tr>
     <td valign="bottom"><span class="icon_document_48">&nbsp;</span>
-      <%= link_to_allow 'Менеджер документов', documents_url, current_user.allow('Administrator') -%>
+      <%= link_to_allow 'Менеджер документов', admin_documents_url, current_user.allow('Administrator') -%>
     </td>
     <td valign="bottom"><span class="icon_content_48">&nbsp;</span>
-      <%= link_to_allow 'Статический контент', contents_url, current_user.allow('Moderator') -%>
+      <%= link_to_allow 'Статический контент', admin_contents_url, current_user.allow('Moderator') -%>
     </td>
     <td valign="bottom"><span class="icon_home_48">&nbsp;</span><%= link_to 'Перейти на сайт', root_url, :target => 'blank' -%></td>
   </tr>
   <tr>
     <td valign="bottom"><span class="icon_users_48">&nbsp;</span>
-      <%= link_to_allow 'Менеджер пользователей', userlists_url, current_user.allow('Administrator')  -%>
+      <%= link_to_allow 'Менеджер пользователей', admin_userlists_url, current_user.allow('Administrator')  -%>
     </td>
     <td valign="bottom"><span class="icon_user_group_48">&nbsp;</span>
-      <%= link_to_allow 'Группы пользователей', usergroups_url, current_user.allow('Administrator') -%>
+      <%= link_to_allow 'Группы пользователей', admin_usergroups_url, current_user.allow('Administrator') -%>
     </td>
     <td valign="bottom"><span class="icon_logout_48">&nbsp;</span><%= link_to 'Выход', logout_url -%></td>
   </tr>
   <tr>
     <td valign="bottom"><span class="icon_config_48">&nbsp;</span>
-      <%= link_to_allow 'Системные настройки', config_url, current_user.allow('Sa') -%>
+      <%= link_to_allow 'Системные настройки', admin_config_url, current_user.allow('Sa') -%>
     </td>
     <td valign="bottom"><span class="icon_document_48">&nbsp;</span>
-      <%= link_to_allow t(:button_new_document), new_document_url, current_user.allow('Administrator') -%>
+      <%= link_to_allow t(:button_new_document), new_admin_document_url, current_user.allow('Administrator') -%>
     </td>
     <td valign="bottom"><span class="icon_content_48">&nbsp;</span>
-      <%= link_to_allow t(:button_new_content), new_content_url, current_user.allow('Moderator') -%>
+      <%= link_to_allow t(:button_new_content), new_admin_content_url, current_user.allow('Moderator') -%>
     </td>
   </tr>
 </table>
@@ -87,7 +87,7 @@
     <tr><th>Документ</th><th>Добавлен</th><th>Хиты</th></tr>
     <% @popular_documents.collect do |row| %>
     <tr>
-      <td><%= link_to row.name, edit_document_url(row.id) -%></td>
+      <td><%= link_to row.name, edit_admin_document_url(row.id) -%></td>
       <td><%= row.created_at.to_date.to_formatted_s(:long) -%></td>
       <td align="right"><%= row.hits.to_i -%></td>
     </tr>
@@ -99,7 +99,7 @@
     <tr><th>Документ</th><th>Добавлен</th><th>Хиты</th></tr>
     <% @last_documents.collect do |row| %>
     <tr>
-      <td><%= link_to row.name, edit_document_url(row.id) -%></td>
+      <td><%= link_to row.name, edit_admin_document_url(row.id) -%></td>
       <td><%= row.created_at.to_date.to_formatted_s(:long) -%></td>
       <td align="right"><%= row.hits.to_i -%></td>
     </tr>
@@ -111,7 +111,7 @@
     <tr><th>Файл</th><th>Добавлен</th><th>Размер</th></tr>
     <% @last_files.collect do |row| %>
     <tr>
-      <td><%= link_to row.f_file_name, download_filelist_url(row.id) -%></td>
+      <td><%= link_to row.f_file_name, download_admin_filelist_url(row.id) -%></td>
       <td><%= row.created_at.to_date.to_formatted_s(:long) -%></td>
       <td align="right"><%= number_to_human_size(row.f_file_size) -%></td>
     </tr>

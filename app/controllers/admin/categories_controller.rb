@@ -31,7 +31,7 @@ class Admin::CategoriesController < AdminApplicationController
     confirm_multiple_operations params[:ids] do
       if Category.destroy_all(['id in (?)',session[current_session_ids]])
         flash[:notice] = t(:notice_destroy_category)
-        redirect_to categories_url
+        redirect_to admin_categories_url
       else
         flash[:error] = t(:error_destroy_category)
         render :action => 'index'

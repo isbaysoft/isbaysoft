@@ -1,4 +1,3 @@
-<%= include_tiny_mce_if_needed %>
 <%= hidden_field_tag 'task','post' %>
 <%= hidden_field_tag :file_id %>
 <%= hidden_field_tag :tab, @active_tab_name %>
@@ -15,8 +14,6 @@
   <fieldset class="left" style="width: 70%"><legend></legend>
     <%= errors_for(form.object) -%>
     <%= errors_for(@logo) if @logo && @logo.errors -%>
-    <%#= error_messages_for 'logo' if @logo && @logo.errors -%>
-
     <%= render_tabs :tabs => document_tabs, :form_object => form %>
   </fieldset>
   <fieldset><legend></legend>
@@ -30,10 +27,12 @@
     <dd><%= file_field_tag 'file[f]' %></dd>
     <dt><%= label_tag 'fromarchive', t(:label_add_file_from_archive) %></dt>
     <dd>
-        <%= link_to_function t(:button_select),
-          remote_function(:url => dialog_url('filelist',:except_document_files => @document.id ),
-          :method => :GET )
+        <%= link_to t(:button_select),
+      
+        dialog_url('filelist',:except_document_files => @document.id),
+        :class => 'example5'
         %>
+
     </dd>
     <dt><%= label_tag 'logo_id', t(:label_add_load_new_logo) %></dt>
     <dd><%= file_field_tag 'logo[logo]' %></dd>
@@ -44,3 +43,34 @@
   </fieldset>
   <div class="clearboth"></div>
 </div>
+
+<%= javascript_include_tag 'jquery.template.min.js' %>
+<%= javascript_include_tag 'jquery.template.min.js' %>
+
+
+<script type="text/javascript">
+  $(".example5").colorbox({innerWidth:640, innerHeight:480, initialWidth:640, initialHeight:480});
+
+  function NotifyFileAdded(obj) {
+    $("#documentfilelist_template").tmpl(obj).fadeIn().appendTo("#documentfilelist");
+  };
+
+  function NotifyFileDeleted(file_id) {
+    $("#remove_documentfilelist_template").tmpl({id:file_id}).appendTo("#documentfilelist");
+    $('#file_id_'+file_id).fadeOut('slow');
+  };
+</script>
+
+<script id="documentfilelist_template" type="text/x-jquery-tmpl">
+  <tr id="file_id_${id}" class="bkw">
+    <td>${f_file_name}</td>
+    <td>${f_file_size}</td>
+    <td>${f_content_type}</td>
+    <td><a class="toolbar_button16 icon_trash_16" href="#" onclick="NotifyFileDeleted(${id}); return false;"></a></td>
+  </tr>
+  <input type="hidden" name="added_documentfilelist_ids[]" value="${id}" />
+</script>
+
+<script id="remove_documentfilelist_template" type="text/x-jquery-tmpl">
+  <input type="hidden" name="deleted_documentfilelist_ids[]" value="${id}" />
+</script>

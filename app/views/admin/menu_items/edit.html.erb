@@ -1,5 +1,5 @@
 <%# menu_items controller -%>
-<% form_for @menu_item, :url => menu_item_url, :html => {:name =>'adminForm'} do |f| %>
+<%= form_for @menu_item, :url => admin_menu_menu_item_url(@menu, @menu_item), :html => {:name =>'adminForm'} do |f| %>
   <%= render :partial =>'form', :object => f %>
 <% end %>
 <%= render :partial => 'shared/admin/toolbar_action', :locals => {:icon_class => "icon_menu_48"} %>
