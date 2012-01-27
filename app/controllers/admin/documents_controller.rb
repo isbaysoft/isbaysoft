@@ -49,16 +49,15 @@ class Admin::DocumentsController < AdminApplicationController
       if @file && @file.valid? && @file.save
          @document.filelists << @file
       end
-
+      
+      #  Adding images
       add_images.each do |file_id| 
         file = Filelist.get(file_id).first
         @document.filelists << file if file
       end if add_images
-
-      # @document.filelists.delete_all(['id in (?)',del_images]) if del_images
-      @document.filelists.where('filelists.id = 111').delete_all
-
-
+      
+      #  Deleting images
+      @document.document_files.where('id in (?)',del_images).delete_all if del_images
     end # END update_attributes_and_redirect
   end
 

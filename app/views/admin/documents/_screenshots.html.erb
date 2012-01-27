@@ -5,7 +5,7 @@
 <br />
 
 <table width="100%" class="screenshots_table">
-<% @document.screenshots.map.in_groups_of(3) do |img| %>
+<% @document.screenshots.map.to_a.in_groups_of(3) do |img| %>
   <tr>
     <% 3.times do |x| %>
       <td width="33%" valign="top" align="center">
