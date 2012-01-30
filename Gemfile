@@ -1,18 +1,20 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
-gem 'sass-rails', "~> 3.1.0"
+gem 'rails', '3.2.0'
+gem 'sass-rails'
 gem 'coffee-script'
 gem 'uglifier'
 gem 'jquery-rails'
 gem 'execjs'
-gem 'rack', '1.3.3'
+gem 'rack'
+gem 'execjs'
+gem 'therubyracer'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'uglifier'
 end
 
@@ -21,7 +23,7 @@ group :development, :test do
   gem 'rspec-rails' 
   gem 'factory_girl_rails', :require => false
   gem 'autotest'
-  gem 'spork', "~> 0.9.0.rc9"
+  gem 'spork'
   gem 'test_notifier'
   gem 'simplecov'
 #  gem 'cucumber-rails'
@@ -37,7 +39,7 @@ group :test do
 end
 
 gem 'mysql2'
-gem "will_paginate",">=2.3.8"
+gem "will_paginate"
 gem 'paperclip'
 gem 'authlogic'
 gem 'tinymce-rails'

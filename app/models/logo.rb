@@ -13,8 +13,8 @@ class Logo < ActiveRecord::Base
   before_create :rename
 
   def rename
-    extension = File.extname(logo_file_name).downcase
-    self.logo.instance_write(:file_name, "#{ActiveSupport::SecureRandom.hex(16)}#{extension}")
+    # extension = File.extname(logo_file_name).downcase
+    # self.logo.instance_write(:file_name, "#{ActiveSupport::SecureRandom.hex(16)}#{extension}")
   end
   
 end

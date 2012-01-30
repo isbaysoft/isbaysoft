@@ -104,7 +104,9 @@ private
       proc.call(update_object) if proc
       flash[:notice] = I18n.t(:global_updating)
       if params[:task].present? and params[:task] == 'post'
-        render :action => 'edit'
+        # render :action => 'edit'
+        redirect_to url_for(:action => 'edit')
+
       else
         flash[:edited] = params[:id]
         redirect_to update_redirect

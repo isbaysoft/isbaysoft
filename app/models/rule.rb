@@ -1,5 +1,5 @@
 class Rule < ActiveRecord::Base
-  set_primary_key "access_level"
+	self.primary_key = "access_level"
   
   has_many :users
   has_many :documents

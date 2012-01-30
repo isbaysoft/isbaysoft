@@ -4,7 +4,7 @@
     <h2><%= h row.name %></h2>
   </div>
   <div class="content_row_text">
-    <%= row.content %>
+    <%= row.content.html_safe %>
   </div>
 </div><br />
 <% end %>

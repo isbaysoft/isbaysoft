@@ -16,9 +16,10 @@ class Regnotification < ActionMailer::Base
     @user = user
     case type
     when 'type_auto'
+      mail(:template_name => 'event_hello_auto')
       template 'event_hello_auto'
     else
-      template 'event_hello_manual'
+      mail(:template_name => 'event_hello_manual')
     end
     mail(:to => user.email, :subject => "Регистрация на сайте #{@site_name}")
   end

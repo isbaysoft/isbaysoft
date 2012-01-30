@@ -44,7 +44,8 @@ class Document < ActiveRecord::Base
   def self.getrows(options = {})
     page = options[:page] || 1
     @@per_page = options[:per_page] || @@per_page
-    Document.getlist.paginate :page => page
+    filter = ['name like ?',"%#{options[:filter]}%"] if options[:filter]
+    Document.where(filter).getlist.paginate :page => page
   end
 
   def path_name
