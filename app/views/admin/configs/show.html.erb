@@ -6,4 +6,6 @@
 <% end %> <!-- end form cfg -->
 <%= render :partial => 'shared/admin/toolbar_action', 
   :locals => {:except => ['post'], 
-  :icon_class => 'icon_config_48'} %>
+  :icon_class => 'icon_config_48',
+  :url_for_exit => administrator_url
+} %>

@@ -4,7 +4,7 @@
   <%= header_caption :caption => "#{controller_caption}: [#{caption_at_action}]", :icon_class => icon_class -%>
   <%= btn(:icon_class=>'icon_exit_32',
     :caption =>'Выйти',
-    :url => url_for(:action => 'index') ) unless except.include?('exit') %>
+    :url => defined?(url_for_exit).nil? ? url_for(:action => 'index') : url_for_exit ) unless except.include?('exit') %>
   <%= btn(:icon_class=>'icon_save_32',
     :caption =>'Сохранить',
     :onclick=>"submitbutton('save')") unless except.include?('save') %>

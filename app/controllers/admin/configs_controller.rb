@@ -9,7 +9,7 @@ class Admin::ConfigsController < AdminApplicationController
 
   def index
 #    hack for toolbar_action for exit
-    redirect_to administrator_url
+    redirect_to admin_administrator_url
   end
 
   def show
