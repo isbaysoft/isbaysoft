@@ -2,21 +2,10 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <%= stylesheet_link_tag 'admin/style_admin' %>
-  <%= stylesheet_link_tag 'admin/layout_admin' %>
-  <%= stylesheet_link_tag 'admin/icons_admin' %>
-  <%= stylesheet_link_tag 'admin/corners_admin' %>
-  <%= stylesheet_link_tag 'admin/menu_admin' %>
-  <%= stylesheet_link_tag 'colorbox' %>
+  <%= stylesheet_link_tag 'bootstrap' %>
 
-  <%= javascript_include_tag 'jquery' %>
-  <%= javascript_include_tag 'rails' %>
-  <%= javascript_include_tag 'flash' %>
-  <%= javascript_include_tag 'menu_main' %>
-  <%= javascript_include_tag 'dialog' %>
-  <%= javascript_include_tag 'jquery.colorbox-min' %>
-  <%= javascript_include_tag 'tiny_mce/tiny_mce' %>
-  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'bootstrap' %>
+
 
   <%= csrf_meta_tag %>
   <!--[if lte IE 6]>
@@ -25,25 +14,44 @@
 <title><%= $sitename %></title>
 </head>
 <body>
-<div id="wrapper">
-  <div id="header"><%= render :partial => 'layouts/admin_header' %></div>
-  <%= render :partial => 'shared/admin/main_menu' %>
-  <div id="content">
-    <%= render :partial => 'shared/admin/show_cfg_errors' if @cfg_errors and @cfg_errors.count > 0 %>
-    <%= roundbox2 do %>
-      <%= yield(:toolbar) %>
-    <% end if yield(:toolbar).present? %>
-    <%= yield %>
-  </div>
-</div>
-<div id="footer"><%= render :partial => 'layouts/admin_footer' %></div>
-<div id="flash">
-  <ul id="flash_errors" class="flash notice" style="display:none; overflow:hidden"><li>&nbsp;</li></ul>
-  <ul id="flash_notice" class="flash notice" style="display:none; overflow:hidden"><li>&nbsp;</li></ul>
-</div>
-<%= javascript_tag "Flash.notice('#{flash[:notice]}')" unless flash[:notice].blank? %>
-<%= javascript_tag "Flash.error('#{flash[:error]}')" unless flash[:error].blank? %>
-<%= render :partial => 'shared/dialog' %>
-<div id="loading" class="loading" style="display:none;"></div>
+	<div id="header"><%= render :partial => 'layouts/admin_header' %></div>
+	<%= render :partial => 'shared/admin/navbar' %>
+
+    <div class="container-fluid">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span4">
+          <h2>Heading</h2>
+           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Heading</h2>
+           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
 </body>
 </html>
