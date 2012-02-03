@@ -3,9 +3,89 @@
 <fieldset><legend></legend>
   <%= errors_for(form.object) %>
   <dl>
-    <dt><%= label_tag :name, t(:label_filelist_select_file) -%></dt>
-    <dd><%= form.file_field :f %></dd>
+    <dt><%#= label_tag :name, t(:label_filelist_select_file) -%></dt>
+    <dd><%#= form.file_field :f %></dd>
   </dl>
+
+<div id="container">
+	<div id="filelist">No runtime found.</div>
+	<br />
+	<a id="pickfiles" href="#" class="button">[Select files]</a>
+	<a id="uploadfiles" href="#">[Upload files]</a>
+</div>
+
 </fieldset>
 </div>
 
+
+<!-- Load plupload and all it's runtimes and finally the jQuery queue widget -->
+<%= javascript_include_tag 'plupload/plupload.full.js' %>			
+
+<script type="text/javascript">
+// Custom example logic
+$(function() {
+
+	authtoken = $("input[name=authenticity_token]").val();
+
+
+	var uploader = new plupload.Uploader({
+		runtimes : 'gears,html5,flash,silverlight',
+		browse_button : 'pickfiles',
+		container : 'container',
+		max_file_size : '10mb',
+		url : '<%= admin_filelists_url %>',
+		flash_swf_url : '<%= javascript_path '/plupload/plupload.flash.swf' %>',
+		silverlight_xap_url : '<%= javascript_path '/plupload/plupload.silverlight.xap' %>',
+		filters : [
+			{title : "Any files", extensions : "*"},
+			{title : "Image files", extensions : "jpg,gif,png"},
+			{title : "Zip files", extensions : "zip"}
+		],
+		multipart_params : {
+      'format': 'json',
+      authenticity_token: authtoken
+	  },
+	  file_data_name: 'filelist[f]'
+	});
+
+	uploader.bind('Init', function(up, params) {
+		$('#filelist').html("<div>Current runtime: " + params.runtime + "</div>");
+	});
+
+	$('#uploadfiles').click(function(e) {
+		uploader.start();
+		e.preventDefault();
+	});
+
+	uploader.init();
+
+	uploader.bind('FilesAdded', function(up, files) {
+		$.each(files, function(i, file) {
+			$('#filelist').append(
+				'<div id="' + file.id + '">' +
+				file.name + ' (' + plupload.formatSize(file.size) + ') <b></b>' +
+			'</div>');
+		});
+
+		up.refresh(); // Reposition Flash/Silverlight
+	});
+
+	uploader.bind('UploadProgress', function(up, file) {
+		$('#' + file.id + " b").html(file.percent + "%");
+	});
+
+	uploader.bind('Error', function(up, err) {
+		$('#filelist').append("<div>Error: " + err.code +
+			", Message: " + err.message +
+			(err.file ? ", File: " + err.file.name : "") +
+			"</div>"
+		);
+
+		up.refresh(); // Reposition Flash/Silverlight
+	});
+
+	uploader.bind('FileUploaded', function(up, file) {
+		$('#' + file.id + " b").html("100%");
+	});
+});
+</script>
