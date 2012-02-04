@@ -16,6 +16,7 @@ class Admin::SectionsController < AdminApplicationController
   end
 
   def create
+
     @section = Section.new(params[:section])
     create_and_redirect(@section)
   end

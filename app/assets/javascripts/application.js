@@ -58,22 +58,19 @@ function submitaction(actionname)
       submitbutton();
 }
 
-function submitbutton(pressbutton)
-{
+function submitbutton(pressbutton) {
     submitform(pressbutton);
 }
 
-function submitform(pressbutton)
-{
- if (pressbutton)
- {
-  document.adminForm.task.value=pressbutton;
- }
- if (typeof document.adminForm.onsubmit == "function")
- {
-  document.adminForm.onsubmit();
- }
- document.adminForm.submit();
+function submitform(pressbutton) {
+  if (pressbutton) {
+    document.adminForm.task.value=pressbutton;
+  }
+  if (typeof document.adminForm.onsubmit == "function")
+  {
+    document.adminForm.onsubmit();
+  }
+  document.adminForm.submit();
 }
 
 function ShowLoading() {

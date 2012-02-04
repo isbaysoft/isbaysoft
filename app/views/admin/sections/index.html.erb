@@ -1,13 +1,7 @@
 <%#= Section controller %>
-<%= roundbox2 do -%>
- <%= render :partial => 'shared/admin/panel_table', :locals => {:per_page => @sections.per_page} %>
-  <%= form_for 'tasks', :url => admin_section_url('destroy'), :html =>{:method => :delete, :name=>'adminForm'} do -%>
-    <%= hidden_field_tag 'task', 'search' -%>
-    <% unless @sections.blank? %>
-      <%= render :partial => 'table' %>
-    <% else %>
-      <%= nodata %>
-    <% end %>
-    <%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @sections } %>
-  <% end %>
+<%= render :partial => 'shared/admin/panel_table', :locals => {:per_page => @sections.per_page} %>
+<%= form_for 'tasks', :url => admin_section_url('destroy'), :html =>{:method => :delete, :name=>'adminForm'} do -%>
+	<%= hidden_field_tag 'task', 'search' -%>
+	<%= @sections.blank? ? nodata : render(:partial => 'table') %>
+	<%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @sections } %>
 <% end %>

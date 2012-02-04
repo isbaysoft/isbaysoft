@@ -1,0 +1,15 @@
+<div class="tablepanel">
+  <%= form_for 'tablepanel_form', :url => url_for(:action => 'index'), :html => {:method => :get, :name => 'tablepanel_form'} do -%>
+  <table width="100%">
+    <td><%= label_tag(:filter, 'Фильтр: ') %></td>
+    <td><%= text_field_tag(:filter, params[:filter], :id => 'filter', :class =>"span3") %><span class="help-inline">Associated help text!</span></td>
+    
+    <td title='Установить фильтр'><%= link_to_function('',"tablepanel_form.submit()", :class=>'speedbutton icon_filter_add_24') %></td>
+    <td title='Убрать фильтр'><%= link_to_function('', "document.getElementById('filter').value='';tablepanel_form.submit();", :class=>'speedbutton icon_filter_del_24') %></td>
+    <td width="100%" align="right" onchange="tablepanel_form.submit()">Количество строк: <%= select_tag('per_page',options_for_select([5,10,20,30,50,100], :selected => per_page )) %></td>
+    <td></td>
+  </table>
+  <%= hidden_field_tag 'sort', @sort_column -%>
+  <%= hidden_field_tag 'direction', @sort_direction -%>
+  <% end %>
+</div>

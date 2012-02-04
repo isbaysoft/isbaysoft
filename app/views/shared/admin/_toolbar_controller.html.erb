@@ -1,17 +1,21 @@
 <% icon_class = "icon_folder_48" unless icon_class  %>
 <% content_for :toolbar do %>
-  <div class="well-mini">
+<%= roundbox2 do %>
     <div class="row-fluid">
       <div class="span4">
-        <%= header_caption :caption => "#{controller_caption}", :icon_class => icon_class -%>                  
+        <%= header_caption :caption => "#{controller_caption}", :icon_class => icon_class -%>
       </div><!--/span4-->
-      <div class="offset4 toolbar_caption pull-right">
-        <%= btn(:icon_class=>'icon-plus-sign', :caption => t(:button_add), :url => url_for(:action => 'new')) %>
-        <%= btn(:icon_class=>'icon-minus-sign', :caption => t(:button_delete), :onclick=>"submitbutton('delete')") %>
-        <%= yield :toolbar_additional %>
+      <div class="pull-right">
+        <div class="btn-group toolbar_caption">
+          <%= btn(:icon_class=>'icon-plus-sign', :class => 'btn-toolbar', :caption => t(:button_add), :url => url_for(:action => 'new')) %>
+          <%= btn(:icon_class=>'icon-minus-sign', :class => 'btn-toolbar', :caption => t(:button_delete), :onclick=>"submitbutton('delete')") %>
+          <%= yield :toolbar_additional %>
+        </div>
       </div><!--/span4-->      
     </div><!--/row-fluid-->
-  </div><!-- /well-mini-->
 <% end %>
+<hr>
+<% end %>
+
 
   

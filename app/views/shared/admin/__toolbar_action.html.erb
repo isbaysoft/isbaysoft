@@ -1,0 +1,16 @@
+<% icon_class = "icon_folder_48" unless icon_class  %>
+<% except = [] if except.blank? %>
+<% content_for :toolbar do %>
+  <%= header_caption :caption => "#{controller_caption}: [#{caption_at_action}]", :icon_class => icon_class -%>
+  <%= btn(:icon_class=>'icon_exit_32',
+    :caption =>'Выйти',
+    :url => defined?(url_for_exit).nil? ? url_for(:action => 'index') : url_for_exit ) unless except.include?('exit') %>
+  <%= btn(:icon_class=>'icon_save_32',
+    :caption =>'Сохранить',
+    :onclick=>"submitbutton('save')") unless except.include?('save') %>
+  <%= btn(:icon_class=>'icon_accept_32',
+    :caption =>'Применить',
+    :onclick=>"submitbutton('post')") unless except.include?('post')%>
+  <%= yield :toolbar_additional %>
+  <br class="clearboth" />
+<% end %>

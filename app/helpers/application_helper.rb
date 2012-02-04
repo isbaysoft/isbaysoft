@@ -116,9 +116,14 @@ end
 # <a class="btn" href="#"><i class=""></i> Refresh</a>
   def btn(options)
     title = "<i class='#{options[:icon_class]}'></i> #{options[:title] || options[:caption]}".html_safe
-    return link_to(title, options[:url], :method => (options[:method] || :get), :class => 'btn') if options[:url]
-    return link_to(title, options[:url], :onclick => options[:onclick], :class => 'btn') if options[:onclick]
+    btn_class = "btn #{options[:class]}"
+    return link_to(title, options[:url], :method => (options[:method] || :get), :class => btn_class) if options[:url]
+    return link_to(title, options[:url], :onclick => options[:onclick], :class => btn_class) if options[:onclick]
     # html << content_tag(:div, submit_tag(options[:submit])) if options[:submit]
+  end
+
+  def current_per_page
+    params[:per_page] || 10
   end
 
 end

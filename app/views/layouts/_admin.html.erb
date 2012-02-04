@@ -34,6 +34,7 @@
       <%= yield(:toolbar) %>
     <% end if yield(:toolbar).present? %>
     <%= yield %>
+    <%= yield(:toolbar) if yield(:toolbar).present? %>
   </div>
 </div>
 <div id="footer"><%= render :partial => 'layouts/admin_footer' %></div>

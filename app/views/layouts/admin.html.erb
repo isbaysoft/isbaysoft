@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <%= stylesheet_link_tag 'bootstrap','admin/icons_admin','admin/layout_admin' %>
-  <%= javascript_include_tag 'jquery','bootstrap','bootstrap-dropdown' %>
+  <%= stylesheet_link_tag 'bootstrap','admin/icons_admin','admin/layout_admin','admin/corners_admin' %>
+  <%= javascript_include_tag 'jquery','bootstrap','bootstrap-dropdown','rails','flash','dialog','tiny_mce/tiny_mce','application' %>
   <%= csrf_meta_tag %>
 <title><%= $sitename %></title>
 </head>
@@ -13,14 +13,12 @@
 
   <div class="container-fluid">
     <div class="well" style="padding-top: 60px;">
-     <%= yield(:toolbar) if yield(:toolbar).present? %>
-     <%= yield %>
-     </div>
-
-    <hr>
-    <footer>
-      <p>&copy; Company 2012</p>
-    </footer>
+      <%= yield(:toolbar) if yield(:toolbar).present? %>
+      <%= yield %>
+      </div>
   </div> <!-- /container -->
+  <footer>
+    <%= render :partial => 'layouts/admin_footer' %>
+  </footer> 
 </body>
 </html>

@@ -1,14 +1,37 @@
-<div class="tablepanel">
-  <%= form_for 'tablepanel_form', :url => url_for(:action => 'index'), :html => {:method => :get, :name => 'tablepanel_form'} do -%>
-  <table width="100%">
-    <td><%= label_tag(:filter, 'Фильтр: ') %></td>
-    <td><%= text_field_tag(:filter, params[:filter], :id => 'filter') %></td>
-    <td title='Установить фильтр'><%= link_to_function('',"tablepanel_form.submit()", :class=>'speedbutton icon_filter_add_24') %></td>
-    <td title='Убрать фильтр'><%= link_to_function('', "document.getElementById('filter').value='';tablepanel_form.submit();", :class=>'speedbutton icon_filter_del_24') %></td>
-    <td width="100%" align="right" onchange="tablepanel_form.submit()">Количество строк: <%= select_tag('per_page',options_for_select([5,10,20,30,50,100], :selected => per_page )) %></td>
-    <td></td>
-  </table>
-  <%= hidden_field_tag 'sort', @sort_column -%>
-  <%= hidden_field_tag 'direction', @sort_direction -%>
-  <% end %>
+<%= form_for 'tablepanel_form', :url => url_for(:action => 'index'), :html => {:method => :get, :name => 'tablepanel_form'} do -%>
+  <%= hidden_field_tag 'per_page', current_per_page %>
+  <div class="tablepanel">
+    <div class="row-fluide">
+      <div class="pull-left">
+        <%= text_field_tag(:filter, params[:filter], :id => 'filter', :class =>"span3", :placeholder => 'Фильтер')%>
+        <div class="help-inline btn-group">
+          <%= btn(:icon_class=>'icon-eye-open', :onclick=>"tablepanel_form.submit()") %>
+          <%= btn(:icon_class=>'icon-eye-close', :onclick=>"tablepanel_form.submit()") %>
+        </div>
+      </div>
+      <div class="pull-right">
+
+<div class="btn-group">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Показывать <strong><%= current_per_page %></strong><span class="caret"></span></a>
+  <ul class="dropdown-menu">
+    <% [5,10,20,30,50,100].map do |per_page| %>
+      <li><a href="#"><%= per_page %></a></li>
+    <% end %>
+  </ul>
 </div>
+
+
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
+<script>
+  $('.dropdown-menu').css('min-width',$('a.btn.dropdown-toggle').outerWidth(true))
+  $('.dropdown-toggle').dropdown();
+  $('.dropdown-menu li a').click(function(){
+    $('#per_page').val($(this).text());
+    tablepanel_form.submit();
+  });
+</script>
