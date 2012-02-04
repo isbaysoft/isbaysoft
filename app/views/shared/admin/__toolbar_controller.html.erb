@@ -1,0 +1,14 @@
+<%= will_paginate paginated_rows, :prev_label => '« назад',:next_label => 'вперед »' if paginated_rows.present? %>
+<% icon_class = "icon_folder_48" unless icon_class  %>
+<% content_for :toolbar do %>
+  <%= header_caption :caption => "#{controller_caption}", :icon_class => icon_class -%>
+  <%= btn(:icon_class=>'icon_add_32', 
+    :caption => t(:button_add),
+    :url => url_for(:action => 'new')) -%>
+  <%= btn(:icon_class=>'icon_delete_32', 
+    :caption => t(:button_delete),
+    :onclick=>"submitbutton('delete')") -%>
+  <%= yield :toolbar_additional %>
+  <div class="clearboth"></div>
+<% end %>
+

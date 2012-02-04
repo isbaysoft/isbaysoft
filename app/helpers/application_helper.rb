@@ -73,10 +73,12 @@ def roundbox2(&block)
 end
 
 def header_caption(options)
-    icon_class = "toolbar_caption"
-    icon_class << " #{options[:icon_class]}" if options[:icon_class]
-    html = content_tag(:div,content_tag(:h2,options[:caption]), :class => icon_class) if options[:caption]
-    return html
+  icon_class = "icon_toolbar_caption #{options[:icon_class]}"
+  %{
+    <div class="#{icon_class.strip}">
+    #{options[:caption]}
+  </div>
+  }.html_safe
 end
 
 def tr_cycle_wrong(row)
@@ -102,23 +104,21 @@ def render_tabs(*args)
   end
 end
 
-# Renders tabs and their content
-def render_vertical_tabs(tabs)
-  if tabs.any?
-    render :partial => 'shared/admin/tabsv', :locals => {:tabs => tabs}
-  else
-    content_tag 'p', t(:text_no_data), :class => "nodata"
+  # Renders tabs and their content
+  def render_vertical_tabs(tabs)
+    if tabs.any?
+      render :partial => 'shared/admin/tabsv', :locals => {:tabs => tabs}
+    else
+      content_tag 'p', t(:text_no_data), :class => "nodata"
+    end
   end
-end
 
+# <a class="btn" href="#"><i class=""></i> Refresh</a>
   def btn(options)
-    options[:title] = options[:caption] unless options[:title].present?
-    a = content_tag(:span,'',:title => options[:title], :class=>options[:icon_class])+options[:caption]
-    html = ""
-    html << content_tag(:div, link_to(a, options[:url], :method => (options[:method] || :get)) , :class => 'toolbar_button32') if options[:url]
-    html << content_tag(:div, link_to(a,'#',:onclick => options[:onclick]), :class => 'toolbar_button32') if options[:onclick]
-    html << content_tag(:div, submit_tag(options[:submit])) if options[:submit]
-    html.html_safe
+    title = "<i class='#{options[:icon_class]}'></i> #{options[:title] || options[:caption]}".html_safe
+    return link_to(title, options[:url], :method => (options[:method] || :get), :class => 'btn') if options[:url]
+    return link_to(title, options[:url], :onclick => options[:onclick], :class => 'btn') if options[:onclick]
+    # html << content_tag(:div, submit_tag(options[:submit])) if options[:submit]
   end
 
 end
