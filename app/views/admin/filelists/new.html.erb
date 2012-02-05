@@ -1,4 +1,8 @@
-<%= form_for @filelist, :url => admin_filelists_url, :html => { :multipart => true, :name =>'adminForm' } do |f| %>
+<%= form_for @filelist, :url => admin_filelists_url, :html => {:multipart => true, :name =>'adminForm', :class => 'form-horizontal'} do |f| %>
   <%= render :partial =>'form', :object => f %>
 <% end %>
-<%= render :partial => 'shared/admin/toolbar_action', :locals => {:except => ['post'], :icon_class => 'icon_hard_48'} %>
+<% content_for :toolbar_additional do %>
+	<a href="#" class="btn btn-toolbar" id="select_local_files_id"><i class="icon-folder-open"></i> Выбрать файлы локально</a>
+	<a href="#" class="btn btn-toolbar" id="upload_files_id"><i class="icon-upload"></i> Загрузить</a>
+<% end %>
+<%= render :partial => 'shared/admin/toolbar_action', :locals => {:except => ['save','post'], :icon_class => 'icon_hard_48'} %>

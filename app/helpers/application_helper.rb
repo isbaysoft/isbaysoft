@@ -1,32 +1,35 @@
 # coding: utf-8
 module ApplicationHelper
 
-
   def errors_for(object, message=nil)
     html = ""
     unless object.errors.blank?
-      html << "<div class='formErrors #{object.class.name.humanize.downcase}Errors'>\n"
+      html << "<div class='alert alert-error #{object.class.name.humanize.downcase}Errors'>\n"
       if message.blank?
         if object.new_record?
-          html << "\t\t<h2>There was a problem creating the #{object.class.name.humanize.downcase}</h2>\n"
+          html << "<h2>There was a problem creating the #{object.class.name.humanize.downcase}</h2>\n"
         else
-          html << "\t\t<h2>There was a problem updating the #{object.class.name.humanize.downcase}</h2>\n"
+          html << "<h2>There was a problem updating the #{object.class.name.humanize.downcase}</h2>\n"
         end
       else
         html << "<h5>#{message}</h5>"
       end
-      html << "\t\t<ul>\n"
+      html << "<ul>\n"
       object.errors.full_messages.each do |error|
-        html << "\t\t\t<li>#{error}</li>\n"
+        html << "<li>#{error}</li>\n"
       end
-      html << "\t\t</ul>\n"
-      html << "\t</div>\n"
+      html << "</ul>\n"
+      html << "</div>\n<hr>"
     end
     html.html_safe
   end
 
 def nodata
-  "<p class='nodata'>#{t(:global_no_data)}</p>".html_safe
+  %{
+    <div class="alert alert-info alert-block">
+          #{t(:global_no_data)}     
+    </div>
+  }.html_safe
 end
 
 def sortable(caption, column, title = nil)
@@ -118,12 +121,12 @@ end
     title = "<i class='#{options[:icon_class]}'></i> #{options[:title] || options[:caption]}".html_safe
     btn_class = "btn #{options[:class]}"
     return link_to(title, options[:url], :method => (options[:method] || :get), :class => btn_class) if options[:url]
-    return link_to(title, options[:url], :onclick => options[:onclick], :class => btn_class) if options[:onclick]
+    return link_to(title, '#', :onclick => options[:onclick], :class => btn_class) if options[:onclick]
     # html << content_tag(:div, submit_tag(options[:submit])) if options[:submit]
   end
 
   def current_per_page
-    params[:per_page] || 10
+    per_page = params[:per_page] || cookies["per_page_#{self.controller_name}"]
   end
 
 end

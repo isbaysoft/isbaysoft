@@ -1,14 +1,15 @@
 <%= hidden_field_tag 'task','post' -%>
-<div class="box tabular settings">
-<fieldset><legend></legend>
-  <%= errors_for(form.object).html_safe %>
-  <dl>
-    <dt><%= label_tag :name, t(:label_section_name) %></dt>
-    <dd><%= form.text_field :name, :class=>'edit' %></dd>
-    <dt><%= label_tag :description, t(:label_description) %></dt>
-    <dd><%= form.text_area(:description, @text_area_default_size_for_description.update(:class => "mceEditor") ) %></dd>
-  </dl>
-</fieldset>
+<%= errors_for(form.object).html_safe %>
+<div class="control-group">
+	<%= label_tag :name, t(:label_section_name), :class => 'control-label' %>
+	<div class="controls">
+		<%= form.text_field :name, :class=>'input-xlarge' %>
+	</div>
 </div>
-
+<div class="control-group">
+	<%= label_tag :description, t(:label_description), :class => 'control-label' %>
+	<div class="controls">
+		<%= form.text_area(:description, :rows => 5, :class => "mceEditor input-xlarge" ) %>
+	</div>
+</div>
 <%= render :partial => 'shared/admin/tinymce_init' %>

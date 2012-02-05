@@ -1,4 +1,4 @@
-<%= form_for @section, :url => admin_sections_url, :html => {:name =>'adminForm'} do |f| %>
+<%= form_for @section, :url => admin_sections_url, :html => {:name =>'adminForm', :class => 'form-horizontal'} do |f| %>
   <%= render :partial =>'form', :object => f %>
 <% end %>
 <%= render :partial => 'shared/admin/toolbar_action', :locals => {:icon_class => "icon_folder_48"} %>

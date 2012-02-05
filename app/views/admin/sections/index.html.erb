@@ -1,4 +1,3 @@
-<%#= Section controller %>
 <%= render :partial => 'shared/admin/panel_table', :locals => {:per_page => @sections.per_page} %>
 <%= form_for 'tasks', :url => admin_section_url('destroy'), :html =>{:method => :delete, :name=>'adminForm'} do -%>
 	<%= hidden_field_tag 'task', 'search' -%>

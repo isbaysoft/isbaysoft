@@ -24,10 +24,6 @@ class AdminApplicationController < ApplicationController
     @cfg_errors << "#{notdef}: #{I18n.t(:global_errors_sitename)}" unless Cfg.getvalue('sitename')
     @cfg_errors << "#{notdef}: #{I18n.t(:global_errors_adminemail)}" unless Cfg.getvalue('adminemail')
     @cfg_errors << "#{notdef}: #{I18n.t(:global_errors_domain)}" unless Cfg.getvalue('domain')
-
-#    other settings
-    @text_area_default_size_for_description = {:cols => 80, :rows => 12}
-    @text_area_default_size_for_description_big = {:cols => 120, :rows => 20}
   end
 
   def prepare_index

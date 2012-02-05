@@ -8,11 +8,11 @@
       </div><!--/span4-->
       <div class="pull-right">
         <div class="btn-group toolbar_caption">
+          <%= yield :toolbar_additional %>
           <%= btn(:icon_class=>'icon-ok-circle', :class => 'btn-toolbar', :caption =>'Применить',
             :onclick=>"submitbutton('post')") unless except.include?('post')%>
           <%= btn(:icon_class=>'icon-ok-sign', :class => 'btn-toolbar', :caption =>'Сохранить', :onclick=>"submitbutton('save')") unless except.include?('save') %>
           <%= btn(:icon_class=>'icon-home', :class => 'btn-toolbar', :caption =>'Выйти', :url => defined?(url_for_exit).nil? ? url_for(:action => 'index') : url_for_exit ) unless except.include?('exit') %>
-          <%= yield :toolbar_additional %>
         </div>
       </div><!--/span4-->      
     </div><!--/row-fluid-->

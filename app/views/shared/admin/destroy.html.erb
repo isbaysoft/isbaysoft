@@ -1,10 +1,16 @@
-<%= roundbox2 do %>
-<div class="confirmation">
+<div class="well confirmation">
   <h2><%= t(:label_confirmation)%></h2>
   <p><%=  t(:label_destroy_confirmation)%></p>
   <%= form_for 'tasks', :url => {:action => 'destroy'}, :html => {:method => :delete } do -%>
-    <p><label><%= check_box 'confirm', 'confirmed' %> <%= t(:global_yes) %></label></p>
-    <%= submit_tag t(:button_delete), :class => "button" %>
+	<label class="checkbox">
+		<%= check_box 'confirm', 'confirmed' %>
+		<%= t(:global_yes) %>
+	</label>
+	<hr>
+	<div class="row-fluid">
+		<div class="pull-right">
+    		<%= submit_tag t(:button_delete)+'?', :class => "btn btn-warning" %>
+		</div>
+	</div>
   <% end %>
 </div>
-<% end %>

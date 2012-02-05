@@ -1,13 +1,6 @@
-<%# Category controller%>
-<%= roundbox2 do -%>
-  <%= render :partial => 'shared/admin/panel_table', :locals => {:per_page => @categories.per_page} %>
-  <%= form_for 'tasks', :url => admin_category_url('destroy'), :html =>{ :method => :delete, :name=>'adminForm'} do -%>
+<%= render :partial => 'shared/admin/panel_table', :locals => {:per_page => @categories.per_page} %>
+<%= form_for 'tasks', :url => admin_category_url('destroy'), :html =>{ :method => :delete, :name=>'adminForm'} do -%>
   <%= hidden_field_tag 'task','0' %>
-  <% unless @categories.blank? %>
-    <%= render :partial => 'table' %>
-  <% else %>
-    <%= nodata   %>
-  <% end %>
+  <%= @categories.blank? ? nodata : render(:partial => 'table') %>
   <%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @categories, :icon_class => 'icon_folder_document_48' } %>
-  <% end %>
 <% end %>
