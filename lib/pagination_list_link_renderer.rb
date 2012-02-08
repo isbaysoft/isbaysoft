@@ -1,56 +1,36 @@
-class PaginationListLinkRenderer < WillPaginate::ViewHelpers::LinkRenderer  
-
-  def to_html
-    links = @options[:page_links] ? windowed_links : []
-
-    links.unshift(page_link_or_span(@collection.previous_page, 'previous', @options[:previous_label]))
-    links.push(page_link_or_span(@collection.next_page, 'next', @options[:next_label]))
-
-    html = links.join(@options[:separator])
-    @options[:container] ? @template.content_tag(:ul, html, html_attributes) : html
-  end
+class PaginationListLinkRenderer < WillPaginate::ActionView::LinkRenderer
 
 protected
-
-  def windowed_links
-    visible_page_numbers.map { |n| page_link_or_span(n, (n == current_page ? 'current' : nil)) }
-  end
-
-
-  def visible_page_numbers
-    inner_window, outer_window = @options[:inner_window].to_i, @options[:outer_window].to_i
-    window_from = current_page - inner_window
-    window_to = current_page + inner_window
-
-    # adjust lower or upper limit if other is out of bounds
-    if window_to > total_pages
-      window_from -= window_to - total_pages
-      window_to = total_pages
-    end
-    if window_from < 1
-      window_to += 1 - window_from
-      window_from = 1
-      window_to = total_pages if window_to > total_pages
-    end
-
-    (window_from..window_to).to_a
-  end
-
-  def page_link_or_span(page, span_class, text = nil)
-    text ||= page.to_s
-    if page && page != current_page
-      page_link(page, text, :class => span_class)
+    
+  def page_number(page)
+    unless page == current_page
+      tag(:li, link(page, page, :rel => rel_value(page)))
     else
-      page_span(page, text, :class => span_class)
+      tag(:li, link(page, '#'), :class => 'active')
     end
   end
 
-  def page_link(page, text, attributes = {})
-    @template.content_tag(:li, @template.link_to(text, 'url_for(page)'), attributes)
+  def previous_or_next_page(page, text, classname)
+    if page
+      tag(:li, link(text, page, :class => classname), :class => classname + ' disabled')
+    else
+      tag(:li, text, :class => classname + ' disabled')
+    end
   end
 
-  def page_span(page, text, attributes = {})
-    @template.content_tag(:li, text, attributes)
-  end
+
+#   <div class="pagination">
+#   <ul>
+#     <li><a href="#">Prev</a></li>
+#     <li class="active">
+#       <a href="#">1</a>
+#     </li>
+#     <li><a href="#">2</a></li>
+#     <li><a href="#">3</a></li>
+#     <li><a href="#">4</a></li>
+#     <li><a href="#">Next</a></li>
+#   </ul>
+# </div>
+
 
 end

@@ -1,4 +1,4 @@
-<%= will_paginate paginated_rows, :prev_label => '« назад',:next_label => 'вперед »', :renderer => PaginationListLinkRenderer if paginated_rows.present? %>
+<%= will_paginate paginated_rows, :previous_label => '« назад',:next_label => 'вперед »', :renderer => PaginationListLinkRenderer if paginated_rows.present? %>
 
 <% icon_class = "icon_folder_48" unless icon_class  %>
 <% content_for :toolbar do %>
