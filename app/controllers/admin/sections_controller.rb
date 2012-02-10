@@ -21,6 +21,7 @@ class Admin::SectionsController < AdminApplicationController
   end
 
   def edit
+    @page = params[:page]
   end
   
   def update

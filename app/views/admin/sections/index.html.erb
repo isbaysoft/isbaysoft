@@ -1,4 +1,4 @@
-<%= render :partial => 'shared/admin/panel_table', :locals => {:per_page => @sections.per_page} %>
+<%= render :partial => 'shared/admin/panel_table', :locals => {:table_collection => @sections} %>
 <%= form_for 'tasks', :url => admin_section_url('destroy'), :html =>{:method => :delete, :name=>'adminForm'} do -%>
 	<%= hidden_field_tag 'task', 'search' -%>
 	<%= @sections.blank? ? nodata : render(:partial => 'table') %>

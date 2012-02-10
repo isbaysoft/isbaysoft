@@ -1,6 +1,6 @@
 <%# StaticContent controller%>
 <%= roundbox2 do -%>
- <%= render :partial => 'shared/admin/panel_table', :locals => {:per_page => @contents.per_page} -%>
+ <%= render :partial => 'shared/admin/panel_table', :locals => {:table_collection => @contents} -%>
   <%= form_for 'tasks', :url => admin_content_url('destroy'), :html =>{:method => :delete, :name=>'adminForm'} do -%>
     <%= hidden_field_tag 'task','search' -%>
     <% unless @contents.blank? %>

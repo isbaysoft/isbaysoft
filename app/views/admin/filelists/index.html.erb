@@ -1,6 +1,6 @@
-<%= render :partial => 'shared/admin/panel_table', :locals => {:per_page => @filelists.per_page} %>
+<%= render :partial => 'shared/admin/panel_table', :locals => {:table_collection => @filelists} %>
 <%= form_for 'tasks', :url => admin_filelist_url('destroy'), :html =>{ :method => :delete, :name=>'adminForm'} do -%>
   <%= hidden_field_tag 'task','0' %>
   <%= @filelists.blank? ? nodata : render(:partial => 'table') %>
-  <%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @filelists, :icon_class => 'icon_hard_48' } %>
+  <%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @filelists, :icon_class => 'icon_hard_48'} %>
 <% end %>

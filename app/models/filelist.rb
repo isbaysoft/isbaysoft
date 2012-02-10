@@ -13,7 +13,7 @@ class Filelist < ActiveRecord::Base
   scope :except, lambda { |ids| {:conditions => ['filelists.id not in (?)', ids] } if ids.present? }
 
   
-  @@per_page=30
+  @@per_page=$per_page
 
 
   def file_exist?

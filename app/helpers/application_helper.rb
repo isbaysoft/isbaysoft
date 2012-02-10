@@ -126,7 +126,7 @@ end
   end
 
   def current_per_page
-    per_page = params[:per_page] || cookies["per_page_#{self.controller_name}"]
+    (per_page = params[:per_page] || cookies["per_page_#{self.controller_name}"] || $per_page).to_i
   end
 
 end

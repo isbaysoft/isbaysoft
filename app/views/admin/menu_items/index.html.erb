@@ -1,5 +1,5 @@
 <%= roundbox2 do -%>
- <%= render :partial => 'shared/admin/panel_table', :locals => {:per_page => @menu_items.per_page} %>
+ <%= render :partial => 'shared/admin/panel_table', :locals => {:table_collection => @menu_items} %>
   <%= form_for 'tasks', :url => admin_menu_menu_item_url(@menu,'destroy'), :html =>{:method => :delete, :name=>'adminForm'} do -%>
     <%= hidden_field_tag 'task', 'search' -%>
     <% unless @menu_items.blank? %>

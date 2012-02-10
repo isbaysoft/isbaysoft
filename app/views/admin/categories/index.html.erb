@@ -1,4 +1,4 @@
-<%= render :partial => 'shared/admin/panel_table', :locals => {:per_page => @categories.per_page} %>
+<%= render :partial => 'shared/admin/panel_table', :locals => {:table_collection => @categories} %>
 <%= form_for 'tasks', :url => admin_category_url('destroy'), :html =>{ :method => :delete, :name=>'adminForm'} do -%>
   <%= hidden_field_tag 'task','0' %>
   <%= @categories.blank? ? nodata : render(:partial => 'table') %>

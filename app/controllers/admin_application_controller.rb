@@ -70,12 +70,16 @@ private
   end
 
   def page_options
+    session["page_#{self.controller_name}"] = params[:page] if params[:page]
+
+  $per_page = 3
+  
     cookies["per_page_#{self.controller_name}"] = params[:per_page] if params[:per_page]
     per_page = params[:per_page] || cookies["per_page_#{self.controller_name}"]
     {:order => @order,
      :sort_column => @sort_column,
      :filter => params[:filter],
-     :page => params[:page],
+     :page => params[:page] || session["page_#{self.controller_name}"],
      :per_page => per_page
     }
   end

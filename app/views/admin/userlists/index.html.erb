@@ -1,6 +1,6 @@
 <%# Users controller%>
 <%= roundbox2 do -%>
- <%= render :partial => 'shared/admin/panel_table', :locals => {:per_page => @users.per_page} %>
+ <%= render :partial => 'shared/admin/panel_table', :locals => {:table_collection => @users} %>
   <%= form_for 'tasks', :url => {:action => :destroy}, :html =>{:method => :delete, :name=>'adminForm'} do -%>
     <%= hidden_field_tag 'task','search' -%>
     <% unless @users.blank? %>
