@@ -2,17 +2,15 @@ class StaticContent < ActiveRecord::Base
   belongs_to :user
   cattr_reader :per_page
 
-  @@per_page=30
-
   def to_param
     name
   end
 
   def self.getrows(options = {})
     page = options[:page] || 1
-    @@per_page = options[:per_page] || @@per_page
-    filter = ['name like ?',"%#{options[:filter]}%"] if options[:filter]
+    filter = ['name like ?',"%#{options[:s]}%"] if options[:s]
     StaticContent.paginate :page =>page,
+      :per_page => options[:per_page] || WillPaginate.per_page,
       :select => 'users.email as user_login,static_contents.*',
       :joins => 'join users on users.id=static_contents.user_id',
       :conditions => filter,

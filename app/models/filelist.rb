@@ -12,10 +12,6 @@ class Filelist < ActiveRecord::Base
   scope :get, lambda { |id| {:conditions => ['filelists.id = ?', id] } }
   scope :except, lambda { |ids| {:conditions => ['filelists.id not in (?)', ids] } if ids.present? }
 
-  
-  @@per_page=$per_page
-
-
   def file_exist?
     File.exist?(self.f.path)
   end
@@ -25,10 +21,10 @@ class Filelist < ActiveRecord::Base
   end
 
   def self.getrows(options)
-    @@per_page = options[:per_page] || @@per_page
     page = options[:page]
-    filter = ['f_file_name like ?',"%#{options[:filter]}%"] if options[:filter]
+    filter = ['f_file_name like ?',"%#{options[:s]}%"] if options[:s]
     Filelist.paginate :page => page,
+      :per_page => options[:per_page] || WillPaginate.per_page,
       :conditions => filter,
       :order => options[:order]
   end

@@ -16,9 +16,6 @@ class MenuItem < ActiveRecord::Base
   scope :published, {:conditions => 'published = true'}
   scope :permitted, {:conditions => ['access_level <= ?',User.current.access_level]}
 
-  
-  @@per_page=30
-
 #  link_to target type
   TARGET_TYPES = {
     0 => '_self',
@@ -40,10 +37,10 @@ class MenuItem < ActiveRecord::Base
 
   def self.getrows(options)
     page = options[:page] || 1
-    @@per_page = options[:per_page] || @@per_page
-    filter = ['title like ?',"%#{options[:filter]}%"] if options[:filter]    
+    filter = ['title like ?',"%#{options[:s]}%"] if options[:s]    
     options[:order] = nil unless options[:order] && MenuItem.column_names.include?(options[:sort_column])
     self.paginate :page =>page,
+      :per_page => options[:per_page] || WillPaginate.per_page,
       :conditions => filter,
       :order => options[:order]
   end

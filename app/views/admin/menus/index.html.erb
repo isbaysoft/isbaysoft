@@ -7,12 +7,12 @@
     <%= nodata %>
   <% end %>
   <% content_for :toolbar_additional do %>
-    <%= btn(:icon_class=>'icon_publish_32',
+    <%= btn(:icon_class=>'icon-eye-close',
       :class => 'btn-toolbar',
       :caption => t(:button_show),
       :title => t(:button_show),
       :onclick=>"submitaction('#{publish_admin_menu_url(0)}')") -%>
-    <%= btn(:icon_class=>'icon_unpublish_32',
+    <%= btn(:icon_class=>'icon-eye-close',
       :class => 'btn-toolbar',
       :caption => t(:button_hide),
       :title => t(:button_deactivate_user),

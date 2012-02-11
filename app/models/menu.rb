@@ -10,8 +10,6 @@ class Menu < ActiveRecord::Base
   scope :published, {:conditions => 'published = true'}
   scope :permitted, {:conditions => ['access_level <= ?',User.current.access_level]}
 
-  @@per_page=30
-
   def reordering
     menu_items = MenuItem.items(self.id).order_by_sort_no
     cnt = 1
@@ -24,9 +22,9 @@ class Menu < ActiveRecord::Base
 
   def self.getrows(options)
     page = options[:page] || 1
-    @@per_page = options[:per_page] || @@per_page
-    filter = ['title like ?',"%#{options[:filter]}%"] if options[:filter]
+    filter = ['title like ?',"%#{options[:s]}%"] if options[:s]
     paginate :page =>page,
+      :per_page => options[:per_page] || WillPaginate.per_page,
       :conditions => filter,
       :order => options[:order]
   end

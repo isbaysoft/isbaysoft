@@ -18,8 +18,6 @@ class User < ActiveRecord::Base
   scope :activated, :conditions => ['access = ?',true]
   scope :deactivated, :conditions => ['access = ?',false]
 
-  @@per_page=30
-
   def self.current=(user)
     @current_user = user
   end
@@ -125,9 +123,9 @@ class User < ActiveRecord::Base
 #  TODO Переделать эту гадость - ...join rules on rules.access_l...
   def self.getrows(options)
     page = options[:page] || 1
-    @@per_page = options[:per_page] || @@per_page
-    filter = ['email like ?',"%#{options[:filter]}%"] if options[:filter]
+    filter = ['email like ?',"%#{options[:s]}%"] if options[:s]
     User.paginate :page =>page, 
+      :per_page => options[:per_page] || WillPaginate.per_page,
       :select => 'usergroups.name as usergroup_name,
         rules.name as rule_name,
         users.*',

@@ -1,33 +1,32 @@
-<%= roundbox2 do -%>
- <%= render :partial => 'shared/admin/panel_table', :locals => {:table_collection => @menu_items} %>
-  <%= form_for 'tasks', :url => admin_menu_menu_item_url(@menu,'destroy'), :html =>{:method => :delete, :name=>'adminForm'} do -%>
-    <%= hidden_field_tag 'task', 'search' -%>
-    <% unless @menu_items.blank? %>
-      <%= render :partial => 'table' %>
-    <% else %>
-      <%= nodata %>
-    <% end %>
-    <% content_for :toolbar_additional do %>
-      <%= btn(:icon_class=>'icon_sort_32',
-        :caption => t(:button_sort),
-        :title => t(:title_reordering),
-        :onclick=>"submitaction('#{reordering_admin_menu_url(@menu)}')") -%>
-      <%= btn(:icon_class=>'icon_save_32',
-        :caption => t(:button_save),
-        :title => t(:button_save),
-        :onclick=>"CheckedCheckBoxes('ids[]'); submitaction('#{save_sorting_admin_menu_url(@menu)}')") -%>
-      <%= btn(:icon_class=>'icon_exit_32',
-        :caption => t(:button_exit),
-        :url => admin_menus_url) -%>
-      <%= btn(:icon_class=>'icon_publish_32',
-        :caption => t(:button_show),
-        :title => t(:button_show),
-        :onclick=>"submitaction('#{publish_admin_menu_menu_item_url(@menu,0)}')") -%>
-      <%= btn(:icon_class=>'icon_unpublish_32',
-        :caption => t(:button_hide),
-        :title => t(:button_deactivate_user),
-        :onclick=>"submitaction('#{unpublish_admin_menu_menu_item_url(@menu,0)}')") -%>
-    <% end %>
-    <%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @menu_items, :icon_class => 'icon_menu_48' } %>
+<%= render :partial => 'shared/admin/panel_table', :locals => {:table_collection => @menu_items} %>
+<%= form_for 'tasks', :url => admin_menu_menu_item_url(@menu,'destroy'), :html =>{:method => :delete, :name=>'adminForm'} do -%>
+  <%= hidden_field_tag 'task', 'search' -%>
+  <% @menu_items.blank? ? nodata : render(:partial => 'table')  %>
+  <% content_for :toolbar_additional do %>
+    <%= btn(:icon_class=>'icon-list',
+      :class => 'btn-toolbar',
+      :caption => t(:button_sort),
+      :title => t(:title_reordering),
+      :onclick=>"submitaction('#{reordering_admin_menu_url(@menu)}')") -%>
+    <%= btn(:icon_class=>'icon-ok-sign',
+      :class => 'btn-toolbar',    
+      :caption => t(:button_save),
+      :title => t(:button_save),
+      :onclick=>"CheckedCheckBoxes('ids[]'); submitaction('#{save_sorting_admin_menu_url(@menu)}')") -%>
+    <%= btn(:icon_class=>'icon-home',
+      :class => 'btn-toolbar',    
+      :caption => t(:button_exit),
+      :url => admin_menus_url) -%>
+    <%= btn(:icon_class=>'icon-eye-open',
+      :class => 'btn-toolbar',    
+      :caption => t(:button_show),
+      :title => t(:button_show),
+      :onclick=>"submitaction('#{publish_admin_menu_menu_item_url(@menu,0)}')") -%>
+    <%= btn(:icon_class=>'icon-eye-close',
+      :class => 'btn-toolbar',
+      :caption => t(:button_hide),
+      :title => t(:button_deactivate_user),
+      :onclick=>"submitaction('#{unpublish_admin_menu_menu_item_url(@menu,0)}')") -%>
   <% end %>
+  <%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @menu_items, :icon_class => 'icon_menu_48' } %>
 <% end %>

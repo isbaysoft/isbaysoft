@@ -23,8 +23,6 @@ class Document < ActiveRecord::Base
 
   cattr_reader :per_page
 
-  @@per_page=30
-
   def hits
     self.document_files.sum('hits')
   end
@@ -43,9 +41,9 @@ class Document < ActiveRecord::Base
 
   def self.getrows(options = {})
     page = options[:page] || 1
-    @@per_page = options[:per_page] || @@per_page
-    filter = ['name like ?',"%#{options[:filter]}%"] if options[:filter]
-    Document.where(filter).getlist.paginate :page => page
+    filter = ['name like ?',"%#{options[:s]}%"] if options[:s]
+    Document.where(filter).getlist.paginate :page => page,
+      :per_page => options[:per_page] || WillPaginate.per_page
   end
 
   def path_name
