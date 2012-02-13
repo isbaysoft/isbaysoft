@@ -1,17 +1,27 @@
 <%= hidden_field_tag 'task','post' -%>
-<div class="box tabular settings">
-<fieldset id="fm1" class="left" style="width: 70%"><legend></legend>
- 	<%= errors_for(form.object).html_safe %>
-  <dl>
-    <dt><%= label_tag :title, t(:label_menu_title) %></dt>
-    <dd><%= form.text_field :title, :class=>'edit' %></dd>
-  </dl>
-</fieldset>
-<fieldset id="fm2"><legend></legend>
-  <dt><%= label_tag :access_level, t(:label_menu_access_level) %></dt>
-  <dd><%= form.select(:access_level, rules_for_select, {:include_blank => false}) %></dd>
-  <dt><%= label_tag :published, t(:label_menu_publication) %></dt>
-  <dd><%= form.select( :published, options_yesno_tag(@menu.published) ) %></dd>
-</fieldset>
-<br class="clearboth" />
+<%= errors_for(form.object).html_safe %>
+<div class="row-fluid">
+	<div class="span3">
+		<div class="control-group">
+			<%= label_tag :title, t(:label_menu_title), :class => 'control-label' %>
+			<div class="controls">
+		    	<%= form.text_field :title, :class=>'input-xlarge' %>
+		    </div>
+		</div>
+	</div>
+	<div class="span3">
+		<div class="control-group">
+		  	<%= label_tag :access_level, t(:label_menu_access_level), :class => 'control-label' %>
+		  	<div class="controls">
+		  		<%= form.select(:access_level, rules_for_select, {:include_blank => false}) %>
+		  	</div>
+		</div>
+		<div class="control-group">  	
+		  	<%= label_tag :published, t(:label_menu_publication), :class => 'control-label' %>
+		  	<div class="controls">
+		  		<%= form.select( :published, options_yesno_tag(@menu.published) ) %>
+		  	</div>
+		</div>
+	</div>
 </div>
+	

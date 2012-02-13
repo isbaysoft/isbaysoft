@@ -1,40 +1,65 @@
 <%= hidden_field_tag 'task','post' -%>
-<div class="box tabular settings">
-<fieldset class="left" style="width: 70%"><legend></legend>
-  <%= errors_for(form.object).html_safe %>
-  <dl>
-    <dt><%= label_tag :title, t(:label_menu_item_title) %></dt>
-    <dd><%= form.text_field :title, :class=>'edit' %></dd>
+<%= errors_for(form.object).html_safe %>
+<div class="row-fluid">
+  <div class="span3">
+    <div class="control-group">
+      <%= label_tag :title, t(:label_menu_item_title), :class => 'control-label' %>
+      <div class="controls">
+        <%= form.text_field :title, :class=>'edit', :class=>'input-xlarge' %>
+      </div>
+    </div>
 
-    <dt><%= label_tag :alias, t(:label_menu_item_alias) %></dt>
-    <dd><%= form.text_field :alias, :class=>'edit' %></dd>
+    <div class="control-group">
+      <%= label_tag :alias, t(:label_menu_item_alias), :class => 'control-label' %>
+      <div class="controls">
+        <%= form.text_field :alias, :class=>'edit', :class=>'input-xlarge' %>
+      </div>
+    </div>
 
-    <dt>
-      <%= label_tag :url, t(:label_menu_item_url) %>
-      (<%= link_to 'Перейти', h(@menu_item.url.to_s), :target => MenuItem::TARGET_TYPES[@menu_item.target] %>)
-    </dt>
-    <dd><%= form.text_field :url, :class=>'edit' %></dd>
-    <dt>Создать сылку как</dt>
-    <dd>
-       <%= link_to 'Статический контент', dialog_url('static_content'), { :id => 'pop_dialog_content' } %>
-    </dd>    
-    <dt><%= label_tag :target, t(:label_menu_item_target) %></dt>
-    <dd><%= form.select( :target, targets_for_select(@menu_item.target) ) %></dd>
-    
-    <dt><%= label_tag :note, t(:label_menu_item_note) %></dt>
-    <dd><%= form.text_area(:note, @text_area_default_size_for_description.update(:class => "mceEditor") ) %></dd>
-  </dl>
-</fieldset>
-<fieldset><legend></legend>
-  <dt><%= label_tag :access_level, t(:label_menu_item_access_level) %></dt>
-  <dd><%= form.select(:access_level, rules_for_select, {:include_blank => false}) %></dd>
-  
-  <dt><%= label_tag :published, t(:label_menu_item_publication) %></dt>
-  <dd><%= form.select( :published, options_yesno_tag(@menu_item.published) ) %></dd>
-</fieldset>
-<div class="clearboth"></div>
+    <div class="control-group">
+      <%= label_tag :url, t(:label_menu_item_url), :class => 'control-label' %>
+      <div class="controls">
+        <%= form.text_field :url, :class=>'edit', :class=>'input-xlarge' %>
+      </div>
+    </div>
+   
+    <div class="control-group">
+      <%= label_tag :note, t(:label_menu_item_note), :class => 'control-label' %>
+      <div class="controls">
+        <%= form.text_area(:note, :rows => 5, :class => 'mceEditor input-xlarge') %>
+      </div>
+    </div>
+  </div>
+  <div class="span3">
+    <div class="control-group">
+      <%= label_tag :target, t(:label_menu_item_target), :class => 'control-label' %>
+      <div class="controls">
+        <%= form.select :target, targets_for_select(@menu_item.target), {}, :class=>'input-xlarge' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= label_tag :access_level, t(:label_menu_item_access_level), :class => 'control-label' %>
+      <div class="controls">
+        <%= form.select :access_level, rules_for_select, {:include_blank => false}, :class=>'input-xlarge' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= label_tag :published, t(:label_menu_item_publication), :class => 'control-label' %>
+      <div class="controls">
+        <%= form.select :published, options_yesno_tag(@menu_item.published), {}, :class=>'input-xlarge' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= label_tag :alias, 'Создать ссылку как', :class => 'control-label' %>
+      <div class="controls">
+        <%= link_to 'Статический контент', dialog_url('static_content'), :id => 'pop_dialog_content', :class=>'popup btn btn-primary' %>
+      </div>
+    </div>
+  </div>  
 </div>
 
-<script type="text/javascript">
-  $("#pop_dialog_content").colorbox({innerWidth:640, innerHeight:480, initialWidth:640, initialHeight:480});
-</script>
+<%= render :partial => 'shared/admin/tinymce_init' %>
+

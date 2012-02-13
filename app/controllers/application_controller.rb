@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
 #    logger.debug "default_url_options is passed options: #{options.inspect}\n"
 #    { :locale => I18n.locale }
 #
-# => Localization changed his mind to do. Possible to do this in the future.
+# => Localization changed his mind to do. Perhaps to do this in the future.
 #  end
 
 private

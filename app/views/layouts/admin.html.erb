@@ -2,9 +2,14 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <%= stylesheet_link_tag 'bootstrap','admin/icons_admin','admin/layout_admin','admin/corners_admin' %>
+  <%= stylesheet_link_tag 'bootstrap',
+    'admin/icons_admin',
+    'admin/layout_admin',
+    'admin/corners_admin',
+    'colorbox'
+  %>
   <%= javascript_include_tag 'jquery','bootstrap','bootstrap-dropdown','bootstrap-button', 'bootstrap-tooltip',
-    'rails','flash','dialog','tiny_mce/tiny_mce','application' %>
+    'rails','flash','dialog','tiny_mce/tiny_mce','jquery.colorbox-min','application' %>
   <%= csrf_meta_tag %>
 <title><%= $sitename %></title>
 </head>

@@ -1,4 +1,4 @@
-<%= form_for @menu_item, :url => admin_menu_menu_items_url(@menu_item.menu_id), :html => {:name =>'adminForm'} do |f| %>
+<%= form_for @menu_item, :url => admin_menu_menu_items_url(@menu_item.menu_id), :html => {:name =>'adminForm', :class => 'form-horizontal'} do |f| %>
   <%= render :partial =>'form', :object => f %>
 <% end %>
 <%= render :partial => 'shared/admin/toolbar_action', :locals => {:icon_class => "icon_menu_48"} %>

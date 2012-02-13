@@ -19,10 +19,10 @@
            %>
   </dd>
   <dt><%= label_tag :short_description, t(:label_short_description) %></dt>
-  <dd><%= general.text_area(:short_description, @text_area_default_size_for_description_big.update(:class => "mceEditor")) %></dd>
+  <dd><%= general.text_area(:short_description, :class => "mceEditor") %></dd>
   <br />
   <dt><%= label_tag :description, t(:label_description) %></dt>
-  <dd><%= general.text_area(:description, @text_area_default_size_for_description_big.update(:class => "mceEditor")) %></dd>
+  <dd><%= general.text_area(:description, :class => "mceEditor") %></dd>
   <br />
 </dl>
 

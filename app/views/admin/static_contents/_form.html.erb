@@ -10,7 +10,7 @@
     <dd><%= form.select(:position, ss, {:include_blank => t(:global_default_select_empty)}, {:size => 10, :class => 'select'}) %></dd>
 
     <dt><%= label_tag :content, 'Описание' %></dt>
-    <dd><%= form.text_area(:content, @text_area_default_size_for_description_big.update(:class => "mceEditor") ) %></dd>
+    <dd><%= form.text_area(:content, :class => "mceEditor") %></dd>
   </dl>
 </fieldset>
 </div>
