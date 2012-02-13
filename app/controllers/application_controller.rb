@@ -20,6 +20,7 @@ class ApplicationController < ActionController::Base
 
 private
 
+
   def set_locale
     I18n.locale = current_locale
   end

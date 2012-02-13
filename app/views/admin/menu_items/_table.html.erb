@@ -1,25 +1,25 @@
-<table class="grid" cellspacing="0" cellpadding="0" border="0">
+<table class="table table-striped table-bordered table-condensed">
 <thead>
-  <th width="2%">№</th>
-  <th width="2%"><%= check_box_tag("groups", false, false, :onclick=>"setCheckBoxes(this,'ids[]')") %></th>
-  <th><%= sortable('Название','title') %></th>
-  <th><%= sortable('Алиас','alias') %></th>
-  <th><%= sortable('Ссылка','url') %></th>
-  <th><%= sortable('Доступ','access_level') %></th>
-  <th><%= sortable('Открывать','target') %></th>
-  <th width="130px"><%= sortable("Порядок",'sort_no') %></th>
-  <th width="2%"><%= sortable('Опубликовано','published') %></th>
+  <th class="span1">#</th>
+  <th class="span1"><%= check_box_tag("groups", false, false, :onclick=>"setCheckBoxes(this,'ids[]')") %></th>
+  <th class="span2"><%= sortable('Название','title') %></th>
+  <th class="span2"><%= sortable('Алиас','alias') %></th>
+  <th class="span2"><%= sortable('Ссылка','url') %></th>
+  <th class="span1"><%= sortable('Доступ','access_level') %></th>
+  <th class="span1"><%= sortable('Открывать','target') %></th>
+  <th class="span1"><%= sortable("Порядок",'sort_no') %></th>
+  <th class="span1"><%= sortable('Опубликовано','published') %></th>
 </thead>
 <% @menu_items.map do |row| %>
-  <tr class="<%= cycle('odd','even') %>"<%= 'id="after_edit"' if flash[:edited].to_s == row.id.to_s %> >
+  <tr>
     <th><%= row.id -%></th>
     <th><%= check_box_tag('ids[]',row.id) -%></th>
     <td><%= link_to(h(row.title), edit_admin_menu_menu_item_url(row.menu_id,row.id)) %></td>
     <td><%= h(row.alias) %></td>
     <td><%= h(row.url) %></td>
     <td><%= h(row.rule.name) %></td>
-    <td><%= h(row.target_name) %></td>
-    <th><%= text_field_tag 'orders[]', row.sort_no, :class => 'edit_mini' %></th>
+    <td><%= target_name(row.target) %></td>
+    <th><%= text_field_tag 'orders[]', row.sort_no, :class => 'span1' %></th>
     <th><%= check_box_tag("published_#{row.id}",row.published,row.published,:disabled => true) -%></th>
   </tr>
 <% end %>

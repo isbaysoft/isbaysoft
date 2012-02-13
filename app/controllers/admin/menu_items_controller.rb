@@ -25,14 +25,13 @@ class Admin::MenuItemsController < AdminApplicationController
   end
 
   def edit
-#    routes = ActionController::Routing::Routes.recognize_path("/show/1", {:method => :get})
   end
 
   def update
     @menu_item.access_level = params[:menu_item][:access_level]
     @menu_item.published = params[:menu_item][:published]
     update_attributes_and_redirect(@menu_item,params[:menu_item])
-end
+  end
 
   def destroy
     confirm_multiple_operations params[:ids] do

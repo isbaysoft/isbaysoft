@@ -1,11 +1,7 @@
 <%= render :partial => 'shared/admin/panel_table', :locals => {:table_collection => @menus} %>
 <%= form_for 'tasks', :url => admin_menu_url('destroy'), :html =>{:method => :delete, :name=>'adminForm'} do -%>
   <%= hidden_field_tag 'task', 'search' -%>
-  <% unless @menus.blank? %>
-    <%= render :partial => 'table' %>
-  <% else %>
-    <%= nodata %>
-  <% end %>
+  <%= @menus.blank? ? nodata : render(:partial => 'table') %>
   <% content_for :toolbar_additional do %>
     <%= btn(:icon_class=>'icon-eye-close',
       :class => 'btn-toolbar',

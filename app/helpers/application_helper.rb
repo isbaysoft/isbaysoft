@@ -125,8 +125,4 @@ end
     # html << content_tag(:div, submit_tag(options[:submit])) if options[:submit]
   end
 
-  def current_per_page
-    (per_page = params[:per_page] || cookies["per_page_#{self.controller_name}"] || WillPaginate.per_page).to_i
-  end
-
 end

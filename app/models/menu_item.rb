@@ -22,19 +22,10 @@ class MenuItem < ActiveRecord::Base
     1 => '_blank'
   }
   
-  TARGET_TYPES_NAMES = {
-    0 => I18n.t(:text_target_self),
-    1 => I18n.t(:text_target_blank)
-  }
-
   def target_type
     TARGET_TYPES[self.target]
   end
   
-  def target_name
-    TARGET_TYPES_NAMES[self.target] unless self.target.nil?
-  end
-
   def self.getrows(options)
     page = options[:page] || 1
     filter = ['title like ?',"%#{options[:s]}%"] if options[:s]    

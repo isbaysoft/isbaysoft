@@ -7,7 +7,7 @@ class AdminApplicationController < ApplicationController
   before_filter :require_user
   before_filter :load_configs
   helper :all # include all helpers, all the time
-  helper_method :sort_column, :sort_direction, :caption_at_action, :controller_caption
+  helper_method :sort_column, :sort_direction, :caption_at_action, :controller_caption, :current_per_page
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   before_filter :prepare_index, :only => [:index]
   
@@ -69,18 +69,22 @@ private
     end
   end
 
+  def current_per_page
+    per_page = (params[:per_page] || cookies["per_page_#{self.controller_name}"]).to_i
+    per_page > 0 ? per_page : WillPaginate.per_page
+  end
+
   def page_options
     #  Default value for per_page
     WillPaginate.per_page = 20
 
     session["page_#{self.controller_name}"] = params[:page] if params[:page]  
     cookies["per_page_#{self.controller_name}"] = params[:per_page] if params[:per_page]
-    per_page = params[:per_page] || cookies["per_page_#{self.controller_name}"]
     {:order => @order,
      :sort_column => @sort_column,
      :s => params[:s],
      :page => params[:page] || session["page_#{self.controller_name}"],
-     :per_page => per_page
+     :per_page => current_per_page
     }
   end
 
