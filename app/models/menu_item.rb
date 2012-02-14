@@ -2,6 +2,11 @@ class MenuItem < ActiveRecord::Base
   belongs_to :menu
   belongs_to :rule, :foreign_key => 'access_level'
 
+  validates :title, :alias, :url, :access_level, :target, :menu_id, :sort_no, 
+    :presence => true
+
+
+
   attr_accessible :title, :alias, :url, :note, :target, :sort_no
   cattr_reader :per_page, :TARGET_TYPES
   
@@ -22,6 +27,11 @@ class MenuItem < ActiveRecord::Base
     1 => '_blank'
   }
   
+  TARGET_TYPES_NAMES = {
+    0 => I18n.t(:text_target_self),
+    1 => I18n.t(:text_target_blank)
+  }
+
   def target_type
     TARGET_TYPES[self.target]
   end

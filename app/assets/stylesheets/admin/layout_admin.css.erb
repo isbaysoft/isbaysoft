@@ -17,6 +17,8 @@ table > thead {background:#FAFAFA url(<%= asset_path 'admin/top-bg.gif' %>) repe
 table > thead th {height: 32px; vertical-align: middle !important;}
 table > thead th a {color: #333333 !important;}
 
+/*#cboxLoadedContent {background: url(<%= asset_path 'w.jpg' %>)}*/
+
 footer {
   position: fixed;
   bottom: 0;
@@ -31,6 +33,16 @@ footer {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+#dialog-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;  
+  border-top: 1px solid #eee;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 8px;
 }
 
 .icon_toolbar_caption {

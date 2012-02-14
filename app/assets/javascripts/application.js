@@ -12,7 +12,9 @@ jQuery.fn.submitWithAjax = function() {
 
 $(document).ready(function() {
   $(".remote").submitWithAjax();
-  $(".popup").colorbox({innerWidth:640, innerHeight:480, initialWidth:640, initialHeight:480});
+  $(".popup").colorbox({innerWidth:640, innerHeight:480, initialWidth:640, initialHeight:480, onLoad: function() {
+      $('#cboxClose').remove();
+    }});
 })
 
 

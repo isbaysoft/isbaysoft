@@ -1,20 +1,19 @@
-<% selected_tab = params[:tab].present? ? params[:tab].to_s : tabs.first[:name] %>
-<div class="tabg tabs">
-  <ul>
-  <% tabs.map do |tab| -%>
-    <li>
-      <%= link_to t(tab[:label]), { :tab => tab[:name] },
-        :id => "tabg-#{tab[:name]}",
-        :class => (tab[:name] != selected_tab ? nil : 'selected'),
-        :onclick => "showtab('tabg','#{tab[:name]}'); this.blur(); return false;" %>
-    </li>
-  <% end -%>
-  </ul>
+<ul id="megatabs" class="nav nav-tabs">
+  <% tabs.map do |tab| %>
+    <li><%= link_to t(tab[:label]), "\##{tab[:name]}", 'data-toggle' => "tab" %></li>
+  <% end %>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+  <% tabs.each do |tab| %>
+    <%= content_tag('div', render(:partial => tab[:partial], :object => form_object),
+       :id => tab[:name],
+       :class => 'tab-pane fade in active') %>
+  <% end %>
 </div>
 
-<% tabs.each do |tab| -%>
-  <%= content_tag('div', render(:partial => tab[:partial], :object => form_object ),
-     :id => "tabg-content-#{tab[:name]}",
-     :style => (tab[:name] != selected_tab ? 'display:none' : nil),
-     :class => 'tabg-content') %>
-<% end -%>
+<script>
+  $(function () {
+    $('#megatabs li:first').addClass('active')
+  })
+</script>

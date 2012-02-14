@@ -1,5 +1,4 @@
-<%# Document controller %>
-<%= form_for @document, :url => admin_document_url(@document), :html => {:multipart => true, :name =>'adminForm'} do |f| -%>
+<%= form_for @document, :url => admin_document_url(@document), :html => {:multipart => true, :name =>'adminForm', :class => 'form-horizontal'} do |f| -%>
   <%= render :partial =>'form', :object => f -%>
 <% end %>
 <%= render :partial => 'shared/admin/toolbar_action', :locals => {:icon_class => 'icon_document_48'} -%>

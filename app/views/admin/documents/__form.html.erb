@@ -7,26 +7,35 @@
 <%= errors_for(@logo) if @logo && @logo.errors -%>
 
 <div class="row-fluid">
-  <div class="span9">
+  <fieldset class="left" style="width: 70%"><legend></legend>
     <%= render_tabs :tabs => document_tabs, :form_object => form %>
-  </div>
-  <div class="span3">
-    <div class="control-group1">
-      <%= label_tag :access_level, t(:label_document_access_for), :class => 'control-label' %>
-      <%= form.select(:access_level, rules_for_select, {:include_blank => false}, :class=>'input-medium') %>
-      <hr>
-      <%= label_tag :published, t(:label_document_publication), :class => 'control-label' %>
-      <%= form.select(:published, options_yesno_tag(@document.published), {}, :class=>'input-medium') %>
-      <br />
-      <%= label_tag :approved, t(:label_document_approved), :class => 'control-label' %>
-      <%= form.select(:approved, options_yesno_tag(@document.approved), {}, :class=>'input-medium') %>
-      <hr>
-      <%= label_tag 'menu_id', t(:label_document_link_menu), :class => 'control-label' %>
-      <%= form.select(:menu_id, menus_for_select, {:include_blank => false, :prompt => 'Не выбранно'}, :class=>'input-medium') %>
-      <hr>
-      <a href="#" class="btn btn-primary"><i class="icon-open"></i><%= t(:label_add_load_new_logo) %></a>
-    </div>
-  </div>
+  </fieldset>
+  <fieldset><legend></legend>
+    <dt><%= label_tag :access_level, t(:label_document_access_for) %></dt>
+    <dd><%= form.select(:access_level, rules_for_select, {:include_blank => false}) %></dd>
+    <dt><%= label_tag :published, t(:label_document_publication) %></dt>
+    <dd><%= form.select(:published, options_yesno_tag(@document.published) ) %></dd>
+    <dt><%= label_tag :approved, t(:label_document_approved) %></dt>
+    <dd><%= form.select(:approved, options_yesno_tag(@document.approved) ) %></dd>
+    <dt><%= label_tag 'file[f]', t(:label_add_load_new_file) %></dt>
+    <dd><%= file_field_tag 'file[f]' %></dd>
+    <dt><%= label_tag 'fromarchive', t(:label_add_file_from_archive) %></dt>
+    <dd>
+        <%= link_to t(:button_select),
+      
+        dialog_url('filelist',:except_document_files => @document.id),
+        :class => 'example5'
+        %>
+
+    </dd>
+    <dt><%= label_tag 'logo_id', t(:label_add_load_new_logo) %></dt>
+    <dd><%= file_field_tag 'logo[logo]' %></dd>
+
+    <dt><%= label_tag :menu_id, t(:label_document_link_menu) %></dt>
+    <dd><%= form.select(:menu_id, menus_for_select, {:include_blank => false, :prompt => 'Не выбранно'}) %></dd>
+
+  </fieldset>
+  <div class="clearboth"></div>
 </div>
 
 <%= javascript_include_tag 'jquery.template.min.js' %>

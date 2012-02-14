@@ -1,0 +1,11 @@
+<h1>this is files tab</h1>
+<%= label_tag('file[f]', t(:label_add_load_new_file), :class => 'control-label') %>
+      <div class="controls">
+        <%= file_field_tag('file[f]', :class=>'input-xlarge') %>
+</div><br />
+
+
+      <%= label_tag 'fromarchive', t(:label_add_file_from_archive), :class => 'control-label' %>
+      <div class="controls">
+        <%= link_to(t(:button_select), dialog_url('filelist',:except_document_files => @document.id), :class=>'example5 input-xlarge') %>
+      </div><br />
