@@ -1,3 +1,11 @@
+
+<div class="left" style="width: 70%">
+    <dt> <%= label_tag :filelist_id, t(:label_document_files) %></dt>
+    <dd><%= render :partial => 'filelist_list', :locals => {:rows => @document.document_files} %></dd>
+    <dd><%= render :partial => 'filelist_info', :locals => {:document => @document} %></dd>
+  </div>
+  
+
 <h1>this is files tab</h1>
 <%= label_tag('file[f]', t(:label_add_load_new_file), :class => 'control-label') %>
       <div class="controls">

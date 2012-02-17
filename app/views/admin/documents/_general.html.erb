@@ -1,31 +1,40 @@
-<dl>
-  <dt><%= label_tag :name, t(:label_document_name) %></dt>
-  <dd><%= general.text_field :name, :class => 'edit' %></dd>
-  <div class="left" style="width: 70%">
-    <dt> <%= label_tag :filelist_id, t(:label_document_files) %></dt>
-    <dd><%= render :partial => 'filelist_list', :locals => {:rows => @document.document_files} %></dd>
-    <dd><%= render :partial => 'filelist_info', :locals => {:document => @document} %></dd>
+<div class="control-group1">
+  <%= label_tag(:name, t(:label_document_name), :class => 'control-label') %>
+  <%= general.text_field(:name, :class => 'edit', :class=>'input-xxlarge') %>
+</div>
+<hr>
+<div class="row-fluid">
+  <div class="span">
+    <div class="control-group1">
+      <a href="#" class="btn btn-primary input-large"><i class="icon-open"></i><%= t(:label_add_load_new_logo) %></a><br /><br />
+      <a href="#" class="btn btn-primary input-large"><i class="icon-open"></i><%= t(:label_add_load_new_logo) %></a>
+    </div>
+    <%#= label_tag(:category_id, t(:label_document_section_and_category), :class => 'control-label') %>
+    <%#= text_field_tag(:category_name, @document.path_name, 
+      :size => 50, 
+      :readonly => true, 
+      :class => 'example5 edit input-xlarge', 
+      :href => dialog_url('category'))
+    %>
   </div>
-  <div class="left" style="width: 25%">
-    <dt> <%= label_tag :logo_id, t(:text_logo) %></dt>
-    <dd><%= image_tag (@document.logo.nil? or @document.new_record?) ? 'main/empty_logo.png ' : @document.logo.logo.url, :size => '128x128'  %></dd>
+  <div class="span">
+    
+    <%#= label_tag :logo_id, t(:text_logo) %>
+    <%#= image_tag (@document.logo.nil? or @document.new_record?) ? 'main/empty_logo.png ' : @document.logo.logo.url, :size => '128x128'  %>
   </div>
-  <br class="clearboth"/>
-  <dt><%= label_tag :category_id, t(:label_document_section_and_category) %></dt>
-  <dd><%= text_field_tag :category_name, @document.path_name, :size => 50,
-            :readonly => true,
-            :class => 'example5 edit',
-            :href => dialog_url('category')
-           %>
-  </dd>
-  <dt><%= label_tag :short_description, t(:label_short_description) %></dt>
-  <dd><%= general.text_area(:short_description, :class => "mceEditor") %></dd>
-  <br />
+</div>
+<hr>
+<div class="control-group1">
+  <%= label_tag :short_description, t(:label_short_description) %>
+  <%= general.text_area(:short_description, :class => "input-xxlarge") %>
+  <hr>
   <dt><%= label_tag :description, t(:label_description) %></dt>
-  <dd><%= general.text_area(:description, :class => "mceEditor") %></dd>
+  <dd><%= general.text_area(:description, :class => "input-xxlarge") %></dd>
   <br />
-</dl>
+</div>
 
 <script type="text/javascript">
   $(".example5").colorbox({innerWidth:640, innerHeight:480, initialWidth:640, initialHeight:480});
 </script>
+
+<%= render :partial => 'shared/admin/tinymce_init' %>

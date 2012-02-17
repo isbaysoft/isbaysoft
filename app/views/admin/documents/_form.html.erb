@@ -22,9 +22,7 @@
       <%= form.select(:approved, options_yesno_tag(@document.approved), {}, :class=>'input-medium') %>
       <hr>
       <%= label_tag 'menu_id', t(:label_document_link_menu), :class => 'control-label' %>
-      <%= form.select(:menu_id, menus_for_select, {:include_blank => false, :prompt => 'Не выбранно'}, :class=>'input-medium') %>
-      <hr>
-      <a href="#" class="btn btn-primary"><i class="icon-open"></i><%= t(:label_add_load_new_logo) %></a>
+      <%= form.select(:menu_id, menus_for_select, {:include_blank => false, :prompt => 'Не выбранно'}, :class=>'input-medium') %>      
     </div>
   </div>
 </div>
