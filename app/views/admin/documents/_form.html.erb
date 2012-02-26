@@ -22,7 +22,10 @@
       <%= form.select(:approved, options_yesno_tag(@document.approved), {}, :class=>'input-medium') %>
       <hr>
       <%= label_tag 'menu_id', t(:label_document_link_menu), :class => 'control-label' %>
-      <%= form.select(:menu_id, menus_for_select, {:include_blank => false, :prompt => 'Не выбранно'}, :class=>'input-medium') %>      
+      <%= form.select(:menu_id, menus_for_select, {:include_blank => false, :prompt => 'Не выбранно'}, :class=>'input-medium') %>
+      <br />
+      <%= label_tag 'logo-upload', t(:text_logo), :class => 'control-label' %>
+      <a class="btn input-medium" href="#" id="logo-upload"><i class="icon-upload"></i> <%= t(:label_upload) %></a>
     </div>
   </div>
 </div>

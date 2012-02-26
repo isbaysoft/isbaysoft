@@ -1,40 +1,78 @@
-<div class="control-group1">
-  <%= label_tag(:name, t(:label_document_name), :class => 'control-label') %>
-  <%= general.text_field(:name, :class => 'edit', :class=>'input-xxlarge') %>
+<h1>manager for logo, make possible have a few logos for one doceumt </h1>
+<div class="row-fluid">
+  <div class="span">
+    <div class="control-group">
+      <%= label_tag(:name, t(:label_document_name), :class => 'control-label') %>
+      <%= general.text_field(:name, :class=>'input-xxlarge') %>
+    </div>
+    <div class="control-group">      
+      <div class="controls">
+        <%= label_tag(:category_id, t(:label_document_section_and_category), :class => 'control-label') %>
+        <%= text_field_tag(:category_name, @document.path_name, :readonly => true, :class => 'input-xxlarge') %>
+        <span class="popup help-inline btn" href="<%= dialog_url('category') %>"><%= t(:button_select) %></span>
+      </div>
+    </div>
+  </div>
+  <div class="pull-right">
+    <%= image_tag (@document.logos.empty? or @document.new_record?) ? 'main/empty_logo.png ' : @document.logo.url, :size => '128x128', :id => 'document_logo' %>
+  </div>
 </div>
 <hr>
 <div class="row-fluid">
-  <div class="span">
-    <div class="control-group1">
-      <a href="#" class="btn btn-primary input-large"><i class="icon-open"></i><%= t(:label_add_load_new_logo) %></a><br /><br />
-      <a href="#" class="btn btn-primary input-large"><i class="icon-open"></i><%= t(:label_add_load_new_logo) %></a>
-    </div>
-    <%#= label_tag(:category_id, t(:label_document_section_and_category), :class => 'control-label') %>
-    <%#= text_field_tag(:category_name, @document.path_name, 
-      :size => 50, 
-      :readonly => true, 
-      :class => 'example5 edit input-xlarge', 
-      :href => dialog_url('category'))
-    %>
-  </div>
-  <div class="span">
-    
-    <%#= label_tag :logo_id, t(:text_logo) %>
-    <%#= image_tag (@document.logo.nil? or @document.new_record?) ? 'main/empty_logo.png ' : @document.logo.logo.url, :size => '128x128'  %>
+  <div class="span5">
+    <%= label_tag(:short_description, t(:label_short_description), :class => 'control-label') %>
+    <%= general.text_area(:short_description, :rows => 5, :class => "input-xxlarge") %>
   </div>
 </div>
 <hr>
-<div class="control-group1">
-  <%= label_tag :short_description, t(:label_short_description) %>
-  <%= general.text_area(:short_description, :class => "input-xxlarge") %>
-  <hr>
-  <dt><%= label_tag :description, t(:label_description) %></dt>
-  <dd><%= general.text_area(:description, :class => "input-xxlarge") %></dd>
-  <br />
+<div class="row-fluid">
+  <%= label_tag :description, t(:label_description) %>
+  <%= general.text_area(:description, :class => "input-fluid") %>
 </div>
+<%= render :partial => 'shared/admin/tinymce_init' %>
+
+
+<!-- Load plupload and all it's runtimes and finally the jQuery queue widget -->
+<%= javascript_include_tag 'plupload/plupload.full.js' %>     
 
 <script type="text/javascript">
-  $(".example5").colorbox({innerWidth:640, innerHeight:480, initialWidth:640, initialHeight:480});
-</script>
+$(function() {
+  authtoken = $("input[name=authenticity_token]").val();
+  var uploader = new plupload.Uploader({
+    runtimes : 'gears,html5,flash,silverlight',
+    browse_button : 'logo-upload',
+    max_file_size : '10mb', // TODO: size from model
+    url : '<%= uploadlogo_admin_document_url %>',
+    flash_swf_url : '<%= javascript_path '/plupload/plupload.flash.swf' %>',
+    silverlight_xap_url : '<%= javascript_path '/plupload/plupload.silverlight.xap' %>',
+    filters : [{title : "Image files", extensions : "jpg,gif,png"}],
+    multipart_params : {
+      'format': 'json',
+      authenticity_token: authtoken
+    },
+    file_data_name: 'document[logo]'
+  });
 
-<%= render :partial => 'shared/admin/tinymce_init' %>
+  $('#upload_files_id').click(function(e) {
+    uploader.start();
+    e.preventDefault();
+  });
+
+  uploader.init();
+
+  uploader.bind('FilesAdded', function(up, files) {
+    up.refresh(); // Reposition Flash/Silverlight
+    up.start();
+  });
+
+  uploader.bind('Error', function(up, err) {
+    up.refresh(); // Reposition Flash/Silverlight
+  });
+
+  uploader.bind('FileUploaded', function(up, file, info) {
+    var response = JSON.parse(info['response']);
+    var url = JSON.parse(response['url']);
+    $('#document_logo').attr("src", url);
+  });
+});
+</script>

@@ -1,9 +1,12 @@
 class Document < ActiveRecord::Base
   belongs_to :category, :dependent => :destroy
   belongs_to :section, :dependent => :destroy
-  belongs_to :rule, :foreign_key => 'access_level'
-  belongs_to :logo, :dependent => :destroy
+  belongs_to :rule, :foreign_key => 'access_level'  
   belongs_to :menu
+
+  # has_many :logos, :dependent => :destroy
+  has_and_belongs_to_many :logos
+
 
   has_many :document_files
   has_many :filelists, :through => :document_files
@@ -47,6 +50,11 @@ class Document < ActiveRecord::Base
   end
 
   def path_name
-    self.category && self.category.section ? "#{self.category.section.name} / #{self.category.name}" : "choose the category"
+    self.category && self.category.section ? "#{self.category.section.name} / #{self.category.name}" : I18n.t(:text_not_selected)
   end
+
+  def set_active_logo(logo_instance)
+    self.update_attribute(:logo_id => logo_instance.id)    
+  end
+
 end

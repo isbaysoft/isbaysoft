@@ -244,7 +244,6 @@ ru:
   global_errors_adminemail: E-mail администратора
   global_errors_domain: Домен
 
-
   label_confirmation: Эта операция требует подтверждения
   label_destroy_confirmation: Вы действительно хотите произвести операцию удаления?
   label_login_email: e-mail
@@ -270,7 +269,7 @@ ru:
   label_short_description: Краткое описание
   label_add_file_from_archive: Добавить файл из архива
   label_add_load_new_file: Загрузить новый файл
-  label_add_load_new_logo: Загрузить новый логотип
+  label_upload: Загрузить
   label_menu_title: Название
   label_menu_publication: Публиковать
   label_menu_access_level: Доступ к меню
@@ -305,6 +304,7 @@ ru:
   button_return: Вернуться
   button_download: Скачать
   button_learn_more: Узнать больше
+  button_select_category: Выбрать категорию
 
   title_reordering: Пересортировать
 
@@ -342,6 +342,7 @@ ru:
   text_target_self: В этом окне
   text_target_blank: В новом окне
   text_only_show: Только просмотр
+  text_not_selected: Не выбранно
 
   controller_sections_name: Менеджер разделов
   controller_categories_name: Менеджер категорий
@@ -368,6 +369,7 @@ ru:
   tab_notify_deactivate_user: Деактивация пользователя
   tab_general: Основные
   tab_screenshots: Скриншоты
+
 
 #frontend
 

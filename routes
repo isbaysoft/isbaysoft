@@ -95,6 +95,7 @@ unpublish_admin_menu_menu_item POST   /admin/menus/:menu_id/menu_items/:id/unpub
                                DELETE /admin/filelists/:id(.:format)                           admin/filelists#destroy
         publish_admin_document POST   /admin/documents/:id/publish(.:format)                   admin/documents#publish
       unpublish_admin_document POST   /admin/documents/:id/unpublish(.:format)                 admin/documents#unpublish
+     uploadlogo_admin_document POST   /admin/documents/:id/uploadlogo(.:format)                admin/documents#uploadlogo
            admin_document_file DELETE /admin/documents/:document_id/file/:id(.:format)         admin/file#destroy
      admin_document_screenshot GET    /admin/documents/:document_id/screenshots/:id(.:format)  admin/screenshots#show
                                DELETE /admin/documents/:document_id/screenshots/:id(.:format)  admin/screenshots#destroy

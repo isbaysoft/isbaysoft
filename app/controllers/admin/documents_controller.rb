@@ -4,6 +4,8 @@ class Admin::DocumentsController < AdminApplicationController
   before_filter :document_find, :only => [:edit, :update]
   before_filter :load_categories_at_params, :only => [:create, :update]
 
+  respond_to :json
+
   def load_configs
     @controlleralias = I18n.t(:controller_documents_name)
     super
@@ -92,6 +94,21 @@ class Admin::DocumentsController < AdminApplicationController
       flash[:notice] = t(:notice_unpublish_documents)
     end
     redirect_to documents_url
+  end
+
+  def uploadlogo
+    document = Document.where(:id => params[:id]).first  
+    logo = Logo.new params[:document]
+    
+    if logo && logo.valid?
+      document.logos << logo
+      document.set_active_logo(logo)
+    end
+
+    respond_with(logo) do |format|
+      format.json {render :json => {:url => logo.logo.url.to_json, :id => logo.id}}
+      format.any {render :nothing => true}
+    end
   end
 
 protected

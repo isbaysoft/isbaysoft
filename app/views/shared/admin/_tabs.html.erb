@@ -8,7 +8,7 @@
   <% tabs.each do |tab| %>
     <%= content_tag('div', render(:partial => tab[:partial], :object => form_object),
        :id => tab[:name],
-       :class => 'tab-pane fade in active') %>
+       :class => 'tab-pane fade in active hide') %>
   <% end %>
 </div>
 
