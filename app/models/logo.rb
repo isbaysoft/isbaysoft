@@ -1,6 +1,5 @@
 class Logo < ActiveRecord::Base
-  has_and_belongs_to_many :documents
-  # belongs_to :documents, :dependent => :destroy
+  has_many :documents
 
   has_attached_file :logo,
     :path => ':rails_root/public/document_logos/:document_id/:basename.:extension',

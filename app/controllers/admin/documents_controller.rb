@@ -100,8 +100,10 @@ class Admin::DocumentsController < AdminApplicationController
     document = Document.where(:id => params[:id]).first  
     logo = Logo.new params[:document]
     
-    if logo && logo.valid?
+    if logo && logo.valid? && logo.save
       document.logos << logo
+
+!!!! this is should be save when user click button SAVE
       document.set_active_logo(logo)
     end
 

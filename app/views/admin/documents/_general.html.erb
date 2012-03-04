@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="pull-right">
-    <%= image_tag (@document.logos.empty? or @document.new_record?) ? 'main/empty_logo.png ' : @document.logo.url, :size => '128x128', :id => 'document_logo' %>
+    <%= image_tag (@document.logo.nil? or @document.new_record?) ? 'main/empty_logo.png ' : @document.logo.logo.url, :size => '128x128', :id => 'document_logo' %>
   </div>
 </div>
 <hr>
@@ -72,6 +72,7 @@ $(function() {
   uploader.bind('FileUploaded', function(up, file, info) {
     var response = JSON.parse(info['response']);
     var url = JSON.parse(response['url']);
+    alert(url);
     $('#document_logo').attr("src", url);
   });
 });

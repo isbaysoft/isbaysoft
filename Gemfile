@@ -9,7 +9,6 @@ gem 'execjs'
 gem 'rack'
 gem 'execjs'
 gem 'therubyracer'
-gem 'uuid'
 
 # Gems used only for assets and not required
 # in production environments by default.
