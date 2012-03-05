@@ -55,8 +55,4 @@ class Document < ActiveRecord::Base
     self.category && self.category.section ? "#{self.category.section.name} / #{self.category.name}" : I18n.t(:text_not_selected)
   end
 
-  def set_active_logo(logo_instance)
-    self.update_attribute(:logo_id, logo_instance.id)    
-  end
-
 end

@@ -11,7 +11,7 @@
     <%= render_tabs :tabs => document_tabs, :form_object => form %>
   </div>
   <div class="span3">
-    <div class="control-group1">
+    <div class="control-group">
       <%= label_tag :access_level, t(:label_document_access_for), :class => 'control-label' %>
       <%= form.select(:access_level, rules_for_select, {:include_blank => false}, :class=>'input-medium') %>
       <hr>
@@ -24,8 +24,14 @@
       <%= label_tag 'menu_id', t(:label_document_link_menu), :class => 'control-label' %>
       <%= form.select(:menu_id, menus_for_select, {:include_blank => false, :prompt => 'Не выбранно'}, :class=>'input-medium') %>
       <br />
+    </div>
+    <hr>
+    <div class="control-group">
       <%= label_tag 'logo-upload', t(:text_logo), :class => 'control-label' %>
       <a class="btn input-medium" href="#" id="logo-upload"><i class="icon-upload"></i> <%= t(:label_upload) %></a>
+    </div>
+    <div class="control-group">
+      <a class="popup btn input-medium" href="<%= dialog_url('manager_logo', :id => @document.id) %>" id="logo-upload"><i class="icon-adjust"></i> <%= t(:button_manager) %></a>
     </div>
   </div>
 </div>

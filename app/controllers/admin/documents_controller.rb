@@ -41,11 +41,6 @@ class Admin::DocumentsController < AdminApplicationController
       screenshot = Screenshot.new params[:screenshot]
       @document.screenshots << screenshot if screenshot && screenshot.valid? && screenshot.save
     end
-    @logo = Logo.new params[:logo] if params[:logo].present?
-    if @logo && @logo.valid? && @logo.save
-      @document.logo.destroy if @document.logo.present?
-      @document.logo = @logo
-    end
     update_attributes_and_redirect(@document,params[:document]) do
       @file = Filelist.new params[:file] if params[:file].present?
       if @file && @file.valid? && @file.save
@@ -102,9 +97,6 @@ class Admin::DocumentsController < AdminApplicationController
     
     if logo && logo.valid? && logo.save
       document.logos << logo
-
-!!!! this is should be save when user click button SAVE
-      document.set_active_logo(logo)
     end
 
     respond_with(logo) do |format|

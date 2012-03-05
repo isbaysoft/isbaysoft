@@ -20,6 +20,12 @@ class DialogsController < ApplicationController
     filelist if params[:dialog_name].eql?('filelist')
     static_content if params[:dialog_name].eql?('static_content')
 
+    if params[:dialog_name].eql?('manager_logo')
+      document = Document.where(:id => params[:id]).limit(1).first
+      @dialog_caption = t(:dialog_caption_static_content)
+      @dialogdata = document.logos.all
+    end
+
     respond_to do |format|
       format.html { redirect_to root_url}
       format.js
