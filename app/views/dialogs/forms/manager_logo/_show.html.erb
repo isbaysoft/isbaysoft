@@ -1,11 +1,17 @@
-<ul class="breadcrumb">
-  <h3><%= t(:dialog_caption_static_content) %></h3>
-</ul>
+<div class="aas">
+<div class="row-fluid">
+  <div class="span12">
+    <ul class="breadcrumb">
+      <h3><%= t(:dialog_caption_static_content) %></h3>
+    </ul>
+  </div>
+</div>
 <% @dialogdata.each_slice(3).map do |sliced| %>
-  <div class="row">
+  <div class="row-fluid">
     <% sliced.map do |logo| %>
-      <div class="span2">
+      <div class="span3 well image_box">
         <%= image_tag logo.logo.url, :size => '128x128' %>
+        <%#= logo.id %>    
         <%#= link_to h(row.name), '#', :onclick => "dialog.select(#{ 
           {
             :menu_item_url => show_path(row.id)
@@ -18,4 +24,5 @@
   <div class="pull-right">
     <a href="#" class="btn" onclick="$.colorbox.close();"><i class="icon-off"></i> Закрыть</a>
   </div>
+</div>
 </div>
