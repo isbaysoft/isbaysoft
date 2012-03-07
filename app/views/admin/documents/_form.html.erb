@@ -31,7 +31,7 @@
       <a class="btn input-medium" href="#" id="logo-upload"><i class="icon-upload"></i> <%= t(:label_upload) %></a>
     </div>
     <div class="control-group">
-      <a class="popup btn input-medium" href="<%= dialog_url('manager_logo', :id => @document.id) %>" id="logo-upload"><i class="icon-adjust"></i> <%= t(:button_manager) %></a>
+      <a class="popup btn input-medium" href="<%= dialog_url('manager_logo', :id => @document.id, :logo_id => (@document.logo ? @document.logo.id : 0)) %>" id="logo-upload"><i class="icon-adjust"></i> <%= t(:button_manager) %></a>
     </div>
   </div>
 </div>

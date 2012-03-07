@@ -22,8 +22,7 @@ class DialogsController < ApplicationController
 
     if params[:dialog_name].eql?('manager_logo')
       document = Document.where(:id => params[:id]).limit(1).first
-      @dialog_caption = t(:dialog_caption_static_content)
-      @dialogdata = document.logos.all
+      @dialogdata = {:feed => document.logos.all, :caption => t(:dialog_caption_logo), :logo_id => params[:logo_id].to_i}
     end
 
     respond_to do |format|

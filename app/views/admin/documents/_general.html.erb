@@ -1,4 +1,3 @@
-<h1>manager for logo, make possible have a few logos for one doceumt </h1>
 <div class="row-fluid">
   <div class="span">
     <div class="control-group">
@@ -17,8 +16,6 @@
     <%= general.hidden_field :logo_id %>
     <div>
       <%= image_tag (@document.logo.nil? or @document.new_record?) ? 'main/empty_logo.png ' : @document.logo.logo.url, :size => '128x128', :id => 'document_logo' %>
-      <br/>
-      <span class="span-text-center-fluen"><a href="#">выбрать</a></span>
     </div>
   </div>
 </div>
@@ -41,6 +38,13 @@
 <%= javascript_include_tag 'plupload/plupload.full.js' %>     
 
 <script type="text/javascript">
+
+$(document).ready(function() {
+  $('#document_logo_id').change(function(e) {
+    $('#document_logo').attr('src',$("#logo" + $(this).val()).attr('src'))
+  });
+});
+
 $(function() {
   authtoken = $("input[name=authenticity_token]").val();
   var uploader = new plupload.Uploader({

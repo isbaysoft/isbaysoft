@@ -1,28 +1,25 @@
-<div class="aas">
-<div class="row-fluid">
-  <div class="span12">
-    <ul class="breadcrumb">
-      <h3><%= t(:dialog_caption_static_content) %></h3>
-    </ul>
-  </div>
+<div class="container-fluid">
+	<div style="padding-top: 16px;">
+		<% @dialogdata[:feed].each_slice(3).map do |sliced| %>
+			<div class="row-fluid">
+				<% sliced.map do |logo| %>
+					<div class="span3 well select_image_box">
+						<%= image_tag logo.logo.url, :size => '128x128', :id => "logo#{logo.id}" , :onclick => "dialog.select(#{ {:document_logo_id => logo.id, 
+							:logo => logo.logo.url}.to_json }); return false;" %>
+						<%= check_box_tag 'cblogo', logo.id, logo.id == @dialogdata[:logo_id] %>
+					</div>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
 </div>
-<% @dialogdata.each_slice(3).map do |sliced| %>
-  <div class="row-fluid">
-    <% sliced.map do |logo| %>
-      <div class="span3 well image_box">
-        <%= image_tag logo.logo.url, :size => '128x128' %>
-        <%#= logo.id %>    
-        <%#= link_to h(row.name), '#', :onclick => "dialog.select(#{ 
-          {
-            :menu_item_url => show_path(row.id)
-          }.to_json }); return false;" %>
-      </div>
-    <% end %>
+<div id="dialog-footer" class="navbar navbar-fixed">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <a class="brand" href="#"><%= @dialogdata[:caption] %></a>
+      <ul class="nav nav-pills pull-right">
+        <li><%= link_to 'Exit', '#', :onclick => "dialog.hide();" %></li>
+      </ul>
+    </div>
   </div>
-<% end %>
-<div id="dialog-footer" class="row-fluid">
-  <div class="pull-right">
-    <a href="#" class="btn" onclick="$.colorbox.close();"><i class="icon-off"></i> Закрыть</a>
-  </div>
-</div>
 </div>
