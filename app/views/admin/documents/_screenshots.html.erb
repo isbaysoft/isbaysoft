@@ -1,27 +1,57 @@
-<dt><%= label_tag 'screenshot_id', t(:label_load_screenshot) %></dt>
-<dd><%= file_field_tag 'screenshot[screenshot]' %>
-  <%= link_to_function 'Загрузить',"submitbutton('post')" %>
-</dd>
-<br />
+<a class="btn input-medium" href="#" id="screenshot-upload"><i class="icon-upload"></i> <%= t(:label_upload) %></a>
+<hr>
+<div class="row-fluid screenshot">
+  <div class="span3">
+    <code>file_name.jpg (1.4 Mb)</code></br>
+    <%= image_tag (@document.logo.nil? or @document.new_record?) ? 'main/empty_logo.png ' : @document.logo.logo.url, :size => '128x128', :id => 'document_logo' %>
+  </div>
+  <div class="span3">Level 2</div>
+  <div class="span3">Level 2</div>
+</div>
 
-<table width="100%" class="screenshots_table">
-<% @document.screenshots.map.to_a.in_groups_of(3) do |img| %>
-  <tr>
-    <% 3.times do |x| %>
-      <td width="33%" valign="top" align="center">
-        <div class="screenshot_container">
-          <%= image_tag img[x].screenshot.url, :width => '128px' if img[x] %> <br />
-        </div>
-        <div class="screenshot_info">
-          <%  if img[x] %>
-            <%= img[x].screenshot_file_name  %><br />
-            <%= number_to_human_size(img[x].screenshot_file_size) if img[x] %><br />
-            <%= link_to 'Удалить', admin_document_screenshot_url(@document,img[x]), {:method => :delete} %>
-          <% end %>
-        </div>
-      </td>
-    <% end %>
-  </tr>
-<% end if @document.screenshots.present? %>
-</table>
 
+
+<script type="text/javascript">
+  $(function() {
+    authtoken = $("input[name=authenticity_token]").val();
+    var uploader = new plupload.Uploader({
+      runtimes : 'gears,html5,flash,silverlight',
+      browse_button : 'screenshot-upload',
+      max_file_size : '10mb', // TODO: size from model
+      url : '<%= uploadscreenshot_admin_document_url %>',
+      flash_swf_url : '<%= javascript_path '/plupload/plupload.flash.swf' %>',
+      silverlight_xap_url : '<%= javascript_path '/plupload/plupload.silverlight.xap' %>',
+      filters : [{title : "Image files", extensions : "jpg,gif,png"}],
+      multipart_params : {
+        'format': 'json',
+        authenticity_token: authtoken
+      },
+      file_data_name: 'document[screenshot]'
+    });
+
+    $('#upload_screenshots_id').click(function(e) {
+      uploader.start();
+      e.preventDefault();
+    });
+
+    uploader.init();
+
+    uploader.bind('FilesAdded', function(up, files) {
+
+
+      up.refresh(); // Reposition Flash/Silverlight
+    });
+
+    uploader.bind('Error', function(up, err) {
+      up.refresh(); // Reposition Flash/Silverlight
+    });
+
+    uploader.bind('FileUploaded', function(up, file, info) {
+      var response = JSON.parse(info['response']);
+      var url = JSON.parse(response['url']);
+      $('#document_logo').attr("src", url);
+      $('#document_logo_id').attr('value', response['id']);
+
+    });
+  });
+  </script>

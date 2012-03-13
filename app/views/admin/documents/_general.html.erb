@@ -63,11 +63,6 @@ $(function() {
     file_data_name: 'document[logo]'
   });
 
-  $('#upload_files_id').click(function(e) {
-    uploader.start();
-    e.preventDefault();
-  });
-
   uploader.init();
 
   uploader.bind('FilesAdded', function(up, files) {

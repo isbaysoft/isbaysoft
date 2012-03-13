@@ -53,6 +53,7 @@ Isbaysoft::Application.routes.draw do
         post :publish
         post :unpublish
         post :uploadlogo
+        post :uploadscreenshot
       end
       resources :file, :only => [:destroy]
       resources :screenshots, :only => [:destroy, :show]

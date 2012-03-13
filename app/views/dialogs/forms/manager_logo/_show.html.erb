@@ -3,9 +3,9 @@
 		<% @dialogdata[:feed].each_slice(3).map do |sliced| %>
 			<div class="row-fluid">
 				<% sliced.map do |logo| %>
-					<div class="span3 well select_image_box">
-						<%= image_tag logo.logo.url, :size => '128x128', :id => "logo#{logo.id}" , :onclick => "dialog.select(#{ {:document_logo_id => logo.id, 
-							:logo => logo.logo.url}.to_json }); return false;" %>
+					<div class="span3 well select_image_box" onclick="dialog.select(<%= {:document_logo_id => logo.id, 
+							:logo => logo.logo.url}.to_json %>); return false;">
+						<%= image_tag logo.logo.url, :size => '128x128', :id => "logo#{logo.id}" %>
 						<%= check_box_tag 'cblogo', logo.id, logo.id == @dialogdata[:logo_id] %>
 					</div>
 				<% end %>

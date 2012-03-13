@@ -1,13 +1,18 @@
 <div class="container-fluid">
   <div style="padding-top: 16px;">
     <ul class="nav nav-list">
-      <% @dialogdata[:feed].map do |row| %>
+      <% @dialogdata[:feed].map do |section| %>
         <li class="nav-header well-min">
-          <%= row.name %>    
+          <%= section.name %>    
         </li>
-        <% row.categories.map do |row2| %>
+        <% section.categories.map do |category| %>
           <li>
-            <a href="#"><%= row2.name %></a>
+            <%= link_to h(category.name), '#', :onclick => "dialog.select(#{
+              {
+                :category_name => "#{section.name}/#{category.name}",
+                :category_id => category.id,
+                :section_id => section.id
+              }.to_json }); return false;" %>
           </li>    
         <% end %>
       <% end %>

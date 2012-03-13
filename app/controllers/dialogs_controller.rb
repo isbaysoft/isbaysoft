@@ -11,12 +11,6 @@ class DialogsController < ApplicationController
 
     @dialogdata = dialog_category_data if params[:dialog_name].eql?('category')
 
-    if params[:dialog_name].eql?('fetch_category')
-      @categories = Category.getlist.section(params[:id]).order('name')
-      @inline_object = 'dialog_category_list'
-      @template_dir = 'dialogs/forms/category/categories'
-    end
-
     filelist if params[:dialog_name].eql?('filelist')
     static_content if params[:dialog_name].eql?('static_content')
 
