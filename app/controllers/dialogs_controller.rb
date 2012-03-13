@@ -9,7 +9,7 @@ class DialogsController < ApplicationController
       render :none
     end
 
-    category if params[:dialog_name].eql?('category')
+    @dialogdata = dialog_category_data if params[:dialog_name].eql?('category')
 
     if params[:dialog_name].eql?('fetch_category')
       @categories = Category.getlist.section(params[:id]).order('name')
@@ -47,9 +47,11 @@ private
     @dialogdata = Filelist.except(ids).order('f_file_name')
   end
 
-  def category
-    @dialog_caption = t(:dialog_category)
-    @dialogdata = Section.order('name')
+  def dialog_category_data
+    dialogdata = {}
+    dialogdata[:caption] = t(:dialog_category)
+    dialogdata[:feed] = Section.order('name')
+    return dialogdata
   end
   
 end

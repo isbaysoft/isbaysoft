@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div style="padding-top: 16px;">
+    <ul class="nav nav-list">
+      <% @dialogdata[:feed].map do |row| %>
+        <li class="nav-header well-min">
+          <%= row.name %>    
+        </li>
+        <% row.categories.map do |row2| %>
+          <li>
+            <a href="#"><%= row2.name %></a>
+          </li>    
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<div id="dialog-footer" class="navbar navbar-fixed">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <a class="brand" href="#"><%= @dialogdata[:caption] %></a>
+      <ul class="nav nav-pills pull-right">
+        <li><%= link_to 'Exit', '#', :onclick => "dialog.hide();" %></li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -55,6 +55,7 @@ $(function() {
     flash_swf_url : '<%= javascript_path '/plupload/plupload.flash.swf' %>',
     silverlight_xap_url : '<%= javascript_path '/plupload/plupload.silverlight.xap' %>',
     filters : [{title : "Image files", extensions : "jpg,gif,png"}],
+    multi_selection: false,
     multipart_params : {
       'format': 'json',
       authenticity_token: authtoken

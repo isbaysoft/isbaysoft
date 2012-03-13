@@ -1,3 +1,4 @@
+
 <div id="dialog_category">
 <table height="100%" width="100%" cellpadding="2px" cellspacing="0" >
   <tr>
@@ -25,3 +26,14 @@
   </tr>
 </table>
 </div>
+
+<ul>
+<% @categories.map do |row| %>
+  <li><h3><%= link_to h(row.name), '#', :onclick => "dialog.select(#{
+          {
+            :category_name => "#{row.section.name}/#{row.name}",
+            :category_id => row.id,
+            :section_id => row.section.id
+          }.to_json }); return false;" %></h3></li>
+<% end %>
+</ul>
