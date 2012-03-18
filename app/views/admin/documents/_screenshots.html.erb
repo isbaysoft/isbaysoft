@@ -1,9 +1,34 @@
 <a class="btn input-medium" href="#" id="screenshot-upload"><i class="icon-upload"></i> <%= t(:label_upload) %></a>
 <hr>
-<div class="row-fluid screenshot">
+<div class="row-fluid ">
   <div class="span3">
-    <code>file_name.jpg (1.4 Mb)</code></br>
+    <table class="table table-striped table-bordered table-condensed">
+      <tr colspan=2>
+        <td>
+          <%= image_tag (@document.logo.nil? or @document.new_record?) ? 'main/empty_logo.png ' : @document.logo.logo.url, :size => '128x128', :id => 'document_logo' %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          1
+        </td>
+        <td>
+          2
+        </td>
+      </tr>
+    </table>
+    
+  </div>
+  <div class="span3">Level 2</div>
+  <div class="span3">Level 2</div>
+</div>
+
+<hr>
+<div class="row-fluid ">
+  <div class="span3">
     <%= image_tag (@document.logo.nil? or @document.new_record?) ? 'main/empty_logo.png ' : @document.logo.logo.url, :size => '128x128', :id => 'document_logo' %>
+    <div class="form-actions">
+      asd</div>
   </div>
   <div class="span3">Level 2</div>
   <div class="span3">Level 2</div>
