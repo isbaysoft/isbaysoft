@@ -270,6 +270,7 @@ ru:
   label_add_file_from_archive: Добавить файл из архива
   label_add_load_new_file: Загрузить новый файл
   label_upload: Загрузить
+  label_select: Выбрать
   label_menu_title: Название
   label_menu_publication: Публиковать
   label_menu_access_level: Доступ к меню

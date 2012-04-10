@@ -4,8 +4,8 @@ class Logo < ActiveRecord::Base
   has_attached_file :logo,
     :path => ':rails_root/public/document_logos/:document_id/:basename.:extension',
     :url => '/document_logos/:document_id/:basename.:extension',
-    :default_style => :middle,
-    :styles => {:middle => "128x128#"}
+    :default_style => :thumb,
+    :styles => {:thumb => "128x128#"}
   
   validates_attachment_content_type :logo, :content_type => /image/
   validates_attachment_size :logo, :less_than => 100.kilobyte,

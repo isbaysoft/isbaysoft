@@ -58,6 +58,17 @@ class Admin::DocumentsController < AdminApplicationController
     end # END update_attributes_and_redirect
   end
 
+  def uploadscreenshot
+    document = Document.where(:id => params[:id]).first  
+    screenshot = Screenshot.new params[:document]
+    document.screenshots << screenshot if screenshot && screenshot.valid? && screenshot.save
+    
+    respond_with(screenshot) do |format|
+      format.json {render :json => {:url => screenshot.screenshot.url.to_json, :id => screenshot.id}}
+      format.any {render :nothing => true}
+    end    
+  end
+
   def destroy
     confirm_multiple_operations params[:ids] do
       if Document.destroy_all(['id in (?)',session[current_session_ids]])
