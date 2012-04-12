@@ -8,11 +8,11 @@
 <% @document.screenshots.map do |img| %>
   <li class="span2">
     <div class="thumbnail">
+      <%= link_to('Удалить', admin_document_screenshot_url(@document,img), :class => 'btn', :method => :delete) %>
       <%= image_tag img.screenshot.url %>
       <div class="caption">
         <h5><%= img.screenshot_file_name  %></h5>
         <p><%= number_to_human_size(img.screenshot_file_size) %></p>
-        <%= link_to('Удалить', admin_document_screenshot_url(@document,img), :class => 'btn input-medium', :method => :delete) %>
       <end>
     </div>
   </li>
@@ -51,6 +51,14 @@
       up.refresh(); // Reposition Flash/Silverlight
     });
 
+    uploader.bind('UploadProgress', function(up, file) {
+      var size = plupload.formatSize(file.size)
+      var loaded = plupload.formatSize(file.loaded)
+      
+      $('#pre_' + file.id).html("<div class='progress progress-info'><div class='bar' style='width: " + file.percent + "%;'></div></div>");
+    });
+    
+
     uploader.bind('Error', function(up, err) {
       up.refresh(); // Reposition Flash/Silverlight
     });
@@ -71,13 +79,10 @@
 <script id="screenshot_add_template" type="text/x-jquery-tmpl">
  <li class="span2">
     <div class="thumbnail">
-      ${url}
+    <a href="#" id="file_id_${id}_rm" class="btn pull-right"><i class="icon-trash"></i></a>
+      <pre id="pre_${id}">?</pre>
       <div class="caption">
-        <h5>${caption}</h5>
-        <p>${plupload.formatSize(size)}</p>
-        <a href="#" id="file_id_${id}_rm"><i class="btn"><i class="icon-minus-sign"></i><a/>
-        
-      <end>
-    </div>
+        <h5>${name}</h5>
+      </div>
   </li>
 </script>
