@@ -122,6 +122,8 @@ td {
 }
 
 pre, .thumbnail .progress {
+  padding: 4px !important;
+  margin: 0 !important;
   font-size: 12em !important;
   color: #cccccc;
   height: 120px;
@@ -130,7 +132,35 @@ pre, .thumbnail .progress {
   line-height: 120px;
 }
 
-.thumbnail .caption h5 {overflow-y: hidden; height: 18px;}
+.thumbnail .caption h5 {overflow: hidden; height: 18px;}
 .thumbnail .caption p {font-size: 10px;}
-
 .thumbnail .bar {height: 100% !important;}
+
+.thumbnail img {
+  /*float: left;*/
+  padding: 4px;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #f5f5f5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.thumbnail .btn {position: absolute;}
+.thumbnails li.span {width: 180px !important;}
+
+.rot {
+  position:absolute;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter:alpha(opacity=0);
+}
+
+.thumbnail .label {
+  display: block;
+  position: relative;
+  float: right;
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+}

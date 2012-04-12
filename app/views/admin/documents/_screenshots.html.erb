@@ -6,13 +6,12 @@
 
 <ul class="thumbnails">
 <% @document.screenshots.map do |img| %>
-  <li class="span2">
+  <li class="span">
     <div class="thumbnail">
-      <%= link_to('Удалить', admin_document_screenshot_url(@document,img), :class => 'btn', :method => :delete) %>
+      <a href="#" id="file_id_${id}_rm" class="btn pull-right"><i class="icon-trash"></i></a>
       <%= image_tag img.screenshot.url %>
       <div class="caption">
         <h5><%= img.screenshot_file_name  %></h5>
-        <p><%= number_to_human_size(img.screenshot_file_size) %></p>
       <end>
     </div>
   </li>
@@ -54,8 +53,10 @@
     uploader.bind('UploadProgress', function(up, file) {
       var size = plupload.formatSize(file.size)
       var loaded = plupload.formatSize(file.loaded)
-      
-      $('#pre_' + file.id).html("<div class='progress progress-info'><div class='bar' style='width: " + file.percent + "%;'></div></div>");
+      if ($('#pre_' + file.id + ' span').length == 0) {
+        $('#pre_' + file.id).prepend('<span class="label label-info">0%</span>');
+      }
+      $('#pre_' + file.id + ' span').html(file.percent + '%');
     });
     
 
@@ -66,21 +67,20 @@
     uploader.bind('FileUploaded', function(up, file, info) {
       var response = JSON.parse(info['response']);
       var url = JSON.parse(response['url']);
-      $('#document_logo').attr("src", url);
-      $('#document_logo_id').attr('value', response['id']);
-
+      $('#pre_'+file.id).prepend('<img id="scr_'+response['id']+'" class="rot" src='+url+'>');
+      $('#scr_'+response['id']).animate({opacity: 1.0}, 500);
+      $('#pre_' + file.id + ' span').remove();
     });
   });
 </script>
 
-
 <%= javascript_include_tag 'jquery.template.min.js' %>
 
 <script id="screenshot_add_template" type="text/x-jquery-tmpl">
- <li class="span2">
+  <li class="span">
     <div class="thumbnail">
-    <a href="#" id="file_id_${id}_rm" class="btn pull-right"><i class="icon-trash"></i></a>
-      <pre id="pre_${id}">?</pre>
+      <a href="#" id="file_id_${id}_rm" class="btn"><i class="icon-trash"></i></a>
+      <div id="pre_${id}"><pre></pre></div>
       <div class="caption">
         <h5>${name}</h5>
       </div>
