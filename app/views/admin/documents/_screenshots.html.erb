@@ -8,7 +8,7 @@
 <% @document.screenshots.map do |img| %>
   <li class="span">
     <div class="thumbnail">
-      <a href="#" id="file_id_${id}_rm" class="btn pull-right"><i class="icon-trash"></i></a>
+      <a href="#" class="btn"><i class="icon-trash"></i></a>
       <%= image_tag img.screenshot.url %>
       <div class="caption">
         <h5><%= img.screenshot_file_name  %></h5>
@@ -74,6 +74,12 @@
       // $('#scr_'+response['id']).removeClass('overloadimg')
 
     });
+  });
+</script>
+
+<script type="text/javascript">
+  $('.thumbnail a.btn').click(function(e) {
+      alert(9);
   });
 </script>
 
