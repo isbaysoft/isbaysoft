@@ -433,6 +433,7 @@ admin/icons/48/user_group.png: admin/icons/48/user_group.png
 admin/icons/48/users.png: admin/icons/48/users.png
 admin/icons/elink.png: admin/icons/elink.png
 admin/icons/link.png: admin/icons/link.png
+admin/image.png: admin/image.png
 admin/left-corners.gif: admin/left-corners.gif
 admin/left-right.gif: admin/left-right.gif
 admin/rails.gif: admin/rails.gif

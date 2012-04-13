@@ -12,7 +12,7 @@
       <%= image_tag img.screenshot.url %>
       <div class="caption">
         <h5><%= img.screenshot_file_name  %></h5>
-      <end>
+      </div>
     </div>
   </li>
 <% end if @document.screenshots.present? %>
@@ -67,9 +67,12 @@
     uploader.bind('FileUploaded', function(up, file, info) {
       var response = JSON.parse(info['response']);
       var url = JSON.parse(response['url']);
-      $('#pre_'+file.id).prepend('<img id="scr_'+response['id']+'" class="rot" src='+url+'>');
+      $('#pre_'+file.id+' a.btn').after('<img id="scr_'+response['id']+'" class="overloadimg" src='+url+'>');
       $('#scr_'+response['id']).animate({opacity: 1.0}, 500);
       $('#pre_' + file.id + ' span').remove();
+      // $('#pre_' + file.id + ' pre').remove();
+      // $('#scr_'+response['id']).removeClass('overloadimg')
+
     });
   });
 </script>
@@ -78,11 +81,12 @@
 
 <script id="screenshot_add_template" type="text/x-jquery-tmpl">
   <li class="span">
-    <div class="thumbnail">
-      <a href="#" id="file_id_${id}_rm" class="btn"><i class="icon-trash"></i></a>
-      <div id="pre_${id}"><pre></pre></div>
+    <div class="thumbnail" id="pre_${id}">
+      <a href="#" class="btn"><i class="icon-trash"></i></a>
+      <pre></pre>
       <div class="caption">
         <h5>${name}</h5>
       </div>
+    </div>
   </li>
 </script>
