@@ -3,12 +3,14 @@
   <a class="btn input-medium" href="#" id="screenshot-upload-id"><i class="icon-upload"></i> <%= t(:label_upload) %></a>
 </div>
 <hr>
+<%= hidden_field_tag 'test', 0 %>
+<a id="aaa1">sdf</a>
 
 <ul class="thumbnails">
 <% @document.screenshots.map do |img| %>
   <li class="span">
     <div class="thumbnail">
-      <a href="#" class="btn"><i class="icon-trash"></i></a>
+      <a href="#" class="btn" id="scr_<%= img.id %>"><i class="icon-trash"></i></a>
       <%= image_tag img.screenshot.url %>
       <div class="caption">
         <h5><%= img.screenshot_file_name  %></h5>
@@ -17,6 +19,7 @@
   </li>
 <% end if @document.screenshots.present? %>
 </ul>
+
 
 <script type="text/javascript">
   $(function() {
@@ -70,17 +73,21 @@
       $('#pre_'+file.id+' a.btn').after('<img id="scr_'+response['id']+'" class="overloadimg" src='+url+'>');
       $('#scr_'+response['id']).animate({opacity: 1.0}, 500);
       $('#pre_' + file.id + ' span').remove();
-      // $('#pre_' + file.id + ' pre').remove();
-      // $('#scr_'+response['id']).removeClass('overloadimg')
-
     });
   });
 </script>
 
 <script type="text/javascript">
-  $('.thumbnail a.btn').click(function(e) {
-      alert(9);
-  });
+  $('.thumbnail a.btn').toggle(function(){
+    a = $('#test').val();
+    
+    $('#test').val().push(111));
+     $(this).next().addClass('image-overlay');
+   }, function(){
+    alert($('#test').val());
+     $(this).next().removeClass('image-overlay');
+   });
+  e.preventDefault();  
 </script>
 
 <%= javascript_include_tag 'jquery.template.min.js' %>
