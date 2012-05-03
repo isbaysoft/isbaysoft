@@ -51,7 +51,7 @@ $(function() {
     runtimes : 'gears,html5,flash,silverlight',
     browse_button : 'logo-upload',
     max_file_size : '10mb', // TODO: size from model
-    url : '<%= uploadlogo_admin_document_url %>',
+    url : '<%= uploadlogo_admin_document_url unless @document.new_record? %>',
     flash_swf_url : '<%= javascript_path '/plupload/plupload.flash.swf' %>',
     silverlight_xap_url : '<%= javascript_path '/plupload/plupload.silverlight.xap' %>',
     filters : [{title : "Image files", extensions : "jpg,gif,png"}],
