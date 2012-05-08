@@ -8,7 +8,7 @@
 
 <div class="row-fluid">
   <div class="span9">
-    <%= render_tabs :tabs => document_tabs, :form_object => form %>
+    <%= render_tabs :tabs => document_tabs.select {|tab| tab[:name] == 'general' || !@document.new_record? } , :form_object => form %>
   </div>
   <div class="span3">
     <div class="control-group">
@@ -26,13 +26,15 @@
       <br />
     </div>
     <hr>
-    <div class="control-group">
-      <%= label_tag 'logo-upload', t(:text_logo), :class => 'control-label' %>
-      <a class="btn input-medium" href="#" id="logo-upload"><i class="icon-upload"></i> <%= t(:label_upload) %></a>
-    </div>
-    <div class="control-group">
-      <a class="popup btn input-medium" href="<%= dialog_url('manager_logo', :id => @document.id, :logo_id => (@document.logo ? @document.logo.id : 0)) %>" id="logo-upload"><i class="icon-adjust"></i> <%= t(:button_manager) %></a>
-    </div>
+    <% unless @document.new_record? %>
+      <div class="control-group">
+        <%= label_tag 'logo-upload', t(:text_logo), :class => 'control-label' %>
+        <a class="btn input-medium" href="#" id="logo-upload"><i class="icon-upload"></i> <%= t(:label_upload) %></a>
+      </div>
+      <div class="control-group">
+        <a class="popup btn input-medium" href="<%= dialog_url('manager_logo', :id => @document.id, :logo_id => (@document.logo ? @document.logo.id : 0)) %>" id="logo-upload"><i class="icon-adjust"></i> <%= t(:button_manager) %></a>
+      </div>
+    <% end %>
   </div>
 </div>
 

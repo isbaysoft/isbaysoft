@@ -15,7 +15,7 @@
   <div class="pull-right">
     <%= general.hidden_field :logo_id %>
     <div>
-      <%= image_tag (@document.logo.nil? or @document.new_record?) ? 'main/empty_logo.png ' : @document.logo.logo.url, :size => '128x128', :id => 'document_logo' %>
+      <%= image_tag (@document.logo.nil? or @document.new_record?) ? '/images/main/empty_logo.png ' : @document.logo.logo.url, :size => '128x128', :id => 'document_logo' %>
     </div>
   </div>
 </div>

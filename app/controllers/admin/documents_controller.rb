@@ -73,7 +73,7 @@ class Admin::DocumentsController < AdminApplicationController
     confirm_multiple_operations params[:ids] do
       if Document.destroy_all(['id in (?)',session[current_session_ids]])
         flash[:notice] = t(:notice_destroy_document)
-        redirect_to documents_url
+        redirect_to admin_documents_url
       else
         flash[:error] = t(:error_destroy_document)
         render :action => 'index'
