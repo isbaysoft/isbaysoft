@@ -9,6 +9,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index:999;
 
   min-height: 20px;
   padding: 19px;

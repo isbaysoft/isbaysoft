@@ -85,3 +85,21 @@ function HideLoading() {
 };
 
 //Ajax.Responders.register({onCreate: ShowLoading, onComplete: HideLoading});
+
+
+jQuery.fn.extend({
+    addToArray: function(value) {
+        return this.filter(":input").val(function(i, v) {
+           var arr = v.split(',');
+           arr.push(value);
+           return arr.join(',');
+        }).end();
+    },
+    removeFromArray: function(value) {
+        return this.filter(":input").val(function(i, v) {
+           return $.grep(v.split(','), function(val) {  
+                    return val != value;
+                  }).join(',');
+        }).end();
+    }
+});
