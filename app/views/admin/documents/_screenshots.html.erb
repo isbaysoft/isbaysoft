@@ -9,9 +9,9 @@
 
 <ul class="thumbnails">
 <% @document.screenshots.map do |img| %>
-  <li class="span">
+  <li class="span" id="img<%= img.id %>">
     <div class="thumbnail">
-      <a href="#" class="btn" id="img<%= img.id %>"><i class="icon-trash"></i></a>
+      <a href="#" class="btn" id="d<%= img.id %>"><i class="icon-trash"></i></a>
       <%= image_tag img.screenshot.url %>
       <div class="caption">
         <h5><%= img.screenshot_file_name  %></h5>
@@ -29,7 +29,7 @@
       runtimes : 'gears,html5,flash,silverlight',
       browse_button : 'screenshot-select-id',
       max_file_size : '10mb', // TODO: size from model
-      url : '<%= uploadscreenshot_admin_document_url unless @document.new_record? %>',
+      url : '<%= screenshot_admin_document_url unless @document.new_record? %>',
       flash_swf_url : '<%= javascript_path '/plupload/plupload.flash.swf' %>',
       silverlight_xap_url : '<%= javascript_path '/plupload/plupload.silverlight.xap' %>',
       filters : [{title : "Image files", extensions : "jpg,gif,png"}],
@@ -74,28 +74,54 @@
       $('#pre_'+file.id+' a.btn').after('<img id="scr_'+response['id']+'" class="overloadimg" src='+url+'>');
       $('#scr_'+response['id']).animate({opacity: 1.0}, 500);
       $('#pre_' + file.id + ' span').remove();
+      $('.thumbnail a.btn').attr('onclick','').attr('id',response['id']);;
+      // $('#scr_'+response['id']).removeClass('overloadimg');
+      // $('#pre_' + file.id + ' pre').remove();
     });
   });
+
+  $(document).ready(function() {
+    //  Botton: Remove image
+    
+    $('.thumbnail a.btn').live('click',function(e) {
+      var val = $(this).attr('id').replace('d','');  
+      $("#imgDelIds").toggleToArray(val);
+      $(this).next().toggleClass("image-overlay");
+      e.preventDefault();
+    });
+
+    
+    //  Button: Remove images
+    $('#screenshot-delete-id').click(function(){
+      $.ajax({
+        url: '<%= screenshot_admin_document_url unless @document.new_record? %>',
+        global: false,
+        type: "DELETE",
+        data: {'ids' : $('#imgDelIds').val()},
+        dataType: "json",
+        error: function(msg){
+            alert('msg');
+        },
+        complete: function(msg){
+          $("#imgDelIds").val('');
+        },
+        success: function(data, textStatus, jqXHR){
+          $.each(data['ids'], function(index, value) { 
+            $('#img'+value).fadeOut();
+          });
+        }
+     });
+    }); // end Button: Remove images
+  }) // end document ready
 </script>
 
-<script type="text/javascript">
-  $('.thumbnail a.btn').toggle(function(){
-    var val = $(this).attr('id').replace('img','');
-    $(this).next().addClass('image-overlay');
-    $("#imgDelIds").addToArray(val);
-   }, function(){
-    $(this).next().removeClass('image-overlay');
-    $("#imgDelIds").removeFromArray(val);
-   });
-  // this.preventDefault();  
-</script>
 
 <%= javascript_include_tag 'jquery.template.min.js' %>
 
 <script id="screenshot_add_template" type="text/x-jquery-tmpl">
-  <li class="span">
+  <li class="span" id="${id}">
     <div class="thumbnail" id="pre_${id}">
-      <a href="#" class="btn"><i class="icon-trash"></i></a>
+      <a href="#" class="btn" id="d${id}" onclick="alert(123); false;"><i class="icon-trash"></i></a>
       <pre></pre>
       <div class="caption">
         <h5>${name}</h5>

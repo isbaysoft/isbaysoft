@@ -1,10 +1,10 @@
 class Admin::DocumentsController < AdminApplicationController
   before_filter :require_admin
   before_filter :set_active_tab, :load_section, :only => [:new, :create, :edit, :update]
-  before_filter :document_find, :only => [:edit, :update]
+  before_filter :document_find, :only => [:edit, :update, :upload_screenshots, :delete_screenshots]
   before_filter :load_categories_at_params, :only => [:create, :update]
 
-  respond_to :json
+  respond_to :json, :js
 
   def load_configs
     @controlleralias = I18n.t(:controller_documents_name)
@@ -58,13 +58,26 @@ class Admin::DocumentsController < AdminApplicationController
     end # END update_attributes_and_redirect
   end
 
-  def uploadscreenshot
-    document = Document.where(:id => params[:id]).first  
-    screenshot = Screenshot.new params[:document]
-    document.screenshots << screenshot if screenshot && screenshot.valid? && screenshot.save
+  def upload_screenshots
+    # screenshot = Screenshot.new params[:document]
+    # screenshot.document_id = params[:id]
+    # puts "============> #{screenshot.document_id}"
+    # @document.screenshots << screenshot if screenshot && screenshot.valid? && screenshot.save
+    screenshot = @document.screenshots.new params[:document]  
+    screenshot.save
     
     respond_with(screenshot) do |format|
       format.json {render :json => {:url => screenshot.screenshot.url.to_json, :id => screenshot.id}}
+      format.any {render :nothing => true}
+    end    
+  end
+
+  def delete_screenshots
+    ids = params[:ids].split(',')
+    @document.screenshots.where(:id => ids).destroy_all
+    
+    respond_with(nil) do |format|
+      format.js {render :json => {:ids => ids}}
       format.any {render :nothing => true}
     end    
   end

@@ -12,7 +12,7 @@ class Document < ActiveRecord::Base
   has_many :document_files
   has_many :filelists, :through => :document_files
 
-  has_many :screenshots
+  has_many :screenshots, :dependent => :destroy
 
   validates :description, :presence => true
   validates :name, :presence => true

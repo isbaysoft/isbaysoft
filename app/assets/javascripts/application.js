@@ -88,11 +88,25 @@ function HideLoading() {
 
 
 jQuery.fn.extend({
+    toggleToArray: function(value) {
+      return this.filter(":input").val(function(i,v) {
+        if ($.isEmptyObject(v) == true)
+          var arr = [];
+        else
+          var arr = v.split(',');
+
+        if ($.inArray(value,arr) == -1)
+          arr.push(value);
+        else
+          arr = $.grep(arr, function(val) {return val != value})        
+        return arr.filter(function(e){return [1,2,3]}).join(',');
+      }).end();
+    },
     addToArray: function(value) {
         return this.filter(":input").val(function(i, v) {
            var arr = v.split(',');
-           arr.push(value);
-           return arr.join(',');
+            arr.push(value);            
+           return arr.filter(function(e){return e}).join(',');
         }).end();
     },
     removeFromArray: function(value) {

@@ -53,7 +53,8 @@ Isbaysoft::Application.routes.draw do
         post :publish
         post :unpublish
         post :uploadlogo
-        post :uploadscreenshot
+        post :screenshot, :to => 'documents#upload_screenshots'
+        delete :screenshot, :to => 'documents#delete_screenshots'
       end
       resources :file, :only => [:destroy]
       resources :screenshots, :only => [:destroy, :show]
