@@ -1,17 +1,23 @@
-<div class="btn-group">
-  <a class="btn input-medium" href="#" id="screenshot-select-id"><i class="icon-folder-open"></i> <%= t(:label_select) %></a>
-  <a class="btn input-medium" href="#" id="screenshot-upload-id"><i class="icon-upload"></i> <%= t(:label_upload) %></a>
-  <a class="btn input-medium" href="#" id="screenshot-delete-id"><i class="icon-trash"></i> <%= t(:label_delete) %></a>
+<%= hidden_field_tag 'imgDelIds' %>
+<div class="btn-toolbar">
+  <div class="btn-group">
+    <a class="btn" href="#" id="screenshot-select-id"><i class="icon-folder-open"></i> <%= t(:label_select) %></a>
+    <a class="btn" href="#" id="screenshot-upload-id"><i class="icon-upload"></i> <%= t(:label_upload) %></a>
+  </div>
+  <div class="btn-group">
+    <a class="btn" href="#" id="screenshot-delete-id"><i class="icon-trash"></i> <%= t(:button_delete) %></a>
+    <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><%= link_to t(:button_delete_all), '#', :id => 'screenshot-delete-all-id' %>
+    </ul>
+  </div>
 </div>
 <hr>
-<%= hidden_field_tag 'imgDelIds' %>
-<a id="aaa1">sdf</a>
-
 <ul class="thumbnails">
 <% @document.screenshots.map do |img| %>
-  <li class="span" id="img<%= img.id %>">
-    <div class="thumbnail">
-      <a href="#" class="btn" id="d<%= img.id %>"><i class="icon-trash"></i></a>
+  <li class="span">
+    <div class="thumbnail" id="<%= img.id %>">
+      <a href="#" class="btn"><i class="icon-trash"></i></a>
       <%= image_tag img.screenshot.url %>
       <div class="caption">
         <h5><%= img.screenshot_file_name  %></h5>
@@ -20,8 +26,6 @@
   </li>
 <% end if @document.screenshots.present? %>
 </ul>
-
-
 <script type="text/javascript">
   $(function() {
     authtoken = $("input[name=authenticity_token]").val();
@@ -54,16 +58,6 @@
       up.refresh(); // Reposition Flash/Silverlight
     });
 
-    uploader.bind('UploadProgress', function(up, file) {
-      var size = plupload.formatSize(file.size)
-      var loaded = plupload.formatSize(file.loaded)
-      if ($('#pre_' + file.id + ' span').length == 0) {
-        $('#pre_' + file.id).prepend('<span class="label label-info">0%</span>');
-      }
-      $('#pre_' + file.id + ' span').html(file.percent + '%');
-    });
-    
-
     uploader.bind('Error', function(up, err) {
       up.refresh(); // Reposition Flash/Silverlight
     });
@@ -71,26 +65,33 @@
     uploader.bind('FileUploaded', function(up, file, info) {
       var response = JSON.parse(info['response']);
       var url = JSON.parse(response['url']);
-      $('#pre_'+file.id+' a.btn').after('<img id="scr_'+response['id']+'" class="overloadimg" src='+url+'>');
-      $('#scr_'+response['id']).animate({opacity: 1.0}, 500);
-      $('#pre_' + file.id + ' span').remove();
-      $('.thumbnail a.btn').attr('onclick','').attr('id',response['id']);;
-      // $('#scr_'+response['id']).removeClass('overloadimg');
-      // $('#pre_' + file.id + ' pre').remove();
+      $('#'+file.id+' img').attr('src',url);
+      $('#'+file.id+' a').attr('onclick','');
+      $('#'+file.id).attr('id',response['id']);
     });
   });
 
   $(document).ready(function() {
+    $('.dropdown-toggle').dropdown();
+
     //  Botton: Remove image
-    
     $('.thumbnail a.btn').live('click',function(e) {
-      var val = $(this).attr('id').replace('d','');  
+      var val = $(this).parent().attr('id');
       $("#imgDelIds").toggleToArray(val);
-      $(this).next().toggleClass("image-overlay");
+      $('#'+val+' img').toggleClass("image-overlay");
       e.preventDefault();
     });
 
-    
+    //  Button: Remove all images
+    $('#screenshot-delete-all-id').click(function(){
+      var a = []
+      $.each($('.thumbnail'), function(i, thumbnail) {
+        a.push($(thumbnail).attr('id'));
+      });
+      $("#imgDelIds").val(a.join(','));
+      $('#screenshot-delete-id').click();
+    });
+
     //  Button: Remove images
     $('#screenshot-delete-id').click(function(){
       $.ajax({
@@ -107,7 +108,7 @@
         },
         success: function(data, textStatus, jqXHR){
           $.each(data['ids'], function(index, value) { 
-            $('#img'+value).fadeOut();
+            $('#'+value).parent().fadeOut();
           });
         }
      });
@@ -119,10 +120,10 @@
 <%= javascript_include_tag 'jquery.template.min.js' %>
 
 <script id="screenshot_add_template" type="text/x-jquery-tmpl">
-  <li class="span" id="${id}">
-    <div class="thumbnail" id="pre_${id}">
-      <a href="#" class="btn" id="d${id}" onclick="alert(123); false;"><i class="icon-trash"></i></a>
-      <pre></pre>
+  <li class="span">
+    <div class="thumbnail" id="${id}">
+      <a href="#" class="btn" onclick="$(this).parent().parent().remove();false;"><i class="icon-trash"></i></a>
+      <img src="/images/admin/image.png">
       <div class="caption">
         <h5>${name}</h5>
       </div>

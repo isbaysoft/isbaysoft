@@ -103,59 +103,30 @@ td {
 
 .nav-list li {padding-left: 16px !important;}
 
-.thumbnail {
-  background-color: white;
-}
 
-.thumbnail pre, .thumbnail .progress {
+/* Thumbnails CSS */
+.thumbnail {background-color: white;}
+.thumbnail img {
   padding: 4px !important;
   margin: 0 !important;
   height: 120px;
   width: 160px;
-}
-
-.thumbnail pre {
-  background: url('/images/admin/image.png') no-repeat center;
-  background-color: whiteSmoke;
-}
-
-
-.thumbnail .caption h5 {overflow: hidden; height: 18px;}
-.thumbnail .caption p {font-size: 10px;}
-.thumbnail .bar {height: 100% !important;}
-
-.thumbnail img {
-  padding: 4px;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.15);
   background-color: #f5f5f5;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
+
+.thumbnail .caption h5 {overflow: hidden; height: 18px;}
+.thumbnail .caption p {font-size: 10px;}
+
 .thumbnail .btn {position: absolute; z-index:500;}
-.thumbnails li.span {width: 180px !important;}
-
-.overloadimg {
-  position:absolute;
-  opacity: 0;
-  -moz-opacity: 0;
-  filter:alpha(opacity=0);
-}
-
-.thumbnail .label {
-  display: block;
-  position: relative;
-  float: right;
-  font-size: 1em;
-  padding: 0;
-  margin: 0;
-}
 
 .image-overlay {
-  background-color: black;
-  position: relative;
-  opacity: 0.1;
-  -moz-opacity: 0.1;
-  filter:alpha(opacity=1);
+  opacity: 0.2;
+  -moz-opacity: 0.2;
+  filter:alpha(opacity=0.2);
 }
