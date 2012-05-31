@@ -52,7 +52,7 @@ Isbaysoft::Application.routes.draw do
       member do
         post :publish
         post :unpublish
-        post :uploadlogo
+        post :upload_logo
         post :screenshot, :to => 'documents#upload_screenshots'
         delete :screenshot, :to => 'documents#delete_screenshots'
       end

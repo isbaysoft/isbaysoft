@@ -16,23 +16,23 @@ ActiveRecord::Schema.define(:version => 20120304225702) do
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
     t.integer  "section_id",  :default => 0
   end
 
   create_table "cfgs", :force => true do |t|
     t.string   "name"
     t.string   "value"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "document_files", :force => true do |t|
     t.integer  "document_id",                :null => false
     t.integer  "filelist_id",                :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
     t.integer  "hits",        :default => 0
   end
 
@@ -50,12 +50,12 @@ ActiveRecord::Schema.define(:version => 20120304225702) do
     t.boolean  "approved",          :default => false
     t.text     "description"
     t.integer  "access_level"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
     t.integer  "section_id"
-    t.integer  "logo_id"
     t.text     "short_description"
     t.integer  "menu_id"
+    t.integer  "logo_id"
   end
 
   create_table "filelists", :force => true do |t|
@@ -63,8 +63,8 @@ ActiveRecord::Schema.define(:version => 20120304225702) do
     t.string   "f_content_type"
     t.integer  "f_file_size"
     t.datetime "f_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "logos", :force => true do |t|
@@ -78,8 +78,8 @@ ActiveRecord::Schema.define(:version => 20120304225702) do
     t.text     "memo"
     t.integer  "object_id"
     t.string   "identify"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "menu_items", :force => true do |t|
@@ -92,8 +92,8 @@ ActiveRecord::Schema.define(:version => 20120304225702) do
     t.integer  "target",                      :default => 0
     t.integer  "menu_id",                                        :null => false
     t.integer  "sort_no",                     :default => 0
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
   end
 
   create_table "menus", :force => true do |t|
@@ -101,14 +101,14 @@ ActiveRecord::Schema.define(:version => 20120304225702) do
     t.integer  "menu_id"
     t.boolean  "published",    :default => false, :null => false
     t.integer  "access_level",                    :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
   create_table "rules", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.integer  "access_level", :null => false
   end
 
@@ -120,15 +120,15 @@ ActiveRecord::Schema.define(:version => 20120304225702) do
     t.integer  "document_id"
     t.string   "short_description"
     t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
   end
 
   create_table "sections", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "static_contents", :force => true do |t|
@@ -136,8 +136,8 @@ ActiveRecord::Schema.define(:version => 20120304225702) do
     t.text     "content"
     t.string   "position"
     t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.text     "short_description"
   end
 
@@ -148,14 +148,14 @@ ActiveRecord::Schema.define(:version => 20120304225702) do
     t.text     "name"
     t.string   "ip",         :limit => 15
     t.integer  "user_id",                  :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
   end
 
   create_table "usergroups", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

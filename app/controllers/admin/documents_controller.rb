@@ -1,7 +1,7 @@
 class Admin::DocumentsController < AdminApplicationController
   before_filter :require_admin
   before_filter :set_active_tab, :load_section, :only => [:new, :create, :edit, :update]
-  before_filter :document_find, :only => [:edit, :update, :upload_screenshots, :delete_screenshots]
+  before_filter :document_find, :only => [:edit, :update, :upload_screenshots, :delete_screenshots, :upload_logo]
   before_filter :load_categories_at_params, :only => [:create, :update]
 
   respond_to :json, :js
@@ -115,12 +115,11 @@ class Admin::DocumentsController < AdminApplicationController
     redirect_to documents_url
   end
 
-  def uploadlogo
-    document = Document.where(:id => params[:id]).first  
-    logo = Logo.new params[:document]
-    
-    if logo && logo.valid? && logo.save
-      document.logos << logo
+  def upload_logo
+    logo = Logo.new params[:document]    
+    if logo && logo.valid? # && logo.save
+      @document.logos << logo
+      # logo.save
     end
 
     respond_with(logo) do |format|
