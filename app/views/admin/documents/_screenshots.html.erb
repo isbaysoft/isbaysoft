@@ -8,7 +8,7 @@
     <a class="btn" href="#" id="screenshot-delete-id"><i class="icon-trash"></i> <%= t(:button_delete) %></a>
     <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
     <ul class="dropdown-menu">
-      <li><%= link_to t(:button_delete_all), '#', :id => 'screenshot-delete-all-id' %>
+      <li><%= link_to t(:button_delete_all), '#', :id => 'screenshot-delete-all-id', :confirm => 'Are you sure?' %>
     </ul>
   </div>
 </div>

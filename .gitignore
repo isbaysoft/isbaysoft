@@ -1,6 +1,6 @@
 tmp/
 log/
-public/sysimages/
-public/document_logos/
+public/system/
 downloads/filelists/
 coverage/
+

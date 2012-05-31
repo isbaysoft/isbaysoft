@@ -1,7 +1,8 @@
 class Admin::DocumentsController < AdminApplicationController
   before_filter :require_admin
   before_filter :set_active_tab, :load_section, :only => [:new, :create, :edit, :update]
-  before_filter :document_find, :only => [:edit, :update, :upload_screenshots, :delete_screenshots, :upload_logo]
+  before_filter :document_find, 
+    :only => [:edit, :update, :upload_screenshots, :delete_screenshots, :upload_logo]
   before_filter :load_categories_at_params, :only => [:create, :update]
 
   respond_to :json, :js
@@ -17,7 +18,6 @@ class Admin::DocumentsController < AdminApplicationController
 
   def new
     @document = Document.new
-    @categories = Category.find(:all, :conditions => ['section_id=?',@sections.first.id])
   end
   
   def create
@@ -116,14 +116,17 @@ class Admin::DocumentsController < AdminApplicationController
   end
 
   def upload_logo
-    logo = Logo.new params[:document]    
-    if logo && logo.valid? # && logo.save
-      @document.logos << logo
-      # logo.save
-    end
-
+    logo = @document.logos.new params[:document]
     respond_with(logo) do |format|
-      format.json {render :json => {:url => logo.logo.url.to_json, :id => logo.id}}
+      format.json do 
+        if logo.save
+          render :json => {:url => logo.logo.url.to_json, :id => logo.id}
+        else
+          render :update do |page|
+            page.call 'alert','some error'
+          end
+        end
+      end
       format.any {render :nothing => true}
     end
   end

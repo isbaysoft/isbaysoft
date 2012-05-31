@@ -2,6 +2,7 @@ class Filelist < ActiveRecord::Base
   has_many :document_files, :dependent => :destroy
   has_attached_file :f,
     :path => ':rails_root/downloads/:class/:id_partition/:basename.:extension'
+  
   validates_attachment_presence :f, :message => I18n.t(:must_be_set)
 
   cattr_reader :per_page

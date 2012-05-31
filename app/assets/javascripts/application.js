@@ -20,6 +20,7 @@ $(document).ready(function() {
 
 
 //=require tinymce
+//= require twitter/bootstrap
 
 function showtab(tab_group,tab_selected)
 {

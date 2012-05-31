@@ -1,0 +1,21 @@
+<%= text_field_tag :au, '', :class => 'search' %>
+<div id="aaa">
+	1
+</div>
+
+<script type="text/javascript">
+	$("#au").autocomplete({
+			url: '<%= au_path(:json) %>',
+			minChars: 1,
+			remoteDataType: 'json',
+			onItemSelect: function(item) {
+				$('#aaa').append('<div>'+item.value+'</div>');					
+			}
+		});
+
+				
+
+	// $(document).ready(function(){
+		
+	// });
+</script>
