@@ -1,3 +1,14 @@
+//= require jquery
+//= require rails
+//= require flash
+//= require dialog
+//= require jquery.colorbox-min
+//= require tinymce
+//= require bootstrap-tab
+//= require bootstrap-tooltip
+//= require bootstrap-button
+//= require bootstrap-dropdown
+
 jQuery.ajaxSetup({
   'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
 })
@@ -17,10 +28,6 @@ $(document).ready(function() {
   }});
   
 })
-
-
-//=require tinymce
-//= require twitter/bootstrap
 
 function showtab(tab_group,tab_selected)
 {
