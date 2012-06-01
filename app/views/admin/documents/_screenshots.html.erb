@@ -15,7 +15,7 @@
 <hr>
 <ul class="thumbnails">
 <% @document.screenshots.map do |img| %>
-  <li class="span">
+  <li class="span2">
     <div class="thumbnail" id="<%= img.id %>">
       <a href="#" class="btn"><i class="icon-trash"></i></a>
       <%= image_tag img.screenshot.url %>

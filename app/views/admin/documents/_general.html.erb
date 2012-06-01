@@ -1,18 +1,19 @@
 <div class="row-fluid">
-  <div class="span">
+  <div class="span10">
     <div class="control-group">
       <%= label_tag(:name, t(:label_document_name), :class => 'control-label') %>
       <%= general.text_field(:name, :class=>'input-xxlarge') %>
     </div>
-    <div class="control-group">      
+    <div class="control-group">
       <div class="controls">
         <%= label_tag(:category_id, t(:label_document_section_and_category), :class => 'control-label') %>
-        <%= text_field_tag(:category_name, @document.path_name, :readonly => true, :class => 'input-xxlarge') %>
-        <span class="popup help-inline btn" href="<%= dialog_url('category') %>"><%= t(:button_select) %></span>
+        <div class="input-append">
+          <%= text_field_tag(:category_name, @document.path_name, :readonly => true, :class => 'input-xxlarge') %><span class="popup help-inline btn" href="<%= dialog_url('category') %>"><%= t(:button_select) %></span>
+        </div>
       </div>
     </div>
   </div>
-  <div class="pull-right">
+  <div class="span2">
     <%= general.hidden_field :logo_id %>
     <div>
       <%= image_tag (@document.logo.nil? or @document.new_record?) ? '/images/main/empty_logo.png ' : @document.logo.logo.url, :size => '128x128', :id => 'document_logo' %>

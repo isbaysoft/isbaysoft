@@ -1,11 +1,8 @@
 <%= form_for 'tablepanel_form', :url => url_for(:action => 'index'), :html => {:method => :get, :name => 'tablepanel_form'} do %>
   <%= hidden_field_tag 'per_page', current_per_page %>
-    <div class="row-fluid">
-      <%= text_field_tag(:filter, params[:filter], :id => 'filter', :class =>"span2", :placeholder => 'Фильтр')%>
-      <div class="help-inline btn-group">
-        <%= btn :icon_class=>'icon-search', :onclick=>"tablepanel_form.submit()", :title => 'Search' %>
-        <%= btn :icon_class=>'icon-trash', :onclick=>"$('#filter').val(''); tablepanel_form.submit();", :title => 'clear search result' %>
-      </div>      
+  <div class="controls">
+    <div class="input-append">
+      <%= text_field_tag(:filter, params[:filter], :id => 'filter', :class =>"span2", :placeholder => 'Фильтр')%><%= btn :icon_class=>'icon-search', :onclick=>"tablepanel_form.submit()", :title => 'Search' %><%= btn :icon_class=>'icon-trash', :onclick=>"$('#filter').val(''); tablepanel_form.submit();", :title => 'clear search result' %>
       <div class="btn-group pull-right">
         <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Показывать <strong><%= current_per_page %></strong><span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -15,6 +12,7 @@
         </ul>        
       </div>
     </div>
+  </div>
 <% end %>
 
 <script type="text/javascript">
