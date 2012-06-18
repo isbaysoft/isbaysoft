@@ -282,6 +282,7 @@ ru:
   label_menu_item_access_level: Доступ к пункту меню
   label_menu_item_publication: Публиковать
   label_load_screenshot: Загрузить скриншот
+  label_selected: Выделено
 
   button_delete: Удалить
   button_delete_all: Удалить все
@@ -308,6 +309,9 @@ ru:
   button_learn_more: Узнать больше
   button_select_category: Выбрать категорию
   button_manager: Управление
+  button_inverse_select: Инвертировать выделение
+  button_deselect: Убрать выделение
+
 
   title_reordering: Пересортировать
 

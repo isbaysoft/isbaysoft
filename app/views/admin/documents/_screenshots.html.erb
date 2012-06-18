@@ -1,14 +1,22 @@
 <%= hidden_field_tag 'imgDelIds' %>
 <div class="btn-toolbar">
   <div class="btn-group">
-    <a class="btn" href="#" id="screenshot-select-id"><i class="icon-folder-open"></i> <%= t(:label_select) %></a>
-    <a class="btn" href="#" id="screenshot-upload-id"><i class="icon-upload"></i> <%= t(:label_upload) %></a>
+    <a class="btn" href="#" id="screenshot_select_id"><i class="icon-folder-open"></i> <%= t(:label_select) %></a>
+    <a class="btn" href="#" id="screenshot_upload_id"><i class="icon-upload"></i> <%= t(:label_upload) %></a>
   </div>
   <div class="btn-group">
-    <a class="btn" href="#" id="screenshot-delete-id"><i class="icon-trash"></i> <%= t(:button_delete) %></a>
+    <a class="btn" href="#" id="screenshot_delete_id"><i class="icon-trash"></i> <%= t(:button_delete) %></a>
     <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
     <ul class="dropdown-menu">
-      <li><%= link_to t(:button_delete_all), '#', :id => 'screenshot-delete-all-id', :confirm => 'Are you sure?' %>
+      <li><%= link_to t(:button_delete_all), '#', :id => 'screenshot_delete_all_id', :confirm => 'Are you sure?' %>
+    </ul>
+  </div>
+  <div class="btn-group">
+    <a class="btn" href="#" id="selected_id"><i class="icon-trash"></i> <%= t(:label_selected) %><span id="selected_count"></span></a>
+    <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><%= link_to t(:button_deselect), '#', :id => 'deselect_id' %>
+      <li><%= link_to t(:button_inverse_select), '#', :id => 'inverse_select_id' %>  
     </ul>
   </div>
 </div>
@@ -18,7 +26,9 @@
   <li class="span2">
     <div class="thumbnail" id="<%= img.id %>">
       <a href="#" class="btn"><i class="icon-trash"></i></a>
-      <%= image_tag img.screenshot.url %>
+      <div class="img">
+        <%= image_tag img.screenshot.url %>
+      </div>
       <div class="caption">
         <h5><%= img.screenshot_file_name  %></h5>
       </div>
@@ -31,7 +41,7 @@
     authtoken = $("input[name=authenticity_token]").val();
     var uploader = new plupload.Uploader({
       runtimes : 'gears,html5,flash,silverlight',
-      browse_button : 'screenshot-select-id',
+      browse_button : 'screenshot_select_id',
       max_file_size : '10mb', // TODO: size from model
       url : '<%= screenshot_admin_document_url unless @document.new_record? %>',
       flash_swf_url : '<%= javascript_path '/plupload/plupload.flash.swf' %>',
@@ -44,7 +54,7 @@
       file_data_name: 'document[screenshot]'
     });
 
-    $('#screenshot-upload-id').click(function(e) {
+    $('#screenshot_upload_id').click(function(e) {
       uploader.start();
       e.preventDefault();
     });
@@ -71,29 +81,61 @@
     });
   });
 
+
+  function update_select_count() {
+    var arr = $("#imgDelIds").val().split(',')
+    if ($.isEmptyObject($("#imgDelIds").val()) == false)
+      $('#selected_count').text(' ('+arr.length+')');
+    else
+      $('#selected_count').empty();
+  }
+
+  function btn_select(obj) {
+    var val = $(obj).parent().attr('id');
+    $("#imgDelIds").toggleToArray(val);
+    $('#'+val+' img').toggleClass("image-overlay");
+    update_select_count();
+  }
+
   $(document).ready(function() {
     $('.dropdown-toggle').dropdown();
 
-    //  Botton: Remove image
+
+    //  Button: Remove image
     $('.thumbnail a.btn').live('click',function(e) {
-      var val = $(this).parent().attr('id');
-      $("#imgDelIds").toggleToArray(val);
-      $('#'+val+' img').toggleClass("image-overlay");
+      btn_select(this);
       e.preventDefault();
     });
 
+    // Button: Deselect images
+    $('#deselect_id').click(function(e) {      
+      $("#imgDelIds").val('');
+      $.each($('.thumbnail img'), function(i, item) {
+        $(item).removeClass();
+      });
+      update_select_count();
+      e.preventDefault();
+    })
+
+    // Button: inverse selected images
+    $('#inverse_select_id').click(function(e){
+      $.each($('.thumbnail a.btn'), function(i, item) {btn_select(item)});
+      update_select_count();
+      e.preventDefault();
+    })
+
     //  Button: Remove all images
-    $('#screenshot-delete-all-id').click(function(){
+    $('#screenshot_delete_all_id').click(function(){
       var a = []
       $.each($('.thumbnail'), function(i, thumbnail) {
         a.push($(thumbnail).attr('id'));
       });
       $("#imgDelIds").val(a.join(','));
-      $('#screenshot-delete-id').click();
+      $('#screenshot_delete_id').click();
     });
 
     //  Button: Remove images
-    $('#screenshot-delete-id').click(function(){
+    $('#screenshot_delete_id').click(function(){
       $.ajax({
         url: '<%= screenshot_admin_document_url unless @document.new_record? %>',
         global: false,
@@ -120,10 +162,12 @@
 <%= javascript_include_tag 'jquery.template.min.js' %>
 
 <script id="screenshot_add_template" type="text/x-jquery-tmpl">
-  <li class="span">
+  <li class="span2">
     <div class="thumbnail" id="${id}">
       <a href="#" class="btn" onclick="$(this).parent().parent().remove();false;"><i class="icon-trash"></i></a>
-      <img src="/images/admin/image.png">
+      <div class="img">
+        <img src="/images/admin/image.png">
+      </div>
       <div class="caption">
         <h5>${name}</h5>
       </div>

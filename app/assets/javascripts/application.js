@@ -107,7 +107,7 @@ jQuery.fn.extend({
           arr.push(value);
         else
           arr = $.grep(arr, function(val) {return val != value})        
-        return arr.filter(function(e){return [1,2,3]}).join(',');
+        return arr.filter(function(e){return e}).join(',');
       }).end();
     },
     addToArray: function(value) {
