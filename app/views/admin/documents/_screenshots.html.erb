@@ -21,9 +21,9 @@
   </div>
 </div>
 <hr>
-<ul class="thumbnails">
+<ul class="thumbnails fixed">
 <% @document.screenshots.map do |img| %>
-  <li class="span2">
+  <li>
     <div class="thumbnail" id="<%= img.id %>">
       <a href="#" class="btn"><i class="icon-trash"></i></a>
       <div class="img">
@@ -162,7 +162,7 @@
 <%= javascript_include_tag 'jquery.template.min.js' %>
 
 <script id="screenshot_add_template" type="text/x-jquery-tmpl">
-  <li class="span2">
+  <li class="span">
     <div class="thumbnail" id="${id}">
       <a href="#" class="btn" onclick="$(this).parent().parent().remove();false;"><i class="icon-trash"></i></a>
       <div class="img">

@@ -118,11 +118,11 @@ body {
 }
 
 .thumbnail img {
-  width: 128px;
-  height: 96px;
+  width: 160px;
+  height: 120px;
 }
 
-.thumbnail .caption h5 {overflow: hidden; height: 18px;}
+.thumbnail .caption {height: 18px;}
 .thumbnail .caption p {font-size: 10px;}
 .thumbnail .btn {position: absolute; z-index:500;}
 .image-overlay {
