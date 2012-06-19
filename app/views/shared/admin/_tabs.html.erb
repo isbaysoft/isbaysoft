@@ -12,8 +12,13 @@
   <% end %>
 </div>
 
-<script>
-  $(function () {
+<script type="text/javascript">
+  var tabs = [], hash = window.location.hash.split('#').slice('1');
+  $('#megatabs a').each(function(i){
+    tabs.push($(this).attr('href'));
+  });
+  if (tabs.indexOf('#'+hash[0]) >= 0)
+    $('#megatabs a[href="#'+hash[0]+'"]').tab('show');
+  else
     $('#megatabs a:first').tab('show')
-  })
 </script>

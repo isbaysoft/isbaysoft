@@ -1,3 +1,4 @@
+<a name="screenshots"></a>
 <%= hidden_field_tag 'imgDelIds' %>
 <div class="btn-toolbar">
   <div class="btn-group">
@@ -29,8 +30,10 @@
       <div class="img">
         <%= image_tag img.screenshot.url %>
       </div>
-      <div class="caption">
-        <h5><%= img.screenshot_file_name  %></h5>
+      <div class="overflow-hidden">
+        <div class="caption">
+          <h5><%= img.screenshot_file_name  %></h5>
+        </div>
       </div>
     </div>
   </li>
@@ -99,7 +102,6 @@
 
   $(document).ready(function() {
     $('.dropdown-toggle').dropdown();
-
 
     //  Button: Remove image
     $('.thumbnail a.btn').live('click',function(e) {

@@ -11,6 +11,9 @@
   border-radius: $radius;
 }
 
+$thumbnail_width: 160px;
+$thumbnail_height: 120px;
+
 footer {
   min-height: 20px;
   padding: 19px;
@@ -107,7 +110,9 @@ body {
   margin-left: 0 !important;
   margin-right: 20px;
 }
-.thumbnail {background-color: white;}
+.thumbnail {background-color: white;
+  max-width: $thumbnail_width;
+}
 .thumbnail .img {
   background-color: #f5f5f5;
   -webkit-border-radius: 4px;
@@ -118,11 +123,13 @@ body {
 }
 
 .thumbnail img {
-  width: 160px;
-  height: 120px;
+  width: $thumbnail_width;
+  height: $thumbnail_height;
 }
 
 .thumbnail .caption {height: 18px;}
+.overflow-hidden {overflow: hidden;}
+
 .thumbnail .caption p {font-size: 10px;}
 .thumbnail .btn {position: absolute; z-index:500;}
 .image-overlay {
