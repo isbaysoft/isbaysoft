@@ -4,6 +4,8 @@
 //= require dialog
 //= require jquery.colorbox-min
 //= require tinymce
+//= require jquery.template.min
+//= require plupload/plupload.full
 //= require bootstrap-tab
 //= require bootstrap-tooltip
 //= require bootstrap-button
