@@ -1,146 +1,154 @@
-                           root        /                                                        main#index
-                          login GET    /login(.:format)                                         user_sessions#new
-                          login POST   /login(.:format)                                         user_sessions#create
-                         logout        /logout(.:format)                                        user_sessions#destroy
-                  administrator        /administrator(.:format)                                 admin/administrator#index
-                   registration        /registration(.:format)                                  users#new
-                    productfile        /file/:document_id/:file_id(.:format)                    main#download
-                      smsdostup        /smsdostup(.:format)                                     admin/smsdostup#billing
-                      downloads        /downloads(.:format)                                     downloads#index
-                         dialog        /dialog/:dialog_name(.:format)                           dialogs#show_dialog
-                     show_index GET    /show(.:format)                                          show#index
-                                POST   /show(.:format)                                          show#create
-                       new_show GET    /show/new(.:format)                                      show#new
-                      edit_show GET    /show/:id/edit(.:format)                                 show#edit
-                           show GET    /show/:id(.:format)                                      show#show
-                                PUT    /show/:id(.:format)                                      show#update
-                                DELETE /show/:id(.:format)                                      show#destroy
-               admin_usergroups GET    /admin/usergroups(.:format)                              admin/usergroups#index
-                                POST   /admin/usergroups(.:format)                              admin/usergroups#create
-            new_admin_usergroup GET    /admin/usergroups/new(.:format)                          admin/usergroups#new
-           edit_admin_usergroup GET    /admin/usergroups/:id/edit(.:format)                     admin/usergroups#edit
-                admin_usergroup GET    /admin/usergroups/:id(.:format)                          admin/usergroups#show
-                                PUT    /admin/usergroups/:id(.:format)                          admin/usergroups#update
-                                DELETE /admin/usergroups/:id(.:format)                          admin/usergroups#destroy
-      deactivate_admin_userlist POST   /admin/userlists/:id/deactivate(.:format)                admin/userlists#deactivate
-        activate_admin_userlist POST   /admin/userlists/:id/activate(.:format)                  admin/userlists#activate
-                admin_userlists GET    /admin/userlists(.:format)                               admin/userlists#index
-                                POST   /admin/userlists(.:format)                               admin/userlists#create
-             new_admin_userlist GET    /admin/userlists/new(.:format)                           admin/userlists#new
-            edit_admin_userlist GET    /admin/userlists/:id/edit(.:format)                      admin/userlists#edit
-                 admin_userlist GET    /admin/userlists/:id(.:format)                           admin/userlists#show
-                                PUT    /admin/userlists/:id(.:format)                           admin/userlists#update
-                                DELETE /admin/userlists/:id(.:format)                           admin/userlists#destroy
-                   admin_config POST   /admin/config(.:format)                                  admin/configs#create
-               new_admin_config GET    /admin/config/new(.:format)                              admin/configs#new
-              edit_admin_config GET    /admin/config/edit(.:format)                             admin/configs#edit
-                                GET    /admin/config(.:format)                                  admin/configs#show
-                                PUT    /admin/config(.:format)                                  admin/configs#update
-                                DELETE /admin/config(.:format)                                  admin/configs#destroy
-                 admin_contents GET    /admin/static_contents(.:format)                         admin/static_contents#index
-                                POST   /admin/static_contents(.:format)                         admin/static_contents#create
-              new_admin_content GET    /admin/static_contents/new(.:format)                     admin/static_contents#new
-             edit_admin_content GET    /admin/static_contents/:id/edit(.:format)                admin/static_contents#edit
-                  admin_content GET    /admin/static_contents/:id(.:format)                     admin/static_contents#show
-                                PUT    /admin/static_contents/:id(.:format)                     admin/static_contents#update
-                                DELETE /admin/static_contents/:id(.:format)                     admin/static_contents#destroy
-          reordering_admin_menu POST   /admin/menus/:id/reordering(.:format)                    admin/menus#reordering
-        save_sorting_admin_menu POST   /admin/menus/:id/save_sorting(.:format)                  admin/menus#save_sorting
-             publish_admin_menu POST   /admin/menus/:id/publish(.:format)                       admin/menus#publish
-           unpublish_admin_menu POST   /admin/menus/:id/unpublish(.:format)                     admin/menus#unpublish
-   publish_admin_menu_menu_item POST   /admin/menus/:menu_id/menu_items/:id/publish(.:format)   admin/menu_items#publish {:name_prefix=>nil}
- unpublish_admin_menu_menu_item POST   /admin/menus/:menu_id/menu_items/:id/unpublish(.:format) admin/menu_items#unpublish {:name_prefix=>nil}
-          admin_menu_menu_items GET    /admin/menus/:menu_id/menu_items(.:format)               admin/menu_items#index {:name_prefix=>nil}
-                                POST   /admin/menus/:menu_id/menu_items(.:format)               admin/menu_items#create {:name_prefix=>nil}
-       new_admin_menu_menu_item GET    /admin/menus/:menu_id/menu_items/new(.:format)           admin/menu_items#new {:name_prefix=>nil}
-      edit_admin_menu_menu_item GET    /admin/menus/:menu_id/menu_items/:id/edit(.:format)      admin/menu_items#edit {:name_prefix=>nil}
-           admin_menu_menu_item GET    /admin/menus/:menu_id/menu_items/:id(.:format)           admin/menu_items#show {:name_prefix=>nil}
-                                PUT    /admin/menus/:menu_id/menu_items/:id(.:format)           admin/menu_items#update {:name_prefix=>nil}
-                                DELETE /admin/menus/:menu_id/menu_items/:id(.:format)           admin/menu_items#destroy {:name_prefix=>nil}
-                    admin_menus GET    /admin/menus(.:format)                                   admin/menus#index
-                                POST   /admin/menus(.:format)                                   admin/menus#create
-                 new_admin_menu GET    /admin/menus/new(.:format)                               admin/menus#new
-                edit_admin_menu GET    /admin/menus/:id/edit(.:format)                          admin/menus#edit
-                     admin_menu GET    /admin/menus/:id(.:format)                               admin/menus#show
-                                PUT    /admin/menus/:id(.:format)                               admin/menus#update
-                                DELETE /admin/menus/:id(.:format)                               admin/menus#destroy
-               admin_menu_items GET    /admin/menu_items(.:format)                              admin/menu_items#index
-                                POST   /admin/menu_items(.:format)                              admin/menu_items#create
-            new_admin_menu_item GET    /admin/menu_items/new(.:format)                          admin/menu_items#new
-           edit_admin_menu_item GET    /admin/menu_items/:id/edit(.:format)                     admin/menu_items#edit
-                admin_menu_item GET    /admin/menu_items/:id(.:format)                          admin/menu_items#show
-                                PUT    /admin/menu_items/:id(.:format)                          admin/menu_items#update
-                                DELETE /admin/menu_items/:id(.:format)                          admin/menu_items#destroy
-                 admin_sections GET    /admin/sections(.:format)                                admin/sections#index
-                                POST   /admin/sections(.:format)                                admin/sections#create
-              new_admin_section GET    /admin/sections/new(.:format)                            admin/sections#new
-             edit_admin_section GET    /admin/sections/:id/edit(.:format)                       admin/sections#edit
-                  admin_section GET    /admin/sections/:id(.:format)                            admin/sections#show
-                                PUT    /admin/sections/:id(.:format)                            admin/sections#update
-                                DELETE /admin/sections/:id(.:format)                            admin/sections#destroy
-               admin_categories GET    /admin/categories(.:format)                              admin/categories#index
-                                POST   /admin/categories(.:format)                              admin/categories#create
-             new_admin_category GET    /admin/categories/new(.:format)                          admin/categories#new
-            edit_admin_category GET    /admin/categories/:id/edit(.:format)                     admin/categories#edit
-                 admin_category GET    /admin/categories/:id(.:format)                          admin/categories#show
-                                PUT    /admin/categories/:id(.:format)                          admin/categories#update
-                                DELETE /admin/categories/:id(.:format)                          admin/categories#destroy
-        download_admin_filelist GET    /admin/filelists/:id/download(.:format)                  admin/filelists#download
-                admin_filelists GET    /admin/filelists(.:format)                               admin/filelists#index
-                                POST   /admin/filelists(.:format)                               admin/filelists#create
-             new_admin_filelist GET    /admin/filelists/new(.:format)                           admin/filelists#new
-            edit_admin_filelist GET    /admin/filelists/:id/edit(.:format)                      admin/filelists#edit
-                 admin_filelist GET    /admin/filelists/:id(.:format)                           admin/filelists#show
-                                PUT    /admin/filelists/:id(.:format)                           admin/filelists#update
-                                DELETE /admin/filelists/:id(.:format)                           admin/filelists#destroy
-         publish_admin_document POST   /admin/documents/:id/publish(.:format)                   admin/documents#publish
-       unpublish_admin_document POST   /admin/documents/:id/unpublish(.:format)                 admin/documents#unpublish
-      uploadlogo_admin_document POST   /admin/documents/:id/uploadlogo(.:format)                admin/documents#uploadlogo
-uploadscreenshot_admin_document POST   /admin/documents/:id/uploadscreenshot(.:format)          admin/documents#uploadscreenshot
-            admin_document_file DELETE /admin/documents/:document_id/file/:id(.:format)         admin/file#destroy
-      admin_document_screenshot GET    /admin/documents/:document_id/screenshots/:id(.:format)  admin/screenshots#show
-                                DELETE /admin/documents/:document_id/screenshots/:id(.:format)  admin/screenshots#destroy
-                admin_documents GET    /admin/documents(.:format)                               admin/documents#index
-                                POST   /admin/documents(.:format)                               admin/documents#create
-             new_admin_document GET    /admin/documents/new(.:format)                           admin/documents#new
-            edit_admin_document GET    /admin/documents/:id/edit(.:format)                      admin/documents#edit
-                 admin_document GET    /admin/documents/:id(.:format)                           admin/documents#show
-                                PUT    /admin/documents/:id(.:format)                           admin/documents#update
-                                DELETE /admin/documents/:id(.:format)                           admin/documents#destroy
-            product_screenshots GET    /products/:product_id/screenshots(.:format)              screenshots#index
-                                POST   /products/:product_id/screenshots(.:format)              screenshots#create
-         new_product_screenshot GET    /products/:product_id/screenshots/new(.:format)          screenshots#new
-        edit_product_screenshot GET    /products/:product_id/screenshots/:id/edit(.:format)     screenshots#edit
-             product_screenshot GET    /products/:product_id/screenshots/:id(.:format)          screenshots#show
-                                PUT    /products/:product_id/screenshots/:id(.:format)          screenshots#update
-                                DELETE /products/:product_id/screenshots/:id(.:format)          screenshots#destroy
-                       products GET    /products(.:format)                                      products#index
-                                POST   /products(.:format)                                      products#create
-                    new_product GET    /products/new(.:format)                                  products#new
-                   edit_product GET    /products/:id/edit(.:format)                             products#edit
-                        product GET    /products/:id(.:format)                                  products#show
-                                PUT    /products/:id(.:format)                                  products#update
-                                DELETE /products/:id(.:format)                                  products#destroy
-                        tickets GET    /tickets(.:format)                                       tickets#index
-                                POST   /tickets(.:format)                                       tickets#create
-                     new_ticket GET    /tickets/new(.:format)                                   tickets#new
-                    edit_ticket GET    /tickets/:id/edit(.:format)                              tickets#edit
-                         ticket GET    /tickets/:id(.:format)                                   tickets#show
-                                PUT    /tickets/:id(.:format)                                   tickets#update
-                                DELETE /tickets/:id(.:format)                                   tickets#destroy
-                   user_session POST   /user_session(.:format)                                  user_sessions#create
-               new_user_session GET    /user_session/new(.:format)                              user_sessions#new
-              edit_user_session GET    /user_session/edit(.:format)                             user_sessions#edit
-                                GET    /user_session(.:format)                                  user_sessions#show
-                                PUT    /user_session(.:format)                                  user_sessions#update
-                                DELETE /user_session(.:format)                                  user_sessions#destroy
-                  activate_user GET    /users/:id/activate(.:format)                            users#activate
-                          users GET    /users(.:format)                                         users#index
-                                POST   /users(.:format)                                         users#create
-                       new_user GET    /users/new(.:format)                                     users#new
-                      edit_user GET    /users/:id/edit(.:format)                                users#edit
-                           user GET    /users/:id(.:format)                                     users#show
-                                PUT    /users/:id(.:format)                                     users#update
-                                DELETE /users/:id(.:format)                                     users#destroy
-                                       /:controller(/:action(/:id))(.:format)                   :controller#:action
-                                       /*path(.:format)                                         main_application#p404
+                             root        /                                                               main#index
+                            login GET    /login(.:format)                                                user_sessions#new
+                            login POST   /login(.:format)                                                user_sessions#create
+                           logout        /logout(.:format)                                               user_sessions#destroy
+                    administrator        /administrator(.:format)                                        admin/administrator#index
+                     registration        /registration(.:format)                                         users#new
+                      productfile        /file/:document_id/:file_id(.:format)                           main#download
+                        smsdostup        /smsdostup(.:format)                                            admin/smsdostup#billing
+                        downloads        /downloads(.:format)                                            downloads#index
+                           dialog        /dialog/:dialog_name(.:format)                                  dialogs#show_dialog
+                       show_index GET    /show(.:format)                                                 show#index
+                                  POST   /show(.:format)                                                 show#create
+                         new_show GET    /show/new(.:format)                                             show#new
+                        edit_show GET    /show/:id/edit(.:format)                                        show#edit
+                             show GET    /show/:id(.:format)                                             show#show
+                                  PUT    /show/:id(.:format)                                             show#update
+                                  DELETE /show/:id(.:format)                                             show#destroy
+                 admin_usergroups GET    /admin/usergroups(.:format)                                     admin/usergroups#index
+                                  POST   /admin/usergroups(.:format)                                     admin/usergroups#create
+              new_admin_usergroup GET    /admin/usergroups/new(.:format)                                 admin/usergroups#new
+             edit_admin_usergroup GET    /admin/usergroups/:id/edit(.:format)                            admin/usergroups#edit
+                  admin_usergroup GET    /admin/usergroups/:id(.:format)                                 admin/usergroups#show
+                                  PUT    /admin/usergroups/:id(.:format)                                 admin/usergroups#update
+                                  DELETE /admin/usergroups/:id(.:format)                                 admin/usergroups#destroy
+        deactivate_admin_userlist POST   /admin/userlists/:id/deactivate(.:format)                       admin/userlists#deactivate
+          activate_admin_userlist POST   /admin/userlists/:id/activate(.:format)                         admin/userlists#activate
+                  admin_userlists GET    /admin/userlists(.:format)                                      admin/userlists#index
+                                  POST   /admin/userlists(.:format)                                      admin/userlists#create
+               new_admin_userlist GET    /admin/userlists/new(.:format)                                  admin/userlists#new
+              edit_admin_userlist GET    /admin/userlists/:id/edit(.:format)                             admin/userlists#edit
+                   admin_userlist GET    /admin/userlists/:id(.:format)                                  admin/userlists#show
+                                  PUT    /admin/userlists/:id(.:format)                                  admin/userlists#update
+                                  DELETE /admin/userlists/:id(.:format)                                  admin/userlists#destroy
+                     admin_config POST   /admin/config(.:format)                                         admin/configs#create
+                 new_admin_config GET    /admin/config/new(.:format)                                     admin/configs#new
+                edit_admin_config GET    /admin/config/edit(.:format)                                    admin/configs#edit
+                                  GET    /admin/config(.:format)                                         admin/configs#show
+                                  PUT    /admin/config(.:format)                                         admin/configs#update
+                                  DELETE /admin/config(.:format)                                         admin/configs#destroy
+                   admin_contents GET    /admin/static_contents(.:format)                                admin/static_contents#index
+                                  POST   /admin/static_contents(.:format)                                admin/static_contents#create
+                new_admin_content GET    /admin/static_contents/new(.:format)                            admin/static_contents#new
+               edit_admin_content GET    /admin/static_contents/:id/edit(.:format)                       admin/static_contents#edit
+                    admin_content GET    /admin/static_contents/:id(.:format)                            admin/static_contents#show
+                                  PUT    /admin/static_contents/:id(.:format)                            admin/static_contents#update
+                                  DELETE /admin/static_contents/:id(.:format)                            admin/static_contents#destroy
+            reordering_admin_menu POST   /admin/menus/:id/reordering(.:format)                           admin/menus#reordering
+          save_sorting_admin_menu POST   /admin/menus/:id/save_sorting(.:format)                         admin/menus#save_sorting
+               publish_admin_menu POST   /admin/menus/:id/publish(.:format)                              admin/menus#publish
+             unpublish_admin_menu POST   /admin/menus/:id/unpublish(.:format)                            admin/menus#unpublish
+     publish_admin_menu_menu_item POST   /admin/menus/:menu_id/menu_items/:id/publish(.:format)          admin/menu_items#publish {:name_prefix=>nil}
+   unpublish_admin_menu_menu_item POST   /admin/menus/:menu_id/menu_items/:id/unpublish(.:format)        admin/menu_items#unpublish {:name_prefix=>nil}
+            admin_menu_menu_items GET    /admin/menus/:menu_id/menu_items(.:format)                      admin/menu_items#index {:name_prefix=>nil}
+                                  POST   /admin/menus/:menu_id/menu_items(.:format)                      admin/menu_items#create {:name_prefix=>nil}
+         new_admin_menu_menu_item GET    /admin/menus/:menu_id/menu_items/new(.:format)                  admin/menu_items#new {:name_prefix=>nil}
+        edit_admin_menu_menu_item GET    /admin/menus/:menu_id/menu_items/:id/edit(.:format)             admin/menu_items#edit {:name_prefix=>nil}
+             admin_menu_menu_item GET    /admin/menus/:menu_id/menu_items/:id(.:format)                  admin/menu_items#show {:name_prefix=>nil}
+                                  PUT    /admin/menus/:menu_id/menu_items/:id(.:format)                  admin/menu_items#update {:name_prefix=>nil}
+                                  DELETE /admin/menus/:menu_id/menu_items/:id(.:format)                  admin/menu_items#destroy {:name_prefix=>nil}
+                      admin_menus GET    /admin/menus(.:format)                                          admin/menus#index
+                                  POST   /admin/menus(.:format)                                          admin/menus#create
+                   new_admin_menu GET    /admin/menus/new(.:format)                                      admin/menus#new
+                  edit_admin_menu GET    /admin/menus/:id/edit(.:format)                                 admin/menus#edit
+                       admin_menu GET    /admin/menus/:id(.:format)                                      admin/menus#show
+                                  PUT    /admin/menus/:id(.:format)                                      admin/menus#update
+                                  DELETE /admin/menus/:id(.:format)                                      admin/menus#destroy
+                 admin_menu_items GET    /admin/menu_items(.:format)                                     admin/menu_items#index
+                                  POST   /admin/menu_items(.:format)                                     admin/menu_items#create
+              new_admin_menu_item GET    /admin/menu_items/new(.:format)                                 admin/menu_items#new
+             edit_admin_menu_item GET    /admin/menu_items/:id/edit(.:format)                            admin/menu_items#edit
+                  admin_menu_item GET    /admin/menu_items/:id(.:format)                                 admin/menu_items#show
+                                  PUT    /admin/menu_items/:id(.:format)                                 admin/menu_items#update
+                                  DELETE /admin/menu_items/:id(.:format)                                 admin/menu_items#destroy
+                   admin_sections GET    /admin/sections(.:format)                                       admin/sections#index
+                                  POST   /admin/sections(.:format)                                       admin/sections#create
+                new_admin_section GET    /admin/sections/new(.:format)                                   admin/sections#new
+               edit_admin_section GET    /admin/sections/:id/edit(.:format)                              admin/sections#edit
+                    admin_section GET    /admin/sections/:id(.:format)                                   admin/sections#show
+                                  PUT    /admin/sections/:id(.:format)                                   admin/sections#update
+                                  DELETE /admin/sections/:id(.:format)                                   admin/sections#destroy
+                 admin_categories GET    /admin/categories(.:format)                                     admin/categories#index
+                                  POST   /admin/categories(.:format)                                     admin/categories#create
+               new_admin_category GET    /admin/categories/new(.:format)                                 admin/categories#new
+              edit_admin_category GET    /admin/categories/:id/edit(.:format)                            admin/categories#edit
+                   admin_category GET    /admin/categories/:id(.:format)                                 admin/categories#show
+                                  PUT    /admin/categories/:id(.:format)                                 admin/categories#update
+                                  DELETE /admin/categories/:id(.:format)                                 admin/categories#destroy
+          download_admin_filelist GET    /admin/filelists/:id/download(.:format)                         admin/filelists#download
+                  admin_filelists GET    /admin/filelists(.:format)                                      admin/filelists#index
+                                  POST   /admin/filelists(.:format)                                      admin/filelists#create
+               new_admin_filelist GET    /admin/filelists/new(.:format)                                  admin/filelists#new
+              edit_admin_filelist GET    /admin/filelists/:id/edit(.:format)                             admin/filelists#edit
+                   admin_filelist GET    /admin/filelists/:id(.:format)                                  admin/filelists#show
+                                  PUT    /admin/filelists/:id(.:format)                                  admin/filelists#update
+                                  DELETE /admin/filelists/:id(.:format)                                  admin/filelists#destroy
+           publish_admin_document POST   /admin/documents/:id/publish(.:format)                          admin/documents#publish
+         unpublish_admin_document POST   /admin/documents/:id/unpublish(.:format)                        admin/documents#unpublish
+       upload_logo_admin_document POST   /admin/documents/:id/upload_logo(.:format)                      admin/documents#upload_logo
+        screenshot_admin_document POST   /admin/documents/:id/screenshot(.:format)                       admin/documents#upload_screenshots
+                                  DELETE /admin/documents/:id/screenshot(.:format)                       admin/documents#delete_screenshots
+              admin_document_file DELETE /admin/documents/:document_id/file/:id(.:format)                admin/file#destroy
+        admin_document_screenshot GET    /admin/documents/:document_id/screenshots/:id(.:format)         admin/screenshots#show
+                                  DELETE /admin/documents/:document_id/screenshots/:id(.:format)         admin/screenshots#destroy
+    admin_document_document_files GET    /admin/documents/:document_id/document_files(.:format)          admin/document_files#index
+                                  POST   /admin/documents/:document_id/document_files(.:format)          admin/document_files#create
+ new_admin_document_document_file GET    /admin/documents/:document_id/document_files/new(.:format)      admin/document_files#new
+edit_admin_document_document_file GET    /admin/documents/:document_id/document_files/:id/edit(.:format) admin/document_files#edit
+     admin_document_document_file GET    /admin/documents/:document_id/document_files/:id(.:format)      admin/document_files#show
+                                  PUT    /admin/documents/:document_id/document_files/:id(.:format)      admin/document_files#update
+                                  DELETE /admin/documents/:document_id/document_files/:id(.:format)      admin/document_files#destroy
+                  admin_documents GET    /admin/documents(.:format)                                      admin/documents#index
+                                  POST   /admin/documents(.:format)                                      admin/documents#create
+               new_admin_document GET    /admin/documents/new(.:format)                                  admin/documents#new
+              edit_admin_document GET    /admin/documents/:id/edit(.:format)                             admin/documents#edit
+                   admin_document GET    /admin/documents/:id(.:format)                                  admin/documents#show
+                                  PUT    /admin/documents/:id(.:format)                                  admin/documents#update
+                                  DELETE /admin/documents/:id(.:format)                                  admin/documents#destroy
+              product_screenshots GET    /products/:product_id/screenshots(.:format)                     screenshots#index
+                                  POST   /products/:product_id/screenshots(.:format)                     screenshots#create
+           new_product_screenshot GET    /products/:product_id/screenshots/new(.:format)                 screenshots#new
+          edit_product_screenshot GET    /products/:product_id/screenshots/:id/edit(.:format)            screenshots#edit
+               product_screenshot GET    /products/:product_id/screenshots/:id(.:format)                 screenshots#show
+                                  PUT    /products/:product_id/screenshots/:id(.:format)                 screenshots#update
+                                  DELETE /products/:product_id/screenshots/:id(.:format)                 screenshots#destroy
+                         products GET    /products(.:format)                                             products#index
+                                  POST   /products(.:format)                                             products#create
+                      new_product GET    /products/new(.:format)                                         products#new
+                     edit_product GET    /products/:id/edit(.:format)                                    products#edit
+                          product GET    /products/:id(.:format)                                         products#show
+                                  PUT    /products/:id(.:format)                                         products#update
+                                  DELETE /products/:id(.:format)                                         products#destroy
+                          tickets GET    /tickets(.:format)                                              tickets#index
+                                  POST   /tickets(.:format)                                              tickets#create
+                       new_ticket GET    /tickets/new(.:format)                                          tickets#new
+                      edit_ticket GET    /tickets/:id/edit(.:format)                                     tickets#edit
+                           ticket GET    /tickets/:id(.:format)                                          tickets#show
+                                  PUT    /tickets/:id(.:format)                                          tickets#update
+                                  DELETE /tickets/:id(.:format)                                          tickets#destroy
+                     user_session POST   /user_session(.:format)                                         user_sessions#create
+                 new_user_session GET    /user_session/new(.:format)                                     user_sessions#new
+                edit_user_session GET    /user_session/edit(.:format)                                    user_sessions#edit
+                                  GET    /user_session(.:format)                                         user_sessions#show
+                                  PUT    /user_session(.:format)                                         user_sessions#update
+                                  DELETE /user_session(.:format)                                         user_sessions#destroy
+                    activate_user GET    /users/:id/activate(.:format)                                   users#activate
+                            users GET    /users(.:format)                                                users#index
+                                  POST   /users(.:format)                                                users#create
+                         new_user GET    /users/new(.:format)                                            users#new
+                        edit_user GET    /users/:id/edit(.:format)                                       users#edit
+                             user GET    /users/:id(.:format)                                            users#show
+                                  PUT    /users/:id(.:format)                                            users#update
+                                  DELETE /users/:id(.:format)                                            users#destroy
+                                         /:controller(/:action(/:id))(.:format)                          :controller#:action
+                                         /*path(.:format)                                                main_application#p404

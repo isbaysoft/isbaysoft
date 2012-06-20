@@ -59,13 +59,8 @@ class Admin::DocumentsController < AdminApplicationController
   end
 
   def upload_screenshots
-    # screenshot = Screenshot.new params[:document]
-    # screenshot.document_id = params[:id]
-    # puts "============> #{screenshot.document_id}"
-    # @document.screenshots << screenshot if screenshot && screenshot.valid? && screenshot.save
     screenshot = @document.screenshots.new params[:document]  
-    screenshot.save
-    
+    screenshot.save    
     respond_with(screenshot) do |format|
       format.json {render :json => {:url => screenshot.screenshot.url.to_json, :id => screenshot.id}}
       format.any {render :nothing => true}

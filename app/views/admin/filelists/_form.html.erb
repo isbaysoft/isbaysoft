@@ -1,11 +1,4 @@
-<%= hidden_field_tag 'task','post' %>
-<%= errors_for(form.object) %>
-
-<div class="alert alert-block alert-info show" id="alert_info_id">
-Выберите файлы для загрузки.
-</div>
-
-<table class="table table-striped table-bordered table-condensed hide" id="filelist_id">
+<table class="table table-striped table-bordered table-condensed hide" id="filelist_table_id">
 <thead>
   <th class="span7">Имя файла</th>
   <th class="span2">Размер</th>
@@ -14,105 +7,7 @@
 </thead>
 <tbody>
 <tr>
-
-<!--     <td>test.png</td>
-    <td>1000</td>
-    <td><span><div class='progress progress-info progress-striped margin-bottom-none'><div class='bar' style='width: 50%;'></div></div></span></td>
-    <td><i class="icon-minus-sign"></i></td> -->
 </tr>
 </tbody>
 </table>
-
-<!-- Load plupload and all it's runtimes and finally the jQuery queue widget -->
-<%= javascript_include_tag 'plupload/plupload.full.js' %>			
-
-<script type="text/javascript">
-$(function() {
-	var UploadStatuses = ['NA','NA','QUEUED', 'UPLOADING', 'FAILED', 'DONE']
-	authtoken = $("input[name=authenticity_token]").val();
-	var uploader = new plupload.Uploader({
-		runtimes : 'gears,html5,flash,silverlight',
-		browse_button : 'select_local_files_id',
-		max_file_size : '200mb',
-		url : '<%= admin_filelists_url %>',
-		flash_swf_url : '<%= javascript_path '/plupload/plupload.flash.swf' %>',
-		silverlight_xap_url : '<%= javascript_path '/plupload/plupload.silverlight.xap' %>',
-		filters : [
-			{title : "Any files", extensions : "*"},
-			{title : "Image files", extensions : "jpg,gif,png"},
-			{title : "Zip files", extensions : "zip"}
-		],
-		multipart_params : {
-      'format': 'json',
-      authenticity_token: authtoken
-	  },
-	  file_data_name: 'filelist[f]'
-	});
-
-	uploader.bind('Init', function(up, params) {
-		$('#filelist').html("<div>Current runtime: " + params.runtime + "</div>");
-	});
-
-	$('#upload_files_id').click(function(e) {
-		uploader.start();
-		e.preventDefault();
-	});
-
-	uploader.init();
-
-	uploader.bind('FilesAdded', function(up, files) {
-		if ($('#filelist_id').css('display') == 'none') {
-			$('#alert_info_id').toggle();
-			$('#filelist_id').fadeIn();
-		}
-
-		$.each(files, function(i, file) {
-			$("#filelist_add_template").tmpl(file).fadeIn().appendTo("#filelist_id");
-
-			$('#file_id_' + file.id + '_rm').first().click(function(e) {
-		      	e.preventDefault();
-		      	uploader.removeFile(file);
-		      	$('#file_id_' + file.id).fadeOut();
-		      	if (uploader.files.length == 0) {
-			        $('#filelist_id').toggle();
-			        $('#alert_info_id').toggle();
-      			}
-    		});
-		});
-
-		up.refresh(); // Reposition Flash/Silverlight
-	});
-
-	uploader.bind('UploadProgress', function(up, file) {
-		var size = plupload.formatSize(file.size)
-		var loaded = plupload.formatSize(file.loaded)
-		$('#file_id_' + file.id + '_status').html("<div class='progress progress-info progress-striped margin-bottom-none'><div class='bar' style='width: +" + file.percent + "%;'>"+file.percent+"%</div></div>");
-	});
-
-	uploader.bind('Error', function(up, err) {
-		$('#filelist').append("<div>Error: " + err.code +
-			", Message: " + err.message +
-			(err.file ? ", File: " + err.file.name : "") +
-			"</div>"
-		);
-
-		up.refresh(); // Reposition Flash/Silverlight
-	});
-
-	uploader.bind('FileUploaded', function(up, file) {
-		$('#file_id_' + file.id + '_status').html(UploadStatuses[file.status]);
-		$('#file_id_' + file.id + '_rm').empty();
-	});
-});
-</script>
-
-<%= javascript_include_tag 'jquery.template.min.js' %>
-
-<script id="filelist_add_template" type="text/x-jquery-tmpl">
-<tr id="file_id_${id}">
-	<td>${name}</td>
-	<td>${plupload.formatSize(size)}</td>
-	<td><span id="file_id_${id}_status">0%</span></td>
-	<td><a href="#" id="file_id_${id}_rm"><i class="icon-minus-sign"></i></a></td>
-</tr>
-</script>
+<%= render :partial => 'plupload' %>
