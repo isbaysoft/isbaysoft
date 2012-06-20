@@ -58,6 +58,7 @@
     });
 
     $('#screenshot_upload_id').click(function(e) {
+      $('#progress_overlay').css('display','block')
       uploader.start();
       e.preventDefault();
     });
@@ -69,6 +70,10 @@
         $("#screenshot_add_template").tmpl(file).fadeIn().appendTo(".thumbnails");
       });
       up.refresh(); // Reposition Flash/Silverlight
+    });
+
+    uploader.bind('UploadProgress', function(up, file) {
+      $('#progress_overlay #bar').attr('style','width: '+up.total*10+'%;')
     });
 
     uploader.bind('Error', function(up, err) {
@@ -164,14 +169,16 @@
 <%= javascript_include_tag 'jquery.template.min.js' %>
 
 <script id="screenshot_add_template" type="text/x-jquery-tmpl">
-  <li class="span">
+  <li>
     <div class="thumbnail" id="${id}">
       <a href="#" class="btn" onclick="$(this).parent().parent().remove();false;"><i class="icon-trash"></i></a>
       <div class="img">
         <img src="/images/admin/image.png">
       </div>
-      <div class="caption">
-        <h5>${name}</h5>
+      <div class="overflow-hidden">
+        <div class="caption">
+          <h5>${name}</h5>
+        </div>
       </div>
     </div>
   </li>
