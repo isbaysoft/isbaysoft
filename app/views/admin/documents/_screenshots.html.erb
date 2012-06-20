@@ -26,13 +26,13 @@
 <% @document.screenshots.map do |img| %>
   <li>
     <div class="thumbnail" id="<%= img.id %>">
-      <a href="#" class="btn"><i class="icon-trash"></i></a>
       <div class="img">
         <%= image_tag img.screenshot.url %>
       </div>
       <div class="overflow-hidden">
         <div class="caption">
-          <h5><%= img.screenshot_file_name  %></h5>
+          <%= content_tag :span, number_to_human_size(img.screenshot_file_size), :title => img.screenshot_file_name %>
+          <a href="#" class="btn-trash pull-right"><i class="icon-trash"></i></a>
         </div>
       </div>
     </div>
@@ -58,7 +58,8 @@
     });
 
     $('#screenshot_upload_id').click(function(e) {
-      $('#progress_overlay').css('display','block')
+      $('#progress_overlay').css('display','block');
+      
       uploader.start();
       e.preventDefault();
     });
@@ -67,13 +68,14 @@
 
     uploader.bind('FilesAdded', function(up, files) {
       $.each(files, function(i, file) {
+        $('.progress .bar').attr('style','width:0')  
         $("#screenshot_add_template").tmpl(file).fadeIn().appendTo(".thumbnails");
       });
       up.refresh(); // Reposition Flash/Silverlight
     });
 
     uploader.bind('UploadProgress', function(up, file) {
-      $('#progress_overlay #bar').attr('style','width: '+up.total*10+'%;')
+      $('.progress .bar').attr('style','width:'+ uploader.total.uploaded*100/uploader.files.length+'%;')
     });
 
     uploader.bind('Error', function(up, err) {
@@ -87,8 +89,11 @@
       $('#'+file.id+' a').attr('onclick','');
       $('#'+file.id).attr('id',response['id']);
     });
-  });
 
+    uploader.bind('UploadComplete', function(up, file) {
+      $('#progress_overlay').fadeOut();
+    });
+  });
 
   function update_select_count() {
     var arr = $("#imgDelIds").val().split(',')
@@ -99,7 +104,8 @@
   }
 
   function btn_select(obj) {
-    var val = $(obj).parent().attr('id');
+    // var val = $(obj).parent().attr('id');
+    var val = $(obj).closest('div.thumbnail').attr('id');
     $("#imgDelIds").toggleToArray(val);
     $('#'+val+' img').toggleClass("image-overlay");
     update_select_count();
@@ -109,7 +115,7 @@
     $('.dropdown-toggle').dropdown();
 
     //  Button: Remove image
-    $('.thumbnail a.btn').live('click',function(e) {
+    $('div.caption a.btn-trash').live('click',function(e) {
       btn_select(this);
       e.preventDefault();
     });
@@ -126,7 +132,7 @@
 
     // Button: inverse selected images
     $('#inverse_select_id').click(function(e){
-      $.each($('.thumbnail a.btn'), function(i, item) {btn_select(item)});
+      $.each($('div.caption a.btn-trash'), function(i, item) {btn_select(item)});
       update_select_count();
       e.preventDefault();
     })
@@ -168,13 +174,13 @@
 <script id="screenshot_add_template" type="text/x-jquery-tmpl">
   <li>
     <div class="thumbnail" id="${id}">
-      <a href="#" class="btn" onclick="$(this).parent().parent().remove();false;"><i class="icon-trash"></i></a>
       <div class="img">
         <img src="/images/admin/image.png">
       </div>
       <div class="overflow-hidden">
         <div class="caption">
-          <h5>${name}</h5>
+          <span>${plupload.formatSize(size)}</span>
+          <a href="#" class="pull-right" onclick="$(this).closest('div.thumbnail').closest('li').remove(); return false;"><i class="icon-trash"></i></a>
         </div>
       </div>
     </div>
