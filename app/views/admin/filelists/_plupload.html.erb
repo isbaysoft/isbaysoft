@@ -6,7 +6,7 @@ $(function() {
 		runtimes : 'gears,html5,flash,silverlight',
 		browse_button : 'select_local_files_id',
 		max_file_size : '200mb',
-		url : '<%= admin_filelists_url %>',
+		url : '<%= uploader_url %>',
 		flash_swf_url : '<%= javascript_path '/plupload/plupload.flash.swf' %>',
 		silverlight_xap_url : '<%= javascript_path '/plupload/plupload.silverlight.xap' %>',
 		filters : [
@@ -21,11 +21,9 @@ $(function() {
 	  file_data_name: 'filelist[f]'
 	});
 
-	uploader.bind('Init', function(up, params) {
-		$('#filelist').html("<div>Current runtime: " + params.runtime + "</div>");
-	});
-
 	$('#upload_files_id').click(function(e) {
+		$('.progress .bar').attr('style','width:0')  
+		$('#progress_overlay').css('display','block');      
 		uploader.start();
 		e.preventDefault();
 	});
@@ -41,11 +39,11 @@ $(function() {
 		$.each(files, function(i, file) {
 			$("#filelist_add_template").tmpl(file).fadeIn().appendTo("#filelist_table_id");
 
-			$('#file_id_' + file.id + '_rm').first().click(function(e) {
+			$('#file_id_' + file.id + '_rm').click(function(e) {
 		      	e.preventDefault();
 		      	uploader.removeFile(file);
-		      	$('#file_id_' + file.id).fadeOut();
-		      	if (uploader.files.length == 0) {
+		      	$('#file_id_' + file.id).remove();
+		      	if ((uploader.files.length == 0) && ($('#filelist_table_id tbody tr:visible').length == 0)) {
 			        $('#filelist_table_id').toggle();
 			        $('#alert_info_id').toggle();
       			}
@@ -55,11 +53,7 @@ $(function() {
 		up.refresh(); // Reposition Flash/Silverlight
 	});
 
-	uploader.bind('UploadProgress', function(up, file) {
-		var size = plupload.formatSize(file.size)
-		var loaded = plupload.formatSize(file.loaded)
-		$('#file_id_' + file.id + '_status').html("<div class='progress progress-info progress-striped margin-bottom-none'><div class='bar' style='width: +" + file.percent + "%;'>"+file.percent+"%</div></div>");
-	});
+	uploader.bind('UploadProgress', uploadProgressBar);
 
 	uploader.bind('Error', function(up, err) {
 		$('#filelist').append("<div>Error: " + err.code +
@@ -75,14 +69,9 @@ $(function() {
 		$('#file_id_' + file.id + '_status').html(UploadStatuses[file.status]);
 		$('#file_id_' + file.id + '_rm').empty();
 	});
-});
-</script>
 
-<script id="filelist_add_template" type="text/x-jquery-tmpl">
-<tr id="file_id_${id}">
-	<td>${name}</td>
-	<td>${plupload.formatSize(size)}</td>
-	<td><span id="file_id_${id}_status">0%</span></td>
-	<td><a href="#" id="file_id_${id}_rm"><i class="icon-minus-sign"></i></a></td>
-</tr>
+	uploader.bind('UploadComplete', function(up, file) {
+      $('#progress_overlay').fadeOut();
+	});
+});
 </script>

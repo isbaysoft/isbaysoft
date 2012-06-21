@@ -127,3 +127,21 @@ jQuery.fn.extend({
         }).end();
     }
 });
+
+
+var pluploadEx = {
+  updateUploadProgressBar: function(up, file) {
+    $('.progress .bar').attr('style','width:'+ up.total.uploaded*100/up.files.length+'%;')
+  },
+  showUploadProgressBar: function() {
+    $('.progress .bar').attr('style','width:0')  
+    $('#progress_overlay').css('display','block');      
+  },
+  hideUploadProgressBar: function() {
+    $('#progress_overlay').fadeOut();    
+  }
+}
+
+function uploadProgressBar(up, file) {
+  
+}

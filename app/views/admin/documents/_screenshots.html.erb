@@ -58,8 +58,8 @@
     });
 
     $('#screenshot_upload_id').click(function(e) {
-      $('#progress_overlay').css('display','block');
-      
+      $('.progress .bar').attr('style','width:0')  
+      $('#progress_overlay').css('display','block');      
       uploader.start();
       e.preventDefault();
     });
@@ -68,7 +68,6 @@
 
     uploader.bind('FilesAdded', function(up, files) {
       $.each(files, function(i, file) {
-        $('.progress .bar').attr('style','width:0')  
         $("#screenshot_add_template").tmpl(file).fadeIn().appendTo(".thumbnails");
       });
       up.refresh(); // Reposition Flash/Silverlight

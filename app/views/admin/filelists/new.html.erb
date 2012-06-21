@@ -1,7 +1,6 @@
 <%= form_for @filelist, :url => admin_filelists_url, :html => {:multipart => true, :name =>'adminForm', :class => 'form-horizontal'} do |f| %> 
 	<%= hidden_field_tag 'task','post' %>
 	<%= errors_for(f.object) %>
-	<div class="alert alert-block alert-info show" id="alert_info_id">Выберите файлы для загрузки.</div>
 	<%= render :partial =>'form', :object => f %>
 <% end %>
 <% content_for :toolbar_additional do %>

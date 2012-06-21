@@ -1,13 +1,23 @@
+<div class="alert alert-block alert-info show" id="alert_info_id">Выберите файлы для загрузки.</div>
 <table class="table table-striped table-bordered table-condensed hide" id="filelist_table_id">
 <thead>
+<tr>
   <th class="span7">Имя файла</th>
   <th class="span2">Размер</th>
   <th class="span2">Статус</th>
   <th class="span1">&nbsp;</th>
+ </tr>
 </thead>
 <tbody>
-<tr>
-</tr>
 </tbody>
 </table>
-<%= render :partial => 'plupload' %>
+<%= render :partial => 'plupload', :locals => {:uploader_url => admin_filelists_url} %>
+
+<script id="filelist_add_template" type="text/x-jquery-tmpl">
+<tr id="file_id_${id}">
+	<td>${name}</td>
+	<td>${plupload.formatSize(size)}</td>
+	<td><span id="file_id_${id}_status"></span></td>
+	<td class="mark"><a href="#" id="file_id_${id}_rm"><i class="icon-trash"></i></a></td>
+</tr>
+</script>

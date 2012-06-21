@@ -5,10 +5,10 @@
     <a class="btn" href="#" id="upload_files_id"><i class="icon-upload"></i> <%= t(:label_upload) %></a>
   </div>
   <div class="btn-group">
-    <a class="btn" href="#" id="file_delete_id"><i class="icon-trash"></i> <%= t(:button_delete) %></a>
+    <%= link_to "<i class='icon-trash'></i>#{t(:button_delete)}".html_safe, '#', :class => 'btn', :id => 'file_delete_id', :confirm => 'Are you sure?', :onclick => 'deleteFiles(this);' %>
     <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
     <ul class="dropdown-menu">
-      <li><%= link_to t(:button_delete_all), '#', :id => 'screenshot_delete_all_id', :confirm => 'Are you sure?' %>
+      <li><%= link_to t(:button_delete_all), '#', :id => 'file_delete_all_id', :confirm => 'Are you sure?', :onclick => 'deleteFiles(this);' %></li>
     </ul>
   </div>
   <div class="btn-group">
@@ -23,21 +23,114 @@
 <hr>
 <table class="table table-striped table-bordered table-condensed" id="filelist_table_id">
 <thead>
+  <th class="mark"><%= check_box_tag("groups", false, false, :onclick=>"setCheckBoxes(this,'file_ids[]')") %></th>
   <th><%= t(:field_filename) %></th>
   <th><%= t(:field_filesize) %></th>
-  <th><%= t(:field_filetype) %></th>
-  <th></th>
 </thead>
 <tbody>
 <% @document.document_files.map do |row| %>
-<tr>
+<tr id="file_id_<%= row.filelist.id %>">
+  <td><%= check_box_tag('file_ids[]',row.filelist.id) %></td>
   <td><%= h(row.filelist.f_file_name) %></td>
   <td><%= number_to_human_size(row.filelist.f_file_size) %></td>
-  <td><%= h(row.filelist.f_content_type) %></td>
-  <td><%= link_to_function '', "NotifyFileDeleted(#{row.id})", :class => 'toolbar_button16 icon_trash_16' %></td>
 </tr>
 <% end if @document.document_files.present? %>
 </tbody>
 </table>
-url : '<%= admin_document_document_files_url(@document) unless @document.new_record? %>',
-<%= render :partial => 'admin/filelists/plupload', :locals => {} %>
+
+<script type="text/javascript">
+// $('#file_delete_id, #file_delete_all_id').click(function() {
+  function deleteFiles(obj) {
+    if ($(obj).attr('class') == 'btn')
+      ids = $.map($('#filelist_table_id').find("input:checked"), function(val) { return val.value; });
+    else 
+      ids = $.map($('#filelist_table_id').find("input"), function(val) { return val.value; });
+    $.ajax({
+        url: '<%= admin_document_document_file_url(@document) %>',
+        global: false,
+        type: "DELETE",
+        data: {'ids' : ids.join(',')},
+        dataType: "json",
+        error: function(msg){
+            alert('msg');
+        },
+        success: function(data, textStatus, jqXHR){
+          $.each(data['ids'], function(index, value) { 
+            $('#file_id_'+value).fadeOut();
+          });
+        }
+    });
+  };
+
+$(function() {
+  var UploadStatuses = ['NA','NA','QUEUED', 'UPLOADING', 'FAILED', 'DONE']
+  authtoken = $("input[name=authenticity_token]").val();
+  var uploader = new plupload.Uploader({
+    runtimes : 'gears,html5,flash,silverlight',
+    browse_button : 'select_local_files_id',
+    max_file_size : '200mb', // TODO: settable
+    url : '<%= admin_document_document_files_url(@document) %>',
+    flash_swf_url : '<%= javascript_path '/plupload/plupload.flash.swf' %>',
+    silverlight_xap_url : '<%= javascript_path '/plupload/plupload.silverlight.xap' %>',
+    multipart_params : {
+      'format': 'json',
+      authenticity_token: authtoken
+    },
+    file_data_name: 'filelist[f]'
+  });
+
+  uploader.init();
+
+  //  Start upload
+  $('#upload_files_id').click(function(e) {
+    pluploadEx.showUploadProgressBar();    
+    uploader.start();
+    e.preventDefault();
+  });
+
+  uploader.bind('FilesAdded', function(up, files) {
+    $.each(files, function(i, file) {
+      $("#filelist_add_template").tmpl(file).fadeIn().appendTo("#filelist_table_id");
+
+      $('#file_id_' + file.id + '_rm').click(function(e) {
+        uploader.removeFile(file);
+        $('#file_id_' + file.id).fadeOut();
+        e.preventDefault();
+      });
+    });
+
+    up.refresh();
+  });
+
+  uploader.bind('UploadProgress', pluploadEx.updateUploadProgressBar);
+
+  uploader.bind('FileUploaded', function(up, file, info) {
+    var response = JSON.parse(info['response']);
+    $("#filelist_add_template").tmpl(response).replaceAll($('#file_id_'+file.id));
+  });
+
+  uploader.bind('UploadComplete', function(up, file) {
+    pluploadEx.hideUploadProgressBar();
+  });
+});
+</script>
+
+<script id="filelist_add_template" type="text/x-jquery-tmpl">
+<tr id="file_id_${id}">
+  <td>
+    {{if url}}
+      <input id="ids_" name="file_ids[]" type="checkbox" value="${id}">
+    {{else}}
+        <a href="#" class="pull-right" onclick="$(this).closest('tr').remove(); return false;"><i class="icon-trash"></i></a>
+    {{/if}}
+  </td>
+  <td>${name}</td>
+  <td>
+    {{if url}}
+      ${size}
+    {{else}}
+      ${plupload.formatSize(size)}
+    {{/if}}
+  </td>
+</tr>
+</script>
