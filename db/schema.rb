@@ -53,9 +53,9 @@ ActiveRecord::Schema.define(:version => 20120304225702) do
     t.datetime "created_at",                           :null => false
     t.datetime "updated_at",                           :null => false
     t.integer  "section_id"
+    t.integer  "logo_id"
     t.text     "short_description"
     t.integer  "menu_id"
-    t.integer  "logo_id"
   end
 
   create_table "filelists", :force => true do |t|

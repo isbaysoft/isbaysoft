@@ -21,4 +21,8 @@
     $('#megatabs a[href="#'+hash[0]+'"]').tab('show');
   else
     $('#megatabs a:first').tab('show')
+
+  $('#megatabs a').click(function(e){
+    window.location.hash = $(this).attr('href');
+  });
 </script>

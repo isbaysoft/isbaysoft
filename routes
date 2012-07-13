@@ -95,12 +95,10 @@
                                   DELETE /admin/filelists/:id(.:format)                                  admin/filelists#destroy
            publish_admin_document POST   /admin/documents/:id/publish(.:format)                          admin/documents#publish
          unpublish_admin_document POST   /admin/documents/:id/unpublish(.:format)                        admin/documents#unpublish
-       upload_logo_admin_document POST   /admin/documents/:id/upload_logo(.:format)                      admin/documents#upload_logo
-        screenshot_admin_document POST   /admin/documents/:id/screenshot(.:format)                       admin/documents#upload_screenshots
-                                  DELETE /admin/documents/:id/screenshot(.:format)                       admin/documents#delete_screenshots
+              admin_document_logo POST   /admin/documents/:document_id/logo(.:format)                    admin/logos#create
+       admin_document_screenshots POST   /admin/documents/:document_id/screenshots(.:format)             admin/screenshots#create
+        admin_document_screenshot DELETE /admin/documents/:document_id/screenshots/:id(.:format)         admin/screenshots#destroy
               admin_document_file DELETE /admin/documents/:document_id/file/:id(.:format)                admin/file#destroy
-        admin_document_screenshot GET    /admin/documents/:document_id/screenshots/:id(.:format)         admin/screenshots#show
-                                  DELETE /admin/documents/:document_id/screenshots/:id(.:format)         admin/screenshots#destroy
     admin_document_document_files GET    /admin/documents/:document_id/document_files(.:format)          admin/document_files#index
                                   POST   /admin/documents/:document_id/document_files(.:format)          admin/document_files#create
  new_admin_document_document_file GET    /admin/documents/:document_id/document_files/new(.:format)      admin/document_files#new

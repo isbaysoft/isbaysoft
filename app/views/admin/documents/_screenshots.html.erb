@@ -9,14 +9,13 @@
     <a class="btn" href="#" id="screenshot_delete_id"><i class="icon-trash"></i> <%= t(:button_delete) %></a>
     <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
     <ul class="dropdown-menu">
-      <li><%= link_to t(:button_delete_all), '#', :id => 'screenshot_delete_all_id', :confirm => 'Are you sure?' %>
+      <li><%= link_to t(:button_delete_all), '#', :id => 'screenshot_delete_all_id' %>
     </ul>
   </div>
   <div class="btn-group">
-    <a class="btn" href="#" id="selected_id"><i class="icon-trash"></i> <%= t(:label_selected) %><span id="selected_count"></span></a>
+    <a class="btn" href="#" id="selected_id"><i class="icon-trash"></i> <%= t(:button_deselect) %><span id="selected_scr_count"></span></a>
     <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
     <ul class="dropdown-menu">
-      <li><%= link_to t(:button_deselect), '#', :id => 'deselect_id' %>
       <li><%= link_to t(:button_inverse_select), '#', :id => 'inverse_select_id' %>  
     </ul>
   </div>
@@ -32,7 +31,7 @@
       <div class="overflow-hidden">
         <div class="caption">
           <%= content_tag :span, number_to_human_size(img.screenshot_file_size), :title => img.screenshot_file_name %>
-          <a href="#" class="btn-trash pull-right"><i class="icon-trash"></i></a>
+          <a href="#" class="btn-scr-trash pull-right"><i class="icon-trash"></i></a>
         </div>
       </div>
     </div>
@@ -46,7 +45,7 @@
       runtimes : 'gears,html5,flash,silverlight',
       browse_button : 'screenshot_select_id',
       max_file_size : '10mb', // TODO: size from model
-      url : '<%= screenshot_admin_document_url unless @document.new_record? %>',
+      url : '<%= admin_document_screenshots_url(@document) unless @document.new_record? %>',
       flash_swf_url : '<%= javascript_path '/plupload/plupload.flash.swf' %>',
       silverlight_xap_url : '<%= javascript_path '/plupload/plupload.silverlight.xap' %>',
       filters : [{title : "Image files", extensions : "jpg,gif,png"}],
@@ -57,14 +56,15 @@
       file_data_name: 'document[screenshot]'
     });
 
-    $('#screenshot_upload_id').click(function(e) {
-      $('.progress .bar').attr('style','width:0')  
-      $('#progress_overlay').css('display','block');      
-      uploader.start();
-      e.preventDefault();
-    });
-
     uploader.init();
+
+    $('#screenshot_upload_id').click(function(e) {
+      if (uploader.total.queued > 0) {
+        pluploadEx.showUploadProgressBar();    
+        uploader.start();
+      }
+      e.preventDefault();      
+    });
 
     uploader.bind('FilesAdded', function(up, files) {
       $.each(files, function(i, file) {
@@ -87,9 +87,11 @@
       $('#'+file.id+' img').attr('src',url);
       $('#'+file.id+' a').attr('onclick','');
       $('#'+file.id).attr('id',response['id']);
+      
     });
 
     uploader.bind('UploadComplete', function(up, file) {
+      // up.removeFile(file);
       $('#progress_overlay').fadeOut();
     });
   });
@@ -97,9 +99,9 @@
   function update_select_count() {
     var arr = $("#imgDelIds").val().split(',')
     if ($.isEmptyObject($("#imgDelIds").val()) == false)
-      $('#selected_count').text(' ('+arr.length+')');
+      $('#selected_scr_count').text(' ('+arr.length+')');
     else
-      $('#selected_count').empty();
+      $('#selected_scr_count').empty();
   }
 
   function btn_select(obj) {
@@ -114,13 +116,13 @@
     $('.dropdown-toggle').dropdown();
 
     //  Button: Remove image
-    $('div.caption a.btn-trash').live('click',function(e) {
+    $('div.caption a.btn-scr-trash').live('click',function(e) {
       btn_select(this);
       e.preventDefault();
     });
 
     // Button: Deselect images
-    $('#deselect_id').click(function(e) {      
+    $('#deselect_id, #selected_id').click(function(e) {      
       $("#imgDelIds").val('');
       $.each($('.thumbnail img'), function(i, item) {
         $(item).removeClass();
@@ -131,41 +133,49 @@
 
     // Button: inverse selected images
     $('#inverse_select_id').click(function(e){
-      $.each($('div.caption a.btn-trash'), function(i, item) {btn_select(item)});
+      $.each($('div.caption a.btn-scr-trash'), function(i, item) {btn_select(item)});
       update_select_count();
       e.preventDefault();
     })
 
     //  Button: Remove all images
-    $('#screenshot_delete_all_id').click(function(){
+    $('#screenshot_delete_all_id').click(function(e){
       var a = []
       $.each($('.thumbnail'), function(i, thumbnail) {
         a.push($(thumbnail).attr('id'));
       });
       $("#imgDelIds").val(a.join(','));
       $('#screenshot_delete_id').click();
+      e.preventDefault();
     });
 
     //  Button: Remove images
-    $('#screenshot_delete_id').click(function(){
-      $.ajax({
-        url: '<%= screenshot_admin_document_url unless @document.new_record? %>',
-        global: false,
-        type: "DELETE",
-        data: {'ids' : $('#imgDelIds').val()},
-        dataType: "json",
-        error: function(msg){
-            alert('msg');
-        },
-        complete: function(msg){
-          $("#imgDelIds").val('');
-        },
-        success: function(data, textStatus, jqXHR){
-          $.each(data['ids'], function(index, value) { 
-            $('#'+value).parent().fadeOut();
-          });
-        }
-     });
+    $('#screenshot_delete_id').click(function(e){
+      if (($.isEmptyObject($("#imgDelIds").val()) == false) && (confirm("Are you sure?"))) {
+        $.ajax({
+          url: '<%= admin_document_screenshot_url(@document) unless @document.new_record? %>',
+          global: false,
+          type: "DELETE",
+          data: {'ids' : $('#imgDelIds').val()},
+          dataType: "json",
+          error: function(msg){
+              alert('msg');
+          },
+          complete: function(msg){
+            $("#imgDelIds").val('');
+          },
+          success: function(data, textStatus, jqXHR){
+            $.each(data['ids'], function(index, value) { 
+              $('#'+value).parent().fadeOut(function(){
+                $(this).remove()
+                $("#imgDelIds").val('');
+                update_select_count();
+              });
+            });
+          }
+        });
+      } 
+      e.preventDefault();
     }); // end Button: Remove images
   }) // end document ready
 </script>
@@ -179,7 +189,7 @@
       <div class="overflow-hidden">
         <div class="caption">
           <span>${plupload.formatSize(size)}</span>
-          <a href="#" class="pull-right" onclick="$(this).closest('div.thumbnail').closest('li').remove(); return false;"><i class="icon-trash"></i></a>
+          <a href="#" class="btn-scr-trash pull-right" onclick="$(this).closest('div.thumbnail').closest('li').remove(); return false;"><i class="icon-trash"></i></a>
         </div>
       </div>
     </div>

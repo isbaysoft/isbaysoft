@@ -98,6 +98,12 @@ function HideLoading() {
 
 
 jQuery.fn.extend({
+    to_a: function() {
+      if ($.isEmptyObject(this.filter(":input").val()) == true)
+        return []
+      else
+        return this.filter(":input").val().split(',')
+    },
     toggleToArray: function(value) {
       return this.filter(":input").val(function(i,v) {
         if ($.isEmptyObject(v) == true)
@@ -114,9 +120,9 @@ jQuery.fn.extend({
     },
     addToArray: function(value) {
         return this.filter(":input").val(function(i, v) {
-           var arr = v.split(',');
-            arr.push(value);            
-           return arr.filter(function(e){return e}).join(',');
+          var arr = v.split(',');
+          arr.push(value);            
+          return arr.filter(function(e){return e}).join(',');
         }).end();
     },
     removeFromArray: function(value) {

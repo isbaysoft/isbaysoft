@@ -2,7 +2,7 @@ class DialogsController < ApplicationController
   before_filter :require_user
 
   def show_dialog
-#   Generate template dialog
+    #   Generate template dialog
     if params[:dialog_name]
       @template_dir = "/dialogs/forms/#{params[:dialog_name]}/show"
     else
@@ -13,11 +13,6 @@ class DialogsController < ApplicationController
 
     filelist if params[:dialog_name].eql?('filelist')
     static_content if params[:dialog_name].eql?('static_content')
-
-    if params[:dialog_name].eql?('manager_logo')
-      document = Document.where(:id => params[:id]).limit(1).first
-      @dialogdata = {:feed => document.logos.all, :caption => t(:dialog_caption_logo), :logo_id => params[:logo_id].to_i}
-    end
 
     respond_to do |format|
       format.html { redirect_to root_url}

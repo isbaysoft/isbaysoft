@@ -1,6 +1,5 @@
 class Logo < ActiveRecord::Base
-  has_many :document_logos
-  has_many :documents, :through => :document_logos
+  has_one :document
 
   has_attached_file :logo,
     :url => '/system/:attachment/:id/:style/:filename',

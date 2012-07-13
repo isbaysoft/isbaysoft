@@ -52,13 +52,11 @@ Isbaysoft::Application.routes.draw do
       member do
         post :publish
         post :unpublish
-        post :upload_logo
-        #  TODO: Move not standart urls to accord controller
-        post :screenshot, :to => 'documents#upload_screenshots'
-        delete :screenshot, :to => 'documents#delete_screenshots'
       end
+      resource :logo, :only => [:create]
+      resources :screenshots, :only => [:create, :destroy]
+
       resources :file, :only => [:destroy]
-      resources :screenshots, :only => [:destroy, :show]
       resources :document_files
     end
   end

@@ -1,21 +1,17 @@
 class Document < ActiveRecord::Base
+  cattr_reader :per_page
+
   belongs_to :category, :dependent => :destroy
   belongs_to :section, :dependent => :destroy
-  belongs_to :rule, :foreign_key => 'access_level'  
-  belongs_to :menu
-
   belongs_to :logo
-
-  has_many :document_logos, :dependent => :destroy
-  has_many :logos, :through => :document_logos
+  belongs_to :menu
+  belongs_to :rule, :foreign_key => 'access_level'  
 
   has_many :document_files
   has_many :filelists, :through => :document_files
-
   has_many :screenshots, :dependent => :destroy
 
-  validates :description, :presence => true
-  validates :name, :presence => true
+  validates :short_description, :name, :category_id, :section_id, :presence => true
 
   scope :get, lambda { |id| { :conditions => ['documents.id = ?', id] } }
   scope :set_of, lambda { |ids| { :conditions => ['documents.id in (?)', ids] } }
@@ -26,7 +22,6 @@ class Document < ActiveRecord::Base
   scope :approved, where('documents.approved = ?',true)
   scope :popular, lambda {|top| { :include => [:document_files], :limit => top, :order => 'document_files.hits desc' }}
 
-  cattr_reader :per_page
 
   def hits
     self.document_files.sum('hits')

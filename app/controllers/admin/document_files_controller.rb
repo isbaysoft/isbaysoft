@@ -3,13 +3,13 @@ class Admin::DocumentFilesController < AdminApplicationController
 
   respond_to :js,:json,:html
 
-  def create
-    
+  def create    
     file = @document.filelists.create(params[:filelist])
     respond_with(file) do |format|
+      helper = Object.new.extend(ActionView::Helpers::NumberHelper)
       format.json {render :json => {
         :url => file.f.url, 
-        :size => file.f_file_size,
+        :size => helper.number_to_human_size(file.f_file_size),
         :name => file.f_file_name,
         :id => file.id}
       }.to_json

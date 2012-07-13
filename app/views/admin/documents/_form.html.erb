@@ -1,6 +1,4 @@
 <%= hidden_field_tag 'task','post' %>
-<%= hidden_field_tag :file_id %>
-<%= hidden_field_tag :tab, @active_tab_name %>
 <%= form.hidden_field(:category_id, :id => "category_id", :value => @document.category_id) -%>
 <%= form.hidden_field(:section_id, :id => "section_id", :value => @document.section_id) -%>
 <%= errors_for(form.object) -%>
@@ -29,10 +27,7 @@
     <% unless @document.new_record? %>
       <div class="control-group">
         <%= label_tag 'logo-upload', t(:text_logo), :class => 'control-label' %>
-        <a class="btn input-medium" href="#" id="logo-upload"><i class="icon-upload"></i> <%= t(:label_upload) %></a>
-      </div>
-      <div class="control-group">
-        <a class="popup btn input-medium" href="<%= dialog_url('manager_logo', :id => @document.id, :logo_id => (@document.logo ? @document.logo.id : 0)) %>" id="logo-upload"><i class="icon-adjust"></i> <%= t(:button_manager) %></a>
+        <%= link_to t(:label_upload), '#', :id => "logo-upload", :class => "btn input-medium", :'data-loading-text' => t(:state_uploading) %>
       </div>
     <% end %>
   </div>
@@ -49,6 +44,59 @@
     $("#remove_documentfilelist_template").tmpl({id:file_id}).appendTo("#documentfilelist");
     $('#file_id_'+file_id).fadeOut('slow');
   };
+</script>
+
+<!-- Load plupload and all it's runtimes and finally the jQuery queue widget -->
+<%= javascript_include_tag 'plupload/plupload.full.js' %>     
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#document_logo_id').change(function(e) {
+      $('#document_logo').attr('src',$("#logo" + $(this).val()).attr('src'))
+    });
+  });
+
+  $(function() {
+    authtoken = $("input[name=authenticity_token]").val();
+    var uploader = new plupload.Uploader({
+      runtimes : 'gears,html5,flash,silverlight',
+      browse_button : 'logo-upload',
+      max_file_size : '10mb', // TODO: size from model
+      url : '<%= admin_document_logo_path(@document) unless @document.new_record? %>',
+      flash_swf_url : '<%= javascript_path '/plupload/plupload.flash.swf' %>',
+      silverlight_xap_url : '<%= javascript_path '/plupload/plupload.silverlight.xap' %>',
+      filters : [{title : "Image files", extensions : "jpg,gif,png"}],
+      multi_selection: false,
+      multipart_params : {
+        'format': 'json',
+        authenticity_token: authtoken
+      },
+      file_data_name: 'document[logo]'
+    });
+
+    uploader.init();
+
+    uploader.bind('FilesAdded', function(up, files) {
+      $('#logo-upload').button('loading')
+      up.refresh(); // Reposition Flash/Silverlight
+      up.start();
+    });
+
+    uploader.bind('Error', function(up, err) {
+      up.refresh(); // Reposition Flash/Silverlight
+    });
+
+    uploader.bind('FileUploaded', function(up, file, info) {
+      var response = JSON.parse(info['response']);
+      var url = JSON.parse(response['url']);
+      $('#document_logo').attr("src", url);
+      $('#document_logo_id').attr('value', response['id']);
+    });
+
+    uploader.bind('UploadComplete', function(up, files){
+      $('#logo-upload').button('reset');
+    })
+  });
 </script>
 
 <script id="documentfilelist_template" type="text/x-jquery-tmpl">

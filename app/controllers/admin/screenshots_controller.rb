@@ -1,22 +1,34 @@
 class Admin::ScreenshotsController < AdminApplicationController
   before_filter :require_admin
+  before_filter :nested_document
 
-  def destroy
-    confirm_operation do 
-      begin
-        document = Document.get(params[:document_id]).first
-        if document && document.screenshots.destroy(params[:id])
-          flash[:notice] = t(:notice_destroy_screenshot)
-        else
-          flash[:error] = t(:error_destroy_document_file)
-        end
-      rescue
-        flash[:error] = t(:error_destroy_document_file)
-      ensure
-        redirect_to edit_admin_document_url params[:document_id], :tab => 'screenshots'
+  respond_to :json
+
+
+  def create
+    screenshot = @document.screenshots.new params[:document]  
+    respond_with(screenshot) do |format|
+      if screenshot.save
+        format.json {render :json => {:url => screenshot.screenshot.url.to_json, :id => screenshot.id}}
+      else
+        format.any {render :nothing => true}
       end
-    end
+    end    
   end
 
+  def destroy
+    ids = params[:ids].split(',')
+    @document.screenshots.where(:id => ids).destroy_all
+    respond_with(nil) do |format|
+      format.js {render :json => {:ids => ids}}
+      format.any {render :nothing => true}
+    end    
+  end  
+
+protected
+
+  def nested_document
+    @document = Document.find_by_id(params[:document_id])    
+  end
 
 end

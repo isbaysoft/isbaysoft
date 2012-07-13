@@ -164,6 +164,9 @@ ru:
       document:
         name: Название документа
         description: Описание
+        short_description: Краткое описание
+        category_id: Категория
+        section_id: Раздел
       user:
         rule_id: Роль пользователя
         email: e-mail
@@ -378,6 +381,9 @@ ru:
   tab_notify_deactivate_user: Деактивация пользователя
   tab_general: Основные
   tab_screenshots: Скриншоты
+  tab_files: Файлы
+
+  state_uploading: uploading...
 
 
 #frontend
