@@ -25,7 +25,7 @@
     <%= btn(:icon_class=>'icon-eye-close',
       :class => 'btn-toolbar',
       :caption => t(:button_hide),
-      :title => t(:button_deactivate_user),
+      :title => t(:button_hide),
       :onclick=>"submitaction('#{unpublish_admin_menu_menu_item_url(@menu,0)}')") -%>
   <% end %>
   <%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @menu_items, :icon_class => 'icon_menu_48' } %>

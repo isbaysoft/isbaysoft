@@ -1,12 +1,11 @@
 class Section < ActiveRecord::Base
-  validates_presence_of :name, :description
+
+  validates :name, :presence => true
 
   has_many :categories, :dependent => :destroy
   has_many :documents, :dependent => :destroy
   
   cattr_reader :per_page
-
-  scope :order, lambda { |order| {:order => order } }
 
   def self.getrows(options)
     page = options[:page] || 1

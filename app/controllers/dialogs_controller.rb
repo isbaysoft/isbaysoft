@@ -10,9 +10,9 @@ class DialogsController < ApplicationController
     end
 
     @dialogdata = dialog_category_data if params[:dialog_name].eql?('category')
+    @dialogdata = static_content if params[:dialog_name].eql?('static_content')
 
     filelist if params[:dialog_name].eql?('filelist')
-    static_content if params[:dialog_name].eql?('static_content')
 
     respond_to do |format|
       format.html { redirect_to root_url}
@@ -24,8 +24,10 @@ class DialogsController < ApplicationController
 private
 
   def static_content
-    @dialog_caption = t(:dialog_caption_static_content)
-    @dialogdata = StaticContent.all
+    dialogdata = {}
+    dialogdata[:caption] = t(:dialog_caption_static_content)
+    dialogdata[:feed] = StaticContent.all
+    return dialogdata
   end
 
   def filelist

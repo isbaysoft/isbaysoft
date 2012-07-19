@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div style="padding-top: 16px;">
+    <ol>
+      <% @dialogdata[:feed].map do |row|  %>
+        <li><%= link_to h(row.name), '#', :onclick => "dialog.select(#{ 
+          {
+            :menu_item_url => show_path(row.id)
+          }.to_json }); return false;" %>
+        </li>
+      <% end if @dialogdata[:feed] %>
+    </ol>
+  </div>
+</div>
+<div id="dialog-footer" class="navbar navbar-fixed">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <a class="brand" href="#"><%= @dialogdata[:caption] %></a>
+      <ul class="nav nav-pills pull-right">
+        <li><%= link_to 'Exit', '#', :onclick => "dialog.hide();" %></li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 <%= hidden_field_tag 'task','post' -%>
-<%= errors_for(form.object) %>
+<%= errors_for form.object %>
 <div class="row-fluid">
 	<div class="span3">
 		<div class="control-group">
@@ -19,7 +19,7 @@
 		<div class="control-group">
 			<%= label_tag :section_id, t(:label_category_section), :class => 'control-label' %>
 			<div class="controls">
-				<%=  form.select(:section_id, sections_for_select, {:include_blank => false}, {:size => 10, :class => 'input-xlarge'}) %>
+				<%=  form.select('section_id', sections_for_select, {:include_blank => false}, {:size => 10, :class => 'input-xlarge'}) %>
 			</div>
 		</div>
 	</div>

@@ -4,13 +4,11 @@ class Category < ActiveRecord::Base
 
   has_many :documents
 
-  validates_presence_of :name, :description, :section
+  validates :name, :section_id, :presence => true
 
   cattr_reader :per_page
 
   scope :getlist, :joins => [:section]
-  scope :order, lambda { |order| {:order => order } }
-  scope :section, lambda { |section_id| {:conditions => ['section_id=?',section_id]} }
   
   def wrong?
     section_name.nil?

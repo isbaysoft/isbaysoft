@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120304225702) do
+ActiveRecord::Schema.define(:version => 20120712081922) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -36,13 +36,6 @@ ActiveRecord::Schema.define(:version => 20120304225702) do
     t.integer  "hits",        :default => 0
   end
 
-  create_table "document_logos", :force => true do |t|
-    t.integer  "document_id", :null => false
-    t.integer  "logo_id",     :null => false
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
   create_table "documents", :force => true do |t|
     t.string   "name"
     t.integer  "category_id"
@@ -53,9 +46,9 @@ ActiveRecord::Schema.define(:version => 20120304225702) do
     t.datetime "created_at",                           :null => false
     t.datetime "updated_at",                           :null => false
     t.integer  "section_id"
-    t.integer  "logo_id"
     t.text     "short_description"
     t.integer  "menu_id"
+    t.integer  "logo_id"
   end
 
   create_table "filelists", :force => true do |t|

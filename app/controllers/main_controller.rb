@@ -18,11 +18,11 @@ class MainController < MainApplicationController
   end
 
   def documents
-    @categories = Category.getlist.section(params[:section_id])
+    @categories = Category.getlist.where(:section => params[:section_id])
     if (params[:category_id].present? and Category.find_by_id(params[:category_id]).nil?) or (not @categories.present?)
       redirect_to root_url and return
     end
-    @documents = Document.getlist.section(params[:section_id]).category(params[:category_id]).paginate :page => params[:page], :per_page => 5
+    @documents = Document.getlist.where(:section_id => params[:section_id], :category => params[:category_id]).paginate(:page => params[:page], :per_page => 5)
   end
 
   def contacts
