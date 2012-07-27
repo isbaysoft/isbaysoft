@@ -22,9 +22,10 @@ $(function() {
 	});
 
 	$('#upload_files_id').click(function(e) {
-		$('.progress .bar').attr('style','width:0')  
-		$('#progress_overlay').css('display','block');      
-		uploader.start();
+		if (uploader.total.queued > 0) {
+	      pluploadEx.showUploadProgressBar();    
+	      uploader.start();
+	    }
 		e.preventDefault();
 	});
 
