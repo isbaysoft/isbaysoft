@@ -1,22 +1,42 @@
-<%= hidden_field_tag 'task','post' %>
-<div class="box tabular settings">
-<fieldset>
+<%= hidden_field_tag 'task','post' -%>
 <% if !form.object.new_record? and !@user.access %>
     <h1 class="red"><%= t(:text_user_deactivated) %></h1><br />
 <% end %>
-<dl>
-  <dt><%= label_tag :email, t(:label_login_email) %></dt>
-    <dd><%= form.text_field :email, :class=>'edit' %></dd>
-  <dt><%= label_tag :password, form.object.new_record? ? t(:label_login_password) : t(:label_login_password_change) %></dt>
-    <dd><%= form.password_field :password, :class=>'edit' %></dd>
-  <dt><%= label_tag :password_confirmation, t(:label_login_password_confirmation) %></dt>
-    <dd><%= form.password_field :password_confirmation, :class=>'edit' %></dd>
-  <dt><%= label_tag :usergroup_id, t(:label_login_usergroup) %></dt>
-    <dd><%= form.select(:usergroup_id, usergroup_for_select,  {:include_blank => true}, {:class=>'select', :size => 10} ) %></dd>
-  <dt><%= label_tag :access_level, t(:label_login_rule) %></dt>
-    <dd><%= select_tag(:access_level, options_for_select(rules_for_select, @user.access_level), {:class=>'select', :size => 10} ) %></dd>
-  <dt></dt>
-    <dd></dd>
-</dl>
-</fieldset>
+<div class="row-fluid">
+  <div class="span3">
+    <div class="control-group">
+      <%= label_tag :email, t(:label_login_email), :class => 'control-label' %>
+      <div class="controls">
+        <%= form.text_field :email, :class=>'input-xlarge' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= label_tag :password, form.object.new_record? ? t(:label_login_password) : t(:label_login_password_change), :class => 'control-label' %>
+      <div class="controls">
+        <%= form.password_field :password, :class=>'input-xlarge' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= label_tag :password_confirmation, t(:label_login_password_confirmation), :class => 'control-label' %>
+      <div class="controls">
+        <%= form.password_field :password_confirmation, :class=>'input-xlarge' %>
+      </div>
+    </div>
+  </div>
+  <div class="span3">
+    <div class="control-group">
+        <%= label_tag :usergroup_id, t(:label_login_usergroup), :class => 'control-label' %>
+        <div class="controls">
+          <%= form.select(:usergroup_id, usergroup_for_select,  {:include_blank => true}, {:class=>'select', :size => 10} ) %>
+        </div>
+    </div>
+  </div>
+  <div class="span3">
+    <div class="control-group">   
+        <%= label_tag :access_level, t(:label_login_rule), :class => 'control-label' %>
+        <div class="controls">
+          <%= select_tag(:access_level, options_for_select(rules_for_select, @user.access_level), {:class=>'select', :size => 10} ) %>
+        </div>
+    </div>
+  </div>
 </div>

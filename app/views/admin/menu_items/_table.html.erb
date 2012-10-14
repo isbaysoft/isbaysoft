@@ -2,13 +2,13 @@
 <thead>
   <th class="mark">#</th>
   <th class="mark"><%= check_box_tag("groups", false, false, :onclick=>"setCheckBoxes(this,'ids[]')") %></th>
-  <th class="span2"><%= sortable('Название','title') %></th>
-  <th class="span2"><%= sortable('Алиас','alias') %></th>
-  <th class="span2"><%= sortable('Ссылка','url') %></th>
-  <th class="span1"><%= sortable('Доступ','access_level') %></th>
-  <th class="span1"><%= sortable('Открывать','target') %></th>
-  <th class="span1"><%= sortable("Порядок",'sort_no') %></th>
-  <th class="span1"><%= sortable('Опубликовано','published') %></th>
+  <th><%= sortable('Название','title') %></th>
+  <th><%= sortable('Алиас','alias') %></th>
+  <th><%= sortable('Ссылка','url') %></th>
+  <th><%= sortable('Доступ','access_level') %></th>
+  <th><%= sortable('Открывать','target') %></th>
+  <th><%= sortable("Порядок",'sort_no') %></th>
+  <th><%= sortable('Опубликовано','published') %></th>
 </thead>
 <% @menu_items.map do |row| %>
   <tr>

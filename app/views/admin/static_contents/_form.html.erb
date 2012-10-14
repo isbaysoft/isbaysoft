@@ -1,18 +1,30 @@
 <%= hidden_field_tag 'task','post' -%>
-<div class="box tabular settings">
-<fieldset><legend></legend>
-  <dl>
-    <dt><%= label_tag :name, 'Название' %></dt>
-    <dd><%= form.text_field :name, :class=>'edit' %></dd>
-
-    <dt><%= label_tag :position, 'Позиция' %></dt>
-    <dd><%= form.select(:position, ss, {:include_blank => t(:global_default_select_empty)}, {:size => 10, :class => 'select'}) %></dd>
-
-    <dt><%= label_tag :content, 'Описание' %></dt>
-    <dd><%= form.text_area(:content, :class => "mceEditor") %></dd>
-  </dl>
-</fieldset>
+<%= errors_for form.object %>
+<div class="row-fluid">
+	<div class="span3">
+		<div class="control-group">
+			<%= label_tag :name, t(:label_name), :class => 'control-label' %>
+			<div class="controls">
+				<%= form.text_field :name, :class=>'input-xlarge' %>
+			</div>
+		</div>
+	</div>
+	<div class="span3">
+		<div class="control-group">
+			<%= label_tag :position, t(:label_content), :class => 'control-label' %>
+			<div class="controls">
+    			<%= form.select(:position, ss, {:include_blank => t(:global_default_select_empty)}, {:size => 10, :class => 'select'}) %>
+			</div>
+		</div>		
+	</div>
 </div>
-
+<div class="row-fluid">
+	<div class="control-group">
+		<%= label_tag :content, t(:label_content), :class => 'control-label' %>
+		<div class="controls">
+			<%= form.text_area(:content, :class => "span12") %>
+		</div>
+	</div>
+</div>
 <%= render :partial => 'shared/admin/tinymce_init' %>
 

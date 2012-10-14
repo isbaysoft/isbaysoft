@@ -1,13 +1,6 @@
-<%#= Usergroup controller %>
-<%= roundbox2 do -%>
- <%= render :partial => 'shared/admin/panel_table', :locals => {:table_collection => @usergroups} %>
-  <%= form_for 'tasks', :url => admin_usergroup_url('destroy'), :html =>{:method => :delete, :name=>'adminForm'} do -%>
-    <%= hidden_field_tag 'task','search' -%>
-    <% unless @usergroups.blank? %>
-      <%= render :partial => 'table' %>
-    <% else %>
-      <%= nodata %>
-    <% end %>
-    <%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @usergroups, :icon_class => 'icon_user_group_48' } %>
-  <% end %>
+<%= render :partial => 'shared/admin/panel_table', :locals => {:table_collection => @usergroups} %>
+<%= form_for 'tasks', :url => admin_usergroup_url('destroy'), :html =>{ :method => :delete, :name=>'adminForm'} do -%>
+  <%= hidden_field_tag 'task','0' %>
+  <%= @usergroups.blank? ? nodata : render(:partial => 'table') %>
+  <%= render :partial =>'shared/admin/toolbar_controller', :locals => { :paginated_rows => @categories, :icon_class => 'icon_user_group_48' } %>
 <% end %>

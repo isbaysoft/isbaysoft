@@ -54,7 +54,7 @@ $(function() {
 		up.refresh(); // Reposition Flash/Silverlight
 	});
 
-	uploader.bind('UploadProgress', uploadProgressBar);
+	uploader.bind('UploadProgress', pluploadEx.updateUploadProgressBar);
 
 	uploader.bind('Error', function(up, err) {
 		$('#filelist').append("<div>Error: " + err.code +
@@ -72,7 +72,7 @@ $(function() {
 	});
 
 	uploader.bind('UploadComplete', function(up, file) {
-      $('#progress_overlay').fadeOut();
+      pluploadEx.hideUploadProgressBar();
 	});
 });
 </script>

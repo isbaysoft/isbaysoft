@@ -1,23 +1,18 @@
-<%# Users controller%>
-<%= roundbox2 do -%>
- <%= render :partial => 'shared/admin/panel_table', :locals => {:table_collection => @users} %>
-  <%= form_for 'tasks', :url => {:action => :destroy}, :html =>{:method => :delete, :name=>'adminForm'} do -%>
-    <%= hidden_field_tag 'task','search' -%>
-    <% unless @users.blank? %>
-      <%= render :partial => 'table' %>
-    <% else %>
-      <%= nodata   %>
-    <% end %>
-    <% content_for :toolbar_additional do %>
-      <%= btn(:icon_class=>'icon_activate_32',
-        :caption => t(:button_on),
-        :title => t(:button_activate_user),
-        :onclick=>"submitaction('#{activate_admin_userlist_url(0)}')") -%>
-      <%= btn(:icon_class=>'icon_deactivate_32', 
-        :caption => t(:button_off),
-        :title => t(:button_deactivate_user),
-        :onclick=>"submitaction('#{deactivate_admin_userlist_url(0)}')") -%>
-    <% end %>
-    <%= render :partial =>'shared/admin/toolbar_controller',:locals => { :paginated_rows => @users, :icon_class => 'icon_users_48' } %>
-  <% end %>
+<%= render :partial => 'shared/admin/panel_table', :locals => {:table_collection => @users} %>
+<%= form_for 'tasks', :url => admin_category_url('destroy'), :html =>{:method => :delete, :name=>'adminForm'} do -%>
+  <%= hidden_field_tag 'task','0' %>
+  <%= @users.blank? ? nodata : render(:partial => 'table') %>
+  <% content_for :toolbar_additional do %>
+    <%= btn(:icon_class=>'icon_activate_32',
+      :class => 'btn-toolbar',
+      :caption => t(:button_on),
+      :title => t(:button_activate_user),
+      :onclick=>"submitaction('#{activate_admin_userlist_url(0)}')") -%>
+    <%= btn(:icon_class=>'icon_deactivate_32', 
+      :class => 'btn-toolbar',
+      :caption => t(:button_off),
+      :title => t(:button_deactivate_user),
+      :onclick=>"submitaction('#{deactivate_admin_userlist_url(0)}')") -%>
+  <% end %>  
+  <%= render :partial =>'shared/admin/toolbar_controller', :locals => {:paginated_rows => @users, :icon_class => 'icon_users_48'} %>
 <% end %>

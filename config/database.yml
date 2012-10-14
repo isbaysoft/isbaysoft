@@ -5,7 +5,7 @@ development: &dev
   database: isbaysoft_dev
   pool: 5
   username: root
-  password: 
+  password: ruby
   socket: /var/run/mysqld/mysqld.sock
 
 test: &test
